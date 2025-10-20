@@ -1,0 +1,24 @@
+{
+    "content": [
+        {   
+            "tin": "1234567890",
+            "title": "นาย",
+            "firstName": "ทดสอบ",
+            "lastName": "ทดสอบ",
+            "buildingName": "test",
+            "floorNumber": "2",
+            "houseIdNumber": "245",
+            "roomNumber": "409",
+            "houseNumber": "409",
+            "mooNumber": "5",
+            "yaek": "test",
+            "villageName": "test",
+            "soiName": "19",
+            "streetName": "test",
+            "thambolName": "test",
+            "amphurName": "test",
+            "provinceName": "test",
+            "postCode": "test"
+        }
+    ]
+}

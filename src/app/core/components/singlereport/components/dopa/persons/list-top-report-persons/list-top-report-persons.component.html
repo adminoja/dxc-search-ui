@@ -1,0 +1,82 @@
+<div class="row" *ngIf="personsShow">
+    <div class="row" *ngFor="let personsItem of personsResults">
+        <div class="col-lg-12 mt-3">
+            <table class="table-striped table-centered mb-0 center font-18">
+                <tbody>
+                    <tr></tr>
+                    <tr>
+                        <th>เลขประจำตัวประชาชน</th>
+                        <td class="text-success">{{personsItem.citizenCardNumber | filter:""}}</td>
+                        <th>ชื่อตัวและชื่อสกุล</th>
+                        <td class="text-success">
+                            {{personsItem.firstName | filter:""}} {{personsItem.lastName | filter:""}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>เกิดวันที่</th>
+                        <td class="text-success">{{personsItem.dateOfBirth | thaidate }}</td>
+                        <th>ศาสนา</th>
+                        <td class="text-success">-</td>
+                    </tr>
+                    <tr>
+                        <th>ที่อยู่</th>
+                        <td class="text-success">-</td>
+                        <th>วันออกบัตร</th>
+                        <td class="text-success">-</td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td class="text-success"></td>
+                        <th>วันหมดอายุบัตร</th>
+                        <td class="text-success">-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="row" *ngIf="!personsShow">
+    <div class="col-lg-6 mt-3">
+        <table class="table-striped table-centered mb-0 center">
+            <tbody>
+                <tr></tr>
+                <tr>
+                    <th>เลขประจำตัวประชาชน</th>
+                    <td class="text-success">-</td>
+                </tr>
+                <tr>
+                    <th>เกิดวันที่</th>
+                    <td class="text-success">-</td>
+                </tr>
+                <tr>
+                    <th>ที่อยู่</th>
+                    <td style="height: 205px;" class="text-success">-</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-lg-6 mt-3">
+        <table class="table-striped table-centered mb-0 centers">
+            <tbody>
+                <tr></tr>
+                <tr>
+                    <th>ชื่อตัวและชื่อสกุล</th>
+                    <td class="text-success">-</td>
+                </tr>
+                <tr>
+                    <th>ศาสนา</th>
+                    <td class="text-success">-</td>
+                </tr>
+                <tr>
+                    <th>วันออกบัตร</th>
+                    <td class="text-success">-</td>
+                </tr>
+                <tr>
+                    <th>วันหมดอายุบัตร</th>
+                    <td class="text-success">-</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

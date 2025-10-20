@@ -1,0 +1,73 @@
+<div *ngIf="prisonerCount">
+    <div *ngIf="exitCode[0].exitCode; else exit">
+        <div *ngIf="report_name != 'รายงาน Single Report'">
+          <div class="card border-secondary border col-md-12">
+            <div class="card mb-md-0 mb-3">
+                <div class="card-body">
+                    <div>
+                        <span class="text-success font-20"><u>กรมราชทัณฑ์: </u></span>
+                        <span class="text-white font-20"><u>ผู้ต้องขัง (คดีที่พิพากษาแล้ว) </u></span>
+                        <span class="text-danger font-20"><u>{{exitCode[0].exitCode | changeStatus}}</u></span>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <ng-template #exit>
+        <div class="card border-secondary border col-md-12">
+            <div class="card mb-md-0 mb-3">
+                <div class="card-body">
+                    <div data-toggle="collapse" data-target="#prisonerTablecollapse" role="button" aria-expanded="true"
+                        aria-controls="prisonercollapse">
+                        <span class="text-success font-20"><u>กรมราชทัณฑ์:</u></span>
+                        <span class="text-white font-20"><u> ผู้ต้องขัง (คดีที่พิพากษาแล้ว)</u></span>
+                        <span class="text-warning font-20"><u> จำนวน: {{prisonerCount}} รายการ</u></span>
+                    </div>
+                    <div id="prisonerTablecollapse" class="collapse pt-3">
+                        <div class="col-md-12" class="singlereport-timeline-item">
+                            <div class="col-md-12" class="singlereport-timeline-item" *ngFor="let prisonerItem of prisonerResults">
+                                <input type="hidden" value="ผู้ต้องขัง (คดีที่พิพากษาแล้ว)" #prisonerTitle>
+                                <input type="hidden" value="assets/dist/img/doc.png" #prisonerImg>
+                                <img src="assets/dist/img/dxc-img/symbol/datatype/32/doc-prisoner.png.png" width="25px">
+                                <span class="text-success font-20">&nbsp;<u>ผู้ต้องขัง (คดีที่พิพากษาแล้ว)</u></span>
+
+                                <table class="table-striped table-centered mb-0 mt-3 text-20">
+                                    <thead>
+                                        <tr>
+                                            <th>ที่อยู่</th>
+                                            <th>เบอร์โทรศัพท์</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>{{ prisonerItem.address | filter:""}}</td>
+                                            <td>{{ prisonerItem.phone | filter:""}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</div>
+
+<div *ngIf="report_name != 'รายงาน Single Report'">
+    <div *ngIf="!prisonerCount">
+      <div class="card border-secondary border col-md-12">
+          <div class="card mb-md-0 mb-3">
+              <div class="card-body">
+                  <div>
+                      <span class="text-success font-20"><u>กรมราชทัณฑ์: </u></span>
+                      <span class="text-white font-20"><u>ผู้ต้องขัง (คดีที่พิพากษาแล้ว) </u></span>
+                      <span class="text-danger font-20"><u> (ไม่พบข้อมูล) </u></span>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+</div>
+

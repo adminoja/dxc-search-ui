@@ -1,0 +1,53 @@
+<!-- กรมคุมประพฤติ -->
+<div *ngIf="cifsMissingPersonCount">
+  <div *ngFor="let cifsMissingPersonItem of cifsMissingPersonResults">
+    <div *ngIf="cifsMissingPersonItem.firstName != null; else checkNull">
+      <div class="card border-secondary border col-md-12">
+        <!-- Portlet card -->
+        <div class="card mb-md-0 mb-3">
+            <div class="card-body">
+                <div data-toggle="collapse" data-target="#cifsMissingPerson" role="button" aria-expanded="true" aria-controls="cifsMissingPerson">
+                    <span class="text-success font-20"><u>สถาบันนิติวิทยาศาสตร์: </u></span>
+                    <span class="text-white font-20"><u>ฐานข้อมูลคนหาย </u></span>
+                    <span class="text-warning font-20"><u>จำนวน: {{cifsMissingPersonCount}} รายการ </u></span>
+                </div>
+                <div id="cifsMissingPerson" class="collapse pt-3">
+                    <div class="col-md-12" class="singlereport-timeline-item">
+                          <img src="assets/dist/img/dxc-img/symbol/datatype/32/cifs-missing-person.png">&nbsp;
+                          <input type="hidden" value="ฐานข้อมูลคนหาย" #cifsMissingPersonTitle>
+                          <input type="hidden" value="assets/dist/img/cifs.png" #cifsMissingPersondepartmentImg>
+                          <span class="text-success font-20"><u>ฐานข้อมูลคนหาย</u></span>
+                          <button
+                            class="btn btn-info" style="float: right;" type="button" href="#missing-person-full-width-modal" data-toggle="modal" data-target="#missing-person-full-width-modal"
+                            (click)="selectRow(cifsMissingPersonItem,cifsMissingPersonTitle.value,cifsMissingPersondepartmentImg.value)">
+                              <span class="icon-name"><i class="mdi mdi-arrow-top-right" style="color:white;"></i></span>
+                          </button>
+                          <div style="padding-left:15px; margin-top: 3%;">
+                            <span class="text-white font-20">ชื่อ</span>&nbsp;&nbsp;
+                            <span class="text-success font-20" style="text-decoration:underline">
+                              {{cifsMissingPersonItem.firstName | filter:""}}</span>&nbsp;&nbsp;
+                            <span class="text-white font-20">นามสกุล</span>&nbsp;&nbsp;
+                            <span class="text-success font-20" style="text-decoration:underline">
+                              {{cifsMissingPersonItem.lastName | filter:""}}&nbsp;</span>&nbsp;&nbsp;
+                            <span class="text-white font-20">เพศ</span>&nbsp;&nbsp;
+                            <span class="text-success font-20" style="text-decoration:underline">
+                              {{cifsMissingPersonItem.sex | filter:""}}</span>&nbsp;&nbsp;
+                            <span class="text-white font-20">อายุ (ณ วันที่แจ้งสูญหาย)</span>&nbsp;&nbsp;
+                            <span class="text-success font-20" style="text-decoration:underline">
+                              {{cifsMissingPersonItem.age | filter:""}}</span>&nbsp;&nbsp;
+                            <span class="text-white font-20">วันที่สูญหาย</span>&nbsp;&nbsp;
+                            <span class="text-success font-20" style="text-decoration:underline">
+                              {{cifsMissingPersonItem.missingDate | converseDate }}</span>&nbsp;&nbsp;
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div> <!-- end card-->
+    </div>
+  </div>
+  <ng-template #checkNull>
+  </ng-template>
+</div>
+
+

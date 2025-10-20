@@ -1,0 +1,111 @@
+<div *ngIf="AgothChargeSubjectCount !==0 && !inputAllegationChargeSubject">
+    <div class="card border-secondary border col-md-12">
+  
+      <div class="card mb-md-0 mb-3">
+        <div class="card-body">
+          <div data-toggle="collapse" data-target="#AgothChargeSubjectcollapse" role="button" aria-expanded="true"
+            aria-controls="AgothChargeSubjectcollapse">
+            <span class="text-success font-20"><u>สำนักงานอัยการสูงสุด: </u></span>
+            <span class="text-white font-20"><u>ข้อมูลผู้ต้องหา/จำเลย </u></span>
+            <span class="text-warning font-20"><u>จำนวน: {{AgothChargeSubjectCount}} รายการ </u></span>
+          </div>
+  
+          <div id="AgothChargeSubjectcollapse" class="collapse pt-3">
+            <div class="col-md-12" *ngFor="let AgothChargeSubjectItem of AgothChargeSubjectResults"
+              class="singlereport-timeline-item">
+              <input type="hidden" value="ข้อมูลผู้ต้องหา/จำเลย" #AgothChargeSubjectTitle>
+              <input type="hidden" value="assets/dist/img/agoth.png" #AgothChargeSubjectdepartmentImg>
+              <img src="assets/dist/img/dxc-img/symbol/datatype/32/charge-subject.png" width="25px">
+              <span class="text-success font-20">&nbsp;<u>ข้อมูลผู้ต้องหา/จำเลย</u></span>
+              <button class="btn btn-info" style="float: right;" type="button" href="#charge-subject-full-width-modal"
+                data-toggle="modal" data-target="#charge-subject-full-width-modal"
+                (click)="selectRow(AgothChargeSubjectItem,AgothChargeSubjectTitle.value,AgothChargeSubjectdepartmentImg.value)">
+                <span class="icon-name"><i class="mdi mdi-arrow-top-right" style="color:white;"></i></span>
+              </button>
+              <div style="padding-left:15px;margin-top: 3%;">
+                <span class="text-white font-20">ชื่อ-สกุลผู้ต้องหา/จำเลย</span>&nbsp;&nbsp;
+                <span class="text-success font-20" style="text-decoration:underline">
+                  {{AgothChargeSubjectItem.name1 | filter:""}} {{AgothChargeSubjectItem.surname1 | filter:""}}</span>&nbsp;&nbsp;
+  
+                <span class="text-white font-20">วันเดือนปี เกิด</span>&nbsp;&nbsp;
+                <span class="text-success font-20" style="text-decoration:underline">
+                  {{AgothChargeSubjectItem.birthDate | converseDate }}</span>&nbsp;&nbsp;
+  
+                <span class="text-white font-20">อายุ</span>&nbsp;&nbsp;
+                <span class="text-success font-20" style="text-decoration:underline">
+                  {{AgothChargeSubjectItem.age | filter:""}} ปี</span>&nbsp;&nbsp;
+  
+                <span class="text-white font-20">อาชีพ</span>&nbsp;&nbsp;
+                <span class="text-success font-20" style="text-decoration:underline">
+                  {{AgothChargeSubjectItem.occupationName | filter:""}}</span>&nbsp;&nbsp;
+  
+                <span class="text-white font-20">สัญชาติ</span>&nbsp;&nbsp;
+                <span class="text-success font-20" style="text-decoration:underline">
+                  {{AgothChargeSubjectItem.nationalityName | filter:""}}</span>&nbsp;&nbsp;
+  
+                <span class="text-white font-20">คำสั่งอัยการ</span>&nbsp;&nbsp;
+                <span class="text-success font-20" style="text-decoration:underline">
+                  {{AgothChargeSubjectItem.prosCommandName | filter:""}}</span>&nbsp;&nbsp;
+  
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div *ngIf="inputAllegationChargeSubject">
+  <div class="card border-secondary border col-md-12">
+
+    <div class="card mb-md-0 mb-3">
+      <div class="card-body">
+        <div data-toggle="collapse" data-target="#AgothChargeSubjectcollapse" role="button" aria-expanded="true"
+          aria-controls="AgothChargeSubjectcollapse">
+          <span class="text-success font-20"><u>สำนักงานอัยการสูงสุด: </u></span>
+          <span class="text-white font-20"><u>ข้อมูลผู้ต้องหา/จำเลย </u></span>
+        </div>
+
+        <div id="AgothChargeSubjectcollapse" class="collapse pt-3">
+          <div class="col-md-12" class="singlereport-timeline-item">
+            <input type="hidden" value="ข้อมูลผู้ต้องหา/จำเลย" #AgothChargeSubjectTitle>
+            <input type="hidden" value="assets/dist/img/agoth.png" #AgothChargeSubjectdepartmentImg>
+            <img src="assets/dist/img/dxc-img/symbol/datatype/32/charge-subject.png" width="25px">
+            <span class="text-success font-20">&nbsp;<u>ข้อมูลผู้ต้องหา/จำเลย</u></span>
+            <button class="btn btn-info" style="float: right;" type="button" href="#charge-subject-full-width-modal"
+              data-toggle="modal" data-target="#charge-subject-full-width-modal"
+              (click)="selectRow(inputAllegationChargeSubject,AgothChargeSubjectTitle.value,AgothChargeSubjectdepartmentImg.value)">
+              <span class="icon-name"><i class="mdi mdi-arrow-top-right" style="color:white;"></i></span>
+            </button>
+            <div style="padding-left:15px;margin-top: 3%;">
+              <span class="text-white font-20">ชื่อ-สกุลผู้ต้องหา/จำเลย</span>&nbsp;&nbsp;
+              <span class="text-success font-20" style="text-decoration:underline">
+                {{inputAllegationChargeSubject.name1 | filter:""}} {{inputAllegationChargeSubject.surname1 | filter:""}}</span>&nbsp;&nbsp;
+
+              <span class="text-white font-20">วันเดือนปี เกิด</span>&nbsp;&nbsp;
+              <span class="text-success font-20" style="text-decoration:underline">
+                {{inputAllegationChargeSubject.birthDate | converseDate }}</span>&nbsp;&nbsp;
+
+              <span class="text-white font-20">อายุ</span>&nbsp;&nbsp;
+              <span class="text-success font-20" style="text-decoration:underline">
+                {{inputAllegationChargeSubject.age | filter:""}} ปี</span>&nbsp;&nbsp;
+
+              <span class="text-white font-20">อาชีพ</span>&nbsp;&nbsp;
+              <span class="text-success font-20" style="text-decoration:underline">
+                {{inputAllegationChargeSubject.occupationName | filter:""}}</span>&nbsp;&nbsp;
+
+              <span class="text-white font-20">สัญชาติ</span>&nbsp;&nbsp;
+              <span class="text-success font-20" style="text-decoration:underline">
+                {{inputAllegationChargeSubject.nationalityName | filter:""}}</span>&nbsp;&nbsp;
+
+              <span class="text-white font-20">คำสั่งอัยการ</span>&nbsp;&nbsp;
+              <span class="text-success font-20" style="text-decoration:underline">
+                {{inputAllegationChargeSubject.prosCommandName | filter:""}}</span>&nbsp;&nbsp;
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

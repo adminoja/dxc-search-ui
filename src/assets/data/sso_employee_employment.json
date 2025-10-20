@@ -1,0 +1,23 @@
+{
+    "content": [
+        {   
+            "id": "1",
+            "activeStatus": "รหัสสถานะผู้ประกันตน",
+            "activeStatusDescription": "เป็นผู้ประกันตน",
+            "employeeBirthdate": "14 เมษายน 2538",
+            "employeeBirthdateString": "14 เมษายน 2538",
+            "expirationDate": "13 เมษายน 2565",
+            "expirationDateString": "วันหมดอายุ",
+            "firstName": "วิไลลักษณ์",
+            "idDescription": "ประเภทบัตร",
+            "idType": "รหัสประเภทบัตร",
+            "lastName": "เจริญพืช",
+            "sex": "หญิง",
+            "sexDescription": "หญิง",
+            "sexString": "",
+            "ssoNumber": "8230290018131",
+            "titleCode": "รหัสคำนำหน้าชื่อ",
+            "titleCodeDescription": "นางสาว"
+        }
+    ]
+}

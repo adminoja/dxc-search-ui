@@ -1,0 +1,139 @@
+<div id="error-one" class="modal fade" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog"
+    aria-labelledby="multiple-oneModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title dataname text-white" id="multiple-oneModalLabel">พบข้อผิดพลาด</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-horizontal dataname text-white" style="margin-top:20px;text-align: center">
+                    <!-- <h3>
+                        Error {{messageErrorUI}}
+                    </h3> -->
+                    <h3 class="dataname text-white" style="text-align: center">
+                        <div *ngIf="messageErrorUI == 500 && debugMessage !== '[95011] No permission in requested service' && debugMessage !== '[95004] No permission in Linkage Center or OfficeID is incorrect';else error01">
+                            <div>
+                                มีข้อผิดพลาดเกิดขึ้นบนเซิร์ฟเวอร์โปรดติดต่อผู้ดูแลระบบ ({{messageErrorUI}})
+                            </div>
+                        </div>
+                        <ng-template #error01>
+                            <div *ngIf="messageErrorUI == 504;else error02">
+                                เซิร์ฟเวอร์มีปริมาณใช้งานสูงโปรดลองอีกครั้ง ({{messageErrorUI}})
+                            </div>
+                        </ng-template>
+                        <ng-template #error02>
+                            <div *ngIf="messageErrorUI == 505;else error03">
+                                ระบบไม่รองรับวิธีการร้องขอที่ส่งมา ({{messageErrorUI}})
+                            </div>
+                        </ng-template>
+                        <ng-template #error03>
+                            <div *ngIf="messageErrorUI == 400;else error04">
+                                การร้องขอไม่ถูกต้อง ไม่เป็นไปตามข้อกำหนด ({{messageErrorUI}})
+                            </div>
+                        </ng-template>
+                        <ng-template #error04>
+                            <div *ngIf="messageErrorUI == 401;else error05">
+                                ไม่ได้ login หรือ ระบุตัวตนเข้าสู่ระบบ ({{messageErrorUI}})
+                            </div>
+                        </ng-template>
+                        <ng-template #error05>
+                            <div *ngIf="messageErrorUI == 404;else error06">
+                                ไม่พบข้อมูลที่ท่านค้นหา ({{messageErrorUI}})
+                            </div>
+                        </ng-template>
+                        <ng-template #error06>
+                            <div *ngIf="messageErrorUI == 406;else error07">
+                                การร้องขอไม่ถูกต้อง ไม่เป็นไปตามข้อกำหนด ({{messageErrorUI}})
+                            </div>
+                        </ng-template>
+                        <ng-template #error07>
+                            <div *ngIf="messageErrorUI == 0;else error08">
+                                พบปัญหา การตอบสนองล้มเหลวของ HTTP สำหรับ status 0 ข้อผิดพลาดที่ไม่รู้จัก
+                            </div>
+                        </ng-template>
+                        <ng-template #error08>
+                            <div *ngIf="debugMessage === '[95011] No permission in requested service' || debugMessage === '[95004] No permission in Linkage Center or OfficeID is incorrect';else error09">
+                                <p>ผู้ใช้งานไม่มีสิทธิ์จาก Linkage Center</p> <p>ในฐานข้อมูลนี้ </p>
+                            </div>
+                        </ng-template>
+                        <ng-template #error09>
+                            <div>
+                                พบปัญหา เกิดข้อผิดพลาดโดยไม่ทราบสาเหตุ
+                            </div>
+                        </ng-template>
+                    </h3>
+                    <hr>
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                        </div>
+                        <div class="panel-body dataname text-danger" style="text-align: center">
+                            <h4>
+                                <div *ngIf="messageErrorUI == 500 && debugMessage !== '[95011] No permission in requested service' && debugMessage !== '[95004] No permission in Linkage Center or OfficeID is incorrect';else errordanger01">
+                                    <div>
+                                        กรุณารอสักครู่แล้วลองใหม่อีกสัก 2-3ครั้ง
+                                        หากยังไม่ได้กรุณาแจ้งปัญหานี้แก่เจ้าหน้าที่เพื่อการแก้ไขปัญหาต่อไป
+                                    </div>
+                                </div>
+                                <ng-template #errordanger01>
+                                    <div *ngIf="messageErrorUI == 504;else errordanger02">
+                                        กรุณารอสักครู่แล้วลองใหม่อีกสัก 2-3ครั้ง
+                                        หากยังไม่ได้กรุณาแจ้งปัญหานี้แก่เจ้าหน้าที่เพื่อการแก้ไขปัญหาต่อไป
+                                    </div>
+                                </ng-template>
+                                <ng-template #errordanger02>
+                                    <div *ngIf="messageErrorUI == 505;else errordanger03">
+                                        กรุณารอสักครู่แล้วลองใหม่อีกสัก 2-3ครั้ง
+                                        หากยังไม่ได้กรุณาแจ้งปัญหานี้แก่เจ้าหน้าที่เพื่อการแก้ไขปัญหาต่อไป
+                                    </div>
+                                </ng-template>
+                                <ng-template #errordanger03>
+                                    <div *ngIf="messageErrorUI == 400;else errordanger04">
+                                        กรุณารอสักครู่แล้วลองใหม่อีกสัก 2-3ครั้ง
+                                        หากยังไม่ได้กรุณาแจ้งปัญหานี้แก่เจ้าหน้าที่เพื่อการแก้ไขปัญหาต่อไป
+                                    </div>
+                                </ng-template>
+                                <ng-template #errordanger04>
+                                    <div *ngIf="messageErrorUI == 401;else errordanger05">
+                                        กรุณารอสักครู่แล้วลองใหม่อีกสัก 2-3ครั้ง
+                                        หากยังไม่ได้กรุณาแจ้งปัญหานี้แก่เจ้าหน้าที่เพื่อการแก้ไขปัญหาต่อไป
+                                    </div>
+                                </ng-template>
+                                <ng-template #errordanger05>
+                                    <div *ngIf="messageErrorUI == 404;else errordanger06">
+                                        กรุณารอสักครู่แล้วลองใหม่อีกสัก 2-3ครั้ง
+                                        หากยังไม่ได้กรุณาแจ้งปัญหานี้แก่เจ้าหน้าที่เพื่อการแก้ไขปัญหาต่อไป
+                                    </div>
+                                </ng-template>
+                                <ng-template #errordanger06>
+                                    <div *ngIf="messageErrorUI == 406;else errordanger07">
+                                        กรุณารอสักครู่แล้วลองใหม่อีกสัก 2-3ครั้ง
+                                        หากยังไม่ได้กรุณาแจ้งปัญหานี้แก่เจ้าหน้าที่เพื่อการแก้ไขปัญหาต่อไป
+                                    </div>
+                                </ng-template>
+                                <ng-template #errordanger07>
+                                    <div *ngIf="messageErrorUI == 0;else errordanger08">
+                                        กรุณารอสักครู่แล้วลองใหม่อีกสัก 2-3ครั้ง
+                                        หากยังไม่ได้กรุณาแจ้งปัญหานี้แก่เจ้าหน้าที่เพื่อการแก้ไขปัญหาต่อไป
+                                    </div>
+                                </ng-template>
+                                <ng-template #errordanger08>
+                                    <div *ngIf="debugMessage === '[95011] No permission in requested service' || debugMessage === '[95004] No permission in Linkage Center or OfficeID is incorrect';else errordanger09">
+                                        กรุณาติดต่อผู้ดูแลระบบหน่วยงานของท่าน
+                                    </div>
+                                </ng-template>
+                                <ng-template #errordanger09>
+                                    <div>
+                                        กรุณารอสักครู่แล้วลองใหม่อีกสัก 2-3ครั้ง
+                                        หากยังไม่ได้กรุณาแจ้งปัญหานี้แก่เจ้าหน้าที่เพื่อการแก้ไขปัญหาต่อไป
+                                    </div>
+                                </ng-template>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

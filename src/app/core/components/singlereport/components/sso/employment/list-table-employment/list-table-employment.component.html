@@ -1,0 +1,43 @@
+<div *ngIf="ssoEmploymentCount">
+    <div class="card border-secondary border col-md-12">
+
+      <!-- Portlet card -->
+      <div class="card mb-md-0 mb-3">
+        <div class="card-body">
+          <div data-toggle="collapse" data-target="#tableEmployment" role="button" aria-expanded="true"
+            aria-controls="addresses">
+            <span class="text-success font-20"><u>สำนักงานประกันสังคม: </u></span>
+            <span class="text-white font-20"><u>ประวัติผู้จ้างงาน</u></span>
+            <span class="text-warning font-20"><u>จำนวน: {{ssoEmploymentCount}} รายการ </u></span>
+          </div>
+          <div id="tableEmployment" class="collapse pt-3">
+            <div class="col-md-12" *ngFor="let ssoEmploymentItem of ssoEmploymentResults"
+              class="singlereport-timeline-item">
+              <img src="assets/dist/img/dxc-img/symbol/datatype/32/sso-employment.png">&nbsp;
+              <input type="hidden" value="ประวัติผู้จ้างงาน" #ssoEmploymentTitle>
+              <input type="hidden" value="assets/dist/img/sso.png" #ssoEmploymentImg>
+              <span class="text-success font-20"><u>ประวัติผู้จ้างงาน</u></span>
+  
+              <table class="table-striped table-centered mb-0 mt-3 text-20">
+                <thead>
+                  <tr>
+                    <th>ชื่อบริษัท</th>
+                    <th>สถานะลูกจ้าง</th>
+                    <th>วันที่เริ่มจ้างงาน</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>{{ ssoEmploymentItem.companyName | converseNull}}</td>
+                    <td>{{ ssoEmploymentItem.employStatusDesc | converseNull}}</td>
+                    <td>{{ ssoEmploymentItem.expStartDate | converseDate}}</td>
+                  </tr>
+                </tbody>
+              </table>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- end card-->
+  </div>

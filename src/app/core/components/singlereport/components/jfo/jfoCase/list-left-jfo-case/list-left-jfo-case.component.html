@@ -1,0 +1,17 @@
+<div *ngIf="checkjfoCaseResults" class="row col-md-12">
+  <div class="col-md-12 media mt-1 p-2 border-secondary border" *ngFor="let jfoCaseItem of jfoCaseResults">
+    <div class="media-body">
+      <img src="assets/dist/img/dxc-img/symbol/datatype/32/jfo-jfo-case.png">
+      <span style="margin-left: 15px;font-size: 18px;" class="text-white">กองทุนยุติธรรม</span>
+      <div class="col-md-10 text-white">เลขประจำตัวประชาชน:
+        <span class="dataname text-success">{{jfoCaseItem.citizenId}}</span>
+      </div>
+      <div class="col-md-8 text-white">ชื่อ:
+        <span class="dataname text-success">-</span>
+      </div>
+      <div class="col-md-4 text-white">เพศ:
+        <span class="dataname text-success"> {{jfoCaseItem.sex | filter:""}}</span>
+      </div>
+    </div>
+  </div>
+</div>

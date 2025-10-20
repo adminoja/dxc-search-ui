@@ -1,0 +1,93 @@
+<div *ngIf="jfoCase64Count !==0 && !inputNormalJfoCase64">
+    <div class="card border-secondary border col-md-12">
+      <!-- Portlet card -->
+      <div class="card mb-md-0 mb-3">
+        <div class="card-body">
+          <div data-toggle="collapse" data-target="#jfoCase64Collapse" role="button" aria-expanded="true">
+            <span class="text-success font-20"><u>สำนักงานปลัดกระทรงยุติธรรม: </u></span>
+            <span class="text-white font-20"><u>ฐานข้อมูลกองทุนยุติธรรม (2564) </u></span>
+            <span class="text-warning font-20"><u>จำนวน: {{jfoCase64Count}} รายการ </u></span>
+          </div>
+          <div id="jfoCase64Collapse" class="collapse pt-3">
+            <div class="col-md-12" *ngFor="let jfoCase64Item of jfoCase64Results" class="singlereport-timeline-item">
+              <img src="assets/dist/img/dxc-img/symbol/datatype/32/jfo-jfo-case.png">&nbsp;
+              <input type="hidden" value="ฐานข้อมูลกองทุนยุติธรรม (2564)" #jfoCase64Title>
+              <input type="hidden" value="assets/dist/img/jfo.png" #jfoCase64departmentImg>
+              <span class="text-success font-20"><u>ฐานข้อมูลกองทุนยุติธรรม (2564)</u></span>
+              <button class="btn btn-info" style="float: right;" type="button" href="#jfo-case64-full-width-modal" data-toggle="modal"
+                data-target="#jfo-case64-full-width-modal" (click)="selectRow(jfoCase64Item,jfoCase64Title.value,jfoCase64departmentImg.value)">
+                <span class="icon-name"><i class="mdi mdi-arrow-top-right" style="color:white;"></i></span>
+              </button>
+              <div style="padding-left:15px; margin-top: 3%;">
+                <span class="text-white font-20">เลขบัตรประจำตัวประชาชน</span>&nbsp;&nbsp;
+                <span class="text-success font-20"
+                  style="text-decoration:underline">{{jfoCase64Item.cardId | filter:"" }}</span>&nbsp;&nbsp;
+                <span class="text-white font-20">เลขสํานวน กทย.</span>&nbsp;&nbsp;
+                <span class="text-success font-20"
+                  style="text-decoration:underline">{{jfoCase64Item.jfCaseNo | filter:"" }}</span>&nbsp;&nbsp;
+                <span class="text-white font-20">ชื่อเรื่อง</span>&nbsp;&nbsp;
+                <span class="text-success font-20"
+                  style="text-decoration:underline">{{jfoCase64Item.subject | filter:"" }}</span>&nbsp;&nbsp;
+                <span class="text-white font-20">วันที่รับเรื่อง</span>&nbsp;&nbsp;
+                <span class="text-success font-20"
+                  style="text-decoration:underline">{{jfoCase64Item.createDate | converseDate}}</span>&nbsp;&nbsp;
+                <span class="text-white font-20">วันที่ลงระบบ</span>&nbsp;&nbsp;
+                <span class="text-success font-20"
+                  style="text-decoration:underline">{{jfoCase64Item.registerDate | converseDate}}</span>&nbsp;&nbsp;
+                <span class="text-white font-20">วันที่แก้ไขล่าสุด</span>&nbsp;&nbsp;
+                <span class="text-success font-20"
+                  style="text-decoration:underline">{{jfoCase64Item.modifiedDate | converseDate}}</span>&nbsp;&nbsp;
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- end card-->
+</div>
+
+<div *ngIf="inputNormalJfoCase64">
+  <div class="card border-secondary border col-md-12">
+    <!-- Portlet card -->
+    <div class="card mb-md-0 mb-3">
+      <div class="card-body">
+        <div data-toggle="collapse" data-target="#registrant" role="button" aria-expanded="true"
+          aria-controls="registrant">
+          <span class="text-success font-20"><u>สำนักงานปลัดกระทรงยุติธรรม: </u></span>
+          <span class="text-white font-20"><u>ฐานข้อมูลกองทุนยุติธรรม (2564) </u></span>
+        </div>
+        <div id="registrant" class="collapse pt-3">
+          <div class="col-md-12" class="singlereport-timeline-item">
+            <img src="assets/dist/img/dxc-img/symbol/datatype/32/jfo-jfo-case.png">&nbsp;
+            <input type="hidden" value="ฐานข้อมูลกองทุนยุติธรรม (2564)" #jfoCase64Title>
+            <input type="hidden" value="assets/dist/img/jfo.png" #jfoCase64departmentImg>
+            <span class="text-success font-20"><u>ฐานข้อมูลกองทุนยุติธรรม (2564)</u></span>
+            <button class="btn btn-info" style="float: right;" type="button" href="#jfo-case64-full-width-modal" data-toggle="modal"
+                data-target="#jfo-case64-full-width-modal" (click)="selectRow(inputNormalJfoCase64,jfoCase64Title.value,jfoCase64departmentImg.value)">
+                <span class="icon-name"><i class="mdi mdi-arrow-top-right" style="color:white;"></i></span>
+            </button>
+            <div style="padding-left:15px; margin-top: 3%;">
+              <span class="text-white font-20">เลขบัตรประจำตัวประชาชน</span>&nbsp;&nbsp;
+              <span class="text-success font-20"
+                style="text-decoration:underline">{{inputNormalJfoCase64.cardId | filter:"" }}</span>&nbsp;&nbsp;
+              <span class="text-white font-20">เลขสํานวน กทย.</span>&nbsp;&nbsp;
+              <span class="text-success font-20"
+                style="text-decoration:underline">{{inputNormalJfoCase64.jfCaseNo | filter:"" }}</span>&nbsp;&nbsp;
+              <span class="text-white font-20">ชื่อเรื่อง</span>&nbsp;&nbsp;
+              <span class="text-success font-20"
+                style="text-decoration:underline">{{inputNormalJfoCase64.subject | filter:"" }}</span>&nbsp;&nbsp;
+              <span class="text-white font-20">วันที่รับเรื่อง</span>&nbsp;&nbsp;
+              <span class="text-success font-20"
+                style="text-decoration:underline">{{inputNormalJfoCase64.createDate | converseDate}}</span>&nbsp;&nbsp;
+              <span class="text-white font-20">วันที่ลงระบบ</span>&nbsp;&nbsp;
+              <span class="text-success font-20"
+                style="text-decoration:underline">{{inputNormalJfoCase64.registerDate | converseDate}}</span>&nbsp;&nbsp;
+              <span class="text-white font-20">วันที่แก้ไขล่าสุด</span>&nbsp;&nbsp;
+              <span class="text-success font-20"
+                style="text-decoration:underline">{{inputNormalJfoCase64.modifiedDate | converseDate}}</span>&nbsp;&nbsp;
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> <!-- end card-->
+</div>

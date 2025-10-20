@@ -1,0 +1,20 @@
+<div *ngIf="checkCorruptionResults" class="row col-md-12">
+  <div class="col-md-12 media mt-1 p-2 border-secondary border" *ngFor="let corruptionItem of corruptionResults">
+    <div class="media-body">
+      <img src="assets/dist/img/dxc-img/symbol/datatype/32/nacc-corruption-accuseds.png">
+      <span style="margin-left: 15px;font-size: 18px;" class="text-white">ข้อมูลผู้ถูกกล่าวหาคดีด้านการทุจริต(Linkage)</span>
+      <div>
+        <div class="col-md-10 text-white">เลขประจำตัวประชาชน:
+          <span class="dataname text-success">{{corruptionItem.citizenCardNumber | filter:""}}</span>
+        </div>
+        <div class="col-md-8 text-white">ชื่อ:
+          <span class="dataname text-success"> {{corruptionItem.firstName | filter:""}}
+            {{corruptionItem.lastName}}</span>
+        </div>
+        <div class="col-md-4 text-white">เพศ:
+          <span class="dataname text-success"> {{corruptionItem.genderDesc | filter:""}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

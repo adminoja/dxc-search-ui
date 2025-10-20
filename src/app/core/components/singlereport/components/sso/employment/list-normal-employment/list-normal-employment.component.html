@@ -1,0 +1,37 @@
+<div *ngIf="ssoEmploymentCount">
+    <div class="card border-secondary border col-md-12">
+      <!-- Portlet card -->
+      <div class="card mb-md-0 mb-3">
+        <div class="card-body">
+          <div data-toggle="collapse" data-target="#Employment" role="button" aria-expanded="true"
+            aria-controls="addresses">
+            <span class="text-success font-20"><u>สำนักงานประกันสังคม: </u></span>
+            <span class="text-white font-20"><u>ประวัติผู้จ้างงาน</u></span>
+            <span class="text-warning font-20"><u>จำนวน: {{ssoEmploymentCount}} รายการ </u></span>
+          </div>
+          <div id="Employment" class="collapse pt-3">
+            <div class="col-md-12" *ngFor="let ssoEmploymentItem of ssoEmploymentResults"
+              class="singlereport-timeline-item">
+              <img src="assets/dist/img/dxc-img/symbol/datatype/32/sso-employment.png">&nbsp;
+              <input type="hidden" value="ประวัติผู้จ้างงาน" #ssoEmploymentTitle>
+              <input type="hidden" value="assets/dist/img/sso.png" #ssoEmploymentImg>
+              <span class="text-success font-20"><u>ประวัติผู้จ้างงาน</u></span>
+              <button class="btn btn-info" style="float: right;" type="button" href="#employee-employment-detail-full-width-modal" 
+                data-toggle="modal" data-target="#employee-employment-detail-full-width-modal"
+                (click)="selectRow(ssoEmploymentItem,ssoEmploymentTitle.value,ssoEmploymentImg.value)">
+                <span class="icon-name"><i class="mdi mdi-arrow-top-right" style="color:white;"></i></span>
+              </button>
+              <div style="padding-left:15px; margin-top: 3%;">
+                <span class="text-white font-20">ชื่อบริษัท</span>&nbsp;&nbsp;
+                <span class="text-success font-20"><u>{{ssoEmploymentItem.companyName | converseNull}} </u></span>&nbsp;&nbsp;
+                <span class="text-white font-20">สถานะลูกจ้าง</span>&nbsp;&nbsp;
+                <span class="text-success font-20">&nbsp;<u>{{ssoEmploymentItem.employStatusDesc | converseNull}}</u>&nbsp;</span>&nbsp;&nbsp;
+                <span class="text-white font-20">วันที่เริ่มจ้างงาน</span>&nbsp;&nbsp;
+                <span class="text-success font-20">&nbsp;<u>{{ssoEmploymentItem.expStartDate | converseDate}}</u>&nbsp;</span>&nbsp;&nbsp;
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- end card-->
+  </div>

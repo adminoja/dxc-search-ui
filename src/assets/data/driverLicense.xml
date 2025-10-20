@@ -1,0 +1,56 @@
+<result>
+  <header>
+    <requesterAccessResource>/api/qm/dlt/driver-licenses/v1</requesterAccessResource>
+    <requesterAccessDateTime>2020-12-14T00:00:00+07:00</requesterAccessDateTime>
+    <requesterGlobalTransactionId/>
+    <requesterLocalTransactionId/>
+    <requesterUsername>3230200083344</requesterUsername>
+    <requesterIpAddress>10.14.33.66</requesterIpAddress>
+    <requesterToken/>
+    <responderTransactionId>dc5b64c6172d457d866f0b60c23f6bd0</responderTransactionId>
+    <responderResponseDateTime>2020-12-14T00:00:00+07:00</responderResponseDateTime>
+    <criteria>driverLicense.citizenCardNumber='1100800912338'</criteria>
+    <orderBy/>
+    <maxNumberOfResults>100</maxNumberOfResults>
+    <offset>0</offset>
+    <numberOfResults>1</numberOfResults>
+    <totalNumberOfResults>1</totalNumberOfResults>
+  </header>
+  <data>
+    <driverLicense id="1100800912338">
+      <citizenCardNumber>1100800912338</citizenCardNumber>
+      <fullName>นาย สิทธิพงษ์ ติยะภูมิ</fullName>
+      <address>ตำบลกระทุ่มล้ม อำเภอสามพราน จังหวัดนครปฐม</address>
+      <diseasesAndConditionIndex/>
+      <driverLicensePK>
+        <licenseNumber>62006769</licenseNumber>
+        <type>รถยนต์ส่วนบุคคล</type>
+        <typeCode>24</typeCode>
+        <officeBranch/>
+        <officeBranchCode>00102</officeBranchCode>
+        <idString>62006769%7C24%7C00102</idString>
+      </driverLicensePK>
+      <issueDateString>20190314</issueDateString>
+      <expirationDateString>20240910</expirationDateString>
+      <status>ไม่เพิกถอน</status>
+      <sequester/>
+      <dataSubmitDate>2020-12-14T14:26:01.68+07:00</dataSubmitDate>
+      <officeBranch/>
+      <type>รถยนต์ส่วนบุคคล</type>
+      <licenseNumber>62006769</licenseNumber>
+      <licenseIssueDate>2019-03-14T00:00:00+07:00</licenseIssueDate>
+      <issueDate>2019-03-14T00:00:00+07:00</issueDate>
+      <licenseExpirationDate>2024-09-10T00:00:00+07:00</licenseExpirationDate>
+      <expirationDate>2024-09-10T00:00:00+07:00</expirationDate>
+      <idString>62006769%7C24%7C00102</idString>
+      <primaryKey>
+        <licenseNumber>62006769</licenseNumber>
+        <type>รถยนต์ส่วนบุคคล</type>
+        <typeCode>24</typeCode>
+        <officeBranch/>
+        <officeBranchCode>00102</officeBranchCode>
+        <idString>62006769%7C24%7C00102</idString>
+      </primaryKey>
+    </driverLicense>
+  </data>
+</result>

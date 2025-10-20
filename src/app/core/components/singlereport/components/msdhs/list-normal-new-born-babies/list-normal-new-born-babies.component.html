@@ -1,0 +1,60 @@
+<div *ngIf="newBornBabiesCount">
+    <div class="card border-secondary border col-md-12">
+       <!-- Portlet card -->
+       <div class="card mb-md-0 mb-3">
+        <div class="card-body">
+          <div data-toggle="collapse" data-target="#newBornBabiescollapse" role="button" aria-expanded="true"
+              aria-controls="regseize">
+            <span class="text-success font-20"><u>ฐานข้อมูลทะเบียนแรกเกิด(Linkage):</u></span>
+            <span class="text-white font-20"><u> กระทรวงพัฒนาสังคมและความมั่นคงของมนุษย์</u></span>
+            <span class="text-warning font-20"><u> จำนวน: {{newBornBabiesCount}} รายการ</u></span>
+          </div>
+          <div id="newBornBabiescollapse" class="collapse pt-3">
+            <div class="col-md-12" *ngFor="let newBornBabiesItem of newBornBabiesResults" class="singlereport-timeline-item">
+              <input type="hidden" value="ฐานข้อมูลทะเบียนแรกเกิด(Linkage)" #newBornBabiesTitle>
+              <input type="hidden" value="assets/dist/img/msdhs.png" #newBornBabiesdepartmentImg>
+              <span class="text-success font-20">  
+                <img src="assets/dist/img/dxc-img/symbol/datatype/32/moi-msdhs-new-born-babies.png">&nbsp;<u>กระทรวงพัฒนาสังคมและความมั่นคงของมนุษย์</u></span>
+              <button class="btn btn-info" style="float: right;" type="button" href="#new-born-babies-full-width-modal" data-toggle="modal" 
+                      data-target="#new-born-babies-full-width-modal" (click)="selectRow(newBornBabiesItem,newBornBabiesTitle.value,newBornBabiesdepartmentImg.value)">
+                <span class="icon-name"><i class="mdi mdi-arrow-top-right" style="color:white;"></i></span>
+              </button>
+  
+                <div style="padding-left:15px; margin-top: 3%;">
+                  <span class="text-white font-20">เลขประจำตัวประชาชนชนเด็ก</span>&nbsp;&nbsp;
+                  <span class="text-success font-20" style="text-decoration:underline">
+                    {{newBornBabiesItem.citizenCardNumber  | filter:""}}
+                  </span>&nbsp;&nbsp;
+                  <span class="text-white font-20">ชื่อเด็ก</span>&nbsp;&nbsp;
+                  <span class="text-success font-20" style="text-decoration:underline">
+                    {{newBornBabiesItem.childName | filter:""}}
+                  </span>&nbsp;&nbsp;
+                  <span class="text-white font-20">นามสกุลเด็ก</span>&nbsp;&nbsp;
+                  <span class="text-success font-20" style="text-decoration:underline">
+                    {{newBornBabiesItem.childSurname | filter:""}}
+                  </span>&nbsp;&nbsp;
+                  <span class="text-white font-20">สถานะ</span>&nbsp;&nbsp;
+                  <span class="text-success font-20" style="text-decoration:underline">
+                    {{newBornBabiesItem.childStatus | filter:""}}
+                  </span>&nbsp;&nbsp;
+                  <span class="text-white font-20">วันที่ลงทะเบียน</span>&nbsp;&nbsp;
+                  <span class="text-success font-20" style="text-decoration:underline">
+                    {{newBornBabiesItem.childRegisterDate | filter:""}}
+                  </span>&nbsp;&nbsp;
+                  <span class="text-white font-20">สถานที่ลงทะเบียน</span>&nbsp;&nbsp;
+                  <span class="text-success font-20" style="text-decoration:underline">
+                    {{newBornBabiesItem.childRegisterPlace | filter:""}}
+                  </span>&nbsp;&nbsp;
+                  <span class="text-white font-20">จังหวัดรับลงทะเบียน</span>&nbsp;&nbsp;
+                  <span class="text-success font-20" style="text-decoration:underline">
+                    {{newBornBabiesItem.childRegisterProvince | filter:""}}
+                  </span>&nbsp;&nbsp;
+                </div>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end card-->
+    </div>
+  </div>

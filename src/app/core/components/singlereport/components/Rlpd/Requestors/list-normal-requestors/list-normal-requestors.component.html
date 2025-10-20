@@ -1,0 +1,85 @@
+<div *ngIf="requestorsCount !==0 && !inputNormalRequestors">
+  <div class="card border-secondary border col-md-12">
+    <!-- Portlet card -->
+    <div class="card mb-md-0 mb-3">
+      <div class="card-body">
+        <div data-toggle="collapse" data-target="#requestorscollapse" role="button" aria-expanded="true">
+          <span class="text-success font-20"><u>กรมคุ้มครองสิทธิและเสรีภาพ </u></span>
+          <span class="text-white font-20"><u>(ผู้ร้องทุกข์)</u></span>
+          <span class="text-warning font-20"><u>จำนวน: {{requestorsCount}} รายการ </u></span>
+        </div>
+        <div id="requestorscollapse" class="collapse pt-3">
+          <div class="col-md-12" *ngFor="let requestorsItem of requestorsResults"
+            class="singlereport-timeline-item">
+            <img src="assets/dist/img/dxc-img/symbol/datatype/32/rlpd-complainant.png">&nbsp;
+            <input type="hidden" value="ผู้ร้องทุกข์" #requestorsTitle>
+            <input type="hidden" value="assets/dist/img/rlpd.png" #requestorsdepartmentImg>
+            <span class="text-success font-20"><u>ผู้ร้องทุกข์</u></span>
+            <button class="btn btn-info" style="float: right;" type="button" href="#requestors-full-width-modal"
+              data-toggle="modal" data-target="#requestors-full-width-modal"
+              (click)="selectRow(requestorsItem,requestorsTitle.value,requestorsdepartmentImg.value)">
+              <span class="icon-name"><i class="mdi mdi-arrow-top-right" style="color:white;"></i></span>
+            </button>
+            <div style="padding-left:15px; margin-top: 3%;">
+              <span class="text-white font-20">ชื่อ</span>&nbsp;&nbsp;
+              <span class="text-success font-20" style="text-decoration:underline">
+                {{requestorsItem.personGivenName | filter:"" }}
+                {{requestorsItem.personSurName | filter:""}}</span>&nbsp;&nbsp;
+              <span class="text-white font-20">วันที่รับเรื่อง</span>&nbsp;&nbsp;
+              <span class="text-success font-20" style="text-decoration:underline">
+                {{requestorsItem.entryDate | converseDate }}</span>&nbsp;&nbsp;
+              <span class="text-white font-20">ชื่อเรื่อง</span>&nbsp;&nbsp;
+              <span class="text-success font-20" style="text-decoration:underline">
+                {{requestorsItem.caseName | filter:"" }}</span>&nbsp;&nbsp;
+              <span class="text-white font-20">หน่วยงานเจ้าของคดี</span>&nbsp;&nbsp;
+              <span class="text-success font-20" style="text-decoration:underline">
+                {{requestorsItem.departmentName | filter:"" }}</span>&nbsp;&nbsp;
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> <!-- end card-->
+</div>
+
+<div *ngIf="inputNormalRequestors">
+  <div class="card border-secondary border col-md-12">
+    <!-- Portlet card -->
+    <div class="card mb-md-0 mb-3">
+      <div class="card-body">
+        <div data-toggle="collapse" data-target="#requestorscollapse" role="button" aria-expanded="true">
+          <span class="text-success font-20"><u>กรมคุ้มครองสิทธิและเสรีภาพ </u></span>
+          <span class="text-white font-20"><u>(ผู้ร้องทุกข์)</u></span>
+        </div>
+        <div id="requestorscollapse" class="collapse pt-3">
+          <div class="col-md-12" class="singlereport-timeline-item">
+            <img src="assets/dist/img/dxc-img/symbol/datatype/32/rlpd-complainant.png">&nbsp;
+            <input type="hidden" value="ผู้ร้องทุกข์" #requestorsTitle>
+            <input type="hidden" value="assets/dist/img/dopa.png" #requestorsdepartmentImg>
+            <span class="text-success font-20"><u>ผู้ร้องทุกข์</u></span>
+            <button class="btn btn-info" style="float: right;" type="button" href="#requestors-full-width-modal"
+              data-toggle="modal" data-target="#requestors-full-width-modal"
+              (click)="selectRow(inputNormalRequestors,requestorsTitle.value,requestorsdepartmentImg.value)">
+              <span class="icon-name"><i class="mdi mdi-arrow-top-right" style="color:white;"></i></span>
+            </button>
+            <div style="padding-left:15px; margin-top: 3%;">
+              <span class="text-white font-20">ชื่อ</span>&nbsp;&nbsp;
+              <span class="text-success font-20" style="text-decoration:underline">
+                {{inputNormalRequestors.personGivenName | filter:"" }}
+                {{inputNormalRequestors.personSurName | filter:""}}</span>&nbsp;&nbsp;
+              <span class="text-white font-20">วันที่รับเรื่อง</span>&nbsp;&nbsp;
+              <span class="text-success font-20" style="text-decoration:underline">
+                {{inputNormalRequestors.entryDate | converseDate }}</span>&nbsp;&nbsp;
+              <span class="text-white font-20">ชื่อเรื่อง</span>&nbsp;&nbsp;
+              <span class="text-success font-20" style="text-decoration:underline">
+                {{inputNormalRequestors.caseName | filter:"" }}</span>&nbsp;&nbsp;
+              <span class="text-white font-20">หน่วยงานเจ้าของคดี</span>&nbsp;&nbsp;
+              <span class="text-success font-20" style="text-decoration:underline">
+                {{inputNormalRequestors.departmentName | filter:"" }}</span>&nbsp;&nbsp;
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> <!-- end card-->
+</div>

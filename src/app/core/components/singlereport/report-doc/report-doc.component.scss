@@ -1,0 +1,53 @@
+.card-body {
+    padding: 15px;
+}
+
+.page-title {
+    padding: 10px;
+}
+
+h3 {
+    text-align: center;
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: lighter;
+    text-align: right;
+}
+
+h5, th, td, p, li {
+    font-size: 20px;
+}
+
+.card .mt-2  {
+    background-color: #3E4853; 
+    max-width: 100%; 
+    width: 300px; 
+    margin: 0 auto; 
+    float: none;
+}
+
+.table-striped th, .table-striped td {
+    border: 1px solid #46505B;
+    padding: 8px;
+}
+
+.table-striped th {
+    width: 250px;
+}
+
+.table-striped td {
+    width: 400px;
+    height: 87px;
+}
+
+.nav-pills {
+    justify-content: flex-end;
+    padding-right: 10px;
+}
+
+#chart {
+    max-width: 1500px;
+    // margin: 35px auto;
+}

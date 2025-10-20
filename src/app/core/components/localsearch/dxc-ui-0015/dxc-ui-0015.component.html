@@ -1,0 +1,333 @@
+<!-- Start Content-->
+<div class="container-fluid">
+
+  <div class="row">
+    <div class="col-xl-8">
+      <!-- start page title -->
+      <div class="page-title-box">
+        <div class="page-title-right">
+          <div class="app-search">
+            <!-- <form>
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search..." />
+                <span class="mdi mdi-magnify search-icon"></span>
+                <div class="input-group-append">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <i class='uil uil-sort-amount-down'></i>
+                  </button>
+                  <div class="dropdown-menu dropdown-menu-right">
+                      <a class="dropdown-item" href="#">Due Date</a>
+                      <a class="dropdown-item" href="#">Added Date</a>
+                      <a class="dropdown-item" href="#">Assignee</a>
+                    </div>
+                </div>
+              </div>
+            </form> -->
+          </div>
+        </div>
+        <h3 class="page-title font-20">ฐานข้อมูลที่ท่านมีสิทธิ์เข้าใช้งานได้
+          <!-- <a href="#" class="btn btn-success btn-sm ml-3">Add New</a> -->
+        </h3>
+      </div>
+      <!-- end page title -->
+      <!-- tasks panel -->
+      <div class="accordion" id="accordionExample">
+        <div class="mt-2" *ngFor="let panel of accordionList">
+          <a class="text-white font-20" data-toggle="collapse" href="#{{panel.titleEn}}" aria-expanded="false"
+            aria-controls="collapse">
+            <span class="m-0 pb-2">
+              <i class='uil uil-angle-down'></i>{{panel.title}}
+              <span class="text-success">{{panel.sub | countlength}}</span>
+            </span>
+          </a>
+          <div id="collapse" id="{{panel.titleEn}}" *ngFor="let sub of panel.sub" class="collapse"
+            aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div *ngFor="let dataAcl of DXC_GROUP_DATA_ACL">
+              <div *ngFor="let subx of sub  | objectvalue">
+                <input #img_database type="hidden" value="{{subx.img}}">
+                <input #title type="hidden" value="{{subx.title}}">
+                <input #departmentImg type="hidden" value="{{panel.img}}">
+                <input type="hidden" #departmentTitle name="{{panel.title}}" value="{{panel.title}}">
+                <div class="card mb-0">
+                  <div class="card-body"
+                    *ngIf="dataAcl.schema == subx.schema && dataAcl.allowValue=='on'; else on">
+                    <!-- task -->
+                    <div class="row justify-content-sm-between">
+                      <div class="col-sm-10 mb-2 mb-sm-0 ">
+                        <div class="custom-control">
+                          <span>
+                            <img src="{{subx.img}}" alt="image" class="rounded mr-1"
+                              data-toggle="tooltip" data-placement="bottom" title="Assigned to Arya S" />
+                          </span>
+                          <a
+                            (click)="btnDatabase_Click(title.value, remark1.value, img_database.value, departmentImg.value, departmentTitle.value)">
+                            <span class="text-white font-20" for="task1" style="cursor: pointer;">
+                              {{subx.title}}
+                            </span>
+                          </a>
+                        </div> <!-- end checkbox -->
+                      </div> <!-- end col -->
+                      <div class="col-sm-2">
+                        <div class="d-flex justify-content-between">
+                          <div>
+                            <ul class="list-inline font-13 text-right">
+                              <li class="list-inline-item ml-2">
+                                <!-- <span class="badge badge-success-lighten p-1">⬤</span> -->
+                                <input #remark1 type="hidden" value="{{subx.remark1}}">
+                              </li>
+                            </ul>
+                          </div>
+                        </div> <!-- end .d-flex-->
+                      </div> <!-- end col -->
+                    </div><!-- end task -->
+                    <!-- task -->
+                    <!-- <div class="row justify-content-sm-between" *ngIf="subx.title === 'ฐานข้อมูลคำพิพากษาอย่างย่อ'">
+                      <div class="col-sm-6 mb-2 mb-sm-0">
+                        <div class="custom-control custom-checkbox">
+                          <span>
+                            <img src="{{subx.img}}" alt="image" class="rounded mr-1"
+                              data-toggle="tooltip" data-placement="bottom" title="Assigned to Arya S" />
+                          </span>
+
+                          <span class="text-white font-20" for="task1" style="cursor: pointer;" >
+                            {{subx.title}}
+                          </span>
+
+                        </div> 
+                      </div> 
+                      <div class="col-sm-6">
+                        <div class="d-flex justify-content-between">
+                          <div>
+                            <img src="assets/dist/img/lock.png" class="avatar-xs rounded-circle mr-1"
+                              data-toggle="tooltip" data-placement="bottom" title="Assigned to Arya S">
+                          </div>
+                          <div *ngIf="subx.title !== 'ฐานข้อมูลคำพิพากษาอย่างย่อ'">
+                            <ul class="list-inline font-13 text-right">
+                              <li class="list-inline-item">
+                                <i class='uil uil-schedule  mr-1'></i>
+                                <span class="text-warning font-20">
+                                  หมายเหตุ :
+                                  <span class="text-danger font-20">ไม่มีสิทธิ์การเข้าใช้งาน!!</span>
+                                </span>
+                                <input #remark1 type="hidden" value="{{subx.remark1}}">
+                              </li>
+
+                            </ul>
+                          </div>
+                          <div *ngIf="subx.title === 'ฐานข้อมูลคำพิพากษาอย่างย่อ'">
+                            <ul class="list-inline font-13 text-right">
+                              <li class="list-inline-item">
+                                <i class='uil uil-schedule  mr-1'></i>
+                                <span class="text-warning font-20">
+                                  หมายเหตุ :
+                                  <span class="text-danger font-20">อยู่ระหว่างปรับปรุงบริการ</span>
+                                </span>
+                                <input #remark1 type="hidden" value="{{subx.remark1}}">
+                              </li>
+                            </ul>
+                          </div>
+                        </div> 
+                      </div> 
+                    </div> -->
+                    <!-- end task -->
+                  </div> <!-- end card-body-->
+                  <ng-template #on>
+                    <div class="card mb-0 font-20">
+                      <div class="card-body" *ngIf="dataAcl.schema == subx.schema && dataAcl.allowValue=='off';">
+                        <!-- task -->
+                        <div class="row justify-content-sm-between">
+                          <div class="col-sm-6 mb-2 mb-sm-0">
+                            <div class="custom-control custom-checkbox">
+                              <span>
+                                <img src="{{subx.img}}" alt="image" class="rounded mr-1"
+                                  data-toggle="tooltip" data-placement="bottom" title="Assigned to Arya S" />
+                              </span>
+
+                              <span class="text-white font-20" for="task1" style="cursor: pointer;" >
+                                {{subx.title}}
+                              </span>
+
+                            </div> <!-- end checkbox -->
+                          </div> <!-- end col -->
+                          <div class="col-sm-6">
+                            <div class="d-flex justify-content-between">
+                              <div>
+                                <img src="assets/dist/img/lock.png" class="avatar-xs rounded-circle mr-1"
+                                  data-toggle="tooltip" data-placement="bottom" title="Assigned to Arya S">
+                              </div>
+                              <div *ngIf="subx.title !== 'ฐานข้อมูลคำพิพากษาอย่างย่อ'">
+                                <ul class="list-inline font-13 text-right">
+                                  <li class="list-inline-item">
+                                    <i class='uil uil-schedule  mr-1'></i>
+                                    <span class="text-warning font-20">
+                                      หมายเหตุ :
+                                      <span class="text-danger font-20">ไม่มีสิทธิ์การเข้าใช้งาน!!</span>
+                                    </span>
+                                    <input #remark1 type="hidden" value="{{subx.remark1}}">
+                                  </li>
+
+                                </ul>
+                              </div>
+                              <div *ngIf="subx.title === 'ฐานข้อมูลคำพิพากษาอย่างย่อ'">
+                                <ul class="list-inline font-13 text-right">
+                                  <li class="list-inline-item">
+                                    <i class='uil uil-schedule  mr-1'></i>
+                                    <span class="text-warning font-20">
+                                      หมายเหตุ :
+                                      <span class="text-danger font-20">อยู่ระหว่างปรับปรุงบริการ</span>
+                                    </span>
+                                    <input #remark1 type="hidden" value="{{subx.remark1}}">
+                                  </li>
+                                </ul>
+                              </div>
+                            </div> <!-- end .d-flex-->
+                          </div> <!-- end col -->
+                        </div>
+                        <!-- end task -->
+                      </div> <!-- end card-body-->
+                    </div>
+                  </ng-template>
+                </div> <!-- end card -->
+              </div>
+            </div>
+          </div> <!-- end .collapse-->
+        </div> <!-- end .mt-2-->
+      </div>
+    </div> <!-- end col -->
+    <div class="col-xl-4">
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col">
+              <br>
+              <div class="font-18"><i class="mdi mdi-cloud-download"></i> โปรแกรมและเอกสาร</div>
+              <hr>
+              <!-- start โปรแกรมและส่วนขยาย -->
+              <div class="mt-4 mb-2 m-1 text-white font-16"><strong>โปรแกรมและส่วนขยาย</strong></div>
+              <div *ngFor="let download of downloads">
+                <div class="card mb-2 shadow-none border">
+                  <div class="p-1">
+                    <div class="row align-items-center">
+                      <div class="col-auto">
+                        <div class="avatar-sm">
+                          <!-- <span class="avatar-title rounded">.ZIP</span> -->
+                          <img alt="CopySafe PDF Reader" class="media-object img-thumbnail img-responsive"
+                            src="{{download.icon}}" style="width: 48px;height: 48px;">
+                        </div>
+                      </div>
+                      <div class="col pl-0">
+                        <a href="{{download.url}}" class="text-white font-16">{{download.filename}}</a>
+                        <!-- <p class="mb-0">2.3 MB</p> -->
+                      </div>
+                      <div class="col-auto">
+                        <!-- Button -->
+                        <a href="{{download.url}}" data-toggle="tooltip" data-placement="bottom" title=""
+                          class="btn btn-link btn-lg p-0 text-white " data-original-title="Download">
+                          <i class="uil uil-cloud-download"></i>
+                        </a>
+                        <!-- <a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="" class="btn btn-link text-danger btn-lg p-0" data-original-title="Delete">
+                                                                      <i class="uil uil-multiply"></i>
+                                                                  </a> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end โปรแกรมและส่วนขยาย -->
+              <!-- start แบบฟอร์ม/คู่มือการใช้งาน -->
+              <div class="mt-4 mb-2 m-1 text-white font-16"><strong>แบบฟอร์ม/คู่มือการใช้งาน</strong></div>
+              <div *ngFor="let manual of manuals">
+                <div class="card mb-2 shadow-none border">
+                  <div class="p-1">
+                    <div class="row align-items-center">
+                      <div class="col-auto">
+                        <div class="avatar-sm">
+                          <!-- <span class="avatar-title rounded">.ZIP</span> -->
+                          <img alt="{{manual.filename}}" class="media-object img-thumbnail img-responsive"
+                            src="{{manual.icon}}">
+                        </div>
+                      </div>
+                      <div class="col pl-0">
+                        <a href="{{manual.url}}" class="text-white font-16" target="_blank">{{manual.filename}}</a>
+                        <!-- <p class="mb-0">2.3 MB</p> -->
+                      </div>
+                      <div class="col-auto">
+                        <!-- Button -->
+                        <a href="{{manual.url}}" data-toggle="tooltip" data-placement="bottom" title=""
+                          class="btn btn-link btn-lg p-0 text-white " data-original-title="Download" target="_blank">
+                          <i class="uil uil-cloud-download"></i>
+                        </a>
+                        <!-- <a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="" class="btn btn-link text-danger btn-lg p-0" data-original-title="Delete">
+                                                                        <i class="uil uil-multiply"></i>
+                                                                    </a> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end แบบฟอร์ม/คู่มือการใช้งาน -->
+              <!-- end ลิงก์อื่นๆ ที่เกี่ยวข้อง -->
+              <div class="mt-4 mb-2  m-1 font-16"><strong>ลิงก์อื่นๆ ที่เกี่ยวข้อง</strong></div>
+              <div *ngFor="let otherlink of otherlinks">
+                <div class="card mb-2 shadow-none border">
+                  <div class="p-1">
+                    <div class="row align-items-center">
+                      <div class="col-auto">
+                        <div class="avatar-sm">
+                          <img alt="{{otherlink.filename}}" class="media-object img-thumbnail img-responsive"
+                            src="{{otherlink.icon}}">
+                        </div>
+                      </div>
+                      <div class="col pl-0">
+                        <a href="{{otherlink.url}}" class="text-white font-16" target="_blank">{{otherlink.filename}}</a>
+                      </div>
+                      <div class="col-auto">
+                        <a href="{{otherlink.url}}" data-toggle="tooltip" data-placement="bottom" title=""
+                          class="btn btn-link text-white  btn-lg p-0" data-original-title="Download">
+                          <i class="uil uil-cloud-download"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end ลิงก์อื่นๆ ที่เกี่ยวข้อง -->
+              <br>
+              <br>
+              <!-- FAQ -->
+              <div class="row mt-3">
+                <div class="col">
+                  <div class="font-18"><i class="mdi mdi-information"></i> FAQ</div>
+                  <hr>
+                  <div *ngFor="let faq of faqs">
+                    <div class="media mt-3 p-1">
+                      <!-- <img src="assets/images/users/avatar-9.jpg" class="mr-2 rounded-circle" height="36" alt="Arya Stark"> -->
+                      <div class="media-body">
+                        <div class="font-16">
+                          <i class="mdi mdi-comment-text-multiple-outline"></i>&nbsp;
+                          <strong>{{faq.header}}</strong>
+                        </div>
+                        <p class="mt-1 mb-0 text-white font-16" style="margin: 3%;">
+                          {{faq.details}}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end comment -->
+                  <hr>
+                </div> <!-- end col -->
+              </div> <!-- end row -->
+              <!-- end FAQ -->
+            </div> <!-- end col -->
+          </div> <!-- end row-->
+        </div> <!-- end card-body -->
+      </div> <!-- end card-->
+    </div>
+  </div>
+  <!-- end row-->
+</div> <!-- container -->
+<!-- Multiple modal -->
+<!-- <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#multiple-one">Multiple Modal</button> -->
+
+

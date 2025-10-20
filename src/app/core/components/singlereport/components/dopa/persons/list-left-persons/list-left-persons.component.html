@@ -1,0 +1,48 @@
+<div *ngIf="checkmoidopapersonResults" class="row col-md-12">
+  <div class="col-md-12 media mt-1 p-2 border-secondary border" *ngFor="let moidopapersonItem of moidopapersonResults">
+    <div class="media-body">
+      <img src="assets/dist/img/dxc-img/symbol/datatype/32/dopa-citizen.png">
+      <span style="margin-left: 15px;font-size: 18px;" class="text-white">ทะเบียนราษฎร (Linkage)</span>
+      <div>
+        <div class="col-md-10 text-white">เลขประจำตัวประชาชน:
+          <span class="dataname text-success">{{moidopapersonItem.citizenCardNumber | filter:""}}</span>
+        </div>
+        <div class="col-md-8 text-white">ชื่อ:
+          <span class="dataname text-success"> {{moidopapersonItem.firstName | filter:""}}
+            {{moidopapersonItem.lastName | filter:""}}</span>
+        </div>
+        <div class="col-md-4 text-white">เพศ:
+          <span class="dataname text-success"> {{moidopapersonItem.genderDesc | filter:""}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <div *ngIf="moidopapersonResults">
+  <div class="col-md-11" *ngFor="let moidopapersonItem of moidopapersonResults" class="row singlereport-timeline-item">
+    <ul class="list-unstyled feeds_widget" data-toggle="modal" data-target="#searchByCidModal">
+      <li>
+        <div class="feeds-left">
+          <img src="assets/dist/img/dxc-img/symbol/datatype/32/dopa-citizen.png">
+        </div>
+        <div class="feeds-body">
+          <span class="pull-right"></span>
+          <span style="margin-left: 15px;font-size: 18px;">ทะเบียนราษฎร (Linkage)</span>
+          <div class="row">
+            <div class="col-md-13">เลขประจำตัวประชาชน:
+              <span class="dataname text-info">{{moidopapersonItem.citizenCardNumber}}</span>
+            </div>
+            <div class="col-md-8">ชื่อ:
+              <span class="dataname text-info"> {{moidopapersonItem.firstName}}
+                {{moidopapersonItem.lastName}}</span>
+            </div>
+            <div class="col-md-4">เพศ:
+              <span class="dataname text-info"> {{moidopapersonItem.titleSex}}</span>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <app-search-by-cid citizenCardNumber="{{moidopapersonItem.citizenCardNumber}}"></app-search-by-cid>
+  </div>
+</div> -->

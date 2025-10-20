@@ -1,0 +1,79 @@
+<div *ngIf="moidopapor4Count">
+    <div *ngFor="let moidopapor4Item of moidopapor4Results">
+        <div *ngIf="moidopapor4Item.exitCode; else exit">
+          <div *ngIf="report_name != 'รายงาน Single Report'">
+            <div class="card border-secondary border col-md-12">
+              <!-- Portlet card -->
+              <div class="card mb-md-0 mb-3">
+                <div class="card-body">
+                  <div>
+                    <span class="text-success font-20"><u>กรมการปกครอง: </u></span>
+                    <span class="text-white font-20"><u>ฐานข้อมูลใบอนุญาต ป.4 ครอบครองอาวุธปืน (Linkage) </u></span>
+                    <span class="text-danger font-20"><u>{{moidopapor4Item.exitCode | changeStatus}} </u></span>
+                    <span *ngIf="moidopapor4Item.Results && moidopapor4Item.exitCode == 'NOT_FOUND'" class="text-danger font-20"><u> (ไม่พบข้อมูล) </u></span>
+                    <span *ngIf="moidopapor4Item.Results == '[]' && moidopapor4Item.exitCode == 'OK'" class="text-danger font-20">
+                      <u> (ไม่พบข้อมูล) </u>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div> <!-- end card-->
+          </div>
+        </div>
+    </div>
+    <ng-template #exit>
+      <div class="card border-secondary border col-md-12">
+        <!-- Portlet card -->
+        <div class="card mb-md-0 mb-3">
+          <div class="card-body">
+            <div data-toggle="collapse" data-target="#moidopapor4collapse" role="button" aria-expanded="true"
+                  aria-controls="moidopapor4">
+              <span class="text-success font-20"><u>กรมการปกครอง:</u></span>
+              <span class="text-white font-20"><u> ฐานข้อมูลใบอนุญาต ป.4 ครอบครองอาวุธปืน (Linkage)</u></span>
+              <span class="text-warning font-20"><u> จำนวน: {{moidopapor4Count}} รายการ</u></span>
+            </div>  
+            <div id="moidopapor4collapse" class="collapse pt-3">
+              <div class="col-md-12" class="singlereport-timeline-item" *ngFor="let moidopapor4Item of moidopapor4Results">
+                <input type="hidden" value="ฐานข้อมูลใบอนุญาต ป.4 ครอบครองอาวุธปืน (Linkage)" #moidopapor4Title>
+                <input type="hidden" value="assets/dist/img/dopa.png" #moidopapor4departmentImg>
+                <span class="text-success font-20">
+                  <img src="assets/dist/img/dxc-img/symbol/datatype/32/moi-dopa-por4-licenses.png">&nbsp;<u>ฐานข้อมูลใบอนุญาต ป.4 ครอบครองอาวุธปืน (Linkage)</u></span>
+                <!-- <button class="btn btn-info" style="float: right;" type="button" href="#crime-defendant-compensation-career-full-width-modal" data-toggle="modal"
+                  data-target="#crime-defendant-compensation-career-full-width-modal" (click)="selectRow(moidopapor4Item,moidopapor4Title.value,moidopapor4departmentImg.value)">
+                  <span class="icon-name"><i class="mdi mdi-arrow-top-right" style="color:white;"></i></span>
+                </button> -->
+    
+                <div style="padding-left:15px; margin-top: 3%;">
+                  <span class="text-white font-20">ที่อยู่</span>&nbsp;&nbsp;
+                  <span class="text-success font-20" style="text-decoration:underline">
+                    {{moidopapor4Item.address | filter:""}}
+                  </span>&nbsp;&nbsp;
+                  <span class="text-white font-20">เบอร์โทรศัพท์</span>&nbsp;&nbsp;
+                  <span class="text-success font-20" style="text-decoration:underline">
+                    {{moidopapor4Item.phone | filter:""}}
+                  </span>&nbsp;&nbsp;
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+          <!-- end card-->
+      </div>
+    </ng-template>
+</div>
+
+<div *ngIf="report_name != 'รายงาน Single Report'">
+  <div *ngIf="!moidopapor4Count">
+    <div class="card border-secondary border col-md-12">
+      <div class="card mb-md-0 mb-3">
+        <div class="card-body">
+          <div>
+            <span class="text-success font-20"><u>กรมการปกครอง: </u></span>
+            <span class="text-white font-20"><u>ฐานข้อมูลใบอนุญาต ป.4 ครอบครองอาวุธปืน (Linkage) </u></span>
+            <span class="text-danger font-20"><u>(ไม่พบข้อมูล)</u></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

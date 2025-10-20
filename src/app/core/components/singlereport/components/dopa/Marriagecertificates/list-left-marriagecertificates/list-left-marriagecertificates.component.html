@@ -1,0 +1,19 @@
+<div *ngIf="checkmoiDopaMarriageCertificatesResults" class="row col-md-12">
+  <div class="col-md-12 media mt-1 p-2 border-secondary border"
+    *ngFor="let moiDopaMarriageCertificatesItem of moiDopaMarriageCertificatesResults">
+    <div class="media-body">
+      <img src="assets/dist/img/dxc-img/symbol/datatype/32/moi-dopa-marriage-certificates.png">
+      <span style="margin-left: 15px;font-size: 18px;" class="text-white">ข้อมูลทะเบียนสมรส (Linkage)</span>
+      <div class="col-md-10">เลขประจำตัวประชาชน:
+        <span class="dataname text-success">{{moiDopaMarriageCertificatesItem.citizenCardNumber}}</span>
+      </div>
+      <div class="col-md-8">ชื่อ:
+        <span class="dataname text-success"> {{moiDopaMarriageCertificatesItem.firstName}}
+          {{moiDopaMarriageCertificatesItem.lastName}}</span>
+      </div>
+      <div class="col-md-4">เพศ:
+        <span class="dataname text-success"> {{moiDopaMarriageCertificatesItem.sex}}</span>
+      </div>
+    </div>
+  </div>
+</div>

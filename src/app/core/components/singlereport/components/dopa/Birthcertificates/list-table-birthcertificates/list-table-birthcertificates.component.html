@@ -1,0 +1,96 @@
+<div *ngIf="moiDopaBirthcertificatesCount">
+    <div *ngFor="let moiDopaBirthcertificatesItem of moiDopaBirthcertificatesResults">
+        <div *ngIf="moiDopaBirthcertificatesItem.exitCode; else exit">
+          <div *ngIf="report_name != 'รายงาน Single Report'">
+            <div class="card border-secondary border col-md-12">
+              <div class="card mb-md-0 mb-3">
+                <div class="card-body">
+                  <div>
+                    <span class="text-success font-20"><u>กรมการปกครอง: </u></span>
+                    <span class="text-white font-20"><u>ฐานข้อมูลใบสูติบัตร (Linkage) </u></span>
+                    <span class="text-danger font-20"><u>{{moiDopaBirthcertificatesItem.exitCode | changeStatus}}</u></span>
+                    <span *ngIf="moiDopaBirthcertificatesItem.Results && moiDopaBirthcertificatesItem.exitCode == 'NOT_FOUND'" class="text-danger font-20">
+                      <u> (ไม่พบข้อมูล) </u>
+                    </span>
+                    <span *ngIf="moiDopaBirthcertificatesItem.Results == '[]' && moiDopaBirthcertificatesItem.exitCode == 'OK'" class="text-danger font-20"><u> (ไม่พบข้อมูล) </u></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <ng-template #exit>
+        <div class="card border-secondary border col-md-12">
+            <div class="card mb-md-0 mb-3">
+                <div class="card-body">
+                    <div data-toggle="collapse" data-target="#moiDopaBirthcertificatesTablecollapse" role="button" aria-expanded="true"
+                        aria-controls="moiDopaBirthcertificatescollapse">
+                        <span class="text-success font-20"><u>กรมการปกครอง: </u></span>
+                        <span class="text-white font-20"><u>ฐานข้อมูลใบสูติบัตร (Linkage) </u></span>
+                        <span class="text-warning font-20"><u>จำนวน: {{moiDopaBirthcertificatesCount}} รายการ</u></span>
+                    </div>
+                    <div id="moiDopaBirthcertificatesTablecollapse" class="collapse pt-3">
+                        <div class="col-md-12" *ngFor="let moiDopaBirthcertificatesItem of moiDopaBirthcertificatesResults" class="singlereport-timeline-item">
+                            <div class="col-md-12" class="singlereport-timeline-item">
+                                <input type="hidden" value="ฐานข้อมูลใบสูติบัตร (Linkage)" #moiDopaBirthcertificatesTitle>
+                                <input type="hidden" value="assets/dist/img/dopa.png" #moiDopaBirthcertificatesImg>
+                                <img src="assets/dist/img/dxc-img/symbol/datatype/32/moi-dopa-birth-certificates.png" width="25px">
+                                <span class="text-success font-20">&nbsp;<u>ฐานข้อมูลใบสูติบัตร (Linkage)</u></span>
+
+                                <table class="table-striped table-centered mb-0 mt-3 text-20">
+                                    <thead>
+                                        <tr>
+                                            <th>ชื่อตัว</th>
+                                            <th>ชื่อสกุล</th>
+                                            <th>สถานที่เกิด</th>
+                                            <th>วันเดือนปี ที่แจ้งเกิด</th>
+                                            <th>ชื่อนายทะเบียนผู้รับแจ้งการเกิด</th>
+                                            <th>ชื่อผู้แจ้งการเกิด</th>
+                                            <th>ความสัมพันธ์ผู้แจ้งการเกิด</th>
+                                            <th>รายละเอียด</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>{{moiDopaBirthcertificatesItem.firstName | filter:""}}</td>
+                                            <td>{{moiDopaBirthcertificatesItem.lastName | filter:""}}</td>
+                                            <td>{{moiDopaBirthcertificatesItem.placeOfBirth | filter:""}}</td>
+                                            <td>{{moiDopaBirthcertificatesItem.dateOfNotifying | thaidate}}</td>
+                                            <td>{{moiDopaBirthcertificatesItem.officerName | filter:""}}</td>
+                                            <td>{{moiDopaBirthcertificatesItem.personInformName | filter:""}}</td>
+                                            <td>{{moiDopaBirthcertificatesItem.personInformRelation | filter:""}}</td>
+                                            <td class="text-center">
+                                                <button class="btn btn-info" type="button" href="#birthcertificates-table-full-width-modal" data-toggle="modal"
+                                                data-target="#birthcertificates-table-full-width-modal"
+                                                (click)="selectRow(moiDopaBirthcertificatesItem,moiDopaBirthcertificatesTitle.value,moiDopaBirthcertificatesImg.value)">
+                                                <span class="icon-name"><i class="mdi mdi-arrow-top-right" style="color:white;"></i></span>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</div>
+
+<div *ngIf="report_name != 'รายงาน Single Report'">
+    <div *ngIf="!moiDopaBirthcertificatesCount">
+      <div class="card border-secondary border col-md-12">
+        <div class="card mb-md-0 mb-3">
+          <div class="card-body">
+            <div>
+              <span class="text-success font-20"><u>กรมการปกครอง: </u></span>
+              <span class="text-white font-20"><u>ฐานข้อมูลใบสูติบัตร (Linkage) </u></span>
+              <span class="text-danger font-20"><u>(ไม่พบข้อมูล)</u></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

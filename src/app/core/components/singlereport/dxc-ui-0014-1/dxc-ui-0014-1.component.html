@@ -1,0 +1,212 @@
+<!-- <app-header></app-header> -->
+<!-- <section class="content home"> -->
+  <div class="container-fluid">
+    <div *ngIf="report_name != 'รายงาน Single Report'" class="mt-3 mr-2 col col-md-12">
+      <h3>Specialize Report > สืบค้นข้อมูลรวมประวัติบุคคล สำหรับ{{report_name}}</h3>
+      <br/>
+      <div class="col-md-12">
+        <div class="col-md-12">
+          <button class="btn btn-light btn-rounded" style="font-weight:bolder;" (click)="dataTable()">
+            <span class="font-16 text-success" style="font-weight:bolder;">ประวัติการค้นหา</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12 font-20">
+      <div class="col-md-12">
+          <div class="body" style="margin-top:20px;">
+            <div class="container-fluid">
+              <div class="card example-1 scrollbar-ripe-malinka">
+                <div class="body">
+                  <div class="bs-example" data-example-id="media-alignment">
+                    <div class="media list-group-item search-result-link singlereport-newwindows-info search-result-item">
+                      <div class="media-body">
+                        <div class="body">
+                          <!-- Nav tabs -->
+                          <ul class="nav nav-tabs" role="tablist">
+                            <li class="nav-item">
+                              <a class="nav-link active" data-toggle="tab" id="tgbCitizenNumber" href="#home_with_icon_title" (click)="clickTap($event)">
+                                <i class="zmdi zmdi-home"></i>{{ tgbCitizenNumber }}
+                            </a>
+                            </li>
+                            <li *ngIf="report_name == 'รายงาน Single Report'" class="nav-item">
+                              <a
+                                class="nav-link" id="tgbFullname"
+                                data-toggle="tab"
+                                href="#profile_with_icon_title"
+                                (click)="clickTap($event)" >
+                                <i class="zmdi zmdi-account"></i>{{ tgbFullname }}</a
+                              >
+                            </li>
+                          </ul>
+
+                          <!-- Tab panes -->
+                          <div class="tab-content">
+                            <!--การค้นหาด้วยเลขบัตร-->
+                            <div role="tabpanel" class="tab-pane in active" id="home_with_icon_title">
+                              <form #heroForm="ngForm" name="searchFormCitizenNumber">
+                                <div class="form-group">
+                                  <!-- <label for="name">{{ tgbCitizenNumber }}</label> -->
+                                  <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" class="form-control font-20 mt-4" id="name" required [(ngModel)]="citizenCardNumber" name="name" #name="ngModel"
+                                    placeholder="เลข 13 หลัก ไม่มีขีด" maxlength="13" pattern="[0-9]{13}" (keyup)="checkCidNumber(heroForm.form.value)"/>
+                                  <div [hidden]="name.valid || name.pristine" class="alert alert-danger"></div>
+                                </div>
+                                <p>{{ lblNote }}</p>
+                                <div style="margin-bottom:60px;">
+                                  <button type="submit" class="btn btn-primary btn-round font-20" [disabled]="isValid" (click)="btnSearch_Click()" style="float: right;">
+                                    ค้นหา
+                                  </button>
+                                </div>
+                              </form>
+                              <div *ngIf="report_name == 'รายงาน Single Report'">
+                                <b>
+                                  <p>{{ lblConditionEtc }}</p>
+                                </b>
+                                <div id="accordionCid">
+                                  <div id="headingCid">
+                                    <a class="text-white font-20" data-toggle="collapse" data-target="#collapseCid" aria-expanded="false" aria-controls="collapseCid">
+                                      <span class="m-0 pb-2">
+                                        <i class='uil uil-angle-down'></i>ค้นจากทุกฐาน (23 หน่วยงาน 42 ฐานข้อมูล)
+                                      </span>
+                                    </a>
+                                  </div>
+                                  <div id="collapseCid" class="collapse" aria-labelledby="headingCid" data-parent="#accordionCid">
+                                    <div class="card-body">
+                                      <div class="ml-2">
+                                        <div *ngFor=" let value of valueCidSingleReport">
+                                          <input id="{{ value.titleEn }}" type="checkbox" (click)="checkDisableCidV2(value.title, $event)" checked/>
+                                            <img src="{{ value.img }}" width="30px" height="30px"/>
+                                              {{value.title}}
+                                          <div *ngFor="let valueCitizenId of citizenId">
+                                            <div *ngIf="valueCitizenId.titleTH.includes(value.title)">
+                                              <div *ngFor="let dataAcl of DXC_GROUP_DATA_ACL"> 
+                                                <ul *ngIf="dataAcl.schema === valueCitizenId.schema">
+                                                  <input id="{{ valueCitizenId.entry_sub }}" type="checkbox" (click)="checkDbV2(value.titleEn,valueCitizenId.entry_sub, valueCitizenId.db,$event)" 
+                                                    [checked]="valueCitizenId.checked"/>{{valueCitizenId.title}}
+                                                </ul>
+                                                <!-- <ng-template #off>
+                                                  <ul *ngIf="dataAcl.schema === valueCitizenId.schema && dataAcl.allowValue=='off'">
+                                                    <input id="{{ value.titleEn }}" type="hidden" disabled [checked]="false"/>
+                                                    <img src="assets/dist/img/dxc-img/symbol/institute/32/checkbox.png">{{valueCitizenId.title}}
+                                                    <img src="assets/dist/img/lock.png" class="avatar-xs rounded-circle mr-1" data-toggle="tooltip" data-placement="bottom" title="Assigned to Arya S">
+                                                    <span class="text-warning font-20">
+                                                      หมายเหตุ :
+                                                      <span class="text-danger font-20">ไม่มีสิทธิ์การเข้าใช้งาน!!</span>
+                                                    </span>
+                                                  </ul>
+                                                </ng-template> -->
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!--การค้นหาด้วยชื่อ-->
+                            <div role="tabpanel"  class="tab-pane" id="profile_with_icon_title">
+                              <form  #searchFormName="ngForm" name="searchFormName">
+                                <div class="form-group" >
+                                  <p class="mt-4">{{ lblFname }}</p>
+                                  <div class="col-sm-12">
+                                    <div class="form-group">
+                                      <input type="text" class="form-control font-20" id="name" required [(ngModel)]="firstName" name="name" #name="ngModel" placeholder="{{ txtFname }}" pattern="^[a-zA-Z\s]+$|^[ก-๏\s]+$"/>
+                                    </div>
+                                  </div>
+                                  <p>{{ lblLname }}</p>
+                                  <div class="col-sm-12">
+                                    <div class="form-group">
+                                      <input type="text"  class="form-control font-20" id="name" required [(ngModel)]="lastName" name="name" #name="ngModel" placeholder="{{ txtLname }}" pattern="^[a-zA-Z\s]+$|^[ก-๏\s]+$"/>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div style="margin-bottom:60px;">
+                                  <button type="submit" class="btn btn-primary btn-round font-20" [disabled]="!searchFormName.form.valid" (click)="btnSearch_Click()" style="float: right;">
+                                    ค้นหา
+                                  </button>
+                                </div>
+                              </form>
+                              <div *ngIf="report_name == 'รายงาน Single Report'">
+                                <b>
+                                  <p>{{ lblConditionEtc }}</p>
+                                </b>
+                                <div id="accordion">
+                                  <div id="headingTwo">
+                                    <a class="text-white font-20" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                      <span class="m-0 pb-2">
+                                        <i class='uil uil-angle-down'></i>ค้นจากทุกฐาน (11 หน่วยงาน 14 ฐานข้อมูล)
+                                      </span>
+                                    </a>
+                                  </div>
+                                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                    <div class="card-body">
+                                      <!-- <input type="checkbox" id="checkAllFnameLname" value="true" (click)="checkAllV2($event)" checked/>เลือกทุกฐาน -->
+                                      <div class="ml-2">
+                                        <!-- <div id="checkIsFnameLname" style="display:none;margin-left: 20px;"> -->
+                                        <div *ngFor=" let value of valueSingleReport">
+                                          <input id="{{ value.titleEn }}" type="checkbox" (click)="checkDisableV2(value.titleEn, $event)" checked/>
+                                            <img src="{{ value.img }}" width="30px" height="30px"/>
+                                              {{value.title}}
+                                          <div *ngFor="let valueFnameLname of fnameLname">
+                                            <div *ngIf="valueFnameLname.schema.includes(value.titleEn)">
+                                              <div *ngFor="let dataAcl of DXC_GROUP_DATA_ACL">
+                                                <ul *ngIf="dataAcl.schema === valueFnameLname.schema"> 
+                                                  <!--  && dataAcl.allowValue=='on'; else off -->
+                                                  <input id="{{ valueFnameLname.entry_sub }}" type="checkbox" (click)="checkDbV2(value.titleEn,valueFnameLname.entry_sub, valueFnameLname.db,$event)" [checked]="valueFnameLname.checked"/>
+                                                    {{valueFnameLname.title}}
+                                                </ul>
+                                                <!-- <ng-template #off>
+                                                  <ul *ngIf="dataAcl.schema === valueFnameLname.schema && dataAcl.allowValue=='off'">
+                                                    <input id="{{ value.titleEn }}" type="hidden" disabled [checked]="false"/>
+                                                    <img src="assets/dist/img/dxc-img/symbol/institute/32/checkbox.png">{{valueFnameLname.title}}
+                                                    <img src="assets/dist/img/lock.png" class="avatar-xs rounded-circle mr-1" data-toggle="tooltip" data-placement="bottom" title="Assigned to Arya S">
+                                                    <span class="text-warning font-20">
+                                                      หมายเหตุ :
+                                                      <span class="text-danger font-20">ไม่มีสิทธิ์การเข้าใช้งาน!!</span>
+                                                    </span>
+                                                  </ul>
+                                                </ng-template> -->
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div  class="media list-group-item">
+                      <div class="media-body">
+                        <div *ngIf="report_name == 'รายงาน Single Report'">
+                          <p  style="margin-left:10px;">
+                            {{  report_name }}
+                            เหมาะสำหรับค้นหาข้อมูลจากเลขประจำตัวประชาชน ชื่อนามสกุลที่ถูกต้อง ในกรณีที่เงื่อนไขไม่ชัดเจน(เช่น ค้นชื่อที่ขึ้นต้นด้วย 'ก') ระบบจะแสดงรายการผลการค้นหาสูงสุด 100 รายการต่อฐาน
+                          </p>
+                        </div>
+                        <div *ngIf="report_name != 'รายงาน Single Report'">
+                          <div >
+                          <p  style="margin-left:10px;">
+                            {{  report_name }} ค้นหาข้อมูลจากเลขประจำตัวประชาชน 
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- #END# Tabs With Icon Title -->
+  </div>
+  <app-dxc-loader></app-dxc-loader>
+  <!-- <app-footer></app-footer> -->
+<!-- </section> -->

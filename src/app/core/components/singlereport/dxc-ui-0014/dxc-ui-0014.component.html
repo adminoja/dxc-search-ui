@@ -1,0 +1,84 @@
+<!-- <app-header></app-header> -->
+<section class="content home">
+  <!-- *ngIf="getKeycloakService().isLogged() -->
+  <div class="block-header">
+    <div class="row">
+      <div class="col-lg-12 col-md-6 col-sm-12">
+        <h2>
+          <a class="menu-sm" (click)="shouldShow = !shouldShow">
+              <i class="zmdi" [ngClass]="{ show: shouldShow, hide: !shouldShow }" style="cursor: pointer;"></i>
+          </a>
+          Single Report
+        </h2>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid font-20">
+    <div class="row clearfix">
+      <div class="col-md-12 col-lg-8">
+        <div class="row clearfix social-widget">
+          <div class="col-md-4" (click)="lblSingleReportForm_Click('รายงาน Single Report')" target="_parent">
+            <div class="card info-box-2 hover-zoom-effect twitter-widget" style="cursor: pointer;">
+              <div class="icon">
+                <i>
+                  <a>
+                    <img src="assets/dist/img/single_report.png" style="width:50px;height:50px"/>
+                  </a>
+                </i>
+              </div>
+              <div class="content">
+                <div class="text">{{ lblSingleReportDxc }}</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4" (click)="lblSingleReportForm_Click('รายงานสนับสนุนการแสวงหาข้อเท็จจริงกรมคุมประพฤติ')" target="_parent">
+            <div class="card info-box-2 hover-zoom-effect twitter-widget" style="cursor: pointer;">
+              <div class="icon">
+                <i>
+                  <a>
+                    <img src="assets/dist/img/arrest.png" style="width:50px;height:50px"/>
+                  </a>
+                </i>
+              </div>
+              <div class="content">
+                <div class="text">{{ lblSingleReportProbation }}</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4" (click)="lblSingleReportForm_Click('รายงานสนับสนุนการสืบเสาะ ค.ป.๐๔.๑ กรมพินิจฯ')" target="_parent">
+            <div class="card info-box-2 hover-zoom-effect twitter-widget" style="cursor: pointer;">
+              <div class="icon">
+                <i>
+                  <a>
+                    <img src="assets/dist/img/children.png" style="width:50px;height:50px"/>
+                  </a>
+                </i>
+              </div>
+              <div class="content">
+                <div class="text">{{ lblSingleReportConsider }}</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4" (click)="lblSingleReportForm_Click('รายงานประวัติที่อยู่บุคคล')" target="_parent">
+            <div class="card info-box-2 hover-zoom-effect twitter-widget" style="cursor: pointer;">
+              <div class="icon">
+                <i>
+                  <a>
+                    <img  src="assets/dist/img/Address.png"  style="width:50px;height:50px;opacity: 0.8;filter: alpha(opacity=40);"/>
+                  </a>
+                </i>
+              </div>
+              <div class="content">
+                <div class="text">{{ lblSingleReportAddress }}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</section>

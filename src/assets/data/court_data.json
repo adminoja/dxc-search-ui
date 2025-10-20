@@ -1,0 +1,1559 @@
+{
+    "content": [
+        {
+            "court_code": "0000004",
+            "abbr": "gad",
+            "court_name": "สำนักบริหารกลาง"
+        },
+        {
+            "court_code": "0000005",
+            "abbr": "oia",
+            "court_name": "สำนักการต่างประเทศ"
+        },
+        {
+            "court_code": "0000006",
+            "abbr": "isd",
+            "court_name": "ศูนย์วิทยบริการศาลยุติธรรม"
+        },
+        {
+            "court_code": "0000007",
+            "abbr": "iprd",
+            "court_name": "กองสารนิเทศและประชาสัมพันธ์"
+        },
+        {
+            "court_code": "0000009",
+            "abbr": "jti",
+            "court_name": "สถาบันพัฒนาข้าราชการฝ่ายตุลาการศาลยุติธรรม"
+        },
+        {
+            "court_code": "0000010",
+            "abbr": "of",
+            "court_name": "สำนักการคลัง"
+        },
+        {
+            "court_code": "0000011",
+            "abbr": "it",
+            "court_name": "สำนักเทคโนโลยีสารสนเทศ"
+        },
+        {
+            "court_code": "0000012",
+            "abbr": "oppb",
+            "court_name": "สำนักแผนงานและงบประมาณ"
+        },
+        {
+            "court_code": "0000013",
+            "abbr": "jla",
+            "court_name": "สำนักกฎหมายและวิชาการศาลยุติธรรม"
+        },
+        {
+            "court_code": "0000014",
+            "abbr": "iau",
+            "court_name": "สำนักตรวจสอบภายใน"
+        },
+        {
+            "court_code": "0000015",
+            "abbr": "iu",
+            "court_name": "หน่วยตรวจราชการ"
+        },
+        {
+            "court_code": "0000016",
+            "abbr": "rabi",
+            "court_name": "สถาบันวิจัยและพัฒนารพีพัฒนศักดิ์"
+        },
+        {
+            "court_code": "0000017",
+            "abbr": "patsadu",
+            "court_name": "สำนักบริหารทรัพย์สิน"
+        },
+        {
+            "court_code": "0000018",
+            "abbr": "wd",
+            "court_name": "กองสวัสดิการศาลยุติธรรม"
+        },
+        {
+            "court_code": "0000020",
+            "abbr": "op",
+            "court_name": "สำนักการเจ้าหน้าที่"
+        },
+        {
+            "court_code": "0000021",
+            "abbr": "lad",
+            "court_name": "สำนักกิจการคดี"
+        },
+        {
+            "court_code": "0000022",
+            "abbr": "oja",
+            "court_name": "สำนักส่งเสริมงานตุลาการ"
+        },
+        {
+            "court_code": "0000023",
+            "abbr": "tai",
+            "court_name": "สำนักอนุญาโตตุลาการ"
+        },
+        {
+            "court_code": "0000101",
+            "abbr": "jor1",
+            "court_name": "สำนักศาลยุติธรรมประจำภาค 1"
+        },
+        {
+            "court_code": "0000201",
+            "abbr": "jor2",
+            "court_name": "สำนักศาลยุติธรรมประจำภาค 2"
+        },
+        {
+            "court_code": "0000301",
+            "abbr": "jor3",
+            "court_name": "สำนักศาลยุติธรรมประจำภาค 3"
+        },
+        {
+            "court_code": "0000401",
+            "abbr": "jor4",
+            "court_name": "สำนักศาลยุติธรรมประจำภาค 4"
+        },
+        {
+            "court_code": "0000501",
+            "abbr": "jor5",
+            "court_name": "สำนักศาลยุติธรรมประจำภาค 5"
+        },
+        {
+            "court_code": "0000601",
+            "abbr": "jor6",
+            "court_name": "สำนักศาลยุติธรรมประจำภาค 6"
+        },
+        {
+            "court_code": "0000701",
+            "abbr": "jor7",
+            "court_name": "สำนักศาลยุติธรรมประจำภาค 7"
+        },
+        {
+            "court_code": "0000801",
+            "abbr": "jor8",
+            "court_name": "สำนักศาลยุติธรรมประจำภาค 8"
+        },
+        {
+            "court_code": "0000901",
+            "abbr": "jor9",
+            "court_name": "สำนักศาลยุติธรรมประจำภาค 9"
+        },
+        {
+            "court_code": "2000101",
+            "abbr": "appealc1",
+            "court_name": "ศาลอุทธรณ์ภาค 1"
+        },
+        {
+            "court_code": "2000201",
+            "abbr": "appealc2",
+            "court_name": "ศาลอุทธรณ์ภาค 2"
+        },
+        {
+            "court_code": "2000301",
+            "abbr": "appealc3",
+            "court_name": "ศาลอุทธรณ์ภาค 3"
+        },
+        {
+            "court_code": "2000401",
+            "abbr": "appealc4",
+            "court_name": "ศาลอุทธรณ์ภาค 4"
+        },
+        {
+            "court_code": "2000501",
+            "abbr": "appealc5",
+            "court_name": "ศาลอุทธรณ์ภาค 5"
+        },
+        {
+            "court_code": "2000601",
+            "abbr": "appealc6",
+            "court_name": "ศาลอุทธรณ์ภาค 6"
+        },
+        {
+            "court_code": "2000701",
+            "abbr": "appealc7",
+            "court_name": "ศาลอุทธรณ์ภาค 7"
+        },
+        {
+            "court_code": "2000801",
+            "abbr": "appealc8",
+            "court_name": "ศาลอุทธรณ์ภาค 8"
+        },
+        {
+            "court_code": "2000901",
+            "abbr": "appealc9",
+            "court_name": "ศาลอุทธรณ์ภาค 9"
+        },
+        {
+            "court_code": "2000002",
+            "abbr": "appealsc",
+            "court_name": "ศาลอุทธรณ์คดีชำนัญพิเศษ"
+        },
+        {
+            "court_code": "3010001",
+            "abbr": "civil",
+            "court_name": "ศาลแพ่ง"
+        },
+        {
+            "court_code": "3010002",
+            "abbr": "civilbsc",
+            "court_name": "ศาลแพ่งกรุงเทพใต้"
+        },
+        {
+            "court_code": "3010003",
+            "abbr": "civiltbc",
+            "court_name": "ศาลแพ่งธนบุรี"
+        },
+        {
+            "court_code": "3020001",
+            "abbr": "crimc",
+            "court_name": "ศาลอาญา"
+        },
+        {
+            "court_code": "3020002",
+            "abbr": "crimsb",
+            "court_name": "ศาลอาญากรุงเทพใต้"
+        },
+        {
+            "court_code": "3020003",
+            "abbr": "crimtbc",
+            "court_name": "ศาลอาญาธนบุรี"
+        },
+        {
+            "court_code": "3020004",
+            "abbr": "cccm",
+            "court_name": "ศาลอาญาคดีทุจริตและประพฤติมิชอบกลาง"
+        },
+        {
+            "court_code": "3020101",
+            "abbr": "cccm1",
+            "court_name": "ศาลอาญาคดีทุจริตและประพฤติมิชอบภาค 1"
+        },
+        {
+            "court_code": "3020201",
+            "abbr": "cccm2",
+            "court_name": "ศาลอาญาคดีทุจริตและประพฤติมิชอบภาค 2"
+        },
+        {
+            "court_code": "3020301",
+            "abbr": "cccm3",
+            "court_name": "ศาลอาญาคดีทุจริตและประพฤติมิชอบภาค 3"
+        },
+        {
+            "court_code": "3020401",
+            "abbr": "cccm4",
+            "court_name": "ศาลอาญาคดีทุจริตและประพฤติมิชอบภาค 4"
+        },
+        {
+            "court_code": "3020501",
+            "abbr": "cccm5",
+            "court_name": "ศาลอาญาคดีทุจริตและประพฤติมิชอบภาค 5"
+        },
+        {
+            "court_code": "3020601",
+            "abbr": "cccm6",
+            "court_name": "ศาลอาญาคดีทุจริตและประพฤติมิชอบภาค 6"
+        },
+        {
+            "court_code": "3020701",
+            "abbr": "cccm7",
+            "court_name": "ศาลอาญาคดีทุจริตและประพฤติมิชอบภาค 7"
+        },
+        {
+            "court_code": "3020801",
+            "abbr": "cccm8",
+            "court_name": "ศาลอาญาคดีทุจริตและประพฤติมิชอบภาค 8"
+        },
+        {
+            "court_code": "3020901",
+            "abbr": "cccm9",
+            "court_name": "ศาลอาญาคดีทุจริตและประพฤติมิชอบภาค 9"
+        },
+        {
+            "court_code": "3030001",
+            "abbr": "lbc",
+            "court_name": "ศาลแรงงานกลาง"
+        },
+        {
+            "court_code": "3030101",
+            "abbr": "lblbrc",
+            "court_name": "ศาลแรงงานภาค 1"
+        },
+        {
+            "court_code": "3030201",
+            "abbr": "lbchnc",
+            "court_name": "ศาลแรงงานภาค 2"
+        },
+        {
+            "court_code": "3030301",
+            "abbr": "lbnksc",
+            "court_name": "ศาลแรงงานภาค 3"
+        },
+        {
+            "court_code": "3030401",
+            "abbr": "lbudtc",
+            "court_name": "ศาลแรงงานภาค 4"
+        },
+        {
+            "court_code": "3030501",
+            "abbr": "lbcmic",
+            "court_name": "ศาลแรงงานภาค 5"
+        },
+        {
+            "court_code": "3030601",
+            "abbr": "lbnkwc",
+            "court_name": "ศาลแรงงานภาค 6"
+        },
+        {
+            "court_code": "3030701",
+            "abbr": "lbkcbc",
+            "court_name": "ศาลแรงงานภาค 7"
+        },
+        {
+            "court_code": "3030801",
+            "abbr": "lbphkc",
+            "court_name": "ศาลแรงงานภาค 8"
+        },
+        {
+            "court_code": "3030901",
+            "abbr": "lbsklc",
+            "court_name": "ศาลแรงงานภาค 9"
+        },
+        {
+            "court_code": "3040001",
+            "abbr": "taxc",
+            "court_name": "ศาลภาษีอากรกลาง"
+        },
+        {
+            "court_code": "3050001",
+            "abbr": "ipitc",
+            "court_name": "ศาลทรัพย์สินทางปัญญาและการค้าระหว่างประเทศกลาง"
+        },
+        {
+            "court_code": "3060001",
+            "abbr": "cbc",
+            "court_name": "ศาลล้มละลายกลาง"
+        },
+        {
+            "court_code": "3070104",
+            "abbr": "smpc",
+            "court_name": "ศาลจังหวัดสมุทรปราการ"
+        },
+        {
+            "court_code": "3070105",
+            "abbr": "ntbc",
+            "court_name": "ศาลจังหวัดนนทบุรี"
+        },
+        {
+            "court_code": "3070106",
+            "abbr": "pttc",
+            "court_name": "ศาลจังหวัดปทุมธานี"
+        },
+        {
+            "court_code": "3070107",
+            "abbr": "tybc",
+            "court_name": "ศาลจังหวัดธัญบุรี"
+        },
+        {
+            "court_code": "3070108",
+            "abbr": "atyc",
+            "court_name": "ศาลจังหวัดพระนครศรีอยุธยา"
+        },
+        {
+            "court_code": "3070109",
+            "abbr": "antc",
+            "court_name": "ศาลจังหวัดอ่างทอง"
+        },
+        {
+            "court_code": "3070110",
+            "abbr": "lbrc",
+            "court_name": "ศาลจังหวัดลพบุรี"
+        },
+        {
+            "court_code": "3070111",
+            "abbr": "snbc",
+            "court_name": "ศาลจังหวัดสิงห์บุรี"
+        },
+        {
+            "court_code": "3070112",
+            "abbr": "cntc",
+            "court_name": "ศาลจังหวัดชัยนาท"
+        },
+        {
+            "court_code": "3070113",
+            "abbr": "cbdc",
+            "court_name": "ศาลจังหวัดชัยบาดาล"
+        },
+        {
+            "court_code": "3070114",
+            "abbr": "srbc",
+            "court_name": "ศาลจังหวัดสระบุรี"
+        },
+        {
+            "court_code": "3070201",
+            "abbr": "cnbc",
+            "court_name": "ศาลจังหวัดชลบุรี"
+        },
+        {
+            "court_code": "3070202",
+            "abbr": "ptyc",
+            "court_name": "ศาลจังหวัดพัทยา"
+        },
+        {
+            "court_code": "3070203",
+            "abbr": "rayc",
+            "court_name": "ศาลจังหวัดระยอง"
+        },
+        {
+            "court_code": "3070204",
+            "abbr": "ctbc",
+            "court_name": "ศาลจังหวัดจันทบุรี"
+        },
+        {
+            "court_code": "3070205",
+            "abbr": "trtc",
+            "court_name": "ศาลจังหวัดตราด"
+        },
+        {
+            "court_code": "3070206",
+            "abbr": "ccsc",
+            "court_name": "ศาลจังหวัดฉะเชิงเทรา"
+        },
+        {
+            "court_code": "3070207",
+            "abbr": "prbc",
+            "court_name": "ศาลจังหวัดปราจีนบุรี"
+        },
+        {
+            "court_code": "3070208",
+            "abbr": "kbbc",
+            "court_name": "ศาลจังหวัดกบินทร์บุรี"
+        },
+        {
+            "court_code": "3070209",
+            "abbr": "nknc",
+            "court_name": "ศาลจังหวัดนครนายก"
+        },
+        {
+            "court_code": "3070210",
+            "abbr": "sakc",
+            "court_name": "ศาลจังหวัดสระแก้ว"
+        },
+        {
+            "court_code": "3070301",
+            "abbr": "nksc",
+            "court_name": "ศาลจังหวัดนครราชสีมา"
+        },
+        {
+            "court_code": "3070302",
+            "abbr": "byic",
+            "court_name": "ศาลจังหวัดบัวใหญ่"
+        },
+        {
+            "court_code": "3070303",
+            "abbr": "skuc",
+            "court_name": "ศาลจังหวัดสีคิ้ว"
+        },
+        {
+            "court_code": "3070304",
+            "abbr": "skupcc",
+            "court_name": "ศาลจังหวัดสีคิ้ว (ปากช่อง)"
+        },
+        {
+            "court_code": "3070305",
+            "abbr": "brrc",
+            "court_name": "ศาลจังหวัดบุรีรัมย์"
+        },
+        {
+            "court_code": "3070306",
+            "abbr": "nrgc",
+            "court_name": "ศาลจังหวัดนางรอง"
+        },
+        {
+            "court_code": "3070307",
+            "abbr": "srnc",
+            "court_name": "ศาลจังหวัดสุรินทร์"
+        },
+        {
+            "court_code": "3070308",
+            "abbr": "rtbc",
+            "court_name": "ศาลจังหวัดรัตนบุรี"
+        },
+        {
+            "court_code": "3070309",
+            "abbr": "sskc",
+            "court_name": "ศาลจังหวัดศรีสะเกษ"
+        },
+        {
+            "court_code": "3070318",
+            "abbr": "ktlc",
+            "court_name": "ศาลจังหวัดกันทรลักษ์"
+        },
+        {
+            "court_code": "3070311",
+            "abbr": "ubtc",
+            "court_name": "ศาลจังหวัดอุบลราชธานี"
+        },
+        {
+            "court_code": "3070312",
+            "abbr": "dudc",
+            "court_name": "ศาลจังหวัดเดชอุดม"
+        },
+        {
+            "court_code": "3070313",
+            "abbr": "ystc",
+            "court_name": "ศาลจังหวัดยโสธร"
+        },
+        {
+            "court_code": "3070314",
+            "abbr": "cypc",
+            "court_name": "ศาลจังหวัดชัยภูมิ"
+        },
+        {
+            "court_code": "3070315",
+            "abbr": "pkwc",
+            "court_name": "ศาลจังหวัดภูเขียว"
+        },
+        {
+            "court_code": "3070316",
+            "abbr": "uncc",
+            "court_name": "ศาลจังหวัดอำนาจเจริญ"
+        },
+        {
+            "court_code": "3070317",
+            "abbr": "phmc",
+            "court_name": "ศาลจังหวัดพิมาย"
+        },
+        {
+            "court_code": "3070401",
+            "abbr": "bngc",
+            "court_name": "ศาลจังหวัดบึงกาฬ"
+        },
+        {
+            "court_code": "3070402",
+            "abbr": "nblc",
+            "court_name": "ศาลจังหวัดหนองบัวลำภู"
+        },
+        {
+            "court_code": "3070403",
+            "abbr": "kknc",
+            "court_name": "ศาลจังหวัดขอนแก่น"
+        },
+        {
+            "court_code": "3070404",
+            "abbr": "phnc",
+            "court_name": "ศาลจังหวัดพล"
+        },
+        {
+            "court_code": "3070405",
+            "abbr": "udtc",
+            "court_name": "ศาลจังหวัดอุดรธานี"
+        },
+        {
+            "court_code": "3070406",
+            "abbr": "leic",
+            "court_name": "ศาลจังหวัดเลย"
+        },
+        {
+            "court_code": "3070407",
+            "abbr": "nnkc",
+            "court_name": "ศาลจังหวัดหนองคาย"
+        },
+        {
+            "court_code": "3070408",
+            "abbr": "mhkc",
+            "court_name": "ศาลจังหวัดมหาสารคาม"
+        },
+        {
+            "court_code": "3070409",
+            "abbr": "riec",
+            "court_name": "ศาลจังหวัดร้อยเอ็ด"
+        },
+        {
+            "court_code": "3070410",
+            "abbr": "klsc",
+            "court_name": "ศาลจังหวัดกาฬสินธุ์"
+        },
+        {
+            "court_code": "3070411",
+            "abbr": "sknc",
+            "court_name": "ศาลจังหวัดสกลนคร"
+        },
+        {
+            "court_code": "3070412",
+            "abbr": "swdc",
+            "court_name": "ศาลจังหวัดสว่างแดนดิน"
+        },
+        {
+            "court_code": "3070413",
+            "abbr": "nkpc",
+            "court_name": "ศาลจังหวัดนครพนม"
+        },
+        {
+            "court_code": "3070414",
+            "abbr": "mdhc",
+            "court_name": "ศาลจังหวัดมุกดาหาร"
+        },
+        {
+            "court_code": "3070415",
+            "abbr": "cphc",
+            "court_name": "ศาลจังหวัดชุมแพ"
+        },
+        {
+            "court_code": "3070501",
+            "abbr": "cmic",
+            "court_name": "ศาลจังหวัดเชียงใหม่"
+        },
+        {
+            "court_code": "3070502",
+            "abbr": "fngc",
+            "court_name": "ศาลจังหวัดฝาง"
+        },
+        {
+            "court_code": "3070503",
+            "abbr": "lpnc",
+            "court_name": "ศาลจังหวัดลำพูน"
+        },
+        {
+            "court_code": "3070504",
+            "abbr": "lpgc",
+            "court_name": "ศาลจังหวัดลำปาง"
+        },
+        {
+            "court_code": "3070505",
+            "abbr": "prec",
+            "court_name": "ศาลจังหวัดแพร่"
+        },
+        {
+            "court_code": "3070506",
+            "abbr": "nanc",
+            "court_name": "ศาลจังหวัดน่าน"
+        },
+        {
+            "court_code": "3070508",
+            "abbr": "pyoc",
+            "court_name": "ศาลจังหวัดพะเยา"
+        },
+        {
+            "court_code": "3070509",
+            "abbr": "cric",
+            "court_name": "ศาลจังหวัดเชียงราย"
+        },
+        {
+            "court_code": "3070510",
+            "abbr": "tngc",
+            "court_name": "ศาลจังหวัดเทิง"
+        },
+        {
+            "court_code": "3070511",
+            "abbr": "mhsc",
+            "court_name": "ศาลจังหวัดแม่ฮ่องสอน"
+        },
+        {
+            "court_code": "3070513",
+            "abbr": "msrc",
+            "court_name": "ศาลจังหวัดแม่สะเรียง"
+        },
+        {
+            "court_code": "3070514",
+            "abbr": "hodc",
+            "court_name": "ศาลจังหวัดฮอด"
+        },
+        {
+            "court_code": "3070515",
+            "abbr": "chkc",
+            "court_name": "ศาลจังหวัดเชียงคำ"
+        },
+        {
+            "court_code": "3070601",
+            "abbr": "utdc",
+            "court_name": "ศาลจังหวัดอุตรดิตถ์"
+        },
+        {
+            "court_code": "3070602",
+            "abbr": "nkwc",
+            "court_name": "ศาลจังหวัดนครสวรรค์"
+        },
+        {
+            "court_code": "3070603",
+            "abbr": "uttc",
+            "court_name": "ศาลจังหวัดอุทัยธานี"
+        },
+        {
+            "court_code": "3070604",
+            "abbr": "kppc",
+            "court_name": "ศาลจังหวัดกำแพงเพชร"
+        },
+        {
+            "court_code": "3070605",
+            "abbr": "takc",
+            "court_name": "ศาลจังหวัดตาก"
+        },
+        {
+            "court_code": "3070606",
+            "abbr": "mesc",
+            "court_name": "ศาลจังหวัดแม่สอด"
+        },
+        {
+            "court_code": "3070607",
+            "abbr": "sktc",
+            "court_name": "ศาลจังหวัดสุโขทัย"
+        },
+        {
+            "court_code": "3070608",
+            "abbr": "swlc",
+            "court_name": "ศาลจังหวัดสวรรคโลก"
+        },
+        {
+            "court_code": "3070609",
+            "abbr": "pslc",
+            "court_name": "ศาลจังหวัดพิษณุโลก"
+        },
+        {
+            "court_code": "3070610",
+            "abbr": "phcc",
+            "court_name": "ศาลจังหวัดพิจิตร"
+        },
+        {
+            "court_code": "3070611",
+            "abbr": "pcbc",
+            "court_name": "ศาลจังหวัดเพชรบูรณ์"
+        },
+        {
+            "court_code": "3070612",
+            "abbr": "lskc",
+            "court_name": "ศาลจังหวัดหล่มสัก"
+        },
+        {
+            "court_code": "3070613",
+            "abbr": "wcbc",
+            "court_name": "ศาลจังหวัดวิเชียรบุรี"
+        },
+        {
+            "court_code": "3070701",
+            "abbr": "rcbc",
+            "court_name": "ศาลจังหวัดราชบุรี"
+        },
+        {
+            "court_code": "3070702",
+            "abbr": "kcbc",
+            "court_name": "ศาลจังหวัดกาญจนบุรี"
+        },
+        {
+            "court_code": "3070703",
+            "abbr": "tppc",
+            "court_name": "ศาลจังหวัดทองผาภูมิ"
+        },
+        {
+            "court_code": "3070704",
+            "abbr": "spbc",
+            "court_name": "ศาลจังหวัดสุพรรณบุรี"
+        },
+        {
+            "court_code": "3070705",
+            "abbr": "nktc",
+            "court_name": "ศาลจังหวัดนครปฐม"
+        },
+        {
+            "court_code": "3070706",
+            "abbr": "smsc",
+            "court_name": "ศาลจังหวัดสมุทรสาคร"
+        },
+        {
+            "court_code": "3070707",
+            "abbr": "smkc",
+            "court_name": "ศาลจังหวัดสมุทรสงคราม"
+        },
+        {
+            "court_code": "3070708",
+            "abbr": "pcrc",
+            "court_name": "ศาลจังหวัดเพชรบุรี"
+        },
+        {
+            "court_code": "3070709",
+            "abbr": "pkkc",
+            "court_name": "ศาลจังหวัดประจวบคีรีขันธ์"
+        },
+        {
+            "court_code": "3070710",
+            "abbr": "hhc",
+            "court_name": "ศาลจังหวัดหัวหิน"
+        },
+        {
+            "court_code": "3070801",
+            "abbr": "nstc",
+            "court_name": "ศาลจังหวัดนครศรีธรรมราช"
+        },
+        {
+            "court_code": "3070802",
+            "abbr": "tnsc",
+            "court_name": "ศาลจังหวัดทุ่งสง"
+        },
+        {
+            "court_code": "3070803",
+            "abbr": "ppnc",
+            "court_name": "ศาลจังหวัดปากพนัง"
+        },
+        {
+            "court_code": "3070804",
+            "abbr": "krbc",
+            "court_name": "ศาลจังหวัดกระบี่"
+        },
+        {
+            "court_code": "3070805",
+            "abbr": "pngc",
+            "court_name": "ศาลจังหวัดพังงา"
+        },
+        {
+            "court_code": "3070806",
+            "abbr": "tkpc",
+            "court_name": "ศาลจังหวัดตะกั่วป่า"
+        },
+        {
+            "court_code": "3070807",
+            "abbr": "phkc",
+            "court_name": "ศาลจังหวัดภูเก็ต"
+        },
+        {
+            "court_code": "3070808",
+            "abbr": "srtc",
+            "court_name": "ศาลจังหวัดสุราษฎร์ธานี"
+        },
+        {
+            "court_code": "3070809",
+            "abbr": "smc",
+            "court_name": "ศาลจังหวัดเกาะสมุย"
+        },
+        {
+            "court_code": "3070810",
+            "abbr": "cyac",
+            "court_name": "ศาลจังหวัดไชยา"
+        },
+        {
+            "court_code": "3070811",
+            "abbr": "wsc",
+            "court_name": "ศาลจังหวัดเวียงสระ"
+        },
+        {
+            "court_code": "3070812",
+            "abbr": "rnnc",
+            "court_name": "ศาลจังหวัดระนอง"
+        },
+        {
+            "court_code": "3070813",
+            "abbr": "cmpc",
+            "court_name": "ศาลจังหวัดชุมพร"
+        },
+        {
+            "court_code": "3070814",
+            "abbr": "lnsc",
+            "court_name": "ศาลจังหวัดหลังสวน"
+        },
+        {
+            "court_code": "3070901",
+            "abbr": "sklc",
+            "court_name": "ศาลจังหวัดสงขลา"
+        },
+        {
+            "court_code": "3070902",
+            "abbr": "ntvc",
+            "court_name": "ศาลจังหวัดนาทวี"
+        },
+        {
+            "court_code": "3070903",
+            "abbr": "stnc",
+            "court_name": "ศาลจังหวัดสตูล"
+        },
+        {
+            "court_code": "3070904",
+            "abbr": "trnc",
+            "court_name": "ศาลจังหวัดตรัง"
+        },
+        {
+            "court_code": "3070905",
+            "abbr": "ptlc",
+            "court_name": "ศาลจังหวัดพัทลุง"
+        },
+        {
+            "court_code": "3070906",
+            "abbr": "ptnc",
+            "court_name": "ศาลจังหวัดปัตตานี"
+        },
+        {
+            "court_code": "3070907",
+            "abbr": "ylac",
+            "court_name": "ศาลจังหวัดยะลา"
+        },
+        {
+            "court_code": "3070908",
+            "abbr": "btnc",
+            "court_name": "ศาลจังหวัดเบตง"
+        },
+        {
+            "court_code": "3070909",
+            "abbr": "nrtc",
+            "court_name": "ศาลจังหวัดนราธิวาส"
+        },
+        {
+            "court_code": "3080101",
+            "abbr": "dsmc",
+            "court_name": "ศาลแขวงดุสิต"
+        },
+        {
+            "court_code": "3080102",
+            "abbr": "tbmc",
+            "court_name": "ศาลแขวงธนบุรี"
+        },
+        {
+            "court_code": "3080103",
+            "abbr": "ptwmc",
+            "court_name": "ศาลแขวงปทุมวัน"
+        },
+        {
+            "court_code": "3080104",
+            "abbr": "bksmc",
+            "court_name": "ศาลแขวงพระนครใต้"
+        },
+        {
+            "court_code": "3080105",
+            "abbr": "bknmc",
+            "court_name": "ศาลแขวงพระนครเหนือ"
+        },
+        {
+            "court_code": "3080106",
+            "abbr": "smpmc",
+            "court_name": "ศาลแขวงสมุทรปราการ"
+        },
+        {
+            "court_code": "3080107",
+            "abbr": "ntbmc",
+            "court_name": "ศาลแขวงนนทบุรี"
+        },
+        {
+            "court_code": "3080108",
+            "abbr": "atymc",
+            "court_name": "ศาลแขวงพระนครศรีอยุธยา"
+        },
+        {
+            "court_code": "3080109",
+            "abbr": "lbrmc",
+            "court_name": "ศาลแขวงลพบุรี"
+        },
+        {
+            "court_code": "3080110",
+            "abbr": "dmmc",
+            "court_name": "ศาลแขวงดอนเมือง"
+        },
+        {
+            "court_code": "3080111",
+            "abbr": "srbmc",
+            "court_name": "ศาลแขวงสระบุรี"
+        },
+        {
+            "court_code": "3080201",
+            "abbr": "cnbmc",
+            "court_name": "ศาลแขวงชลบุรี"
+        },
+        {
+            "court_code": "3080202",
+            "abbr": "ptymc",
+            "court_name": "ศาลแขวงพัทยา"
+        },
+        {
+            "court_code": "3080301",
+            "abbr": "nksmc",
+            "court_name": "ศาลแขวงนครราชสีมา"
+        },
+        {
+            "court_code": "3080303",
+            "abbr": "srnmc",
+            "court_name": "ศาลแขวงสุรินทร์"
+        },
+        {
+            "court_code": "3080304",
+            "abbr": "ubtmc",
+            "court_name": "ศาลแขวงอุบลราชธานี"
+        },
+        {
+            "court_code": "3080401",
+            "abbr": "kknmc",
+            "court_name": "ศาลแขวงขอนแก่น"
+        },
+        {
+            "court_code": "3080402",
+            "abbr": "udtmc",
+            "court_name": "ศาลแขวงอุดรธานี"
+        },
+        {
+            "court_code": "3080403",
+            "abbr": "pypmc",
+            "court_name": "ศาลแขวงพยัคฆภูมิพิสัย"
+        },
+        {
+            "court_code": "3080501",
+            "abbr": "cmimc",
+            "court_name": "ศาลแขวงเชียงใหม่"
+        },
+        {
+            "court_code": "3080502",
+            "abbr": "lpgmc",
+            "court_name": "ศาลแขวงลำปาง"
+        },
+        {
+            "court_code": "3080503",
+            "abbr": "wppmc",
+            "court_name": "ศาลแขวงเวียงป่าเป้า"
+        },
+        {
+            "court_code": "3080601",
+            "abbr": "nkwmc",
+            "court_name": "ศาลแขวงนครสวรรค์"
+        },
+        {
+            "court_code": "3080602",
+            "abbr": "pslmc",
+            "court_name": "ศาลแขวงพิษณุโลก"
+        },
+        {
+            "court_code": "3080603",
+            "abbr": "ntmc",
+            "court_name": "ศาลแขวงนครไทย"
+        },
+        {
+            "court_code": "3080701",
+            "abbr": "rcbmc",
+            "court_name": "ศาลแขวงราชบุรี"
+        },
+        {
+            "court_code": "3080702",
+            "abbr": "spbmc",
+            "court_name": "ศาลแขวงสุพรรณบุรี"
+        },
+        {
+            "court_code": "3080703",
+            "abbr": "nktmc",
+            "court_name": "ศาลแขวงนครปฐม"
+        },
+        {
+            "court_code": "3080801",
+            "abbr": "nstmc",
+            "court_name": "ศาลแขวงนครศรีธรรมราช"
+        },
+        {
+            "court_code": "3080802",
+            "abbr": "srtmc",
+            "court_name": "ศาลแขวงสุราษฎร์ธานี"
+        },
+        {
+            "court_code": "3080803",
+            "abbr": "tnsmc",
+            "court_name": "ศาลแขวงทุ่งสง"
+        },
+        {
+            "court_code": "3080901",
+            "abbr": "sklmc",
+            "court_name": "ศาลแขวงสงขลา"
+        },
+        {
+            "court_code": "3090001",
+            "abbr": "jvnc",
+            "court_name": "ศาลเยาวชนและครอบครัวกลาง"
+        },
+        {
+            "court_code": "3090002",
+            "abbr": "mnbjc",
+            "court_name": "ศาลเยาวชนและครอบครัวกลาง (สาขามีนบุรี)"
+        },
+        {
+            "court_code": "3090101",
+            "abbr": "smpjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดสมุทรปราการ"
+        },
+        {
+            "court_code": "3090102",
+            "abbr": "ntbjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดนนทบุรี"
+        },
+        {
+            "court_code": "3090103",
+            "abbr": "pttjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดปทุมธานี"
+        },
+        {
+            "court_code": "3090104",
+            "abbr": "atyjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดพระนครศรีอยุธยา"
+        },
+        {
+            "court_code": "3090105",
+            "abbr": "antjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดอ่างทอง"
+        },
+        {
+            "court_code": "3090106",
+            "abbr": "lbrjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดลพบุรี"
+        },
+        {
+            "court_code": "3090107",
+            "abbr": "snbjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดสิงห์บุรี"
+        },
+        {
+            "court_code": "3090108",
+            "abbr": "cntjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดชัยนาท"
+        },
+        {
+            "court_code": "3090109",
+            "abbr": "srbjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดสระบุรี"
+        },
+        {
+            "court_code": "3090201",
+            "abbr": "cnbjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดชลบุรี"
+        },
+        {
+            "court_code": "3090202",
+            "abbr": "rayjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดระยอง"
+        },
+        {
+            "court_code": "3090203",
+            "abbr": "ctbjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดจันทบุรี"
+        },
+        {
+            "court_code": "3090204",
+            "abbr": "trtjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดตราด"
+        },
+        {
+            "court_code": "3090205",
+            "abbr": "ccsjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดฉะเชิงเทรา"
+        },
+        {
+            "court_code": "3090206",
+            "abbr": "prbjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดปราจีนบุรี"
+        },
+        {
+            "court_code": "3090207",
+            "abbr": "nknjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดนครนายก"
+        },
+        {
+            "court_code": "3090208",
+            "abbr": "sakjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดสระแก้ว"
+        },
+        {
+            "court_code": "3090301",
+            "abbr": "nksjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดนครราชสีมา"
+        },
+        {
+            "court_code": "3090302",
+            "abbr": "brrjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดบุรีรัมย์"
+        },
+        {
+            "court_code": "3090303",
+            "abbr": "srnjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดสุรินทร์"
+        },
+        {
+            "court_code": "3090304",
+            "abbr": "sskjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดศรีสะเกษ"
+        },
+        {
+            "court_code": "3090305",
+            "abbr": "ubtjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดอุบลราชธานี"
+        },
+        {
+            "court_code": "3090306",
+            "abbr": "ystjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดยโสธร"
+        },
+        {
+            "court_code": "3090307",
+            "abbr": "cypjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดชัยภูมิ"
+        },
+        {
+            "court_code": "3090308",
+            "abbr": "uncjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดอำนาจเจริญ"
+        },
+        {
+            "court_code": "3090401",
+            "abbr": "bngjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดบึงกาฬ"
+        },
+        {
+            "court_code": "3090402",
+            "abbr": "nbljc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดหนองบัวลำภู"
+        },
+        {
+            "court_code": "3090403",
+            "abbr": "kknjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดขอนแก่น"
+        },
+        {
+            "court_code": "3090404",
+            "abbr": "udtjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดอุดรธานี"
+        },
+        {
+            "court_code": "3090405",
+            "abbr": "leijc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดเลย"
+        },
+        {
+            "court_code": "3090406",
+            "abbr": "nnkjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดหนองคาย"
+        },
+        {
+            "court_code": "3090407",
+            "abbr": "mhkjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดมหาสารคาม"
+        },
+        {
+            "court_code": "3090408",
+            "abbr": "riejc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดร้อยเอ็ด"
+        },
+        {
+            "court_code": "3090409",
+            "abbr": "klsjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดกาฬสินธุ์"
+        },
+        {
+            "court_code": "3090410",
+            "abbr": "sknjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดสกลนคร"
+        },
+        {
+            "court_code": "3090411",
+            "abbr": "nkpjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดนครพนม"
+        },
+        {
+            "court_code": "3090412",
+            "abbr": "mdhjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดมุกดาหาร"
+        },
+        {
+            "court_code": "3090501",
+            "abbr": "cmijc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดเชียงใหม่"
+        },
+        {
+            "court_code": "3090502",
+            "abbr": "lpnjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดลำพูน"
+        },
+        {
+            "court_code": "3090503",
+            "abbr": "lpgjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดลำปาง"
+        },
+        {
+            "court_code": "3090504",
+            "abbr": "prejc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดแพร่"
+        },
+        {
+            "court_code": "3090505",
+            "abbr": "nanjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดน่าน"
+        },
+        {
+            "court_code": "3090506",
+            "abbr": "pyojc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดพะเยา"
+        },
+        {
+            "court_code": "3090507",
+            "abbr": "crijc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดเชียงราย"
+        },
+        {
+            "court_code": "3090508",
+            "abbr": "mhsjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดแม่ฮ่องสอน"
+        },
+        {
+            "court_code": "3090601",
+            "abbr": "utdjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดอุตรดิตถ์"
+        },
+        {
+            "court_code": "3090602",
+            "abbr": "nkwjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดนครสวรรค์"
+        },
+        {
+            "court_code": "3090603",
+            "abbr": "uttjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดอุทัยธานี"
+        },
+        {
+            "court_code": "3090604",
+            "abbr": "kppjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดกำแพงเพชร"
+        },
+        {
+            "court_code": "3090605",
+            "abbr": "takjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดตาก"
+        },
+        {
+            "court_code": "3090606",
+            "abbr": "sktjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดสุโขทัย"
+        },
+        {
+            "court_code": "3090607",
+            "abbr": "psljc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดพิษณุโลก"
+        },
+        {
+            "court_code": "3090608",
+            "abbr": "phcjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดพิจิตร"
+        },
+        {
+            "court_code": "3090609",
+            "abbr": "pcbjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดเพชรบูรณ์"
+        },
+        {
+            "court_code": "3090701",
+            "abbr": "rcbjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดราชบุรี"
+        },
+        {
+            "court_code": "3090702",
+            "abbr": "kcbjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดกาญจนบุรี"
+        },
+        {
+            "court_code": "3090703",
+            "abbr": "spbjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดสุพรรณบุรี"
+        },
+        {
+            "court_code": "3090704",
+            "abbr": "nktjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดนครปฐม"
+        },
+        {
+            "court_code": "3090705",
+            "abbr": "smsjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดสมุทรสาคร"
+        },
+        {
+            "court_code": "3090706",
+            "abbr": "smkjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดสมุทรสงคราม"
+        },
+        {
+            "court_code": "3090707",
+            "abbr": "pcrjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดเพชรบุรี"
+        },
+        {
+            "court_code": "3090708",
+            "abbr": "pkkjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดประจวบคีรีขันธ์"
+        },
+        {
+            "court_code": "3090801",
+            "abbr": "nstjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดนครศรีธรรมราช"
+        },
+        {
+            "court_code": "3090802",
+            "abbr": "krbjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดกระบี่"
+        },
+        {
+            "court_code": "3090803",
+            "abbr": "pngjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดพังงา"
+        },
+        {
+            "court_code": "3090804",
+            "abbr": "phkjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดภูเก็ต"
+        },
+        {
+            "court_code": "3090805",
+            "abbr": "srtjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดสุราษฎร์ธานี"
+        },
+        {
+            "court_code": "3090806",
+            "abbr": "rnnjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดระนอง"
+        },
+        {
+            "court_code": "3090807",
+            "abbr": "cmpjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดชุมพร"
+        },
+        {
+            "court_code": "3090901",
+            "abbr": "skljc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดสงขลา"
+        },
+        {
+            "court_code": "3090902",
+            "abbr": "stnjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดสตูล"
+        },
+        {
+            "court_code": "3090903",
+            "abbr": "trnjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดตรัง"
+        },
+        {
+            "court_code": "3090904",
+            "abbr": "ptljc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดพัทลุง"
+        },
+        {
+            "court_code": "3090905",
+            "abbr": "ptnjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดปัตตานี"
+        },
+        {
+            "court_code": "3090906",
+            "abbr": "ylajc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดยะลา"
+        },
+        {
+            "court_code": "3090907",
+            "abbr": "nrtjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดนราธิวาส"
+        },
+        {
+            "court_code": "2000001",
+            "abbr": "appealc",
+            "court_name": "ศาลอุทธรณ์"
+        },
+        {
+            "court_code": "3080203",
+            "abbr": "raymc",
+            "court_name": "ศาลแขวงระยอง"
+        },
+        {
+            "court_code": "3080804",
+            "abbr": "phkmc",
+            "court_name": "ศาลแขวงภูเก็ต"
+        },
+        {
+            "court_code": "30705111",
+            "abbr": "mhspc",
+            "court_name": "ศาลจังหวัดแม่ฮ่องสอน (สาขาปาย)"
+        },
+        {
+            "court_code": "30705112",
+            "abbr": "nanpc",
+            "court_name": "ศาลจังหวัดน่าน (สาขาปัว)"
+        },
+        {
+            "court_code": "30706061",
+            "abbr": "mesc_takjc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดตาก (แม่สอด)"
+        },
+        {
+            "court_code": "1000001",
+            "abbr": "supremecourt",
+            "court_name": "ศาลฎีกา"
+        },
+        {
+            "court_code": "1000007",
+            "abbr": "crimpoli",
+            "court_name": "ศาลฎีกาแผนกคดีอาญาของผู้ดำรงตำแหน่งทางการเมือง"
+        },
+        {
+            "court_code": "30908051",
+            "abbr": "srtjc_sm",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดสุราษฎร์ธานี (เกาะสมุย)"
+        },
+        {
+            "court_code": "3080112",
+            "abbr": "bbmc",
+            "court_name": "ศาลแขวงบางบอน"
+        },
+        {
+            "court_code": "3080504",
+            "abbr": "crmc",
+            "court_name": "ศาลแขวงเชียงราย"
+        },
+        {
+            "court_code": "30909061",
+            "abbr": "ylajc_bt",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดยะลา (เบตง)"
+        },
+        {
+            "court_code": "3010004",
+            "abbr": "civiltlc",
+            "court_name": "ศาลแพ่งตลิ่งชัน"
+        },
+        {
+            "court_code": "3010005",
+            "abbr": "civilpkc",
+            "court_name": "ศาลแพ่งพระโขนง"
+        },
+        {
+            "court_code": "3010006",
+            "abbr": "civilmbc",
+            "court_name": "ศาลแพ่งมีนบุรี"
+        },
+        {
+            "court_code": "3020007",
+            "abbr": "crimtlc",
+            "court_name": "ศาลอาญาตลิ่งชัน"
+        },
+        {
+            "court_code": "3020005",
+            "abbr": "crimpkc",
+            "court_name": "ศาลอาญาพระโขนง"
+        },
+        {
+            "court_code": "3020006",
+            "abbr": "crimmbc",
+            "court_name": "ศาลอาญามีนบุรี"
+        },
+        {
+            "court_code": "30907021",
+            "abbr": "kcbjc_tpp",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดกาญจนบุรี (ทองผาภูมิ)"
+        },
+        {
+            "court_code": "30908031",
+            "abbr": "pngjc_tkc",
+            "court_name": "ศาลเยาวชนและครอบครัวจังหวัดพังงา (ตะกั่วป่า)"
+        },
+        {
+            "court_code": "3080505",
+            "abbr": "cdmc",
+            "court_name": "ศาลแขวงเชียงดาว"
+        },
+        {
+            "court_code": "3080805",
+            "abbr": "krbmc",
+            "court_name": "ศาลแขวงกระบี่"
+        },
+        {
+            "court_code": "3080902",
+            "abbr": "trnmc",
+            "court_name": "ศาลแขวงตรัง"
+        }
+    ]
+}

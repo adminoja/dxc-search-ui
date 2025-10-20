@@ -1,0 +1,76 @@
+<div *ngIf="registerOfTaxpayersCount">
+    <div *ngFor="let registerOfTaxpayersItem of registerOfTaxpayersResults">
+        <div *ngIf="registerOfTaxpayersItem.exitCode; else exit">
+          <div *ngIf="report_name != 'รายงาน Single Report'">
+            <div class="card border-secondary border col-md-12">
+              <!-- Portlet card -->
+              <div class="card mb-md-0 mb-3">
+                <div class="card-body">
+                  <div>
+                    <span class="text-success font-20"><u>กรมสรรพากร: </u></span>
+                    <span class="text-white font-20"><u>ฐานข้อมูลทะเบียนผู้เสียภาษี (Linkage) </u></span>
+                    <span class="text-danger font-20"><u>{{registerOfTaxpayersItem.exitCode | changeStatus}} </u></span>
+                    <span *ngIf="registerOfTaxpayersItem.Results && registerOfTaxpayersItem.exitCode == 'NOT_FOUND'" class="text-danger font-20"><u> (ไม่พบข้อมูล) </u></span>
+                  </div>
+                </div>
+              </div>
+            </div> <!-- end card-->
+          </div>
+        </div>
+    </div>
+    <ng-template #exit>
+        <div class="card border-secondary border col-md-12">
+            <div class="card mb-md-0 mb-3">
+                <div class="card-body">
+                    <div data-toggle="collapse" data-target="#registerOfTaxpayersTablecollapse" role="button" aria-expanded="true"
+                        aria-controls="registerOfTaxpayerscollapse">
+                        <span class="text-success font-20"><u>กรมสรรพากร:</u></span>
+                        <span class="text-white font-20"><u> ฐานข้อมูลทะเบียนผู้เสียภาษี (Linkage)</u></span>
+                        <span class="text-warning font-20"><u> จำนวน: {{registerOfTaxpayersCount}} รายการ</u></span>
+                    </div>
+                    <div id="registerOfTaxpayersTablecollapse" class="collapse pt-3">
+                        <div class="col-md-12" class="singlereport-timeline-item">
+                            <div class="col-md-12" class="singlereport-timeline-item" *ngFor="let registerOfTaxpayersItem of registerOfTaxpayersResults">
+                                <input type="hidden" value="ฐานข้อมูลทะเบียนผู้เสียภาษี (Linkage)" #registerOfTaxpayersTitle>
+                                <input type="hidden" value="assets/dist/img/rd.png" #registerOfTaxpayersImg>
+                                <img src="assets/dist/img/dxc-img/symbol/datatype/32/mof-register-of-taxpayers.png" width="25px">
+                                <span class="text-success font-20">&nbsp;<u>ฐานข้อมูลทะเบียนผู้เสียภาษี (Linkage)</u></span>
+
+                                <table class="table-striped table-centered mb-0 mt-3 text-20">
+                                    <thead>
+                                        <tr>
+                                            <th>ที่อยู่</th>
+                                            <th>เบอร์โทรศัพท์</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>{{ registerOfTaxpayersItem.address | filter:""}}</td>
+                                            <td>{{ registerOfTaxpayersItem.phone | filter:""}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</div>
+
+<div *ngIf="report_name != 'รายงาน Single Report'">
+    <div *ngIf="!registerOfTaxpayersCount">
+      <div class="card border-secondary border col-md-12">
+        <div class="card mb-md-0 mb-3">
+          <div class="card-body">
+            <div>
+              <span class="text-success font-20"><u>กรมสรรพากร: </u></span>
+              <span class="text-white font-20"><u>ฐานข้อมูลทะเบียนผู้เสียภาษี (Linkage) </u></span>
+              <span class="text-danger font-20"><u>(ไม่พบข้อมูล)</u></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,25 @@
+{
+    "content": [
+        {   
+            "caseFundNo": "3055/2557",
+            "year": "2558",
+            "citizenId": "0000000000001",
+            "caseType": "กรณีการขอปล่อยชั่วคราวผู้ต้องหาหรือจำเลย",
+            "ofcNotifyDate": "-",
+            "meetingDate": "-",
+            "ofcStartDate": "-",
+            "ofcResultDate": "-",
+            "receiveDate": "-",
+            "caseEndType": "-",
+            "caseEndDate": "-",
+            "amount": "-",
+            "province": "กรุงเทพมหานคร",
+            "nationality": "ไทย",
+            "categoryId": "-",
+            "subcategoryId": "-",
+            "entryDate" : "-",
+            "sex": "FEMALE",
+            "updated": "2016-11-23T06:25:24.000+0000"
+        }
+    ]
+}

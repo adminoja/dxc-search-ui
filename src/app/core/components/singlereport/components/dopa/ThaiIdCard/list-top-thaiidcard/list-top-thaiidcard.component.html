@@ -1,0 +1,100 @@
+    <div class="row" *ngIf="MoiDopaThaiIdcardShow">
+        <div class="row" *ngFor="let thaiidcardItem of MoiDopaThaiIdcardResults">
+            <div class="col-lg-6 mt-3">
+                <table class="table-striped table-centered mb-0 center">
+                    <tbody>
+                        <tr></tr>
+                        <tr>
+                            <th>เลขประจำตัวประชาชน</th>
+                            <td class="text-success">{{thaiidcardItem.citizenCardNumber | filter:""}}</td>
+                        </tr>
+                        <tr>
+                            <th>เกิดวันที่</th>
+                            <td class="text-success">{{thaiidcardItem.birthDate | thaidate }}</td>
+                        </tr>
+                        <tr>
+                            <th>ที่อยู่</th>
+                            <td style="height: 174px;">
+                                บ้านเลขที่ <span class="text-success">{{thaiidcardItem.addressHouseNo | filter:""}}</span>
+                                หมู่ที่ <span class="text-success">{{thaiidcardItem.addressVillageNo | filter:""}}</span>
+                                ตรอก <span class="text-success">{{thaiidcardItem.addressAlleyWayDesc | filter:""}}</span> 
+                                ซอย <span class="text-success">{{thaiidcardItem.addressAlleyDesc | filter:""}}</span> 
+                                ถนน <span class="text-success">{{thaiidcardItem.addressRoadDesc | filter:""}}</span>
+                                ตําบล <span class="text-success">{{thaiidcardItem.addressSubdistrictDesc | filter:""}}</span> 
+                                อำเภอ <span class="text-success">{{thaiidcardItem.addressDistrictDesc | filter:""}}</span> 
+                                จังหวัด <span class="text-success">{{thaiidcardItem.addressProvinceDesc | filter:""}}</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-lg-6 mt-3">
+                <table class="table-striped table-centered mb-0 center">
+                    <tbody>
+                        <tr></tr>
+                        <tr>
+                            <th>ชื่อตัวและชื่อสกุล</th>
+                            <td class="text-success">{{thaiidcardItem.nameTHFirstName | filter:""}} {{thaiidcardItem.nameTHLastName | filter:""}}</td>
+                        </tr>
+                        <tr>
+                            <th>ศาสนา</th>
+                            <td class="text-success">{{thaiidcardItem.religion | filter:""}}</td>
+                        </tr>
+                        <tr>
+                            <th>วันออกบัตร</th>
+                            <td class="text-success">{{thaiidcardItem.issueDate | thaidate}}</td>
+                        </tr>
+                        <tr>
+                            <th>วันหมดอายุบัตร</th>
+                            <td class="text-success">{{thaiidcardItem.expireDate | thaidate}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row" *ngIf="!MoiDopaThaiIdcardShow">
+        <div class="col-lg-6 mt-3">
+            <table class="table-striped table-centered mb-0 center">
+                <tbody>
+                    <tr></tr>
+                    <tr>
+                        <th>เลขประจำตัวประชาชน</th>
+                        <td class="text-success">{{thaiNin}}</td>
+                    </tr>
+                    <tr>
+                        <th>เกิดวันที่</th>
+                        <td class="text-success">-</td>
+                    </tr>
+                    <tr>
+                        <th>ที่อยู่</th>
+                        <td style="height: 205px;" class="text-success">-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-lg-6 mt-3">
+            <table class="table-striped table-centered mb-0 centers">
+                <tbody>
+                    <tr></tr>
+                    <tr>
+                        <th>ชื่อตัวและชื่อสกุล</th>
+                        <td class="text-success">-</td>
+                    </tr>
+                    <tr>
+                        <th>ศาสนา</th>
+                        <td class="text-success">-</td>
+                    </tr>
+                    <tr>
+                        <th>วันออกบัตร</th>
+                        <td class="text-success">-</td>
+                    </tr>
+                    <tr>
+                        <th>วันหมดอายุบัตร</th>
+                        <td class="text-success">-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>

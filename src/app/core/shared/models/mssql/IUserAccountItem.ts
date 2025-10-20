@@ -1,0 +1,73 @@
+export interface IUserAccountItem {
+
+    id: string;
+    officerNumber: string;
+    citizenCardNumber: string;
+    departmentCode: string;
+    username: string;
+    password: string;
+    accountType: string;
+    activationCode: string;
+    registerDate: string;
+    lastAccessDate: string;
+    createDate: string;
+    isBlock: string;
+    status: string;
+    subStatus: string;
+    exprDate: string;
+    email: string;
+    permissions: string;
+    countLogin: string;
+    countSearch: string;
+    prefix: string;
+    firstName: string;
+    lastName: string;
+    address: string;
+    phoneNumber: string;
+    hadToken: string;
+    adAccount: string;
+    groupId: string;
+    firstNameEn: string;
+    lastNameEn: string;
+    position: string;
+    createrId: string;
+    createrName: string;
+    apikey: string;
+    isAllowServiceAPI: string;
+    apiEnabled: string;
+    drmAccount: string;
+    drmAccountID: string;
+    drmAccountStatus: string;
+    countLoginFail: string;
+    deletedDatetime: string;
+    deleteUsername: string;
+    deleteEmail: string;
+    deleteCitizenCardNumber: string;
+    deleteAdminId: string;
+    deleted: string;
+    profileCompletedDateTime: string;
+    sys_update_registerDate_byscript: string;
+    sys_update_lastAccessDate_byscript: string;
+    refId: string;
+    hideOnReport: string;
+    approvalStatus: string;
+    approvalStatusBy: string;
+    approvalRemark: string;
+    approvalDate: string;
+    province: string;
+    subordinate: string;
+
+        // id: string;
+    // citizenCardNumber: string;
+    // departmentCode: string;
+    // username: string;
+    // firstName: string;
+    // lastName: string;
+    // firstNameEn: string;
+    // lastNameEn: string;
+    // province: string;
+    // position: string;
+    // subordinate: string;
+
+
+}

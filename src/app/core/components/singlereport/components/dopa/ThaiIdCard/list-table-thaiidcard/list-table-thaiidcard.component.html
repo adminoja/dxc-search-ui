@@ -1,0 +1,96 @@
+<div *ngIf="MoiDopaThaiIdcardTableCount">
+    <div *ngFor="let thaiidcardItem of MoiDopaThaiIdcardResults">
+        <div *ngIf="thaiidcardItem.exitCode; else exit">
+          <div *ngIf="report_name != 'รายงาน Single Report'">
+            <div class="card border-secondary border col-md-12">
+              <div class="card mb-md-0 mb-3">
+                <div class="card-body">
+                  <div>
+                    <span class="text-success font-20"><u>กรมการปกครอง: </u></span>
+                    <span class="text-white font-20"><u>บัตรประจำตัวประชาชน (Linkage) </u></span>
+                    <span class="text-danger font-20"><u>{{thaiidcardItem.exitCode | changeStatus}}</u></span>
+                    <span *ngIf="thaiidcardItem.Results && thaiidcardItem.exitCode == 'NOT_FOUND'" class="text-danger font-20">
+                      <u> (ไม่พบข้อมูล) </u>
+                    </span>
+                    <span *ngIf="thaiidcardItem.Results == '[]' && thaiidcardItem.exitCode == 'OK'" class="text-danger font-20">
+                      <u> (ไม่พบข้อมูล) </u>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <ng-template #exit>
+        <div class="card border-secondary border col-md-12">
+        <div class="card mb-md-0 mb-3">
+            <div class="card-body">
+                <div data-toggle="collapse" data-target="#MoiDopaThaiIdcardTablecollapse" role="button" aria-expanded="true"
+                    aria-controls="MoiDopaThaiIdcardTablecollapse">
+                    <span class="text-success font-20"><u>กรมการปกครอง: </u></span>
+                    <span class="text-white font-20"><u>บัตรประจำตัวประชาชน (Linkage) </u></span>
+                    <span class="text-warning font-20"><u>จำนวน: {{MoiDopaThaiIdcardTableCount}} รายการ </u></span>
+                </div>
+                <div id="MoiDopaThaiIdcardTablecollapse" class="collapse pt-3">
+                    <div class="col-md-12" *ngFor="let thaiidcardItem of MoiDopaThaiIdcardResults" class="singlereport-timeline-item">
+                        <div class="col-md-12" class="singlereport-timeline-item">
+                            <input type="hidden" value="บัตรประจำตัวประชาชน (Linkage)" #thaiidcardTitle>
+                            <input type="hidden" value="assets/dist/img/dopa.png" #thaiidcarddepartmentImg>
+                            <span class="text-success font-20">&nbsp;<u>บัตรประจำตัวประชาชน (Linkage)</u></span>
+                            <table class="table-striped table-centered mb-0 mt-3 text-20">
+                                <thead>
+                                    <tr>
+                                        <th>ชื่อตัว (ภาษาไทย)</th>
+                                        <th>ชื่อสกุล (ภาษาไทย)</th>
+                                        <th>วันเดือนปี เกิด</th>
+                                        <th>วันเดือนปี ที่ออกบัตร</th>
+                                        <th>วันเดือนปี บัตรหมดอายุ</th>
+                                        <th>สาเหตุการยกเลิกบัตร</th>
+                                        <th>รายละเอียด</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>{{ thaiidcardItem.nameTHFirstName | filter:""}}</td>
+                                        <td>{{ thaiidcardItem.nameTHLastName | filter:""}}</td>
+                                        <td>{{ thaiidcardItem.birthDate | thaidate }}</td>
+                                        <td>{{ thaiidcardItem.issueDate | thaidate }}</td>
+                                        <td>{{ thaiidcardItem.expireDate | thaidate }}</td>
+                                        <td>{{ thaiidcardItem.cancelCause | converseNull }}</td>
+                                        <td class="text-center">
+                                            <button class="btn btn-info" type="button" href="#thai-id-cards-table-full-width-modal"
+                                                data-toggle="modal" data-target="#thai-id-cards-table-full-width-modal"
+                                                (click)="selectRow(thaiidcardItem,thaiidcardTitle.value,thaiidcarddepartmentImg.value)">
+                                                <span class="icon-name"><i class="mdi mdi-arrow-top-right" style="color:white;"></i></span>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </ng-template>
+</div>
+  
+  
+<div *ngIf="report_name != 'รายงาน Single Report'">
+    <div *ngIf="!MoiDopaThaiIdcardTableCount">
+      <div class="card border-secondary border col-md-12">
+        <div class="card mb-md-0 mb-3">
+          <div class="card-body">
+            <div>
+              <span class="text-success font-20"><u>กรมการปกครอง: </u></span>
+              <span class="text-white font-20"><u>บัตรประจำตัวประชาชน (Linkage) </u></span>
+              <span class="text-danger font-20"><u>(ไม่พบข้อมูล)</u></span>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+  
+  

@@ -1,0 +1,118 @@
+<div *ngIf="personsShow">
+  <div class="mt-3" *ngFor="let personItem of personsResults">
+    <hr class="" />
+
+    <div class="row">
+      <div class="col-sm-3 text-white">
+        <p class="mt-3 mb-1 font-20 "><span><i class='dripicons dripicons-user-id'></i> เลขประจำตัวประชาชน:</span>
+        </p>
+        <p class="dataname text-success font-20">{{personItem.citizenCardNumber}}</p>
+      </div><!-- end col -->
+
+      <div class="col-sm-3 text-white">
+        <p class="mt-3 mb-1 font-20"><span><i class='uil uil-user-circle'></i> ชื่อ:</span></p>
+        <p class="dataname text-success font-20">{{personItem.firstName}}</p>
+      </div><!-- end col -->
+
+      <div class="col-sm-3 text-white">
+        <p class="mt-3 mb-1 font-20"><span><i class='uil uil-user-circle'></i> นามสกุล:</span></p>
+        <p class="dataname text-success font-20">{{personItem.lastName}}</p>
+      </div><!-- end col -->
+
+      <div class="col-sm-3 text-white">
+        <p class="mt-3 mb-1 font-20"><span><i class='mdi mdi-gender-transgender'></i> เพศ:</span></p>
+        <p class="dataname text-success font-20">{{personItem.genderDesc}}</p>
+      </div><!-- end col -->
+    </div>
+    <!-- end row -->
+
+    <div class="row">
+      <div class="col-sm-3 text-white">
+        <p class="mt-3 mb-1 font-20"><span><i class='mdi mdi-calendar-account-outline'></i> เกิดวันที่:</span></p>
+        <p class="dataname text-success font-20">{{personItem.dateOfBirth | thaidate }}</p>
+      </div><!-- end col -->
+
+      <div class="col-sm-3 text-white">
+        <p class="mt-3 mb-1 font-20"><span><i class='uil uil-user-square'></i> อายุ:</span></p>
+        <p class="dataname text-success font-20">{{personItem.age}}</p>
+      </div><!-- end col -->
+
+      <div class="col-sm-3 text-white">
+        <p class="mt-3 mb-1 font-20"><span><i class='uil uil-globe'></i> สัญชาติ:</span></p>
+        <p class="dataname text-success font-20">{{personItem.nationalityDesc}}</p>
+      </div><!-- end col -->
+    </div>
+
+    <div class="row">
+      <div class="col-sm-3 text-white">
+        <p class="mt-3 mb-1 font-20"><span><i class='uil uil-user'></i> บิดาชื่อ:</span></p>
+        <p class="dataname text-success font-20">{{personItem.fatherName}}</p>
+      </div><!-- end col -->
+
+      <div class="col-sm-3 text-white">
+        <p class="mt-3 mb-1 font-20"><span><i class='uil uil-user'></i> มารดาชื่อ:</span></p>
+        <p class="dataname text-success font-20">{{personItem.motherName}}</p>
+      </div><!-- end col -->
+    </div>
+
+  </div>
+</div>
+<div *ngIf="!personsShow">
+  <div class="mt-3">
+    <hr class="" />
+
+    <div class="row">
+      <div class="col-sm-3 text-white">
+        <p class="mt-3 mb-1 font-20 "><span><i class='dripicons dripicons-user-id'></i> เลขประจำตัวประชาชน:</span>
+        </p>
+        <p class="dataname text-success font-20">-</p>
+      </div><!-- end col -->
+
+      <div class="col-sm-3 text-white">
+        <p class="mt-3 mb-1 font-20"><span><i class='uil uil-user-circle'></i> ชื่อ:</span></p>
+        <p class="dataname text-success font-20">-</p>
+      </div><!-- end col -->
+
+      <div class="col-sm-3 text-white">
+        <p class="mt-3 mb-1 font-20"><span><i class='uil uil-user-circle'></i> นามสกุล:</span></p>
+        <p class="dataname text-success font-20">-</p>
+      </div><!-- end col -->
+
+      <div class="col-sm-3 text-white">
+        <p class="mt-3 mb-1 font-20"><span><i class='mdi mdi-gender-transgender'></i> เพศ:</span></p>
+        <p class="dataname text-success font-20">-</p>
+      </div><!-- end col -->
+    </div>
+    <!-- end row -->
+
+    <div class="row">
+      <div class="col-sm-3 text-white">
+        <p class="mt-3 mb-1 font-20"><span><i class='mdi mdi-calendar-account-outline'></i> เกิดวันที่:</span></p>
+        <p class="dataname text-success font-20">-</p>
+      </div><!-- end col -->
+
+      <div class="col-sm-3 text-white">
+        <p class="mt-3 mb-1 font-20"><span><i class='uil uil-user-square'></i> อายุ:</span></p>
+        <p class="dataname text-success font-20">-</p>
+      </div><!-- end col -->
+
+      <div class="col-sm-3 text-white">
+        <p class="mt-3 mb-1 font-20"><span><i class='uil uil-globe'></i> สัญชาติ:</span></p>
+        <p class="dataname text-success font-20">-</p>
+      </div><!-- end col -->
+    </div>
+
+    <div class="row">
+      <div class="col-sm-3 text-white">
+        <p class="mt-3 mb-1 font-20"><span><i class='uil uil-user'></i> บิดาชื่อ:</span></p>
+        <p class="dataname text-success font-20">-</p>
+      </div><!-- end col -->
+
+      <div class="col-sm-3 text-white">
+        <p class="mt-3 mb-1 font-20"><span><i class='uil uil-user'></i> มารดาชื่อ:</span></p>
+        <p class="dataname text-success font-20">-</p>
+      </div><!-- end col -->
+    </div>
+
+  </div>
+</div>

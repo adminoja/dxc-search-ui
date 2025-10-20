@@ -1,0 +1,30 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <h3 class="page-title mt-3">Specialize Report</h3>
+            <div class="card mt-3">
+                <div class="card-body">
+                    <h4 class="font-20">เลขบัตรประจำตัวประชาชน</h4>
+                    <div class="row">
+                        <div class="col-sm-5" style="margin-left: 25%;">
+                        <form #heroForm="ngForm" name="searchFormCitizenNumber">
+                            <div class="form-group">
+                              <input type="text"
+                                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+                                class="form-control font-20" id="name" required [(ngModel)]="citizenCardNumber"
+                                name="name" #name="ngModel" placeholder="กรอกเลขบัตรประชาชน 13 หลัก ไม่มีขีด" maxlength="13"
+                                pattern="[0-9]{13}" />
+                              <div [hidden]="name.valid || name.pristine" class="alert alert-danger"></div>
+                            </div>
+                            <p class="font-20">กรุณากรอก เลขบัตรประชาชน 13 หลัก</p>
+                            <button type="submit" class="btn btn-primary btn-round font-20" [disabled]="!heroForm.form.valid" (click)="btnSearch_Click()" style="float: right;">
+                              ค้นหา
+                            </button>   
+                          </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

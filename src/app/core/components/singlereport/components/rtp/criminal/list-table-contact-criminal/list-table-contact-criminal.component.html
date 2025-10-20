@@ -1,0 +1,77 @@
+<div *ngIf="criminalCount !==0 ">
+    <div *ngFor="let criminalItem of criminalResults">
+      <div *ngIf="exitCode[0].exitCode; else exit">
+        <div *ngIf="report_name != 'รายงาน Single Report'">
+          <div class="card border-secondary border col-md-12">
+            <div class="card mb-md-0 mb-3">
+              <div class="card-body">
+                <div>
+                  <span class="text-success font-20"><u>สำนักงานตำรวจแห่งชาติ: </u></span>
+                  <span class="text-white font-20"><u>ฐานข้อมูลผู้กระทำผิดกฎหมาย (ฐานข้อมูลเก่า ระบบ Police) </u></span>
+                  <span *ngIf="exitCode[0].Results && exitCode[0].exitCode == 'NOT_FOUND'" class="text-danger font-20"><u> (ไม่พบข้อมูล) </u></span>
+                  <span *ngIf="exitCode[0].Results == '[]' && exitCode[0].exitCode == 'OK'" class="text-danger font-20">
+                    <u> (ไม่พบข้อมูล) </u>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ng-template #exit>
+        <div class="card border-secondary border col-md-12">
+            <div class="card mb-md-0 mb-3">
+                <div class="card-body">
+                    <div data-toggle="collapse" data-target="#criminalTablecollapse" role="button" aria-expanded="true"
+                        aria-controls="criminalcollapse">
+                        <span class="text-success font-20"><u>สำนักงานตำรวจแห่งชาติ:</u></span>
+                        <span class="text-white font-20"><u> ฐานข้อมูลผู้กระทำผิดกฎหมาย (ฐานข้อมูลเก่า ระบบ Police)</u></span>
+                        <span class="text-warning font-20"><u> จำนวน: {{criminalCount}} รายการ</u></span>
+                    </div> 
+                    <div id="criminalTablecollapse" class="collapse pt-3">
+                        <div class="col-md-12" class="singlereport-timeline-item">
+                            <div class="col-md-12" class="singlereport-timeline-item" *ngFor="let criminalItem of criminalResults">
+                                <input type="hidden" value="ฐานข้อมูลผู้กระทำผิดกฎหมาย (ฐานข้อมูลเก่า ระบบ Police)" #criminalTitle>
+                                <input type="hidden" value="assets/dist/img/rtp.png" #criminalImg>
+                                <img src="assets/dist/img/dxc-img/symbol/datatype/32/rtp-criminal.png" width="25px">
+                                <span class="text-success font-20">&nbsp;<u>ฐานข้อมูลผู้กระทำผิดกฎหมาย (ฐานข้อมูลเก่า ระบบ Police)</u></span>
+
+                                <table class="table-striped table-centered mb-0 mt-3 text-20">
+                                    <thead>
+                                        <tr>
+                                            <th>ที่อยู่</th>
+                                            <th>เบอร์โทรศัพท์</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>{{ criminalItem.address | filter:""}}</td>
+                                            <td>{{ criminalItem.phone | filter:""}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</div>
+
+<div *ngIf="report_name != 'รายงาน Single Report'">
+    <div *ngIf="!criminalCount">
+      <div class="card border-secondary border col-md-12">
+          <div class="card mb-md-0 mb-3">
+              <div class="card-body">
+                  <div>
+                      <span class="text-success font-20"><u>สำนักงานตำรวจแห่งชาติ: </u></span>
+                      <span class="text-white font-20"><u>ฐานข้อมูลผู้กระทำผิดกฎหมาย (ฐานข้อมูลเก่า ระบบ Police) </u></span>
+                      <span class="text-danger font-20"><u> (ไม่พบข้อมูล) </u></span>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+</div>

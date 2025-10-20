@@ -1,0 +1,410 @@
+{
+  "/dxc-qm-dopa-person-service": {
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/dxc-api": {
+    "target": "http://10.14.33.27:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/dxc-qm-doc-prisoner-service": {
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/dxc-qm-moi-linkage-service": {
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/dxc-qm-djop-juvenile-offender-service": {
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/dxc-qm-dop-probationer-service": {
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/dxc-qm-rlpd-requestor-service": {
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/dxc-qm-doc-reg-seize-service": {
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/dxc-qm-fpo-welfare-registration-record-service": {
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/dxc-qm-oncb-narcotic-offender-service": {
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/dxc-qm-amlo-money-laundering-case-service": {
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/dxc-qm-led-bankruptcy-case-service": {
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/dxc-qm-cifs-anonymous-corpse-service": {
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/api": {
+    "target": "https://search.dxc.go.th",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/auth": {
+    "target": "https://sso.dxc.go.th/auth/",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/dxc-self-service-service": {
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/dxc-qm-ago-charge-service": {
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/dxc-qm-ago-incident-location-service": {
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/dxc-qm-ago-charge-subject-service": {
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/dxc-qm-doc-remandee-service": {
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/dxc-qm-ago-charge-victim-service": {
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/dxc-qm-ago-case-prosecution-attorney-service": {
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/dxc-qm-ago-case-prosecution-attorney-order-service": {
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/dxc-qm-ago-charge-verdict-service": {
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/dxc-qm-ago-attorney-subcase-service": {
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/dxc-qm-ago-attorney-main-case-service": {
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/dxc-qm-rtp-criminal-service": {
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/dxc-qm-jfo-case-service": {
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/dxc-qm-cifs-corpse-service": {
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/dxc-qm-rtp-missing-car-service": {
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/dxc-qm-cifs-missing-person-service": {
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/dxc-qm-rtp-missing-person-case-service": {
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/dxc-qm-rlpd-crime-defendant-compensation-service": {
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/dxc-qm-doc-released-prisoner-service": {
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/dxc-qm-doc-prisoner-image-service": {
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/dxc-qm-rlpd-crime-victim-compensation-service": {
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/dxc-qm-dxc-released-offender-service": {
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/dxc-reason-service": {
+    "target": "http://10.14.33.37:8193",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/dxc-qm-dlt-driver-license-service": {
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/dxc-qm-dlt-vehicle-license-service": {
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/dxc-qm-sso-employee-employment-service": {
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/dxc-qm-dbd-juristic-registration-service": {
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/dxc-qm-ago-directory-dimension-case-service": {
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/dxc-qm-ago-directory-dimension-persons-service": {
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/dxc-qm-ws-rest": {
+    "target": "http://10.14.34.194",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/my-dataset": {
+    "target": "https://search.dxc.go.th",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/dxc-qm-coj-arrest-warrant-service": {
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/dxc-qm-coj-judgement-summary-service": {
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/dxc-search-service": {
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/dxc-qm-mof-registrant-service": {
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/dxc-qm-jfo-case64-service": {
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/dxc-admin-service": {
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/dxc-qm-coj-judgement-service": {
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/dxc-qm-dsi-arrest-warrant-service": {
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+   },
+   "/dxc-qm-rtp-arrest-warrant-service":{
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+   },
+   "/dxc-qm-rtp-criminal-case-service":{
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+   },
+   "/dxc-qm-rtp-criminal-record-information-service":{
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+   },
+   "/dxc-qm-rtp-traffic-case-service":{
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+   },
+   "/dxc-qm-rtp-thai-entry-exit-service":{
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+   },
+   "/dxc-qm-djop-juvenile-offender-2565-service": {
+     "target": "http://cloud-gw.ad.thaidxc.org:8081",
+     "secure": false,
+     "logLevel": "debug",
+     "changeOrigin": true
+   },
+   "/dxc-qm-sso-select-hospital-service": {
+     "target": "http://cloud-gw.ad.thaidxc.org:8081",
+     "secure": false,
+     "logLevel": "debug",
+     "changeOrigin": true
+  },
+  "/dxc-qm-dop-fact-finding-report-service": {
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+ },
+  "/dxc-qm-doc-prisoner-bankrupt-service": {
+   "target": "http://cloud-gw.ad.thaidxc.org:8081",
+   "secure": false,
+   "logLevel": "debug",
+   "changeOrigin": true
+  },
+  "/dxc-doc-absolute-prisoner-information-before-release-on-probation-service": {
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+ },
+  "/dxc-qm-dop-probationer-narcotics-service": {
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/dxc-core-service":{
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/dxc-qm-djop-juvenile-offender-2567-service":{
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "/dxc-login-thaid-service":{
+    "target": "http://cloud-gw.ad.thaidxc.org:8081",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  }
+}

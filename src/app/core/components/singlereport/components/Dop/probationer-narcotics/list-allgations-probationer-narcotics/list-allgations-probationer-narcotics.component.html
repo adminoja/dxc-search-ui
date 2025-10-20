@@ -1,0 +1,40 @@
+<div *ngIf="probationerNarcoticsCount">
+    <div class="card border-secondary border col-md-12">
+      <!-- Portlet card -->
+      <div class="card mb-md-0 mb-3">
+        <div class="card-body">
+          <div data-toggle="collapse" data-target="#probationerNarcotics" role="button" aria-expanded="true"
+            aria-controls="addresses">
+            <span class="text-success font-20"><u>กรมคุมประพฤติ: </u></span>
+            <span class="text-white font-20"><u>ผู้ถูกคุมประพฤติในคดียาเสพติดและผลการเข้าร่วมกิจกรรมแก้ไขฟื้นฟู</u></span>
+            <span class="text-warning font-20"><u>จำนวน: {{probationerNarcoticsCount}} รายการ </u></span>
+          </div>
+          <div id="probationerNarcotics" class="collapse pt-3">
+            <div class="col-md-12" *ngFor="let probationerNarcoticsItem of probationerNarcoticsResults"
+              class="singlereport-timeline-item">
+              <img src="assets/dist/img/dxc-img/symbol/datatype/32/dop-probationee.png">&nbsp;
+              <input type="hidden" value="ผู้ถูกคุมประพฤติในคดียาเสพติดและผลการเข้าร่วมกิจกรรมแก้ไขฟื้นฟู" #probationerNarcoticsTitle>
+              <input type="hidden" value="assets/dist/img/sso.png" #probationerNarcoticsImg>
+              <span class="text-success font-20"><u>ผู้ถูกคุมประพฤติในคดียาเสพติดและผลการเข้าร่วมกิจกรรมแก้ไขฟื้นฟู</u></span>
+              <button class="btn btn-info" style="float: right;" type="button" href="#probationer-narcotics-full-width-modal" data-toggle="modal" data-target="#probationer-narcotics-full-width-modal"
+                (click)="selectRow(probationerNarcoticsItem,probationerNarcoticsTitle.value,probationerNarcoticsImg.value)">
+                <span class="icon-name"><i class="mdi mdi-arrow-top-right" style="color:white;"></i></span>
+              </button>
+              <div style="padding-left:15px; margin-top: 3%;">
+                <span class="text-white font-20">ชื่อ</span>&nbsp;&nbsp;
+                <span class="text-success font-20"><u>{{probationerNarcoticsItem.firstName | filter:""}}</u></span>&nbsp;&nbsp;
+                <span class="text-white font-20">นามสกุล</span>&nbsp;&nbsp; 
+                <span class="text-success font-20"><u>{{probationerNarcoticsItem.lastName}}</u></span>&nbsp;&nbsp;
+                <span class="text-white font-20">ทะเบียนคดี</span>&nbsp;&nbsp;
+                <span class="text-success font-20">&nbsp;<u>{{probationerNarcoticsItem.registerNumber | filter:""}}</u>&nbsp;</span>&nbsp;&nbsp;
+                <span class="text-white font-20">สำนักงานคุมประพฤติ</span>&nbsp;&nbsp;
+                <span class="text-success font-20"><u>{{probationerNarcoticsItem.officeName | filter:""}}</u></span>&nbsp;&nbsp;
+                <span class="text-white font-20">ภาระกิจ</span>&nbsp;&nbsp;
+                <span class="text-success font-20"><u>{{probationerNarcoticsItem.type | filter:""}}</u></span>&nbsp;&nbsp;
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- end card-->
+  </div>

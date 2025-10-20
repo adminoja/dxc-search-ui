@@ -1,0 +1,97 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{{dataSourceName}} {{dataModelName}}</title>
+
+<style>body{font-size:14px}</style>
+</head>
+
+<body>
+<div>
+		<table border="1px" style="border-style:solid; border-color:#000; width:100%">
+            	<tr>
+                	<td align="center">{{dataModelName}}</td>
+                </tr>
+        </table>
+<br />
+<br />
+	<table style="width:100%">
+		<tr>
+    		<td width="5%"></td><td width="5%"></td><td width="66%"></td>
+            <td width="14%">รหัสข้อมูล</td>
+            <td width="10%" style="color:blue">{{dataId}}</td>
+        </tr>
+        <tr>
+    		<td width="5%"></td><td width="5%"></td><td width="66%"></td>
+            <td width="14%">รหัสคดี</td>
+            <td width="10%" style="color:blue">-</td>
+        </tr>
+    </table>
+     
+    <table style="width:100%">
+            <tr>
+               	<td colspan="4">ข้อมูลผู้ร้องทุกข์</td>
+                
+            </tr>
+            <tr>
+                <td>เลขประจำตัวประชาชน</td>
+                <td style="color:blue" data-attributeName="personNationalIdentificationId"  data-role="dxc-hyperlink" data-value="[[personNationalIdentificationId]]">{{selectData.personNationalIdentificationId}}</td>
+                <td>&nbsp;</td><td>&nbsp;</td> 
+            </tr>
+            <tr>
+                <td>ชื่อผู้ร้อง</td>
+                <td style="color:blue">{{selectData.personPrefixName}} {{selectData.personGivenName}} {{selectData.personSurName}}</td>
+                <td>เพศ</td>
+                <td style="color:blue">{{selectData.personSex}}</td>
+            </tr>
+            <tr>
+                <td>วันเกิด</td>
+                <td style="color:blue">{{selectData.personBirthDate}}</td>
+                <td>อายุ</td>
+                <td style="color:blue">{{selectData.personAge}} ปี</td>
+            </tr>
+            <tr>
+                <td>ศาสนา</td>
+                <td style="color:blue">{{selectData.personReligionText}}</td>
+                <td>สัญชาติ</td>
+                <td style="color:blue">{{selectData.personNationalityText}}</td>
+            </tr>
+           	<tr>
+                <td>ระดับการศึกษา</td>
+                <td style="color:blue">{{selectData.personEducationLevelText}}</td>
+                <td>อาชีพ</td>
+                <td style="color:blue">{{selectData.personOccupationText}}</td>
+            </tr>
+            <tr>
+                <td>ที่อยู่</td>
+                <td colspan="3" style="color:blue">{{selectData.personAddressFullText}} </td>
+          	</tr>
+            
+             <tr>
+               <td colspan="4">&nbsp;</td> 
+            </tr>
+            <tr>
+               <td>ชื่อเรื่อง/ชื่อคดี</td> 
+               <td colspan="3" style="color:blue">{{selectData.caseName}}</td>
+            </tr>
+             <tr>
+               <td>วันที่รับเรื่อง</td> 
+               <td colspan="3" style="color:blue">{{selectData.entryDate}}</td>
+            </tr>
+             <tr>
+               <td>ปีขึ้นทะเบียน</td> 
+               <td colspan="3" style="color:blue">{{selectData.year}}</td>
+            </tr>
+           
+
+    </table>
+    
+    
+  </div>
+
+	
+
+</body>
+</html>
+
+<iframe id="result" style="width:100%; height: 95vh;"></iframe>

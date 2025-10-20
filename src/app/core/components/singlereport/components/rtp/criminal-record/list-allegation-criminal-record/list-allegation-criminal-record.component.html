@@ -1,0 +1,106 @@
+<div *ngIf="criminalRecordCount !==0 && !inputAllgationsCriminalRecord">
+    <div class="card border-secondary border col-md-12">
+      <!-- Portlet card -->
+      <div class="card mb-md-0 mb-3">
+        <div class="card-body">
+          <div data-toggle="collapse" data-target="#criminalRecordcollapse" role="button" aria-expanded="true"
+                aria-controls="criminalRecord">
+            <span class="text-success font-20"><u>สำนักงานตำรวจแห่งชาติ:</u></span>
+            <span class="text-white font-20"><u> ฐานข้อมูลทะเบียนประวัติอาชญากร</u></span>
+            <span class="text-warning font-20"><u> จำนวน: {{criminalRecordCount}} รายการ</u></span>
+          </div>  
+          <div id="criminalRecordcollapse" class="collapse pt-3">
+            <div class="col-md-12" *ngFor="let criminalRecordItem of criminalRecordResults" class="singlereport-timeline-item">
+              <input type="hidden" value="ฐานข้อมูลทะเบียนประวัติอาชญากร" #criminalRecordTitle>
+              <input type="hidden" value="assets/dist/img/rtp.png" #criminalRecorddepartmentImg>
+              <span class="text-success font-20">
+                <img src="assets/dist/img/dxc-img/symbol/datatype/32/rtp-criminal-record.png">&nbsp;<u>ฐานข้อมูลทะเบียนประวัติอาชญากร</u></span>
+              <button class="btn btn-info" style="float: right;" type="button" href="#criminal-record-full-width-modal" data-toggle="modal"
+                data-target="#criminal-record-full-width-modal" (click)="selectRow(criminalRecordItem,criminalRecordTitle.value,criminalRecorddepartmentImg.value)">
+                <span class="icon-name"><i class="mdi mdi-arrow-top-right" style="color:white;"></i></span>
+              </button>
+  
+              <div style="padding-left:15px; margin-top: 3%;">
+                <span class="text-white font-20">เลขประจำตัวประชาชน</span>&nbsp;&nbsp;
+                <span class="text-success font-20" style="text-decoration:underline">
+                  {{criminalRecordItem.idNo | filter:""}}
+                </span>&nbsp;&nbsp;
+                <span class="text-white font-20">คำนำหน้านาม</span>&nbsp;&nbsp;
+                <span class="text-success font-20" style="text-decoration:underline">
+                  {{criminalRecordItem.pname | filter:""}}
+                </span>&nbsp;&nbsp;
+                <span class="text-white font-20">ชื่อ-สกุล</span>&nbsp;&nbsp;
+                <span class="text-success font-20" style="text-decoration:underline">
+                  {{criminalRecordItem.cardFName | filter:""}}
+                  {{criminalRecordItem.cardLName | filter:""}}
+                </span>&nbsp;&nbsp;
+                <span class="text-white font-20">เลขคดีตำรวจ</span>&nbsp;&nbsp;
+                <span class="text-success font-20" style="text-decoration:underline">
+                  {{criminalRecordItem.caseNoYear}}
+                </span>&nbsp;&nbsp;
+                <span class="text-white font-20">ข้อหา</span>&nbsp;&nbsp;
+                <span class="text-success font-20" style="text-decoration:underline">
+                  {{criminalRecordItem.charge | filter:""}}
+                </span>&nbsp;&nbsp;
+              </div>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+        <!-- end card-->
+    </div>
+</div>
+
+<div *ngIf="inputAllgationsCriminalRecord">
+    <div class="card border-secondary border col-md-12">
+      <!-- Portlet card -->
+      <div class="card mb-md-0 mb-3">
+        <div class="card-body">
+          <div data-toggle="collapse" data-target="#criminalRecordcollapse" role="button" aria-expanded="true"
+                aria-controls="criminalRecord">
+            <span class="text-success font-20"><u>สำนักงานตำรวจแห่งชาติ:</u></span>
+            <span class="text-white font-20"><u> ฐานข้อมูลทะเบียนประวัติอาชญากร</u></span>
+          </div>  
+          <div id="criminalRecordcollapse" class="collapse pt-3">
+            <div class="col-md-12" class="singlereport-timeline-item">
+              <input type="hidden" value="ฐานข้อมูลทะเบียนประวัติอาชญากร" #criminalRecordTitle>
+              <input type="hidden" value="assets/dist/img/rtp.png" #criminalRecorddepartmentImg>
+              <span class="text-success font-20">
+                <img src="assets/dist/img/dxc-img/symbol/datatype/32/rtp-criminal-record.png">&nbsp;<u>ฐานข้อมูลทะเบียนประวัติอาชญากร</u></span>
+              <button class="btn btn-info" style="float: right;" type="button" href="#criminal-record-full-width-modal" data-toggle="modal"
+                data-target="#criminal-record-full-width-modal" (click)="selectRow(inputAllgationsCriminalRecord,criminalRecordTitle.value,criminalRecorddepartmentImg.value)">
+                <span class="icon-name"><i class="mdi mdi-arrow-top-right" style="color:white;"></i></span>
+              </button>
+  
+              <div style="padding-left:15px; margin-top: 3%;">
+                <span class="text-white font-20">เลขประจำตัวประชาชน</span>&nbsp;&nbsp;
+                <span class="text-success font-20" style="text-decoration:underline">
+                  {{inputAllgationsCriminalRecord.idNo | filter:""}}
+                </span>&nbsp;&nbsp;
+                <span class="text-white font-20">คำนำหน้านาม</span>&nbsp;&nbsp;
+                <span class="text-success font-20" style="text-decoration:underline">
+                  {{inputAllgationsCriminalRecord.pname | filter:""}}
+                </span>&nbsp;&nbsp;
+                <span class="text-white font-20">ชื่อ-สกุล</span>&nbsp;&nbsp;
+                <span class="text-success font-20" style="text-decoration:underline">
+                  {{inputAllgationsCriminalRecord.cardFName | filter:""}}
+                  {{inputAllgationsCriminalRecord.cardLName | filter:""}}
+                </span>&nbsp;&nbsp;
+                <span class="text-white font-20">เลขคดีตำรวจ</span>&nbsp;&nbsp;
+                <span class="text-success font-20" style="text-decoration:underline">
+                  {{inputAllgationsCriminalRecord.caseNoYear}}
+                </span>&nbsp;&nbsp;
+                <span class="text-white font-20">ข้อหา</span>&nbsp;&nbsp;
+                <span class="text-success font-20" style="text-decoration:underline">
+                  {{inputAllgationsCriminalRecord.charge | filter:""}}
+                </span>&nbsp;&nbsp;
+              </div>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+        <!-- end card-->
+    </div>
+  </div>

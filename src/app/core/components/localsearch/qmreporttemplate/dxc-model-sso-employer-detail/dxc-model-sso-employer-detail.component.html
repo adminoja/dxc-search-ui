@@ -1,0 +1,77 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{{dataSourceName}} {{dataModelName}}</title>
+
+<style>body{font-size:14px}</style>
+</head>
+
+<body>
+<div>
+		<table border="1px" style="border-style:solid; border-color:#000; width:100%">
+            	<tr>
+                	<td align="center">{{dataModelName}}</td>
+                </tr>
+        </table>
+<br />
+<br />
+    <table style="width:100%">
+            
+            <tr>
+                <td>บัญชีสาขาจังหวัด</td>
+                <td style="color:blue">{{selectData.accountBranch}}</td>
+                <td>เลขที่บัญชี</td>
+                <td style="color:blue">{{selectData.accountNumber}}</td>
+            </tr>
+            <tr>
+                <td>เลขที่สาขาลูกจ้าง</td>
+                <td style="color:blue">{{selectData.branchEmplyeeNo}}</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>ชื่อบริษัท</td>
+                <td colspan="3" style="color:blue">{{selectData.companyName}}</td>
+            </tr>
+            <tr>
+                <td>ที่อยู่บริษัท</td>
+                <td colspan="3" style="color:blue">{{selectData.companyAddress}}</td>
+            </tr>
+            <tr>
+                <td>สถานะบริษัท</td>
+                <td style="color:blue">{{selectData.companyStatusDescription}}</td>
+                <td>เบอร์โทรศัพท์</td>
+                <td style="color:blue">{{selectData.companyTelephoneNumber}}</td>
+            </tr>
+            <tr>
+                <td>ประเภทบริษัท</td>
+                <td style="color:blue">{{selectData.companyType}}</td>
+                <td>คำอธิบายประเภท</td>
+                <td style="color:blue">{{selectData.companyTypeDescription}}</td>
+            </tr>
+            
+            <tr>
+            	<td colspan="4">&nbsp;</td>
+            </tr>
+            <tr>
+                <td>ที่อยู่ที่สามารถติดต่อได้</td>
+                <td colspan="3" style="color:blue">{{selectData.contactAddress}}</td>
+            </tr>
+            <tr>
+                <td>เบอร์แฟกซ์</td>
+                <td style="color:blue">{{selectData.contactFax}}</td>
+                <td>เบอร์โทรศัพท์</td>
+                <td style="color:blue">{{selectData.contactTelephoneNumber}}</td>
+            </tr>
+                       
+           
+	</table>
+    
+  </div>
+
+	
+
+</body>
+</html>
+
+<iframe id="result" style="width:100%; height: 95vh;"></iframe>

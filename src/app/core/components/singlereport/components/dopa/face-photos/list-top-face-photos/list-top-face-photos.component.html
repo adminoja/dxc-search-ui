@@ -1,0 +1,23 @@
+<div *ngIf="checkFacephotosResults">
+    <div *ngFor="let facePhotoItem of facePhotoResults">
+        <div *ngIf="facePhotoItem.exitCode; else exit">
+            <div *ngIf="report_name != 'รายงาน Single Report'">
+                <div class="mt-3 text-center">
+                    <img src="assets/dist/img/nopicnew.png" alt="shreyu" class="img-thumbnail avatar-lg page-content" style=" width:300px;  height:auto;"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ng-template #exit>
+    <div class="mt-3 text-center" *ngFor="let facePhotoItem of facePhotoResults">
+        <img src="{{facePhotoItem.mimeType}},{{facePhotoItem.image}}" alt="shreyu" class="img-thumbnail avatar-lg page-content" style=" width:300px;  height:auto;"/>
+    </div>
+    </ng-template>
+</div>
+
+
+<div *ngIf = "!checkFacephotosResults">
+    <div class="mt-3 text-center">
+        <img src="assets/dist/img/nopicnew.png" alt="shreyu" class="img-thumbnail avatar-lg page-content" style=" width:300px;  height:auto;"/>
+    </div>
+</div>

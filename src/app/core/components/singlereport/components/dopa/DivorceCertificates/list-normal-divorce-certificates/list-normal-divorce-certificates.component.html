@@ -1,0 +1,88 @@
+<div *ngIf="moidopaDivorceCertificatesCount">
+  <div *ngFor="let moidopaDivorceCertificatesItem of moidopaDivorceCertificatesResults">
+    <div *ngIf="moidopaDivorceCertificatesItem.exitCode; else exit">
+      <div *ngIf="report_name != 'รายงาน Single Report'">
+        <div class="card border-secondary border col-md-12">
+          <div class="card mb-md-0 mb-3">
+            <div class="card-body">
+              <div>
+                <span class="text-success font-20"><u>กรมการปกครอง: </u></span>
+                <span class="text-white font-20"><u>ข้อมูลทะเบียนหย่า (Linkage) </u></span>
+                <span class="text-danger font-20"><u>{{moidopaDivorceCertificatesItem.exitCode | changeStatus}}</u></span>
+                <span *ngIf="moidopaDivorceCertificatesItem.Results && moidopaDivorceCertificatesItem.exitCode == 'NOT_FOUND'" class="text-danger font-20">
+                  <u> (ไม่พบข้อมูล) </u>
+                </span>
+                <span *ngIf="moidopaDivorceCertificatesItem.Results == '[]' && moidopaDivorceCertificatesItem.exitCode == 'OK'" class="text-danger font-20">
+                  <u> (ไม่พบข้อมูล) </u>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ng-template #exit>
+    <div class="card border-secondary border col-md-12">
+      <!-- Portlet card -->
+      <div class="card mb-md-0 mb-3">
+        <div class="card-body">
+          <div data-toggle="collapse" data-target="#divorceCertificates" role="button" aria-expanded="true"
+            aria-controls="divorceCertificates">
+            <span class="text-success font-20"><u>กรมการปกครอง: </u></span>
+            <span class="text-white font-20"><u>ข้อมูลทะเบียนหย่า (Linkage) </u></span>
+            <span class="text-warning font-20"><u>จำนวน: {{moidopaDivorceCertificatesCount}} รายการ </u></span>
+          </div>
+          <div id="divorceCertificates" class="collapse pt-3">
+            <div class="col-md-12" *ngFor="let moidopaDivorceCertificatesItem of moidopaDivorceCertificatesResults"
+              class="singlereport-timeline-item">
+              <img src="assets/dist/img/dxc-img/symbol/datatype/32/moi-dopa-divorce-certificates.png">&nbsp;
+              <input type="hidden" value="ข้อมูลทะเบียนหย่า (Linkage)" #moidopaDivorceCertificatesTitle>
+              <input type="hidden" value="assets/dist/img/dopa.png" #moidopaDivorceCertificatesImg>
+              <span class="text-success font-20"><u>ข้อมูลทะเบียนหย่า (Linkage)</u></span>
+              <button class="btn btn-info" style="float: right;" type="button" href="#divorce-certificates-full-width-modal" data-toggle="modal" data-target="#divorce-certificates-full-width-modal"
+                (click)="selectRow(moidopaDivorceCertificatesItem,moidopaDivorceCertificatesTitle.value,moidopaDivorceCertificatesImg.value)">
+                <span class="icon-name"><i class="mdi mdi-arrow-top-right" style="color:white;"></i></span>
+              </button>
+              <div style="padding-left:15px; margin-top: 3%;">
+                <span class="text-white font-20">ชื่อตัวฝ่ายชาย</span>&nbsp;&nbsp;
+                <span
+                  class="text-success font-20"><u>{{moidopaDivorceCertificatesItem.maleFirstName | filter:""}}</u></span>&nbsp;&nbsp;
+                <span class="text-white font-20">ชื่อสกุลฝ่ายชาย</span>&nbsp;&nbsp;
+                <span class="text-success font-20">&nbsp;<u>{{moidopaDivorceCertificatesItem.maleLastName | filter:""}}</u>&nbsp;</span>&nbsp;&nbsp;
+                <span class="text-white font-20">ชื่อตัวฝ่ายหญิง</span>&nbsp;&nbsp;
+                <span class="text-success font-20"><u>{{moidopaDivorceCertificatesItem.femaleFirstName}}</u></span>&nbsp;&nbsp;
+                <span class="text-white font-20">ชื่อสกุลฝ่ายหญิง</span>&nbsp;&nbsp;
+                <span class="text-success font-20"><u>{{moidopaDivorceCertificatesItem.femaleLastName | filter:""}}</u></span>&nbsp;&nbsp;
+                <span class="text-white font-20"> วันเดือนปีที่จดทะเบียนหย่า</span>&nbsp;&nbsp;
+                <span class="text-success font-20"><u>{{moidopaDivorceCertificatesItem.divorceDate | thaidate }}</u></span>&nbsp;&nbsp;
+                <span class="text-white font-20"> สนท.ที่จดทะเบียนหย่า</span>&nbsp;&nbsp;
+                <span class="text-success font-20"><u>{{moidopaDivorceCertificatesItem.divorcePlaceDesc | filter:""}}</u></span>&nbsp;&nbsp;
+                <span class="text-white font-20">จังหวัดที่จดทะเบียนหย่า</span>&nbsp;&nbsp;
+                <span class="text-success font-20"><u>{{moidopaDivorceCertificatesItem.divorcePlaceProvince | filter:""}}</u></span>&nbsp;&nbsp;
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- end card-->
+  </ng-template>
+</div>
+
+
+<div *ngIf="report_name != 'รายงาน Single Report'">
+  <div *ngIf="!moidopaDivorceCertificatesCount">
+    <div class="card border-secondary border col-md-12">
+      <div class="card mb-md-0 mb-3">
+        <div class="card-body">
+          <div>
+            <span class="text-success font-20"><u>กรมการปกครอง: </u></span>
+            <span class="text-white font-20"><u>ข้อมูลทะเบียนหย่า (Linkage) </u></span>
+            <span class="text-danger font-20"><u>(ไม่พบข้อมูล)</u></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

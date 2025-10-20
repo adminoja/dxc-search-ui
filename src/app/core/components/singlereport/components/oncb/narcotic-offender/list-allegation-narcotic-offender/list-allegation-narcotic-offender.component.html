@@ -1,0 +1,114 @@
+<div *ngIf="narcoticOffenderCount !==0 && !inputAlgationsNarcoticOffender">
+  <div class="card border-secondary border col-md-12">
+    <!-- Portlet card -->
+    <div class="card mb-md-0 mb-3">
+      <div class="card-body">
+        <div data-toggle="collapse" data-target="#narcoticOffendercollapse" role="button" aria-expanded="true"
+              aria-controls="narcoticOffender">
+          <span class="text-success font-20"><u>สำนักงานคณะกรรมการป้องกันและปราบปรามยาเสพติด:</u></span>
+          <span class="text-white font-20"><u> ประวัติคดียาเสพติด</u></span>
+          <span class="text-warning font-20"><u> จำนวน: {{narcoticOffenderCount}} รายการ</u></span>
+        </div>  
+        <div id="narcoticOffendercollapse" class="collapse pt-3">
+          <div class="col-md-12" *ngFor="let narcoticOffenderItem of narcoticOffenderResults" class="singlereport-timeline-item">
+            <input type="hidden" value="ประวัติคดียาเสพติด" #narcoticOffenderTitle>
+            <input type="hidden" value="assets/dist/img/oncb.png" #narcoticOffenderdepartmentImg>
+            <span class="text-success font-20">
+              <img src="assets/dist/img/dxc-img/symbol/datatype/32/oncb-narcotic-offender.png">&nbsp;<u>ประวัติคดียาเสพติด</u></span>
+            <button class="btn btn-info" style="float: right;" type="button" href="#narcotic-offender-full-width-modal" data-toggle="modal"
+              data-target="#narcotic-offender-full-width-modal" (click)="selectRow(narcoticOffenderItem,narcoticOffenderTitle.value,narcoticOffenderdepartmentImg.value)">
+              <span class="icon-name"><i class="mdi mdi-arrow-top-right" style="color:white;"></i></span>
+            </button>
+
+            <div style="padding-left:15px; margin-top: 3%;">
+              <span class="text-white font-20">ชื่อ</span>&nbsp;&nbsp;
+              <span class="text-success font-20" style="text-decoration:underline">
+                {{narcoticOffenderItem.firstName | filter:""}}
+                {{narcoticOffenderItem.lastName | filter:""}}
+              </span>&nbsp;&nbsp;
+              <span class="text-white font-20">ถูกจับกุมเมื่อ</span>&nbsp;&nbsp;
+              <span class="text-success font-20" style="text-decoration:underline">
+                {{narcoticOffenderItem.arrestDate | converseDate }}
+              </span>&nbsp;&nbsp;
+              <span class="text-white font-20">ข้อหา</span>&nbsp;&nbsp;
+              <span class="text-success font-20" style="text-decoration:underline">
+                {{narcoticOffenderItem.allegation | filter:""}}
+              </span>&nbsp;&nbsp;
+              <span class="text-white font-20">ชื่อยาเสพติด</span>&nbsp;&nbsp;
+              <span class="text-success font-20" style="text-decoration:underline">
+                {{narcoticOffenderItem.narcoticName | filter:""}}
+              </span>&nbsp;&nbsp;
+              <span class="text-white font-20">จังหวัดเกิดเหตุ</span>&nbsp;&nbsp;
+              <span class="text-success font-20" style="text-decoration:underline">
+                {{narcoticOffenderItem.crimeSceneProvince | filter:""}}
+              </span>&nbsp;&nbsp;
+              <span class="text-white font-20">หน่วยงานที่สอบสวน</span>&nbsp;&nbsp;
+              <span class="text-success font-20" style="text-decoration:underline">
+                {{narcoticOffenderItem.investigationUnitName | filter:""}}
+              </span>&nbsp;&nbsp;
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+      <!-- end card-->
+  </div>
+</div>
+
+<div *ngIf="inputAlgationsNarcoticOffender">
+  <div class="card border-secondary border col-md-12">
+    <!-- Portlet card -->
+    <div class="card mb-md-0 mb-3">
+      <div class="card-body">
+        <div data-toggle="collapse" data-target="#narcoticOffendercollapse" role="button" aria-expanded="true"
+              aria-controls="narcoticOffender">
+          <span class="text-success font-20"><u>สำนักงานคณะกรรมการป้องกันและปราบปรามยาเสพติด:</u></span>
+          <span class="text-white font-20"><u> ประวัติคดียาเสพติด</u></span>
+        </div>  
+        <div id="narcoticOffendercollapse" class="collapse pt-3">
+          <div class="col-md-12" class="singlereport-timeline-item">
+            <input type="hidden" value="ประวัติคดียาเสพติด" #narcoticOffenderTitle>
+            <input type="hidden" value="assets/dist/img/oncb.png" #narcoticOffenderdepartmentImg>
+            <span class="text-success font-20">
+              <img src="assets/dist/img/dxc-img/symbol/datatype/32/oncb-narcotic-offender.png">&nbsp;<u>ประวัติคดียาเสพติด</u></span>
+            <button class="btn btn-info" style="float: right;" type="button" href="#narcotic-offender-full-width-modal" data-toggle="modal"
+              data-target="#narcotic-offender-full-width-modal" (click)="selectRow(inputAlgationsNarcoticOffender,narcoticOffenderTitle.value,narcoticOffenderdepartmentImg.value)">
+              <span class="icon-name"><i class="mdi mdi-arrow-top-right" style="color:white;"></i></span>
+            </button>
+
+            <div style="padding-left:15px; margin-top: 3%;">
+              <span class="text-white font-20">ชื่อ</span>&nbsp;&nbsp;
+              <span class="text-success font-20" style="text-decoration:underline">
+                {{inputAlgationsNarcoticOffender.firstName | filter:""}}
+                {{inputAlgationsNarcoticOffender.lastName | filter:""}}
+              </span>&nbsp;&nbsp;
+              <span class="text-white font-20">ถูกจับกุมเมื่อ</span>&nbsp;&nbsp;
+              <span class="text-success font-20" style="text-decoration:underline">
+                {{inputAlgationsNarcoticOffender.arrestDate | converseDate }}
+              </span>&nbsp;&nbsp;
+              <span class="text-white font-20">ข้อหา</span>&nbsp;&nbsp;
+              <span class="text-success font-20" style="text-decoration:underline">
+                {{inputAlgationsNarcoticOffender.allegation | filter:""}}
+              </span>&nbsp;&nbsp;
+              <span class="text-white font-20">ชื่อยาเสพติด</span>&nbsp;&nbsp;
+              <span class="text-success font-20" style="text-decoration:underline">
+                {{inputAlgationsNarcoticOffender.narcoticName | filter:""}}
+              </span>&nbsp;&nbsp;
+              <span class="text-white font-20">จังหวัดเกิดเหตุ</span>&nbsp;&nbsp;
+              <span class="text-success font-20" style="text-decoration:underline">
+                {{inputAlgationsNarcoticOffender.crimeSceneProvince | filter:""}}
+              </span>&nbsp;&nbsp;
+              <span class="text-white font-20">หน่วยงานที่สอบสวน</span>&nbsp;&nbsp;
+              <span class="text-success font-20" style="text-decoration:underline">
+                {{inputAlgationsNarcoticOffender.investigationUnitName | filter:""}}
+              </span>&nbsp;&nbsp;
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+      <!-- end card-->
+  </div>
+</div>

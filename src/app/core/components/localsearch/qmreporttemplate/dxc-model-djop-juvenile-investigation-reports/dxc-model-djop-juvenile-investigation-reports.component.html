@@ -1,0 +1,430 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{{dataSourceName}} {{dataModelName}}</title>
+
+<style>body{font-size:14px}</style>
+</head>
+
+<body>
+<div>
+    <table style="border-style: solid; border-color: #000; width: 100%; max-width: 800px; margin-left: auto; margin-right: auto; " border="1px">
+        <tbody>
+        <tr>
+            <td align="center">{{dataModelName}}</td>
+        </tr>
+        </tbody>
+    </table>
+    <br /> <br />
+    <table style="width: 100%; max-width: 800px ;margin-left: auto; margin-right: auto;">
+        <tbody>
+        <tr>
+            <td style="width: 25%">&nbsp;</td>
+            <td style="width: 25%">&nbsp;</td>
+            <td style="color: black;width: 25% " align="left">เลขคดี/ปี</td>
+            <td style="color: blue; width: 25%" align="right">{{selectData.caseId}}/{{selectData.caseYear}}</td>
+        </tr>
+        <tr>
+            <td colspan="4">&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="font-size: 17px; padding-bottom: 5px;" colspan="4"><strong>ข้อมูลสืบเสาะ</strong></td>
+        </tr>
+        <tr>
+            <td style="font-size: 17px; padding-bottom: 5px;" colspan="4"><strong>ข้อมูลพื้นฐานเยาวชน</strong></td>
+        </tr>
+        <tr>
+            <td style="color: black;">เลขประจำตัวประชาชน</td>
+            <td style="color: blue;" data-attributename="citizenCardNumber" data-role="dxc-hyperlink" data-value="[[citizenCardNumber]]">{{selectData.citizenCardNumber}}</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="color: black;">ชื่อ</td>
+            <td style="color: blue;">{{selectData.firstName}}</td>
+            <td style="color: black;">นามสกุล</td>
+            <td style="color: blue;">{{selectData.lastName}}</td>
+        </tr>
+        <tr>
+            <td style="color: black;">ชื่อเล่น</td>
+            <td style="color: blue;">N/A</td>
+            <td style="color: black;">ชื่อตัว/ชื่อสกุลอื่น</td>
+            <td style="color: blue;">N/A</td>
+        </tr>
+        <tr>
+            <td style="color: black;">วันเกิด</td>
+            <td style="color: blue;">{{selectData.dateOfBirth}}</td>
+            <td style="color: black;">อายุปัจจุบัน</td>
+            <td style="color: blue;">N/A</td>
+        </tr>
+        <tr>
+            <td style="color: black;">เพศ</td>
+            <td style="color: blue;">{{selectData.sex}}</td>
+            <td style="color: black;">&nbsp;</td>
+            <td style="color: blue;">&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="color: black;">สัญชาติ</td>
+            <td style="color: blue;">N/A</td>
+            <td style="color: black;">&nbsp;เชื้อชาติ</td>
+            <td style="color: blue;">N/A</td>
+        </tr>
+        <tr>
+            <td colspan="4">เป็นบุตรคนที่ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ในจำนวน</td>
+        </tr>
+        <tr>
+            <td colspan="4">&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="font-size: 17px; padding-bottom: 5px;" colspan="4"><strong>การศึกษา</strong></td>
+        </tr>
+        <tr>
+            <td>การศึกษาปัจจุบัน</td>
+            <td style="color: blue;">N/A</td>
+            <td>ระดับการศึกษา</td>
+            <td style="color: blue;">N/A</td>
+        </tr>
+        <tr>
+            <td>จบการศึกษา</td>
+            <td style="color: blue;">N/A</td>
+            <td>&nbsp;สถานศึกษา</td>
+            <td style="color: blue;">N/A</td>
+        </tr>
+        <tr>
+            <td colspan="4">&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="font-size: 17px; padding-bottom: 5px;" colspan="4"><strong>อาชีพ</strong></td>
+        </tr>
+        <tr>
+            <td>อาชีพ</td>
+            <td style="color: blue;">N/A</td>
+            <td>รายได้</td>
+            <td style="color: blue;">N/A</td>
+        </tr>
+        <tr>
+            <td colspan="4">&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="font-size: 17px; padding-bottom: 5px;" colspan="4"><strong>ที่อยู่</strong></td>
+        </tr>
+        <tr>
+            <td style="font-size: 14px; padding-bottom: 5px;" colspan="4"><strong>ที่อยู่ปัจจุบัน:</strong></td>
+        </tr>
+        <tr>
+            <td style="font-size: 14px; padding-bottom: 5px;" colspan="4"><strong>ที่อยู่ตามทะเบียนบ้าน</strong></td>
+        </tr>
+        <tr>
+            <td>บ้านเลขที่</td>
+            <td style="color: blue;">N/A</td>
+            <td>หมู่</td>
+            <td style="color: blue;">N/A</td>
+        </tr>
+        <tr>
+            <td>ซอย</td>
+            <td style="color: blue;">N/A</td>
+            <td>ถนน</td>
+            <td style="color: blue;">N/A</td>
+        </tr>
+        <tr>
+            <td>ตำบล</td>
+            <td style="color: blue;">N/A</td>
+            <td>อำเภอ</td>
+            <td style="color: blue;">N/A</td>
+        </tr>
+        <tr>
+            <td>จังหวัด</td>
+            <td style="color: blue;">N/A</td>
+            <td>รหัสไปรษณีย์</td>
+            <td style="color: blue;">N/A</td>
+        </tr>
+        <tr>
+            <td colspan="4">&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="font-size: 17px; padding-bottom: 5px;" colspan="4"><strong>ผู้ร่วมอาศัย</strong></td>
+        </tr>
+        <tr>
+            <td>ชื่อนามสกุล</td>
+            <td style="color: blue;">N/A</td>
+            <td>ความสัมพันธ์</td>
+            <td style="color: blue;">N/A</td>
+        </tr>
+        <tr>
+            <td>ที่อยู่</td>
+            <td style="color: blue;" colspan="3">N/A</td>
+        </tr>
+        <tr>
+            <td>เบอร์โทรศัพท์</td>
+            <td style="color: blue;">N/A</td>
+            <td>&nbsp;</td>
+            <td style="color: blue;">&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="4">&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="4">&nbsp;</td>
+        </tr>
+        </tbody>
+        </table>
+    <div style="page-break-after: always;"></div>
+        <table style="width: 100%; max-width: 800px ;margin-left: auto; margin-right: auto;">
+        <tbody>
+        <tr>
+            <td style="font-size: 17px; padding-bottom: 5px;" colspan="4"><strong>ข้อมูลบิดา</strong></td>
+        </tr>
+        <tr>
+            <td style="width: 25%">ชื่อนามสกุล</td>
+            <td style="color: blue;width: 25%">N/A</td>
+            <td style="width: 25%">&nbsp;</td>
+            <td style="color: blue;width: 25%">&nbsp;</td>
+        </tr>
+        <tr>
+            <td>ที่อยู่</td>
+            <td style="color: blue;" colspan="3">N/A</td>
+        </tr>
+        <tr>
+            <td>เบอร์โทรศัพท์</td>
+            <td style="color: blue;">N/A</td>
+            <td>&nbsp;</td>
+            <td style="color: blue;">&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="4">&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="font-size: 17px; padding-bottom: 5px;" colspan="4"><strong>ข้อมูลมารดา</strong></td>
+        </tr>
+        <tr>
+            <td>ชื่อนามสกุล</td>
+            <td style="color: blue;">N/A</td>
+            <td>&nbsp;</td>
+            <td style="color: blue;">&nbsp;</td>
+        </tr>
+        <tr>
+            <td>ที่อยู่</td>
+            <td style="color: blue;" colspan="3">N/A</td>
+        </tr>
+        <tr>
+            <td>เบอร์โทรศัพท์</td>
+            <td style="color: blue;">N/A</td>
+            <td>&nbsp;</td>
+            <td style="color: blue;">&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="4">&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="font-size: 17px; padding-bottom: 5px;" colspan="4"><strong>ข้อมูลผู้ปกครอง</strong></td>
+        </tr>
+        <tr>
+            <td>ชื่อนามสกุล</td>
+            <td style="color: blue;">N/A</td>
+            <td>ความสัมพันธ์</td>
+            <td style="color: blue;">N/A</td>
+        </tr>
+        <tr>
+            <td>ที่อยู่</td>
+            <td style="color: blue;" colspan="3">N/A</td>
+        </tr>
+        <tr>
+            <td>เบอร์โทรศัพท์</td>
+            <td style="color: blue;">N/A</td>
+            <td>&nbsp;</td>
+            <td style="color: blue;">N/A</td>
+        </tr>
+        <tr>
+            <td colspan="4">&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="font-size: 17px; padding-bottom: 5px;" colspan="4"><strong>หนังสือแจ้งการจับกุม</strong></td>
+        </tr>
+        <tr>
+            <td>สถานะ การดำเนินคดี</td>
+            <td style="color: blue;">N/A</td>
+            <td>&nbsp;อายุขณะกระทำผิด</td>
+            <td style="color: blue;">N/A</td>
+        </tr>
+        <tr>
+            <td>วันที่เกิดเหตุ</td>
+            <td style="color: blue;" colspan="3">N/A</td>
+        </tr>
+        <tr>
+            <td>วันที่เกิดเหตุ</td>
+            <td style="color: blue;">{{selectData.eventDate}}</td>
+            <td>&nbsp;เวลาเกิดเหตุ</td>
+            <td style="color: blue;">N/A</td>
+        </tr>
+        <tr>
+            <td>วันที่จับกุม</td>
+            <td style="color: blue;">N/A</td>
+            <td>&nbsp;เวลาที่จับกุม</td>
+            <td style="color: blue;">N/A</td>
+        </tr>
+        <tr>
+            <td colspan="4">&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="font-size: 17px; padding-bottom: 5px;" colspan="4"><strong>ข้อมูลหนังสือแจ้งการจับกุม</strong></td>
+        </tr>
+        <tr>
+            <td>เลขที่เอกสาร</td>
+            <td style="color: blue;">N/A</td>
+            <td>ลงวันที่</td>
+            <td style="color: blue;">N/A</td>
+        </tr>
+        <tr>
+            <td>วันที่รับตัว/แจ้งดำเนินคดี</td>
+            <td style="color: blue;">{{selectData.receiveDate}}</td>
+            <td>กระทำผิดเป็นครั้งที่</td>
+            <td style="color: blue;">N/A</td>
+        </tr>
+        <tr>
+            <td>สถานีตำรวจ</td>
+            <td style="color: blue;">N/A</td>
+            <td>จังหวัด</td>
+            <td style="color: blue;">N/A</td>
+        </tr>
+        <tr>
+            <td colspan="4">&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="font-size: 17px; padding-bottom: 5px;" colspan="4"><strong>ข้อมูลข้อหา</strong></td>
+        </tr>
+        <tr>
+            <td>หมวดข้อหาย</td>
+            <td style="color: blue;">N/A</td>
+            <td>อัตราโทษ</td>
+            <td style="color: blue;">N/A</td>
+        </tr>
+        <tr>
+            <td>ข้อหา</td>
+            <td style="color: blue;" colspan="3" >&nbsp;{{selectData.allegation}}</td>
+
+        </tr>
+        <tr>
+            <td style="font-size: 14px; padding-bottom: 5px;" colspan="4"><strong>ข้อมูลสารเสพติด</strong></td>
+        </tr>
+        <tr>
+            <td>สารเสพติดที่เกี่ยวข้องในข้อหาหลัก</td>
+            <td style="color: blue;">N/A</td>
+            <td>สารเสพติดอื่นๆ ที่เกี่ยวข้อง</td>
+            <td style="color: blue;">N/A</td>
+        </tr>
+
+        </tbody>
+        </table>
+    <div style="page-break-after: always;"></div>
+    <table style="width: 100%; max-width: 800px ;margin-left: auto; margin-right: auto;">
+        <tbody>
+
+        <tr>
+            <td style="font-size: 14px; padding-bottom: 5px;width: 25%"><strong>สถานที่เกิดเหตุ</strong></td>
+            <td style="color: blue;width: 25%">N/A</td>
+            <td style="width: 25%">&nbsp;</td>
+            <td style="color: blue; width: 25% ">&nbsp;</td>
+        </tr>
+        <tr>
+            <td>ชั้น พนักงานสอบสวนให้การ</td>
+            <td style="color: blue;">N/A</td>
+            <td>&nbsp;</td>
+            <td style="color: blue;">&nbsp;</td>
+        </tr>
+        <tr>
+            <td>ชั้น พนักงานสอบสวนให้การ อื่นๆ ระบุ</td>
+            <td style="color: blue;">N/A</td>
+            <td>&nbsp;</td>
+            <td style="color: blue;">&nbsp;</td>
+        </tr>
+        <tr>
+            <td>สถานพินิจดำเนินการ</td>
+            <td style="color: blue;">{{selectData.unitName}}</td>
+            <td>&nbsp;</td>
+            <td style="color: blue;">&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="4">&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="font-size: 17px; padding-bottom: 5px;" colspan="4"><strong>คดีอื่นที่อยู่ในระบบ</strong></td>
+        </tr>
+        <tr>
+            <td>เลขคดี</td>
+            <td style="color: blue;">N/A</td>
+            <td>&nbsp;พื้นที่เกิดเหตุ</td>
+            <td style="color: blue;">N/A</td>
+        </tr>
+        <tr>
+            <td>ข้อหา</td>
+            <td style="color: blue;" colspan="3">N/A</td>
+        </tr>
+        <tr>
+            <td>วันที่เกิดเหตุ</td>
+            <td style="color: blue;">N/A</td>
+            <td>&nbsp;เวลาเกิดเหตุ</td>
+            <td style="color: blue;">&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="4">&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="font-size: 17px; padding-bottom: 5px;" colspan="4"><strong>คดีอื่นที่อยู่นอกระบบ</strong></td>
+        </tr>
+        <tr>
+            <td>เลขคดี</td>
+            <td style="color: blue;">N/A</td>
+            <td>&nbsp;พื้นที่เกิดเหตุ</td>
+            <td style="color: blue;">N/A</td>
+        </tr>
+        <tr>
+            <td>ข้อหา</td>
+            <td style="color: blue;" colspan="3">&nbsp;</td>
+        </tr>
+        <tr>
+            <td>วันที่เกิดเหตุ</td>
+            <td style="color: blue;">N/A</td>
+            <td>&nbsp;เวลาเกิดเหตุ</td>
+            <td style="color: blue;">N/A</td>
+        </tr>
+        <tr>
+            <td>ชั้นพนักงานคุมประพฤติให้การ</td>
+            <td style="color: blue;">N/A</td>
+            <td>&nbsp;</td>
+            <td style="color: blue;">N/A</td>
+        </tr>
+        <tr>
+            <td>สถานะการประกันตัว</td>
+            <td style="color: blue;">N/A</td>
+            <td>&nbsp;</td>
+            <td style="color: blue;">N/A</td>
+        </tr>
+        <tr>
+            <td>ส่งหนังสือรายงานข้อเท็จจริง</td>
+            <td style="color: blue;">N/A</td>
+            <td>วันที่ส่งรายงานข้อเท็จจริง</td>
+            <td style="color: blue;">N/A</td>
+        </tr>
+        <tr>
+            <td>คดีหมายเลขดำที่</td>
+            <td style="color: blue;">N/A</td>
+            <td>คดีหมายเลขแดงที่</td>
+            <td style="color: blue;">N/A</td>
+        </tr>
+        <tr>
+            <td>วันที่ศาลพิพากษา</td>
+            <td style="color: blue;">N/A</td>
+            <td>ผลคำพิพากษา</td>
+            <td style="color: blue;">N/A</td>
+        </tr>
+        <tr>
+            <td colspan="4">&nbsp;</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
+
+
+<iframe id="result" style="width:100%; height: 95vh;"></iframe>

@@ -1,0 +1,243 @@
+<div class="container-fluid">
+    <h3 class="text-left mt-3 mb-4">Specialize Report > สืบค้นข้อมูลรวมประวัติบุคคล สำหรับ{{report_name}}</h3>
+    <div class="mt-3">
+        <a href="/secured/v2/index.html#/dxcui0014/dxcui00141/{{report_name}}" data-toggle="link" aria-expanded="false" class="py-2">
+            <button type="button" class="btn btn-light btn-rounded">
+                <span class="font-16 text-success" style="font-weight:bolder;">กลับไปหน้าฟอร์มสืบค้น</span>
+            </button>
+        </a>
+        <a href="/secured/v2/index.html#/singlereport/loaddata2/กรมราชทัณฑ์" data-toggle="link" aria-expanded="false" class="py-2">
+            <button type="button" class="btn btn-light btn-rounded">
+                <span class="font-16 text-success" style="font-weight:bolder;">กลับไปหน้าผลการสืบค้น</span>
+            </button>
+        </a>
+    </div>
+    <!-- end nav-->
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h3 class="page-title">รายงานชุดข้อมูลรวมประวัติบุคคล สำหรับกรมราชทัณฑ์
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4>
+                        <span>
+                            ค้นหาด้วย เลขบัตรประชาชน {{thaiNin}}
+                        </span>
+                        <span>
+                            วันที่ {{startTime | converseDate}} เวลา {{startTime | converseTime}} น.
+                        </span>
+                        <!-- <span *ngIf="DopaMoiThaiidcardShow">
+                            <span *ngFor="let MoiDopaPersonsItem of DopaMoiThaiidcardResults">
+                                {{MoiDopaPersonsItem.citizenCardNumber | filter:""}}
+                            </span>
+                        </span>
+                        <span *ngIf="!DopaMoiThaiidcardShow"> - </span> -->
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row" style="padding-left: 15px;">
+                        <h5>ข้อมูลบัตรประจำตัวประชาชน</h5>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3" style="padding-left: 15px;">
+                            <app-list-top-face-photos></app-list-top-face-photos>
+                        </div>
+                        <div class="col-lg-9">
+                            <app-list-top-thaiidcard></app-list-top-thaiidcard>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <ul class="nav nav-tabs mb-3">
+                        <li class="nav-item">
+                            <a href="#person" data-toggle="tab" aria-expanded="false" class="nav-link">
+                                <span class="d-none d-md-block">ข้อมูลทะเบียนราษฎร</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#allegation" data-toggle="tab" aria-expanded="false" class="nav-link">
+                                <span class="d-none d-md-block">ประวัติกระบวนการยุติธรรมอาญา</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#education" data-toggle="tab" aria-expanded="false" class="nav-link">
+                                <span class="d-none d-md-block">ข้อมูลบูรณาการ การศึกษา</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#asset" data-toggle="tab" aria-expanded="false" class="nav-link">
+                                <span class="d-none d-md-block">ข้อมูลบูรณาการ ทรัพย์สิน</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <!-- ข้อมูลทะเบียนราษฎร -->
+                        <div class="tab-pane" id="person">
+                            <ul class="nav nav-pills bg-nav-pills mb-3">
+                                <li class="nav-item">
+                                    <a href="#report2" data-toggle="tab" aria-expanded="true" class="nav-link active">
+                                        <span class="d-none d-md-block">รายงาน</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#list2" data-toggle="tab" aria-expanded="false" class="nav-link">
+                                        <span class="d-none d-md-block">รายการ</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane show active" id="report2">
+                                    <app-list-normal-persons></app-list-normal-persons>
+                                    <app-list-normal-thaiidcard></app-list-normal-thaiidcard>
+                                    <app-list-normal-addresses></app-list-normal-addresses>
+                                    <app-list-normal-birthcertificates></app-list-normal-birthcertificates>
+                                    <app-list-normal-aliens></app-list-normal-aliens>
+                                    <app-list-normal-divorce-certificates></app-list-normal-divorce-certificates>
+                                    <app-list-normal-marriagecertificates></app-list-normal-marriagecertificates>
+                                    <app-list-normal-face-photos></app-list-normal-face-photos>
+                                    <app-list-normal-person-changelastname></app-list-normal-person-changelastname>
+                                    <app-list-normal-person-changename-primary></app-list-normal-person-changename-primary>
+                                    <app-list-normal-borderpasses></app-list-normal-borderpasses>
+                                    <app-list-normal-por4></app-list-normal-por4>
+                                </div>
+                                <div class="tab-pane" id="list2">
+                                    <app-list-table-persons></app-list-table-persons>
+                                    <app-list-table-thaiidcard></app-list-table-thaiidcard>
+                                    <app-list-table-addresses></app-list-table-addresses>
+                                    <app-list-table-birthcertificates></app-list-table-birthcertificates>
+                                    <app-list-table-aliens></app-list-table-aliens>
+                                    <app-list-table-divorce-certificates></app-list-table-divorce-certificates>
+                                    <app-list-table-marriagecertificates></app-list-table-marriagecertificates>
+                                    <app-list-table-face-photos></app-list-table-face-photos>
+                                    <app-list-table-person-changelastname></app-list-table-person-changelastname>
+                                    <app-list-table-person-changename-primary></app-list-table-person-changename-primary>
+                                    <app-list-table-borderpasses></app-list-table-borderpasses>
+                                    <app-list-table-por4></app-list-table-por4>                               
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ประวัติกระบวนการยุติธรรมอาญา -->
+                        <div class="tab-pane" id="allegation">
+                            <ul class="nav nav-pills bg-nav-pills mb-3">
+                                <li class="nav-item">
+                                    <a href="#report3" data-toggle="tab" aria-expanded="true" class="nav-link active">
+                                        <span class="d-none d-md-block">รายงาน</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#list3" data-toggle="tab" aria-expanded="false" class="nav-link">
+                                        <span class="d-none d-md-block">รายการ</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#time3" data-toggle="tab" aria-expanded="false" class="nav-link">
+                                        <span class="d-none d-md-block">เวลา</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane show active" id="report3">
+                                    <div *ngIf="true">
+                                        <app-list-algations-prisoner></app-list-algations-prisoner>
+                                        <app-list-algations-probations></app-list-algations-probations>
+                                        <app-list-allegation-juvenile-offender></app-list-allegation-juvenile-offender>
+                                        <!-- <app-list-allegation-narcotic-offender></app-list-allegation-narcotic-offender>
+                                        <app-list-allegation-regseize></app-list-allegation-regseize>
+                                        <app-list-allegaiton-remandee></app-list-allegaiton-remandee>
+                                        <app-list-allegation-money-laundering-case>
+                                        </app-list-allegation-money-laundering-case>
+                                        <app-list-algations-corruption-accuseds>
+                                        </app-list-algations-corruption-accuseds>
+                                        <app-list-normal-fisheriesillegal></app-list-normal-fisheriesillegal>
+                                        <app-list-allegation-criminal></app-list-allegation-criminal>
+                                        <app-list-allegation-warrant></app-list-allegation-warrant>
+                                        <app-list-allegation-charge-subject></app-list-allegation-charge-subject>
+                                        <app-list-allegation-released-offender></app-list-allegation-released-offender>
+                                        <app-list-allgetion-coj-arrest-warrants>
+                                        </app-list-allgetion-coj-arrest-warrants> -->
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="list3">
+                                    <app-list-table-probations></app-list-table-probations>
+                                    <app-list-table-juvenile-offender></app-list-table-juvenile-offender>
+                                    <app-list-table-prisoner></app-list-table-prisoner>  
+                                </div>
+                                <div class="tab-pane" id="time3">
+                                    <div id="chart"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ข้อมูลบูรณาการ การศึกษา -->
+                        <div class="tab-pane" id="education">
+                            <ul class="nav nav-pills bg-nav-pills mb-3">
+                                <li class="nav-item">
+                                    <a href="#report6" data-toggle="tab" aria-expanded="true" class="nav-link active">
+                                        <span class="d-none d-md-block">รายงาน</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#list6" data-toggle="tab" aria-expanded="false" class="nav-link">
+                                        <span class="d-none d-md-block">รายการ</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane show active" id="report6">
+                                    <!-- <app-list-normal-students></app-list-normal-students> -->
+                                </div>
+                                <div class="tab-pane" id="list6">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ข้อมูลบูรณาการ ทรัพย์สิน -->
+                        <div class="tab-pane" id="asset">
+                            <ul class="nav nav-pills bg-nav-pills mb-3">
+                                <li class="nav-item">
+                                    <a href="#report5" data-toggle="tab" aria-expanded="true" class="nav-link active">
+                                        <span class="d-none d-md-block">รายงาน</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#list5" data-toggle="tab" aria-expanded="false" class="nav-link">
+                                        <span class="d-none d-md-block">รายการ</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane show active" id="report5">
+                                    <app-list-normal-land-and-condominium-titles></app-list-normal-land-and-condominium-titles>
+                                    <app-list-normal-car-license></app-list-normal-car-license>
+                                </div>
+                                <div class="tab-pane" id="list5">
+                                    <app-list-table-land-and-condominium-titles></app-list-table-land-and-condominium-titles>
+                                    <app-list-table-car-license></app-list-table-car-license>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

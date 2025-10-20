@@ -1,0 +1,70 @@
+<!-- <div *ngIf="checkMofRegistrantResults" class="row col-md-12">
+    <div class="col-md-12 media mt-1 p-2 border-secondary border" *ngFor="let mofRegistrantItem of mofRegistrantResults">
+      <div class="media-body">
+        <img src="assets/dist/img/dxc-img/symbol/datatype/32/mof-konjon.png">
+        <span style="margin-left: 15px;font-size: 18px;" class="text-white">ทะเบียนผู้มีรายได้น้อย</span>
+          <div class="col-md-10 text-white">เลขประจำตัวประชาชน:
+            <span class="dataname text-success">{{mofRegistrantItem.citizenCardNumber | filter:""}}</span>
+          </div>
+          <div class="col-md-8 text-white">ชื่อ:
+            <span class="dataname text-success"> {{mofRegistrantItem.firstName | filter:""}}
+              {{mofRegistrantItem.lastName}}</span>
+          </div>
+          <div class="col-md-4 text-white">เพศ:
+            <span class="dataname text-success"> {{mofRegistrantItem.sex | filter:""}}</span>
+          </div>
+      </div>
+    </div>
+</div> -->
+
+<div *ngIf="checkMofRegistrantResults">
+  <div class="card border-secondary border col-md-12">
+    <!-- Portlet card -->
+    <div class="card mb-md-0 mb-3">
+      <div class="card-body">
+        <div data-toggle="collapse" data-target="#registrantcollapse1" role="button" aria-expanded="true">
+          <span class="text-white font-20"><u>กระทรวงการคลัง: ทะเบียนผู้มีรายได้น้อย</u></span>
+          <span class="badge badge-success float-right ml-2 font-16">{{mofRegistrantCount}}</span>
+          <!-- <span class="text-warning font-20"><u>จำนวน: {{registrantCount}} รายการ </u></span> -->
+        </div>
+        <div id="registrantcollapse1" class="collapse pt-3">
+          <div class="col-md-12 media mt-1 p-2 border-secondary border" *ngFor="let mofRegistrantItem of mofRegistrantResults; let i = index">
+            <div class="media-body pointer" id="mofRegistrantItem{{i}}" (click)="openModal('registrantModal', mofRegistrantItem)">
+              <img src="assets/dist/img/dxc-img/symbol/datatype/32/mof-konjon.png">
+              <span style="margin-left: 15px;font-size: 18px;" class="text-white">ทะเบียนผู้มีรายได้น้อย</span>
+                <div class="col-md-10 text-white">เลขประจำตัวประชาชน:
+                  <span class="dataname text-success">{{mofRegistrantItem.citizenCardNumber | filter:""}}</span>
+                </div>
+                <div class="col-md-8 text-white">ชื่อ:
+                  <span class="dataname text-success"> {{mofRegistrantItem.firstName | filter:""}}
+                    {{mofRegistrantItem.lastName}}</span>
+                </div>
+                <div class="col-md-4 text-white">เพศ:
+                  <span class="dataname text-success"> {{mofRegistrantItem.sex | filter:""}}</span>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> <!-- end card-->
+</div>
+
+<jw-modal id="registrantModal">
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">ค้นหา</h4>
+    <button type="button" class="close btn-dark" aria-label="ปิด" (click)="closeModal('registrantModal');">
+      <span class="text-dark" aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div>
+      ข้อมูลที่คุณเลือกมีหมายเลขประจำตัวประชาชนอยู่ด้วย
+      คุณต้องการให้ระบบค้นข้อมูลอีกครั้งจาก หมายเลขประจำตัวประชาชน <label type="text">{{bodyText}}</label>
+      หรือไม่? </div>
+      <div style="text-align:center;color: white;">
+        <a type="button" class="button btn btn-danger" (click)="sendDataToSingleReport()">แสดงเท่าที่พบตอนนี้</a>
+        <a type="button" target="_blank" class="button btn btn-success" (click)="closeModal('registrantModal');" href="#/dxcui0014/dxcui0018/%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%87%E0%B8%B2%E0%B8%99%20Single%20Report/{{bodyText}}/0/0/0/0/0">ค้นหาใหม่อีกครั้ง</a>
+      </div>
+  </div>
+</jw-modal>

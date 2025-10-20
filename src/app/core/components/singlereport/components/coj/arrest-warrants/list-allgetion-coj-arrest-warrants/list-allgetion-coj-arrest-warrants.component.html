@@ -1,0 +1,54 @@
+<div *ngIf="arrestWarrantsCount">
+    <div class="card border-secondary border col-md-12">
+        <!-- Portlet card -->
+        <div class="card mb-md-0 mb-3">
+            <div class="card-body">
+                <div data-toggle="collapse" data-target="#arrestWarrantscollapse" role="button" aria-expanded="true" aria-controls="arrestWarrants">
+                    <span class="text-success font-20"><u>สำนักงานศาลยุติธรรมฯ:</u></span>
+                    <span class="text-white font-20"><u>ฐานข้อมูลหมายจับศาล </u></span>
+                    <span class="text-warning font-20"><u> จำนวน: {{arrestWarrantsCount}} รายการ </u></span>
+                </div>
+                <div id="arrestWarrantscollapse" class="collapse pt-3">
+                    <div class="col-md-12" *ngFor="let arrestWarrantsItem of arrestWarrantsResults" class="singlereport-timeline-item">
+                          <input type="hidden" value="ฐานข้อมูลหมายจับศาล" #arrestWarrantsTitle>
+                          <input type="hidden" value="assets/dist/img/coj.png" #arrestWarrantsdepartmentImg>
+                          <span class="text-success font-20">
+                            <img src="assets/dist/img/dxc-img/symbol/datatype/32/coj-arrest-warrants.png"> 
+                            &nbsp;<u>ฐานข้อมูลหมายจับศาล</u></span>
+                          <button
+                            class="btn btn-info" style="float: right;" type="button"
+                            href="#coj-arrest-warrants-full-width-modal" data-toggle="modal" data-target="#coj-arrest-warrants-full-width-modal"
+                            (click)="selectRow(arrestWarrantsItem,arrestWarrantsTitle.value,arrestWarrantsdepartmentImg.value)">
+                              <span class="icon-name"><i class="mdi mdi-arrow-top-right" style="color:white;"></i></span>
+                          </button>
+                          <div style="padding-left:15px; margin-top: 3%;">
+                            <span class="text-white font-20">เลขประจำตัวประชาชน</span>&nbsp;&nbsp;
+                            <span class="text-success font-20">
+                              <u>{{arrestWarrantsItem.accCardId | filter:""}}</u></span>&nbsp;&nbsp;
+                            <span class="text-white font-20">ชื่อ-สกุลผู้ต้องหา</span>&nbsp;&nbsp;
+                            <span class="text-success font-20">
+                              <u>{{arrestWarrantsItem.accFullName | filter:""}}</u>&nbsp;</span>&nbsp;&nbsp;
+                            <span class="text-white font-20">สัญชาติ</span>&nbsp;&nbsp;
+                            <span class="text-success font-20">
+                              <u>{{arrestWarrantsItem.accNationText | filter:""}}</u>&nbsp;</span>&nbsp;&nbsp;
+                            <span class="text-white font-20">วันนัด</span>&nbsp;&nbsp;
+                            <span class="text-success font-20">
+                              <u>{{arrestWarrantsItem.appointmentDate | converseDate}}</u></span>&nbsp;&nbsp;
+                            <span class="text-white font-20">ประเภทการกำหนด</span>&nbsp;&nbsp;
+                            <span class="text-success font-20">
+                              <u>{{arrestWarrantsItem.appointmentTypeText | filter:""}}</u></span>&nbsp;&nbsp;
+                            <span class="text-white font-20">จับได้เมื่อวันที่</span>&nbsp;&nbsp;
+                            <span class="text-success font-20">
+                              <u>{{arrestWarrantsItem.arrestDate | converseDate}}</u></span>&nbsp;&nbsp;
+                            <span class="text-white font-20">ชื่อเจ้าหน้าที่ผู้จับกุม</span>&nbsp;&nbsp;
+                            <span class="text-success font-20">
+                              <u>{{arrestWarrantsItem.arrestOfficerName | filter:""}}</u></span>&nbsp;&nbsp;
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  <!-- end card-->
+    </div> 
+</div>
+

@@ -1,0 +1,51 @@
+{
+    "content": [
+        {
+            "citizenCardNumber": "1111111111111",
+            "refNumber": "406820000",
+            "tdtNo": "AA3820000",
+            "inoutdate": "23 ก.ย. 2561 เวลา 15:07 น.",
+            "inOutType": "ขาเข้า",
+            "eFullName": "KORNPONG NPO",
+            "sex": "Male",
+            "nationEnm": "THAI",
+            "birthDate": "02 ก.พ. 2525",
+            "visaType": "Tourist Visa",
+            "convregNo": "TRD868",
+            "convenm": "เครื่องบิน",
+            "deptTnm": "ด่านตรวจคนเข้าเมืองท่ากาศยานกรุงเทพ"
+        },
+        {
+            "citizenCardNumber": "2222222222222",
+            "refNumber": "406820010",
+            "tdtNo": "AA3820001",
+            "inoutdate": "01 มี.ค. 2561 เวลา 15:07 น.",
+            "inOutType": "ขาเข้า",
+            "eFullName": "Archen Aydin",
+            "sex": "Male",
+            "nationEnm": "THAI",
+            "birthDate": "10 มี.ค. 2544",
+            "visaType": "Tourist Visa",
+            "convregNo": "TRD869",
+            "convenm": "เครื่องบิน",
+            "deptTnm": "ด่านตรวจคนเข้าเมืองท่ากาศยานกรุงเทพ"
+
+        },
+        {
+            "citizenCardNumber": "3333333333333",
+            "refNumber": "406820010",
+            "tdtNo": "AA3820002",
+            "inoutdate": "30 ก.ค. 2565 เวลา 23:00 น.",
+            "inOutType": "ขาเข้า",
+            "eFullName": "Jackson Wang",
+            "sex": "Male",
+            "nationEnm": "THAI",
+            "birthDate": "28 มี.ค. 2537",
+            "visaType": "Tourist Visa",
+            "convregNo": "TRD528",
+            "convenm": "เครื่องบิน",
+            "deptTnm": "ด่านตรวจคนเข้าเมืองท่ากาศยานกรุงเทพ"
+
+        }
+    ]
+}

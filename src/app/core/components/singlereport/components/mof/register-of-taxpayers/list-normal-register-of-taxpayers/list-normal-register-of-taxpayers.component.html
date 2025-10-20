@@ -1,0 +1,53 @@
+<div *ngIf="registerOfTaxpayersCount">
+  <div class="card border-secondary border col-md-12">
+      <!-- Portlet card -->
+      <div class="card mb-md-0 mb-3">
+          <div class="card-body">
+              <div data-toggle="collapse" data-target="#registerOfTaxpayerscollapse" role="button" aria-expanded="true" aria-controls="registerOfTaxpayers">
+                  <span class="text-success font-20"><u>กรมสรรพากร:</u></span>
+                  <span class="text-white font-20"><u>ฐานข้อมูลทะเบียนผู้เสียภาษี (Linkage) </u></span>
+                  <span class="text-warning font-20"><u> จำนวน: {{registerOfTaxpayersCount}} รายการ </u></span>
+              </div>
+              <div id="registerOfTaxpayerscollapse" class="collapse pt-3">
+                  <div class="col-md-12" *ngFor="let registerOfTaxpayersItem of registerOfTaxpayersResults" class="singlereport-timeline-item">
+                        <input type="hidden" value="ฐานข้อมูลทะเบียนผู้เสียภาษี (Linkage)" #registerOfTaxpayersTitle>
+                        <input type="hidden" value="assets/dist/img/mof.png" #registerOfTaxpayersTitledepartmentImg>
+                        <span class="text-success font-20">
+                          <img src="assets/dist/img/dxc-img/symbol/datatype/32/mof-register-of-taxpayers.png"> 
+                          &nbsp;<u>ฐานข้อมูลทะเบียนผู้เสียภาษี (Linkage)</u></span>
+                        <button
+                          class="btn btn-info" style="float: right;" type="button"
+                          href="#register-of-taxpayers-full-width-modal" data-toggle="modal" data-target="#register-of-taxpayers-full-width-modal"
+                          (click)="selectRow(registerOfTaxpayersItem,registerOfTaxpayersTitle.value,registerOfTaxpayersTitledepartmentImg.value)">
+                            <span class="icon-name"><i class="mdi mdi-arrow-top-right" style="color:white;"></i></span>
+                        </button>
+                        <div style="padding-left:15px; margin-top: 3%;">
+                          <span class="text-white font-20">เลขประจำตัวผู้เสียภาษี</span>&nbsp;&nbsp;
+                          <span class="text-success font-20">
+                            <u>{{registerOfTaxpayersItem.tin | filter:""}}</u></span>&nbsp;&nbsp;
+                          <span class="text-white font-20">ชื่อ</span>&nbsp;&nbsp;
+                          <span class="text-success font-20">
+                            <u>{{registerOfTaxpayersItem.firstName | filter:""}}</u>&nbsp;</span>&nbsp;&nbsp;
+                          <span class="text-white font-20">นามสกุล</span>&nbsp;&nbsp;
+                          <span class="text-success font-20">
+                            <u>{{registerOfTaxpayersItem.lastName | filter:""}}</u>&nbsp;</span>&nbsp;&nbsp;
+                          <span class="text-white font-20">ชื่ออาคาร</span>&nbsp;&nbsp;
+                          <span class="text-success font-20">
+                            <u>{{registerOfTaxpayersItem.buildingName | filter:""}}</u></span>&nbsp;&nbsp;
+                          <span class="text-white font-20">ชั้น</span>&nbsp;&nbsp;
+                          <span class="text-success font-20">
+                            <u>{{registerOfTaxpayersItem.floorNumber | filter:""}}</u></span>&nbsp;&nbsp;
+                          <span class="text-white font-20">เลขที่บ้าน</span>&nbsp;&nbsp;
+                          <span class="text-success font-20">
+                            <u>{{registerOfTaxpayersItem.houseIdNumber | filter:""}}</u></span>&nbsp;&nbsp;
+                          <span class="text-white font-20">เลขที่ห้อง</span>&nbsp;&nbsp;
+                          <span class="text-success font-20">
+                            <u>{{registerOfTaxpayersItem.roomNumber | filter:""}}</u></span>&nbsp;&nbsp;
+                        </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+<!-- end card-->
+  </div> 
+</div>

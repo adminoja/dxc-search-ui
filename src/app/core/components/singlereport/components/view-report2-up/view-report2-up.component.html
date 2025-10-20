@@ -1,0 +1,2736 @@
+<div class="body">
+  <div class="container-fluid">
+
+    <div style="text-align:center;">
+      <h5>
+        <span>แบบบันทึกข้อมูลเพื่อการแสวงหาและรวบรวมข้อเท็จจริงของนักโทษเด็ดขาด ส ๑ - ๔๖</span>
+      </h5>
+
+    </div>
+    <div>
+      <form>
+        <table style="margin-left:60px;width:100%">
+          <tbody>
+            <tr>
+              <td style="width: 10%;"></td>
+              <td style="width: 10%;"></td>
+              <td style="width: 10%;"></td>
+              <td style="width: 10%;"></td>
+              <td style="width: 10%;"></td>
+              <td style="width: 10%;"></td>
+              <td style="width: 5%;"></td>
+
+            </tr>
+            <tr>
+              <td style="font-weight: bold; font-size:18px;" colspan="3">ชื่อ-ชื่อสกุล นักโทษเด็ดขาด
+                (น.ช./น.ญ.)</td>
+              <td class="colorfont" style="border-bottom: black 1px dotted; text-align:center;" colspan="3"
+                *ngFor="let citizenItem of moidopapersonResults">
+                <div *ngIf="true">{{citizenItem.firstName}} {{citizenItem.lastName}} </div>
+              </td>
+              <!-- <ng-template #driverlicenseelse>
+                        <td style="border-bottom: black 1px dotted; text-align:center;" colspan="3" *ngIf="driverlicenseObj">
+                          {{driverlicenseObj[0].fullName}}
+                        </td>
+                      </ng-template> -->
+            </tr>
+          </tbody>
+        </table>
+      </form>
+
+    </div>
+    <div>
+      <form>
+        <table style="width:100%" border="0">
+
+          <tbody>
+            <tr>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 4%;"></td>
+              <td style="width: 4%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+
+            </tr>
+            <tr>
+              <td style="font-weight: bold; height: 5px; text-decoration: underline;" colspan="11">
+                ตอนที่
+                ๑ ความคิดเห็นของผู้อุปการะ</td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+
+            <tr>
+              <td style="font-weight: bold; height: 5px;" colspan="11">๑.
+                การยอมรับเป็นผู้อุปการะนักโทษเด็ดขาด</td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="4">ชื่อ-ชื่อสกุล (ของผู้อุปการะ)</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="10"></td>
+              <td>อายุ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;"></td>ปี
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+
+            <tr>
+              <td colspan="4">เกี่ยวข้องกับนักโทษผู้นี้เป็น</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="12"></td>
+
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+
+            <tr>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="6">ข้าพเจ้ายินดีรับเป็นผู้อุปการะเนื่องจาก</td>
+              <td style="border-bottom: black 1px dotted; " colspan="9"></td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="17">
+                และรับรองว่าจะดูแลตักเตือนให้ผู้ต้องขังปฏิบัติตามเงื่อนไขการคุมประพฤติทุกประการ
+                หากผิดเงื่อนไขหรือ
+                ประพฤติไม่เหมาะสมจะรายงานให้สำนักงานคุมประพฤติทราบทันที
+              </td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+
+            <tr>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="6">ข้าพเจ้าไม่ยินดีรับเป็นผู้อุปการะเนื่องจาก</td>
+              <td style="border-bottom: black 1px dotted; " colspan="9"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+
+            <tr>
+              <td colspan="16">(ถ้าผู้อุปการะไม่ยินดีรับเป็นผู้อุปการะนักโทษเด็ดขาดรายนี้
+                ก็ไม่ต้องถามข้ออื่น)</td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td style="font-weight: bold; height: 5px;" colspan="15">๒.
+                ข้อมูลทั่วไปของผู้อุปการะและความพร้อมของผู้อุปการะต่อการคุมความประพฤตินักโทษเด็ดขาด</td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td style="font-weight: bold; height: 5px;" colspan="15">๒.๑ ข้อมูลส่วนบุคคลของผู้อุปการะ
+              </td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="6">ชื่อ-ชื่อสกุล (ของผู้อุปการะ)</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="8"></td>
+              <td>อายุ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;"></td>ปี
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="5">เกี่ยวข้องกับนักโทษผู้นี้เป็น</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="4"></td>
+              <td colspan="2">เชื้อชาติ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;"></td>
+              <td>สัญชาติ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;"></td>
+              <td>ศาสนา</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3">อยู่บ้านเลขที่</td>
+              <td class="colorfont" style="border-bottom: black 1px dotted; text-align:center;" colspan="2">
+                <div></div>
+              </td>
+              <td colspan="2">หมู่บ้าน</td>
+              <td class="colorfont" style="border-bottom: black 1px dotted; text-align:center;" colspan="2">
+                <div></div>
+              </td>
+              <td>หมู่ที่</td>
+              <td class="colorfont" style="border-bottom: black 1px dotted; text-align:center;" colspan="2">
+                <div></div>
+              </td>
+              <td>ซอย</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="3">
+                <div></div>
+              </td>
+              <td>ถนน</td>
+              <td class="colorfont" style="border-bottom: black 1px dotted; text-align:center;" colspan="3">
+                <div></div>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="2">ตำบล/แขวง</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;"></td>
+              <td colspan="2">อำเภอ/เขต</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="2"></td>
+              <td>จังหวัด</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="2"></td>
+              <td colspan="2">รหัสไปรษณีย์</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;"></td>
+              <td>โทรศัพท์</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="2"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3">จบการศึกษา</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="6"></td>
+              <td>อาชีพ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="2"></td>
+              <td>ตำแหน่ง</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="3"></td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3">สถานที่ทำงาน</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="9"></td>
+              <td>โทรศัพท์</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="3"></td>
+
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3">โทรศัพท์มือถือ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="9"></td>
+              <td>มีรายได้</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="2"></td>บาท/เดือน
+
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="2">สถานภาพสมรส</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td>โสด</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="4">หย่าร้าง/เลิกร้าง/แยกกันอยู่</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="4">สมรส /อยู่กินฉันสามีภรรยา</td>
+            </tr>
+
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3">คู่สมรส ชื่อ-ชื่อสกุล</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="8"></td>
+              <td colspan="2">เชื้อชาติ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;"></td>
+              <td>สัญชาติ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;"></td>
+            </tr>
+
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td>ศาสนา</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="2"></td>
+              <td colspan="2">จบการศึกษา</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="9"></td>
+              <td>อาชีพ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;"></td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td>รายได้</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="2"></td>
+              <td colspan="2">บาท/เดือน</td>
+              <td colspan="7">จำนวนสมาชิกในครอบครัวของผู้อุปการะมี</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="4"></td>คน
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="5">ผู้อุปการะมีนิสัยความประพฤติ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="11"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+
+            <tr>
+              <td style="font-weight: bold; height: 5px;" colspan="16">๒.๒
+                ความพร้อมของผู้อุปการะต่อการคุมความประพฤตินักโทษเด็ดขาด (ตอบได้มากกว่า ๑ ข้อ)</td>
+            </tr>
+            <tr>
+              <td style="font-weight: bold; height: 5px;" colspan="16">(๑) ความพร้อมด้านฐานะทางเศรษฐกิจ
+              </td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="4">มีบ้านเป็นของตนเอง</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="4">อยู่บ้านเช่าเดือนละบาท</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="2"></td>บาท
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td>อื่นๆ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="4">มีอาชีพที่มั่นคง</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="4">มีรายได้มั่นคง</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="2"></td>บาท
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="2">มีรายได้มากกว่ารายจ่าย</td>
+            </tr>
+            <!-- //หน้า2 -->
+            <tr>
+              <td style="height: 5px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3"></td>
+              <td colspan="3"></td>
+              <td colspan="3"></td>
+              <td></td>
+              <td>- ๒ -</td>
+              <td></td>
+              <td></td>
+            </tr>
+
+
+            <tr>
+              <td style="font-weight: bold; height: 5px;" colspan="16">(๒)
+                ความพร้อมด้านครอบครัวและความสัมพันธ์</td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td style="font-weight: bold; height: 5px;" colspan="9">๒.๑
+                ความสัมพันธ์ของสมาชิกในครอบครัวของผู้อุปการะ</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="2">รักใคร่กันดี</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td>ปกติ</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td>ทะเลาะกันบ้าง</td>
+            </tr>
+
+            <tr>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="2">มีปัญหาคือ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="13"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td style="font-weight: bold; height: 5px;" colspan="14">๒.๒
+                ความสัมพันธ์ระหว่างสมาชิกในครอบครัวของผู้อุปการะกับนักโทษเด็ดขาด</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td>รักใคร่กันดี</td>
+            </tr>
+
+            <tr>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td>ปกติ</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="3">ทะเลาะกันบ้าง</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="3">มีปัญหาคือ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="6"></td>
+            </tr>
+
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td style="font-weight: bold; height: 5px;" colspan="10">๒.๓
+                ความสัมพันธ์ระหว่างผู้อุปการะกับนักโทษเด็ดขาด</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td>ดีมาก</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td>ดี</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td>ไม่ค่อยดี</td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td>ไม่ดี</td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+
+            <tr>
+              <td style="font-weight: bold; height: 5px;" colspan="16">๒.๔
+                ความพร้อมด้านการอุปการะนักโทษเด็ดขาด (ตอบได้มากกว่า ๑ ข้อ)</td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="15">นักโทษเด็ดขาดให้ความเคารพนับถือ และเชื่อฟังผู้อุปการะ</td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="15">
+                มีเวลาเพียงพอต่อการสอดส่องดูแลพฤติกรรมของนักโทษเด็ดขาดในระหว่างพัก/ลดการลงโทษ</td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="15">ผู้อุปการะ สามารถเป็นต้นแบบและเป็นตัวอย่างที่ดีในการด
+                าเนินชีวิตให้กับนักโทษเด็ดขาดได้</td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="15">ผู้อุปการะ
+                สามารถวางแผนและช่วยเหลือให้นักโทษเด็ดขาดสามารถดeเนินชีวิตได้อย่างปกติสุข</td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="15">ผู้อุปการะ
+                มีความพร้อมในการติดต่อสื่อสารและให้ข้อมูลเกี่ยวกับนักโทษเด็ดขาดต่อพนักงานเจ้าหน้าที่หรือ
+                อาสาสมัครคุมประพฤติ ตลอดจนบุคคลที่เป็นผู้ช่วยเหลือเจ้าพนักงานได้</td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="4">ความพร้อมด้านอื่น ๆ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="10"></td>
+            </tr>
+
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+
+            <tr>
+              <td style="font-weight: bold; height: 5px;" colspan="16">๒.๕
+                ประวัติการติดต่อเยี่ยมเยียนนักโทษเด็ดขาด</td>
+            </tr>
+
+            <tr>
+              <td colspan="14">ผู้อุปการะได้ไปเยี่ยมเยียนนักโทษเด็ดขาดที่เรือนจำ/ทัณฑสถาน
+                โดยเฉลี่ยเดือน/ปีละ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;"></td>ครั้ง/
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3">รวมทั้งสิ้นประมาณ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;"></td>ครั้ง
+            </tr>
+
+            <tr>
+              <td colspan="12">ผู้อุปการะได้ติดต่อทางจดหมายกับนักโทษเด็ดขาด โดยเฉลี่ยเดือน/ปีละ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;"></td>ครั้ง/
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3">รวมทั้งสิ้นประมาณ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;"></td>ครั้ง
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+
+            <tr>
+              <td style="font-weight: bold; height: 5px;" colspan="16">๓.
+                ประวัติภูมิหลังของนักโทษเด็ดขาด (โดยผู้อุปการะเป็นผู้ให้ข้อมูล)
+              </td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td style="font-weight: bold; height: 5px;" colspan="9">๓.๑
+                ข้อมูลส่วนบุคคลของนักโทษเด็ดขาด</td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="7">ชื่อ-ชื่อสกุลจริงของนักโทษเด็ดขาด</td>
+              <td class="colorfont" style="border-bottom: black 1px dotted; text-align:center;" colspan="3"
+                *ngFor="let citizenItem of moidopapersonResults">
+                <div *ngIf="true">{{citizenItem.firstName}} {{citizenItem.lastName}}</div>
+              </td>
+              <td colspan="2">ชื่อเล่น</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="2">เชื้อชาติ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;"></td>
+              <td>สัญชาติ</td>
+              <td class="colorfont" style="border-bottom: black 1px dotted; text-align:center;" colspan="3"
+                *ngFor="let citizenItem of moidopapersonResults">
+                <div *ngIf="true">{{citizenItem.nationality}}</div>
+              </td>
+              <td>ศาสนา</td>
+              <td class="colorfont" style="border-bottom: black 1px dotted; text-align:center;" colspan="3"
+                *ngFor="let citizenItem of moidopapersonResults">
+                <div *ngIf="true">{{citizenItem.religion}}</div>
+              </td>
+              <td colspan="5">จบการศึกษาก่อนวันต้องโทษ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="3"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="4">อาชีพก่อนต้องโทษ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="4"></td>
+              <td colspan="2">รายได้</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="2"></td>
+              <td colspan="3">บาท/เดือน/ปี</td>
+
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="6">ก่อนต้องโทษมีภูมิลำเนาอยู่บ้านเลขที</td>
+              <td class="colorfont" style="border-bottom: black 1px dotted; text-align:center;" colspan="1"
+                *ngFor="let citizenItem of moidopapersonResults">
+                <div *ngIf="true">{{citizenItem.homeNumber}}</div>
+              </td>
+              <td>หมู่ที่</td>
+              <td class="colorfont" style="border-bottom: black 1px dotted; text-align:center;" colspan="1"
+                *ngFor="let citizenItem of moidopapersonResults">
+                <div *ngIf="true">{{citizenItem.homeMoo}}</div>
+              </td>
+              <td>ถนน</td>
+              <td class="colorfont" style="border-bottom: black 1px dotted; text-align:center;" colspan="2"
+                *ngFor="let citizenItem of moidopapersonResults">
+                <div *ngIf="true">{{citizenItem.homeRoad}}</div>
+              </td>
+              <td colspan="2">ตำบล/แขวง</td>
+              <td class="colorfont" style="border-bottom: black 1px dotted; text-align:center;" colspan="3"
+                *ngFor="let citizenItem of moidopapersonResults">
+                <div *ngIf="true">{{citizenItem.homeTumbon}}</div>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3">อำเภอ/เขต</td>
+              <td class="colorfont" style="border-bottom: black 1px dotted; text-align:center;" colspan="3"
+                *ngFor="let citizenItem of moidopapersonResults">
+                <div *ngIf="true">{{citizenItem.homeAmphur}}</div>
+              </td>
+              <td colspan="2">จังหวัด</td>
+              <td class="colorfont" style="border-bottom: black 1px dotted; text-align:center;" colspan="3"
+                *ngFor="let citizenItem of moidopapersonResults">
+                <div *ngIf="true">{{citizenItem.homeProvince}}</div>
+              </td>
+              <td colspan="2">โทรศัพท์</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="2"></td>
+
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="4">นักโทษผู้นี้มีหลักทรัพย์คือ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="12"></td>
+
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="6">ขณะนี้ผู้ดูแลหลักทรัพย์ดังกล่าว คือ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="10"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3">สถานภาพสมรส</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td>โสด</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td>สมรส</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="2">หย่าร้าง</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="2">แยกกันอยู่</td>
+
+            </tr>
+            <tr>
+              <td colspan="3"></td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="4">อยู่กินฉันสามีภรรยา</td>
+            </tr>
+            <!-- //หน้า3 -->
+            <tr>
+              <td style="height: 5px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3"></td>
+              <td colspan="3"></td>
+              <td colspan="3"></td>
+              <td></td>
+              <td>- ๓ -</td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="4">คู่สมรสชื่อ-ชื่อสกุล</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="6"></td>
+              <td>อายุ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;"></td>
+              <td colspan="2">จบการศึกษา</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="2"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td>อาชีพ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="3"></td>
+              <td colspan="2">รายได้</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="3"></td>
+              <td colspan="5">บาท/เดือน/ปี มีบุตรด้วยกัน</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="2"></td>คน
+
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="4">อายุของบุตร (เรียงลำดับ)</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="12"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="4">บุตรขณะนี้อยู่กับ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="5"></td>
+              <td colspan="7">บุตรที่สามารถช่วยครอบครัวในการประกอบอาชีพ</td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="4">หรือเลี้ยงตัวเองได้แล้ว มี</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;"></td>คน
+
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="4">แต่ละคนประกอบอาชีพ </td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="12"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="4">บุตรที่กำลังศึกษาเล่าเรียน </td>
+              <td style="border-bottom: black 1px dotted; text-align:center;"></td> คน
+              <td colspan="2">อยู่ชั้น </td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="8"></td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="9">ขณะนี้คู่สมรส (ภรรยา/สามี) ของนักโทษผู้นี้อาศัยอยู่กับ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="7"></td>
+
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3">บิดาของนักโทษ</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="3">ถึงแก่กรรมแล้ว</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="3">ยังมีชีวิต และอายุ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;"></td>ปี
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3">พักอาศัยอยู่กับ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="13"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="2">บ้านเลขที่</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="3"></td>
+              <td colspan="2">หมู่ที่</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="2"></td>
+              <td colspan="3">ตำบล/แขวง</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="4"></td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3">อำเภอ/เขต</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="5"></td>
+              <td colspan="3">จังหวัด</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="5"></td>
+
+            </tr>
+
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3">มารดาของนักโทษ</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="3">ถึงแก่กรรมแล้ว</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="3">ยังมีชีวิต และอายุ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;"></td>ปี
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3">พักอาศัยอยู่กับ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="13"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="2">บ้านเลขที่</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="3"></td>
+              <td colspan="2">หมู่ที่</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="2"></td>
+              <td colspan="3">ตำบล/แขวง</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="4"></td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3">อำเภอ/เขต</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="5"></td>
+              <td colspan="3">จังหวัด</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="5"></td>
+
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="16">หลักทรัพย์ฐานะความเป็นอยู่ภายในครอบครัวและการประกอบอาชีพ คือ</td>
+
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="16"></td>
+
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td style="font-weight: bold; height: 5px;" colspan="16">๓.๒ ข้อมูลสาเหตุการกระทำความผิด
+                ประวัติการกระทำผิด และนิสัยความประพฤติ
+              </td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="7">สาเหตุและพฤติการณ์การกระทำผิดคดีนี้ </td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="2">ไม่ทราบ</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="4">ทราบราบละเอียดบ้าง คือ</td>
+
+            </tr>
+            <tr>
+
+              <td class="colorfont" style="border-bottom: black 1px dotted;" colspan="16">
+
+              </td>
+
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="10">ประวัติการต้องโทษจำคุก หรือกระทำผิดอาญาคดีอื่นนอกจากคดีนี้ </td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="2">ไม่ทราบ</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="2">ทราบ คือ</td>
+            </tr>
+            <tr>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="16"></td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="6">นิสัยความประพฤติของนักโทษ</td>
+            </tr>
+            <tr>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="16"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td style="font-weight: bold; height: 5px;" colspan="16">๓.๓ ปัญหาของนักโทษเด็ดขาด</td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+
+            <tr>
+              <td colspan="6">ปัญหาของนักโทษก่อนต้องโทษ</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="2">ไม่มี</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="2">ไม่ทราบ</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="2">มี คือ</td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+
+            <tr>
+              <td colspan="4">สภาพปัญหา คือ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="12"></td>
+            </tr>
+
+            <!-- //หน้า4 -->
+            <tr>
+              <td style="height: 5px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3"></td>
+              <td colspan="3"></td>
+              <td colspan="3"></td>
+              <td></td>
+              <td>- ๔ -</td>
+              <td></td>
+              <td></td>
+            </tr>
+
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+
+            <tr>
+              <td colspan="16">กรณีมีปัญหาด้านยาเสพติด คือ</td>
+            </tr>
+
+
+            <tr>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="4">เสพยาเสพติดประเภท</td>
+              <td class="colorfont" style="border-bottom: black 1px dotted; " colspan="8" *ngIf="true">
+            <tr *ngFor="let narcoticOffenderItem of moidopapersonResults">
+              {{narcoticOffenderItem.narcoticName}}
+            <tr>
+              </td>
+              <td colspan="2">ตั้งแต่อายุ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;"></td>ปี
+            </tr>
+            <tr>
+              <td colspan="16">กรณีมีปัญหาด้านยาเสพติด คือ</td>
+            </tr>
+
+
+            <tr>
+
+              <td colspan="2">เนื่องจาก</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="14"></td>
+
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+
+            <tr>
+              <td colspan="4">เข้ารับการบำบัดฟื้นฟู</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="2">ไม่เคย</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td>เคย</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;"></td>
+              <td colspan="2">ครั้ง ที่</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+
+            <tr>
+
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="4">รับจ้างซื้อยาเสพติด</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="3">จำหน่ายยาเสพติด</td>
+              <td>เนื่องจาก</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="6"></td>
+            </tr>
+
+
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td style="font-weight: bold; height: 5px;" colspan="16">๓.๔
+                ที่อยู่อาศัยและสภาพแวดล้อมของนักโทษเด็ดขาดในระหว่างการคุมความประพฤติ</td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="4">เป็นบ้านส่วนตัวของนักโทษเด็ดขาด</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="3">เป็นบ้านส่วนตัวของผู้อุปการะ</td>
+
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="3">อาศัยผู้อื่น</td>
+              <td>คือ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="5"></td>
+              <td colspan="2">เกี่ยวข้องเป็น</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="4"></td>
+
+            </tr>
+
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="2">บ้านเช่า</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td>อื่นๆ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="11"></td>
+
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="16">สภาพแวดล้อมที่พักอาศัย มีลักษณะ</td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="3"> ชุมชนแออัด</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="2">ย่านการค้า</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="4">บริเวณโรงงานอุตสาหกรรม</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="3">บ้านจัดสรรชานเมือง</td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="3"> ที่อยู่อาศัยทั่วไป</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="4">สภาพชนบทห่างไกล</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="3">ชุมชนหมู่บ้านในชนบท</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td>อื่นๆ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;"></td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="9">การประกอบอาชีพของประชาชนที่อยู่ในละแวกบ้านพัก</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="7"></td>
+
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="12">สภาพแวดล้อมมีความเหมาะสม ต่อการปรับเปลี่ยนพฤติกรรมนักโทษเพียงใด</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="4"></td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td style="font-weight: bold; height: 5px;" colspan="16">๓.๕
+                การวางแผนให้นักโทษเด็ดขาดดำเนินชีวิตภายหลังปล่อยตัว</td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="4">ยังไม่ได้เตรียมการไว้</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+
+              <td colspan="4">เตรียมการไว้แล้ว คือ </td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="8"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="7">ต้องการคำแนะนำช่วยเหลือเพิ่มเติมในเรื่อง</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="8"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td style="font-weight: bold; height: 5px;" colspan="16">๓.๖
+                การวางแผนให้นักโทษเด็ดขาดดำเนินชีวิตภายหลังปล่อยตัว</td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="8">ผู้อุปการะเคยติดต่อ หรือมีความสัมพันธ์กันหรือไม</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td>เคย</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="2">ไม่่เคย</td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="16">
+                การพักลงโทษนักโทษเด็ดขาดจะทำก่อให้เกิดปัญหาความไม่เป็นปกติสุขของผู้เสียหายหรือไม่</td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="3">เกิดปัญหา</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="3">ไม่เกิดปัญหา</td>
+              <td colspan="2">เนื่องจาก</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="6"></td>
+            </tr>
+            <!-- //หน้า5 -->
+            <tr>
+              <td style="height: 5px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3"></td>
+              <td colspan="3"></td>
+              <td colspan="3"></td>
+              <td></td>
+              <td>- ๕ -</td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3"></td>
+              <td colspan="12">ข้าพเจ้าขอรับรองรองว่า เป็นความจริงทุกประการ
+                จึงลงลายมือชื่อไว้เป็นพยานหลักฐาน</td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="4"></td>
+              <td colspan="2">ลงชื่อ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="6"></td>
+              <td colspan="3">ผู้อุปการะ</td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="5"></td>
+              (
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="6"></td>)
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="4"></td>
+              <td colspan="2">วันที่</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="6"></td>
+
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="4"></td>
+              <td colspan="2">ลงชื่อ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="6"></td>
+              <td colspan="4">พนักงานคุมประพฤติ/อ.ส.ค.</td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="5"></td>
+              (
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="6"></td>)
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="4"></td>
+              <td colspan="2">วันที่</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="6"></td>
+
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td style="font-weight: bold; height: 5px; text-decoration: underline;" colspan="3">
+                คำเตือน</td>
+              <td colspan="13">การพักโทษหรือลดวันต้องโทษ
+                นักโทษหรือผู้อุปการะไม่ต้องเสียค่าใช้จ่ายหรือค่าธรรมเนียมใดๆ</td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3"></td>
+              <td colspan="13">แต่หากมีผู้ใดเรียกหรือรับทรัพย์สินหรือยินยอมที่จะรับประโยชน์อื่นใด
+                ในการดำเนินการดังกล่าว</td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3"></td>
+              <td style="font-weight: bold; height: 5px; text-decoration: underline;" colspan="2">
+                โปรดแจ้ง</td>
+              <td colspan="6"> ผู้อำนวยการสำนักงานคุมประพฤติ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="5"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3"></td>
+              <td>โทรศัพท์</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="7"></td>
+              <td colspan="6"> หรือ อธิบดีกรมคุมประพฤติกรมคุมประพฤติ</td>
+
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3"></td>
+              <td colspan="13">ถนนแจ้งวัฒนะ เขตหลักสี่ กรุงเทพมหานคร ๑๐๑๒๐ โทรศัพท์ ๐๒ – ๑๔๑๔๙๐๒</td>
+            </tr>
+
+            <!-- //หน้า6 -->
+            <tr>
+              <td style="height: 5px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3"></td>
+              <td colspan="3"></td>
+              <td colspan="3"></td>
+              <td></td>
+              <td>- ๖ -</td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td style="font-weight: bold; height: 5px; text-decoration: underline;" colspan="16">
+                ตอนที่
+                ๒ ความเห็นของผู้นำชุมชน</td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="4">ผู้ให้ถ้อยคำชื่อ-ชื่อสกุล</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="5"></td>
+              <td colspan="4">เกี่ยวข้องกับนักโทษเป็น</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="3"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="4">พักอาศัยอยู่บ้านเลขที่</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="2"></td>
+              <td>หมู่ที่</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;"></td>
+              <td>ซอย</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="2"></td>
+              <td>ถนน</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="4"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3">ตำบล/แขวง</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="3"></td>
+              <td colspan="3">อำเภอ/เขต</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="3"></td>
+              <td colspan="2">จังหวัด</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="2"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3">โทรศัพท์</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="7"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td style="font-weight: bold; height: 5px;" colspan="16">มีความเห็นว่า</td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="9">ควรปล่อยนักโทษรายนี้และคุมประพฤติไว้ เนื่องจาก</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="6"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="5">ไม่สมควรปล่อยเนื่องจาก</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="10"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="4">หากปล่อยตัวนักโทษรายนี้</td>
+              <td style="font-weight: bold;" colspan="12">แนวโน้มของความปลอดภัยทางสังคม</td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td>สูง</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="2">ปานกลาง</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td>ต่ำ</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="3">ไม่มีความปลอดภัย</td>
+
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="2">ผู้ให้ถ้อยคำ</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="3">ไม่รู้จักผู้อุปการะ</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="3">รู้จักผู้อุปการะ</td>
+            </tr>
+
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="7">มีความเห็นต่อ นาย / นาง / นางสาว</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="7"></td>
+              <td colspan="2">ผู้อุปการะว่า</td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="4">มีนิสัยความประพฤติ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="11"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="7">สามารถให้ความอุปการะนักโทษได้ เนื่องจาก</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="8"></td>
+            </tr>
+
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="8">ไม่สามารถให้ความอุปการะนักโทษได้เนื่องจาก</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="7"></td>
+            </tr>
+
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="3">อื่นๆ (ระบุ)</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="12"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3"></td>
+              <td colspan="13">ข้าพเจ้าขอรับรองรองว่า เป็นความจริงทุกประการ
+                จึงลงลายมือชื่อไว้เป็นพยานหลักฐาน</td>
+
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="4"></td>
+              <td colspan="2">ลงชื่อ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="6"></td>
+              <td colspan="4">ผู้นำชุมชน</td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="5"></td>
+              (
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="6"></td>)
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+
+            <tr>
+              <td colspan="4"></td>
+              <td colspan="2">วันที่</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="6"></td>
+
+            </tr>
+
+            <!-- //หน้า7 -->
+            <tr>
+              <td style="height: 5px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3"></td>
+              <td colspan="3"></td>
+              <td colspan="3"></td>
+              <td></td>
+              <td>- ๗ -</td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="4"></td>
+              <td colspan="2">ลงชื่อ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="6"></td>
+              <td colspan="4">พนักงานคุมประพฤติ/อ.ส.ค.</td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="5"></td>
+              (
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="6"></td>)
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="4"></td>
+              <td colspan="2">วันที่</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="6"></td>
+
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td style="font-weight: bold; height: 5px; text-decoration: underline;" colspan="3">
+                คำเตือน</td>
+              <td colspan="13">การพักโทษหรือลดวันต้องโทษ
+                นักโทษหรือผู้อุปการะไม่ต้องเสียค่าใช้จ่ายหรือค่าธรรมเนียมใดๆ</td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3"></td>
+              <td colspan="13">แต่หากมีผู้ใดเรียกหรือรับทรัพย์สินหรือยินยอมที่จะรับประโยชน์อื่นใด
+                ในการดำเนินการดังกล่าว</td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3"></td>
+              <td style="font-weight: bold; height: 5px; text-decoration: underline;" colspan="2">
+                โปรดแจ้ง</td>
+              <td colspan="6"> ผู้อำนวยการสำนักงานคุมประพฤติ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="5"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3"></td>
+              <td>โทรศัพท์</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="7"></td>
+              <td colspan="6"> หรือ อธิบดีกรมคุมประพฤติกรมคุมประพฤติ</td>
+
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3"></td>
+              <td colspan="13">ถนนแจ้งวัฒนะ เขตหลักสี่ กรุงเทพมหานคร ๑๐๑๒๐ โทรศัพท์ ๐๒ – ๑๔๑๔๙๐๒</td>
+            </tr>
+
+            <!-- //หน้า8 -->
+            <tr>
+              <td style="height: 5px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3"></td>
+              <td colspan="3"></td>
+              <td colspan="3"></td>
+              <td></td>
+              <td>- ๘ -</td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td style="font-weight: bold; height: 5px; text-decoration: underline;" colspan="16">
+                ตอนที่
+                ๓ ความเห็นของเพื่อนบ้าน</td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="4">ผู้ให้ถ้อยคำชื่อ-ชื่อสกุล</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="5"></td>
+              <td colspan="4">เกี่ยวข้องกับนักโทษเป็น</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="3"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="4">พักอาศัยอยู่บ้านเลขที่</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="2"></td>
+              <td>หมู่ที่</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;"></td>
+              <td>ซอย</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="2"></td>
+              <td>ถนน</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="4"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3">ตำบล/แขวง</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="3"></td>
+              <td colspan="3">อำเภอ/เขต</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="3"></td>
+              <td colspan="2">จังหวัด</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="2"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3">โทรศัพท์</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="7"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td style="font-weight: bold; height: 5px;" colspan="16">มีความเห็นว่า</td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="9">ควรปล่อยนักโทษรายนี้และคุมประพฤติไว้ เนื่องจาก</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="6"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="5">ไม่สมควรปล่อยเนื่องจาก</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="10"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="4">หากปล่อยตัวนักโทษรายนี้</td>
+              <td style="font-weight: bold;" colspan="12">แนวโน้มของความปลอดภัยทางสังคม</td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td>สูง</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="2">ปานกลาง</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td>ต่ำ</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="3">ไม่มีความปลอดภัย</td>
+
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="2">ผู้ให้ถ้อยคำ</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="3">ไม่รู้จักผู้อุปการะ</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="3">รู้จักผู้อุปการะ</td>
+            </tr>
+
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="7">มีความเห็นต่อ นาย / นาง / นางสาว</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="7"></td>
+              <td colspan="2">ผู้อุปการะว่า</td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="4">มีนิสัยความประพฤติ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="11"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="7">สามารถให้ความอุปการะนักโทษได้ เนื่องจาก</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="8"></td>
+            </tr>
+
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="8">ไม่สามารถให้ความอุปการะนักโทษได้เนื่องจาก</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="7"></td>
+            </tr>
+
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="3">อื่นๆ (ระบุ)</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="12"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3"></td>
+              <td colspan="13">ข้าพเจ้าขอรับรองรองว่า เป็นความจริงทุกประการ
+                จึงลงลายมือชื่อไว้เป็นพยานหลักฐาน</td>
+
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="4"></td>
+              <td colspan="2">ลงชื่อ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="6"></td>
+              <td colspan="4">เพื่อนบ้าน</td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="5"></td>
+              (
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="6"></td>)
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+
+            <tr>
+              <td colspan="4"></td>
+              <td colspan="2">วันที่</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="6"></td>
+
+            </tr>
+            <!-- // หน้า9 -->
+            <tr>
+              <td style="height: 5px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3"></td>
+              <td colspan="3"></td>
+              <td colspan="3"></td>
+              <td></td>
+              <td>- ๙ -</td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="4"></td>
+              <td colspan="2">ลงชื่อ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="6"></td>
+              <td colspan="4">พนักงานคุมประพฤติ/อ.ส.ค.</td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="5"></td>
+              (
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="6"></td>)
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="4"></td>
+              <td colspan="2">วันที่</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="6"></td>
+
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td style="font-weight: bold; height: 5px; text-decoration: underline;" colspan="3">
+                คำเตือน</td>
+              <td colspan="13">การพักโทษหรือลดวันต้องโทษ
+                นักโทษหรือผู้อุปการะไม่ต้องเสียค่าใช้จ่ายหรือค่าธรรมเนียมใดๆ</td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3"></td>
+              <td colspan="13">แต่หากมีผู้ใดเรียกหรือรับทรัพย์สินหรือยินยอมที่จะรับประโยชน์อื่นใด
+                ในการดำเนินการดังกล่าว</td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3"></td>
+              <td style="font-weight: bold; height: 5px; text-decoration: underline;" colspan="2">
+                โปรดแจ้ง</td>
+              <td colspan="6"> ผู้อำนวยการสำนักงานคุมประพฤติ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="5"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3"></td>
+              <td>โทรศัพท์</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="7"></td>
+              <td colspan="6"> หรือ อธิบดีกรมคุมประพฤติกรมคุมประพฤติ</td>
+
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3"></td>
+              <td colspan="13">ถนนแจ้งวัฒนะ เขตหลักสี่ กรุงเทพมหานคร ๑๐๑๒๐ โทรศัพท์ ๐๒ – ๑๔๑๔๙๐๒</td>
+            </tr>
+
+
+            <!-- //หน้า10 -->
+
+
+            <!-- //หน้า10 -->
+            <tr>
+              <td style="height: 5px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3"></td>
+              <td colspan="3"></td>
+              <td colspan="3"></td>
+              <td></td>
+              <td colspan="2">- ๑๐ -</td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td style="font-weight: bold; height: 5px; text-decoration: underline;" colspan="16">
+                ตอนที่
+                ๔ ความเห็นของผู้เสียหาย</td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="4">ผู้ให้ถ้อยคำชื่อ-ชื่อสกุล</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="5"></td>
+              <td colspan="4">เกี่ยวข้องกับนักโทษเป็น</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="3"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="4">พักอาศัยอยู่บ้านเลขที่</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="2"></td>
+              <td>หมู่ที่</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;"></td>
+              <td>ซอย</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="2"></td>
+              <td>ถนน</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="4"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3">ตำบล/แขวง</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="3"></td>
+              <td colspan="3">อำเภอ/เขต</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="3"></td>
+              <td colspan="2">จังหวัด</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="2"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3">โทรศัพท์</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="7"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td style="font-weight: bold; height: 5px;" colspan="16">มีความเห็นว่า</td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="9">ควรปล่อยนักโทษรายนี้และคุมประพฤติไว้ เนื่องจาก</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="6"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="5">ไม่สมควรปล่อยเนื่องจาก</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="10"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="4">หากปล่อยตัวนักโทษรายนี้</td>
+              <td style="font-weight: bold;" colspan="12">แนวโน้มของความปลอดภัยทางสังคม</td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td>สูง</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="2">ปานกลาง</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td>ต่ำ</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="3">ไม่มีความปลอดภัย</td>
+
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="2">ผู้ให้ถ้อยคำ</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="3">ไม่รู้จักผู้อุปการะ</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="3">รู้จักผู้อุปการะ</td>
+            </tr>
+
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="7">มีความเห็นต่อ นาย / นาง / นางสาว</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="7"></td>
+              <td colspan="2">ผู้อุปการะว่า</td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="4">มีนิสัยความประพฤติ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="11"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="7">สามารถให้ความอุปการะนักโทษได้ เนื่องจาก</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="8"></td>
+            </tr>
+
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="8">ไม่สามารถให้ความอุปการะนักโทษได้เนื่องจาก</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="7"></td>
+            </tr>
+
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="3">อื่นๆ (ระบุ)</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="12"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3"></td>
+              <td colspan="13">ข้าพเจ้าขอรับรองรองว่า เป็นความจริงทุกประการ
+                จึงลงลายมือชื่อไว้เป็นพยานหลักฐาน</td>
+
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="4"></td>
+              <td colspan="2">ลงชื่อ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="6"></td>
+              <td colspan="4">ผูู้เสียหาย/คู่คดี</td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="5"></td>
+              (
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="6"></td>)
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+
+            <tr>
+              <td colspan="4"></td>
+              <td colspan="2">วันที่</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="6"></td>
+
+            </tr>
+            <!-- // หน้า11 -->
+            <tr>
+              <td style="height: 5px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3"></td>
+              <td colspan="3"></td>
+              <td colspan="3"></td>
+              <td></td>
+              <td colspan="2">- ๑๑ -</td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="4"></td>
+              <td colspan="2">ลงชื่อ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="6"></td>
+              <td colspan="4">พนักงานคุมประพฤติ/อ.ส.ค.</td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="5"></td>
+              (
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="6"></td>)
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="4"></td>
+              <td colspan="2">วันที่</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="6"></td>
+
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td style="font-weight: bold; height: 5px; text-decoration: underline;" colspan="3">
+                คำเตือน</td>
+              <td colspan="13">การพักโทษหรือลดวันต้องโทษ
+                นักโทษหรือผู้อุปการะไม่ต้องเสียค่าใช้จ่ายหรือค่าธรรมเนียมใดๆ</td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3"></td>
+              <td colspan="13">แต่หากมีผู้ใดเรียกหรือรับทรัพย์สินหรือยินยอมที่จะรับประโยชน์อื่นใด
+                ในการดำเนินการดังกล่าว</td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3"></td>
+              <td style="font-weight: bold; height: 5px; text-decoration: underline;" colspan="2">
+                โปรดแจ้ง</td>
+              <td colspan="6"> ผู้อำนวยการสำนักงานคุมประพฤติ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="5"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3"></td>
+              <td>โทรศัพท์</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="7"></td>
+              <td colspan="6"> หรือ อธิบดีกรมคุมประพฤติกรมคุมประพฤติ</td>
+
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3"></td>
+              <td colspan="13">ถนนแจ้งวัฒนะ เขตหลักสี่ กรุงเทพมหานคร ๑๐๑๒๐ โทรศัพท์ ๐๒ – ๑๔๑๔๙๐๒</td>
+            </tr>
+
+
+
+
+            <!-- //หน้า12 -->
+            <tr>
+              <td style="height: 5px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3"></td>
+              <td colspan="3"></td>
+              <td colspan="3"></td>
+              <td></td>
+              <td colspan="2">- ๑๒ -</td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td style="font-weight: bold; height: 5px; text-decoration: underline;" colspan="16">
+                ตอนที่
+                ๔ ความเห็นของคู่คดี</td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="4">ผู้ให้ถ้อยคำชื่อ-ชื่อสกุล</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="5"></td>
+              <td colspan="4">เกี่ยวข้องกับนักโทษเป็น</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="3"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="4">พักอาศัยอยู่บ้านเลขที่</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="2"></td>
+              <td>หมู่ที่</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;"></td>
+              <td>ซอย</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="2"></td>
+              <td>ถนน</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="4"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3">ตำบล/แขวง</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="3"></td>
+              <td colspan="3">อำเภอ/เขต</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="3"></td>
+              <td colspan="2">จังหวัด</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="2"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3">โทรศัพท์</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="7"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td style="font-weight: bold; height: 5px;" colspan="16">มีความเห็นว่า</td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="9">ควรปล่อยนักโทษรายนี้และคุมประพฤติไว้ เนื่องจาก</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="6"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="5">ไม่สมควรปล่อยเนื่องจาก</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="10"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="4">หากปล่อยตัวนักโทษรายนี้</td>
+              <td style="font-weight: bold;" colspan="12">แนวโน้มของความปลอดภัยทางสังคม</td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td>สูง</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="2">ปานกลาง</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td>ต่ำ</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="3">ไม่มีความปลอดภัย</td>
+
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="2">ผู้ให้ถ้อยคำ</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="3">ไม่รู้จักผู้อุปการะ</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="3">รู้จักผู้อุปการะ</td>
+            </tr>
+
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="7">มีความเห็นต่อ นาย / นาง / นางสาว</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="7"></td>
+              <td colspan="2">ผู้อุปการะว่า</td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="4">มีนิสัยความประพฤติ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="11"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="7">สามารถให้ความอุปการะนักโทษได้ เนื่องจาก</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="8"></td>
+            </tr>
+
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="8">ไม่สามารถให้ความอุปการะนักโทษได้เนื่องจาก</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="7"></td>
+            </tr>
+
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="3">อื่นๆ (ระบุ)</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="12"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3"></td>
+              <td colspan="13">ข้าพเจ้าขอรับรองรองว่า เป็นความจริงทุกประการ
+                จึงลงลายมือชื่อไว้เป็นพยานหลักฐาน</td>
+
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="4"></td>
+              <td colspan="2">ลงชื่อ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="6"></td>
+              <td colspan="4">ผูู้เสียหาย/คู่คดี</td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="5"></td>
+              (
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="6"></td>)
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+
+            <tr>
+              <td colspan="4"></td>
+              <td colspan="2">วันที่</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="6"></td>
+
+            </tr>
+            <!-- // หน้า13 -->
+            <tr>
+              <td style="height: 5px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3"></td>
+              <td colspan="3"></td>
+              <td colspan="3"></td>
+              <td></td>
+              <td colspan="2">- ๑๓ -</td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="4"></td>
+              <td colspan="2">ลงชื่อ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="6"></td>
+              <td colspan="4">พนักงานคุมประพฤติ/อ.ส.ค.</td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="5"></td>
+              (
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="6"></td>)
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="4"></td>
+              <td colspan="2">วันที่</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="6"></td>
+
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td style="font-weight: bold; height: 5px; text-decoration: underline;" colspan="3">
+                คำเตือน</td>
+              <td colspan="13">การพักโทษหรือลดวันต้องโทษ
+                นักโทษหรือผู้อุปการะไม่ต้องเสียค่าใช้จ่ายหรือค่าธรรมเนียมใดๆ</td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3"></td>
+              <td colspan="13">แต่หากมีผู้ใดเรียกหรือรับทรัพย์สินหรือยินยอมที่จะรับประโยชน์อื่นใด
+                ในการดำเนินการดังกล่าว</td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3"></td>
+              <td style="font-weight: bold; height: 5px; text-decoration: underline;" colspan="2">
+                โปรดแจ้ง</td>
+              <td colspan="6"> ผู้อำนวยการสำนักงานคุมประพฤติ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="5"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3"></td>
+              <td>โทรศัพท์</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="7"></td>
+              <td colspan="6"> หรือ อธิบดีกรมคุมประพฤติกรมคุมประพฤติ</td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3"></td>
+              <td colspan="13">ถนนแจ้งวัฒนะ เขตหลักสี่ กรุงเทพมหานคร ๑๐๑๒๐ โทรศัพท์ ๐๒ – ๑๔๑๔๙๐๒</td>
+            </tr>
+
+
+
+          </tbody>
+        </table>
+      </form>
+    </div>
+
+
+  </div>
+</div>
+
+<!--end if report name-->

@@ -1,0 +1,78 @@
+<div *ngIf="moiDsdWorkforceDevelopmentsCount">
+    <div *ngFor="let moiDsdWorkforceDevelopmentsItem of moiDsdWorkforceDevelopmentsResults">
+        <div *ngIf="moiDsdWorkforceDevelopmentsItem.exitCode; else exit">
+          <div *ngIf="report_name != 'รายงาน Single Report'">
+            <div class="card border-secondary border col-md-12">
+              <!-- Portlet card -->
+              <div class="card mb-md-0 mb-3">
+                <div class="card-body">
+                  <div>
+                    <span class="text-success font-20"><u>กรมการปกครอง: </u></span>
+                    <span class="text-white font-20"><u>ฐานข้อมูลการพัฒนาฝีมือแรงงาน(Linkage) </u></span>
+                    <span class="text-danger font-20"><u>{{moiDsdWorkforceDevelopmentsItem.exitCode | changeStatus}} </u></span>
+                    <span *ngIf="moiDsdWorkforceDevelopmentsItem.Results && moiDsdWorkforceDevelopmentsItem.exitCode == 'NOT_FOUND'" class="text-danger font-20"><u> (ไม่พบข้อมูล) </u></span>
+                    <span *ngIf="moiDsdWorkforceDevelopmentsItem.Results == '[]' && moiDsdWorkforceDevelopmentsItem.exitCode == 'OK'" class="text-danger font-20">
+                      <u> (ไม่พบข้อมูล) </u>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div> <!-- end card-->
+          </div>
+        </div>
+    </div>
+    <ng-template #exit>
+        <div class="card border-secondary border col-md-12">
+            <div class="card mb-md-0 mb-3">
+                <div class="card-body">
+                    <div data-toggle="collapse" data-target="#moiDsdWorkforceDevelopmentsTablecollapse" role="button" aria-expanded="true"
+                        aria-controls="moiDsdWorkforceDevelopmentscollapse">
+                        <span class="text-success font-20"><u>กรมการปกครอง:</u></span>
+                        <span class="text-white font-20"><u> ฐานข้อมูลการพัฒนาฝีมือแรงงาน(Linkage)</u></span>
+                        <span class="text-warning font-20"><u> จำนวน: {{moiDsdWorkforceDevelopmentsCount}} รายการ</u></span>
+                    </div>
+                    <div id="moiDsdWorkforceDevelopmentsTablecollapse" class="collapse pt-3">
+                        <div class="col-md-12" class="singlereport-timeline-item">
+                            <div class="col-md-12" class="singlereport-timeline-item" *ngFor="let moiDsdWorkforceDevelopmentsItem of moiDsdWorkforceDevelopmentsResults">
+                                <input type="hidden" value="ฐานข้อมูลการพัฒนาฝีมือแรงงาน(Linkage)" #moiDsdWorkforceDevelopmentsTitle>
+                                <input type="hidden" value="assets/dist/img/dsd.png" #moiDsdWorkforceDevelopmentsImg>
+                                <img src="assets/dist/img/dxc-img/symbol/datatype/32/moi-dsd-workforce-developments.png" width="25px">
+                                <span class="text-success font-20">&nbsp;<u>ฐานข้อมูลการพัฒนาฝีมือแรงงาน(Linkage)</u></span>
+
+                                <table class="table-striped table-centered mb-0 mt-3 text-20">
+                                    <thead>
+                                        <tr>
+                                            <th>ที่อยู่</th>
+                                            <th>เบอร์โทรศัพท์</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>{{ moiDsdWorkforceDevelopmentsItem.address | filter:""}}</td>
+                                            <td>{{ moiDsdWorkforceDevelopmentsItem.phone | filter:""}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</div>
+
+<div *ngIf="report_name != 'รายงาน Single Report'">
+    <div *ngIf="!moiDsdWorkforceDevelopmentsCount">
+      <div class="card border-secondary border col-md-12">
+        <div class="card mb-md-0 mb-3">
+          <div class="card-body">
+            <div>
+              <span class="text-success font-20"><u>กรมการปกครอง: </u></span>
+              <span class="text-white font-20"><u>ฐานข้อมูลการพัฒนาฝีมือแรงงาน(Linkage) </u></span>
+              <span class="text-danger font-20"><u>(ไม่พบข้อมูล)</u></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

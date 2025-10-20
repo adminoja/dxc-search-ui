@@ -1,0 +1,24 @@
+{
+    "content": [
+      {
+        "academicYear": "2568",
+        "semester": "1",
+        "prefixName": "เด็กชาย",
+        "firstName": "ก้องภพ",
+        "lastName": "ใจดี",
+        "personID": "1234567890123",
+        "schoolID": "R12345",
+        "schoolName": "โรงเรียนบ้านหนองคาย",
+        "departmentNameThai": "กลุ่มสาระการเรียนรู้วิทยาศาสตร์",
+        "educationLevelName": "มัธยมศึกษาตอนต้น",
+        "gradeLevelName": "ม.2",
+        "studentStatusName": "กำลังศึกษา",
+        "curriculumName": "หลักสูตรแกนกลางการศึกษาขั้นพื้นฐาน พ.ศ. 2551",
+        "majorName": "วิทยาศาสตร์",
+        "programName": "วิทยาศาสตร์-คณิตศาสตร์",
+        "courseName": "วิทยาศาสตร์พื้นฐาน",
+        "gpax": 3.85
+      }
+    ]
+  }
+  

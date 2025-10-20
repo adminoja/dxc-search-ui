@@ -1,0 +1,94 @@
+<div *ngIf="probationerCount">
+    <!-- <div *ngFor="let probationerItem of probationerResults"> -->
+        <div *ngIf="exitCode[0].exitCode; else exit">
+          <div *ngIf="report_name != 'รายงาน Single Report'">
+            <div class="card border-secondary border col-md-12">
+              <div class="card mb-md-0 mb-3">
+                <div class="card-body">
+                  <div>
+                    <span class="text-success font-20"><u>กรมคุมประพฤติ: </u></span>
+                    <span class="text-white font-20"><u>ผู้ถูกคุมประพฤติ </u></span>
+                    <span class="text-danger font-20"><u>{{exitCode[0].exitCode | changeStatus}}</u></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    <!-- </div> -->
+    <ng-template #exit>
+        <div class="card border-secondary border col-md-12">
+            <div class="card mb-md-0 mb-3">
+                <div class="card-body">
+                    <div data-toggle="collapse" data-target="#probationercollapse" role="button" aria-expanded="true"
+                        aria-controls="probationercollapse">
+                        <span class="text-success font-20"><u>กรมคุมประพฤติ: </u></span>
+                        <span class="text-white font-20"><u>ผู้ถูกคุมประพฤติ
+                            </u></span>
+                        <span class="text-warning font-20"><u>จำนวน: {{probationerCount}}
+                                รายการ
+                            </u></span>
+                    </div>
+                    <div id="probationercollapse" class="collapse pt-3">
+                        <div class="col-md-12" *ngFor="let probationerItem of probationerResults" class="singlereport-timeline-item">
+                            <div class="col-md-12" class="singlereport-timeline-item">
+                                <input type="hidden" value="ผู้ถูกคุมประพฤติ" #probationerTitle>
+                                <input type="hidden" value="assets/dist/img/dop.png" #probationerImg>
+                                <img src="assets/dist/img/dxc-img/symbol/datatype/32/dop-probationee.png" width="25px">
+                                <span class="text-success font-20">&nbsp;<u>ผู้ถูกคุมประพฤติ</u></span>
+
+                                <table class="table-striped table-centered mb-0 mt-3 text-20">
+                                    <thead>
+                                        <tr>
+                                            <th>ชื่อ</th>
+                                            <th>ถูกศาลสั่งคุมประพฤติเมื่อ</th>
+                                            <th>ฐานความผิด</th>
+                                            <th>หน่วยงานคุมประพฤติ</th>
+                                            <th>วันที่ครบกำหนดคุมประพฤติ</th>
+                                            <th>วันที่พ้นคุมประพฤติ</th>
+                                            <th>รายละเอียด</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>{{ probationerItem.firstName | filter:""}} 
+                                                {{probationerItem.lastName | filter:""}}</td>
+                                            <td>{{probationerItem.probationStartDate | converseDate}}</td>
+                                            <td>{{ probationerItem.predicateOffence | filter:""}}</td>
+                                            <td>{{ probationerItem.officeName | filter:""}}</td>
+                                            <td>{{probationerItem.probationPlannedEndDateSrc | converseDate }}</td>
+                                            <td>{{probationerItem.probationActualEndDateSrc | converseDate}}</td>
+                                            <td class="text-center">
+                                                <button class="btn btn-info" type="button" href="#probationer-table-full-width-modal" data-toggle="modal"
+                                                data-target="#probationer-table-full-width-modal"
+                                                (click)="selectRow(probationerItem,probationerTitle.value,probationerImg.value)">
+                                                <span class="icon-name"><i class="mdi mdi-arrow-top-right" style="color:white;"></i></span>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</div>
+
+<div *ngIf="report_name != 'รายงาน Single Report'">
+    <div *ngIf="!probationerCount">
+      <div class="card border-secondary border col-md-12">
+          <div class="card mb-md-0 mb-3">
+              <div class="card-body">
+                  <div>
+                      <span class="text-success font-20"><u>กรมคุมประพฤติ: </u></span>
+                      <span class="text-white font-20"><u>ผู้ถูกคุมประพฤติ </u></span>
+                      <span class="text-danger font-20"><u> (ไม่พบข้อมูล) </u></span>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+</div>

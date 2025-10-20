@@ -1,0 +1,190 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{{dataSourceName}} {{dataModelName}}</title>
+
+<style>body{font-size:14px}</style>
+</head>
+
+<body>
+<div>
+		<table border="1px" style="border-style:solid; border-color:#000; width:100%">
+            	<tr>
+                	<td align="center">{{dataModelName}}</td>
+                </tr>
+        </table>
+<br />
+<br />
+	<table style="width:100%">
+		<tr>
+    		
+                    <td colspan="4" style="text-align: right"><strong>เลขที่คำขอ</strong> <span style="color:blue">{{selectData.caseId}}</span></td>
+           
+        </tr>
+        
+    </table>
+     <br />
+    <table style="width:100%">
+            
+            <tr>
+                <td style="width:25%"><strong><em>ข้อมูลผู้ขอ</em></strong></td>
+                <td>&nbsp;</td>
+                <td style="width:25%">&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+            	<td>รายได้ของผู้ขอ</td>
+                <td style="color:blue">{{selectData.income}}</td>
+                <td></td><td></td>
+            </tr>
+            <tr>
+                <td>อาชีพอื่นๆของผู้ขอ</td>
+                <td style="color:blue">{{selectData.occupationOther}}</td>
+                <td>รายได้อื่นๆของผู้ขอ</td>
+                <td style="color:blue">{{selectData.incomeOther}}</td>
+            </tr>
+            <tr><td colspan="4">&nbsp;</td></tr>
+            <tr>
+                <td><strong><em>ข้อมูลการพิจารณา</em></strong></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td><td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>ชื่อศาล</td>
+                <td colspan="3" style="color:blue">{{selectData.courtName}}</td>
+            </tr>
+            <tr>
+                <td>เลขคดีดำ</td>
+                <td style="color:blue">{{selectData.courtBlacknum}}</td>
+                <td>เลขคดีแดง</td>
+                <td style="color:blue">{{selectData.courtRednum}}</td>
+            </tr>
+             <tr><td colspan="4">&nbsp;</td></tr>
+            <tr>
+                <td colspan="4" ><strong>ฐานความผิด</strong></td>
+               
+            </tr>
+             <tr>
+               
+                <td colspan="4" style="color:blue;text-indent:50px">{{selectData.courtCasedes}}</td>
+               
+            </tr>
+             <tr><td colspan="4">&nbsp;</td></tr>
+            <tr>
+                <td>สถานะผู้ขอ</td>
+                <td style="color:blue">{{selectData.courtSide}}</td>
+                <td>ผลการพิจารณาของศาล</td>
+                <td style="color:blue">{{selectData.courtResult}}</td>
+            </tr>
+            <tr>
+                <td>สรุปความเห็นเจ้าหน้าที่</td>
+                <td style="color:blue">{{selectData.ofcResult}}</td>
+                <td>วันที่เจ้าหน้าที่สรุปความเห็นส่งคณะอนุกรรมการ</td>
+                <td style="color:blue">{{selectData.ofcResultDate}}</td>
+            </tr>
+             <tr><td colspan="4">&nbsp;</td></tr>
+            <tr>
+                <td colspan="4" ><strong>รายละเอียดสรุปความเห็นเจ้าหน้าที่</strong></td>
+               
+                
+            </tr>
+            <tr>
+             
+                <td colspan="4" style="color:blue;text-indent:50px">{{selectData.ofcResultDes}}</td>
+                
+            </tr>
+            <tr>
+            	<td colspan="4">&nbsp;</td>
+            </tr>
+            <tr>
+                <td>ผลการพิจารณาของคณะอนุกรรมการ</td>
+                <td style="color:blue">{{selectData.subcomResult}}</td>
+                <td>คณะอนุกรรมการผู้พิจารณา</td>
+                <td style="color:blue">{{selectData.subcomId}}</td>
+            </tr>
+            <tr>
+                <td>วันที่ผลการพิจารณาของคณะอนุกรรมการ</td>
+                <td style="color:blue;text-indent:50px">{{selectData.subcomResultDate}}</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+            	<td colspan="4">&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="4"><strong>รายละเอียดผลการพิจารณาของคณะอนุกรรมการ</strong></td>
+               
+            </tr>
+            <tr>
+              
+                <td colspan="4" style="color:blue;text-indent:50px">{{selectData.subcomResultDes}}</td>
+            </tr>
+            <tr>
+            	<td colspan="4">&nbsp;</td>
+            </tr>
+            <tr>
+                <td>มติคณะอนุกรรมการครั้งที่</td>
+                <td style="color:blue">{{selectData.subcomResultnum}}</td>
+                <td>&nbsp;</td><td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>ผลการพิจารณาของคณะกรรมการ</td>
+                <td style="color:blue">{{selectData.comResult}}</td>
+                <td>วันที่ผลการพิจารณาของคณะกรรมการ</td>
+                <td style="color:blue">{{selectData.comResultDate}}</td>
+            </tr>
+            <tr>
+            	<td colspan="4">&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="4"><strong>รายละเอียดผลการพิจารณาของคณะกรรมการ</strong></td>
+              
+            </tr>
+            <tr>
+               
+                <td colspan="4" style="color:blue">{{selectData.comResultDes}}</td>
+            </tr>
+            <tr>
+            	<td colspan="4">&nbsp;</td>
+            </tr>
+            <tr>
+                <td>มติคณะกรรมการครั้งที่</td>
+                <td style="color:blue">{{selectData.comResultnum}}</td>
+                <td>&nbsp;</td><td>&nbsp;</td>
+            </tr>
+            <tr>
+            	<td colspan="4">&nbsp;</td>
+            </tr>
+            <tr>
+            	<td>ข้อเท็จจริงเพิ่มเติม</td>
+                <td colspan="3" style="color:blue">{{selectData.blobId}}</td>
+            </tr>
+            <tr>
+            	<td>มีการอุทธรณ์หรือไม่</td>
+                <td style="color:blue">{{selectData.isappeal}}</td>
+                <td>วันที่ยื่นอุทธรณ์</td>
+                <td style="color:blue">{{selectData.appealDate}}</td>
+            </tr>
+             <tr>
+            	<td colspan="4">&nbsp;</td>
+            </tr>
+             <tr>
+            	<td colspan="4"><strong>ประเด็นในการอุทธรณ์</strong></td>
+              
+            </tr>
+            <tr>
+            	
+                <td colspan="4" style="color:blue;text-indent:50px">{{selectData.appealDetail}}</td>
+            </tr>
+           
+	</table>
+    
+  </div>
+
+	
+
+</body>
+</html>
+
+
+<iframe id="result" style="width:100%; height: 95vh;"></iframe>

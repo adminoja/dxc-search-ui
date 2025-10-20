@@ -1,0 +1,58 @@
+ <!-- กรมคุ้มครองสิทธิแลเสรีภาพ -->
+ <div *ngIf="true">
+  <div *ngFor="let requestorsItem of requestorsResults">
+    <div class="row singlereport-timeline-item">
+
+      <div class='col-md-11'>
+        <div class='section-criminal-results'
+          style='text-indent:25px; font-size: 16px; line-height:30px; padding-top: 0px ;margin-top: 0pxp;'>
+          <span style='text-decoration:underline; color: #0070C0; font-weight: bold; '
+            class='report-section-source-title'>กรมคุ้มครองสิทธิแลเสรีภาพ </span>
+          <span
+            style='text-decoration:underline; color: #C00000; font-weight: bold; font-style: italic;'
+            class='report-section-data-title'>(ที่อยู่)</span>
+          <div style='padding-left:15px;'>
+            <strong class='report-field-title'>เลขบัตรประชาชน</strong>&nbsp;&nbsp;
+            <span class='report-field-value text-info'>{{requestorsItem.personNationalIdentificationId
+            | filter:'0'}}
+            </span>&nbsp;
+            <strong class='report-field-title'>ชื่อ</strong>&nbsp;&nbsp;
+            <span class='report-field-value text-info'>{{requestorsItem.personGivenName |
+            filter:"" }}
+            </span>&nbsp;
+            <strong class='report-field-title'>นามสกุล</strong>&nbsp;&nbsp;
+            <span class='report-field-value text-info'>{{requestorsItem.personSurName |
+            filter:"" }}
+            </span>&nbsp;
+            <strong class='report-field-title'>เพศ</strong>&nbsp;&nbsp;
+            <span class='report-field-value text-info'>{{requestorsItem.personSex | filter:"" }}
+            </span>&nbsp;
+            <div>
+              <strong class='report-field-title'>เลขที่</strong>&nbsp;&nbsp;
+              <span class='report-field-value text-info'>{{requestorsItem.personAddressFullText
+              | filter:"" }}
+              </span>&nbsp;
+              <strong class='report-field-title'>อำเภอ</strong>&nbsp;&nbsp;
+              <span class='report-field-value text-info'>{{requestorsItem.personAddressAmphur
+              | filter:""}} </span>&nbsp;
+            </div>
+            <div>
+              <strong class='report-field-title'>จังหวัด</strong>&nbsp;&nbsp;
+              <span class='report-field-value text-info'>{{requestorsItem.personAddressProvince
+              | filter:""}} </span>&nbsp;
+              <strong class='report-field-title'>รหัสไปรษณีย์</strong>&nbsp;&nbsp;
+              <span class='report-field-value text-info'>{{requestorsItem.personAddressPostalCode
+              | filter:'0'}} </span>&nbsp;
+              <strong class='report-field-title'>เบอร์โทรศัพท์</strong>&nbsp;&nbsp;
+              <span class='report-field-value text-info'>{{requestorsItem.telephoneNumber
+              | filter:'0'}} </span>&nbsp;
+              <strong class='report-field-title'>วันที่บันทึกข้อมูล</strong>&nbsp;&nbsp;
+              <span class='report-field-value text-info'>{{requestorsItem.dataSubmitDate
+              | filter:""}} </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

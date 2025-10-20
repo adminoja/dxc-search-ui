@@ -1,0 +1,23 @@
+{
+    "content": [
+        {   
+            "citizenCardNumber": "8230290018131",
+            "fullName": "นางสาว วิไลลักษณ์ เจริญพืช",
+            "diseasesAndConditionIndex": "N/A",
+            "address": "ตำบลหาดเล็ก อำเภอคลองใหญ่ จังหวัดตราด",
+            "licenseNumber": "58001799",
+            "type": "รถจักรยานยนต์ส่วนบุคคล",
+            "typeCode": "N/A",
+            "officeBranch": "ตราด",
+            "officeBranchCode": "N/A",
+            "idString": "58001799%7C26%7C20600",
+            "licenseIssueDate": "2015-12-30",
+            "issueDateString": "20151230",
+            "licenseExpirationDate": "2021-04-14",
+            "expirationDateString": "20210414",
+            "status": "ไม่เพิกถอน",
+            "sequester": "N/A",
+            "dataSubmitDate": "2020-11-18"
+        }
+    ]
+}

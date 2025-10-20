@@ -1,0 +1,83 @@
+<!-- กรมคุมประพฤติ -->
+<div *ngIf="corpseCount !==0 && !inputNormalCorpse">
+    <div class="card border-secondary border col-md-12">
+        <!-- Portlet card -->
+        <div class="card mb-md-0 mb-3">
+            <div class="card-body">
+                <div data-toggle="collapse" data-target="#cifsCorpse" role="button" aria-expanded="true" aria-controls="cifsCorpse">
+                    <span class="text-success font-20"><u>สถาบันนิติวิทยาศาสตร์: </u></span>
+                    <span class="text-white font-20"><u>ฐานข้อมูลคนนิรนาม </u></span>
+                    <span class="text-warning font-20"><u>จำนวน: {{corpseCount}} รายการ </u></span>
+                </div>
+                <div id="cifsCorpse" class="collapse pt-3">
+                    <div class="col-md-12" *ngFor="let corpseItem of corpseResults" class="singlereport-timeline-item">
+                          <img src="assets/dist/img/dxc-img/symbol/datatype/32/cifs-corpse.png">&nbsp;
+                          <input type="hidden" value="ฐานข้อมูลคนนิรนาม" #corpseTitle>
+                          <input type="hidden" value="assets/dist/img/cifs.png" #corpsedepartmentImg>
+                          <span class="text-success font-20"><u>ฐานข้อมูลคนนิรนาม</u></span>
+                          <button
+                            class="btn btn-info" style="float: right;" type="button" href="#corpse-full-width-modal" data-toggle="modal" data-target="#corpse-full-width-modal"
+                            (click)="selectRow(corpseItem,corpseTitle.value,corpsedepartmentImg.value)">
+                              <span class="icon-name"><i class="mdi mdi-arrow-top-right" style="color:white;"></i></span>
+                          </button>
+                          <div style="padding-left:15px; margin-top: 3%;">
+                            <span class="text-white font-20">หมายเลขศพ</span>&nbsp;&nbsp;
+                            <span class="text-success font-20" style="text-decoration:underline">
+                              {{corpseItem.autopsyNumber | filter:""}}</span>&nbsp;&nbsp;
+                            <span class="text-white font-20">คำนำหน้าผู้เสียชีวิต</span>&nbsp;&nbsp;
+                            <span class="text-success font-20" style="text-decoration:underline">
+                              {{corpseItem.personNamePrefixText | filter:""}}&nbsp;</span>&nbsp;&nbsp;
+                            <span class="text-white font-20">ชื่อผู้เสียชีวิต</span>&nbsp;&nbsp;
+                            <span class="text-success font-20" style="text-decoration:underline">
+                              {{corpseItem.personGivenName | filter:""}}</span>&nbsp;&nbsp;
+                            <span class="text-white font-20">นามสกุลผู้เสียชีวิต</span>&nbsp;&nbsp;
+                            <span class="text-success font-20" style="text-decoration:underline">
+                              {{corpseItem.personSurName | filter:""}}</span>&nbsp;&nbsp;
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- end card-->
+</div>
+
+<div *ngIf="inputNormalCorpse">
+  <div class="card border-secondary border col-md-12">
+      <!-- Portlet card -->
+      <div class="card mb-md-0 mb-3">
+          <div class="card-body">
+              <div data-toggle="collapse" data-target="#cifsCorpse" role="button" aria-expanded="true" aria-controls="cifsCorpse">
+                  <span class="text-success font-20"><u>สถาบันนิติวิทยาศาสตร์: </u></span>
+                  <span class="text-white font-20"><u>ฐานข้อมูลคนนิรนาม </u></span>
+              </div>
+              <div id="cifsCorpse" class="collapse pt-3">
+                  <div class="col-md-12" class="singlereport-timeline-item">
+                        <img src="assets/dist/img/dxc-img/symbol/datatype/32/cifs-corpse.png">&nbsp;
+                        <input type="hidden" value="ฐานข้อมูลคนนิรนาม" #corpseTitle>
+                        <input type="hidden" value="assets/dist/img/cifs.png" #corpsedepartmentImg>
+                        <span class="text-success font-20"><u>ฐานข้อมูลคนนิรนาม</u></span>
+                        <button
+                          class="btn btn-info" style="float: right;" type="button" href="#corpse-full-width-modal" data-toggle="modal" data-target="#corpse-full-width-modal"
+                          (click)="selectRow(inputNormalCorpse,corpseTitle.value,corpsedepartmentImg.value)">
+                            <span class="icon-name"><i class="mdi mdi-arrow-top-right" style="color:white;"></i></span>
+                        </button>
+                        <div style="padding-left:15px; margin-top: 3%;">
+                          <span class="text-white font-20">หมายเลขศพ</span>&nbsp;&nbsp;
+                          <span class="text-success font-20" style="text-decoration:underline">
+                            {{inputNormalCorpse.autopsyNumber | filter:""}}</span>&nbsp;&nbsp;
+                          <span class="text-white font-20">คำนำหน้าผู้เสียชีวิต</span>&nbsp;&nbsp;
+                          <span class="text-success font-20" style="text-decoration:underline">
+                            {{inputNormalCorpse.personNamePrefixText | filter:""}}&nbsp;</span>&nbsp;&nbsp;
+                          <span class="text-white font-20">ชื่อผู้เสียชีวิต</span>&nbsp;&nbsp;
+                          <span class="text-success font-20" style="text-decoration:underline">
+                            {{inputNormalCorpse.personGivenName | filter:""}}</span>&nbsp;&nbsp;
+                          <span class="text-white font-20">นามสกุลผู้เสียชีวิต</span>&nbsp;&nbsp;
+                          <span class="text-success font-20" style="text-decoration:underline">
+                            {{inputNormalCorpse.personSurName | filter:""}}</span>&nbsp;&nbsp;
+                        </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div> <!-- end card-->
+</div>

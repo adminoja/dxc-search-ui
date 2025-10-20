@@ -1,0 +1,91 @@
+<div *ngIf="aliensCount">
+    <div *ngFor="let aliensItem of aliensResults">
+        <div *ngIf="aliensItem.exitCode; else exit">
+          <div *ngIf="report_name != 'รายงาน Single Report'">
+            <div class="card border-secondary border col-md-12">
+              <div class="card mb-md-0 mb-3">
+                <div class="card-body">
+                  <div>
+                    <span class="text-success font-20"><u>กรมการปกครอง:</u></span>
+                    <span class="text-white font-20"><u> ข้อมูลทะเบียนบุคคลต่างด้าว (Linkage) </u></span>
+                    <span class="text-danger font-20"><u>{{aliensItem.exitCode | changeStatus}}</u></span>
+                    <span *ngIf="aliensItem.Results && aliensItem.exitCode == 'NOT_FOUND'" class="text-danger font-20"><u> (ไม่พบข้อมูล) </u></span>
+                    <span *ngIf="aliensItem.Results == '[]' && aliensItem.exitCode == 'OK'" class="text-danger font-20"><u> (ไม่พบข้อมูล) </u></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <ng-template #exit>
+        <div class="card border-secondary border col-md-12">
+            <div class="card mb-md-0 mb-3">
+                <div class="card-body">
+                    <div data-toggle="collapse" data-target="#aliensTablecollapse" role="button" aria-expanded="true"
+                        aria-controls="alienscollapse">
+                        <span class="text-success font-20"><u>กรมการปกครอง: </u></span>
+                        <span class="text-white font-20"><u>ข้อมูลทะเบียนบุคคลต่างด้าว (Linkage) </u></span>
+                        <span class="text-warning font-20"><u>จำนวน: {{aliensCount}} รายการ</u></span>
+                    </div>
+                    <div id="aliensTablecollapse" class="collapse pt-3">
+                        <div class="col-md-12" *ngFor="let aliensItem of aliensResults"
+                            class="singlereport-timeline-item">
+                            <div class="col-md-12" class="singlereport-timeline-item">
+                                <input type="hidden" value="ข้อมูลทะเบียนบุคคลต่างด้าว (Linkage)" #aliensTitle>
+                                <input type="hidden" value="assets/dist/img/dopa.png" #aliensImg>
+                                <img src="assets/dist/img/dxc-img/symbol/datatype/32/moi-dopa-alien.png" width="25px">
+                                <span class="text-success font-20">&nbsp;<u>ข้อมูลทะเบียนบุคคลต่างด้าว (Linkage)</u></span>
+
+                                <table class="table-striped table-centered mb-0 mt-3 text-20">
+                                    <thead>
+                                        <tr>
+                                            <th>ชื่อตัว</th>
+                                            <th>ชื่อสกุล</th>
+                                            <th>เพศ</th>
+                                            <th>สถานภาพบุคคล</th>
+                                            <th>วันเดือนปีที่ ที่เข้ามาในประเทศไทย</th>
+                                            <th>รายละเอียด</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>{{aliensItem.firstName | filter:""}}</td>
+                                            <td>{{aliensItem.lastName | filter:""}}</td>
+                                            <td>{{aliensItem.genderDesc | filter:""}}</td>
+                                            <td>{{aliensItem.statusOfPersonDesc | filter:""}}</td>
+                                            <td>{{aliensItem.dateInThai | filter:""}}</td>
+                                            <td class="text-center">
+                                                <button class="btn btn-info" type="button" href="#aliens-table-full-width-modal" data-toggle="modal"
+                                                data-target="#aliens-table-full-width-modal"
+                                                (click)="selectRow(aliensItem,aliensTitle.value,aliensImg.value)">
+                                                <span class="icon-name"><i class="mdi mdi-arrow-top-right" style="color:white;"></i></span>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</div>
+
+<div *ngIf="report_name != 'รายงาน Single Report'">
+    <div *ngIf="!aliensCount">
+      <div class="card border-secondary border col-md-12">
+          <div class="card mb-md-0 mb-3">
+              <div class="card-body">
+                  <div>
+                      <span class="text-success font-20"><u>กรมการปกครอง:</u></span>
+                      <span class="text-white font-20"><u> ข้อมูลทะเบียนบุคคลต่างด้าว (Linkage) </u></span>
+                      <span class="text-danger font-20"><u> (ไม่พบข้อมูล) </u></span>
+                  </div>
+              </div>
+          </div>
+      </div> 
+    </div>
+</div>

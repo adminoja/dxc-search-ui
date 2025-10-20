@@ -1,0 +1,212 @@
+{
+    "searchId": 23,
+    "dataSetId": "idb-career-report",
+    "parameters": {
+        "thaiNin": "3180100093667"
+    },
+    "startTime": "2021-09-28T09:28:00.456135+07:00",
+    "stopTime": "2021-09-28T09:28:09.527241201+07:00",
+    "status": null,
+    "items": [
+        {
+            "searchId": 23,
+            "dataSetId": "rlpd-crime-defendant-compensation",
+            "parameters": {
+                "thaiNin": "3180100093667"
+            },
+            "startTime": "2021-09-28T09:28:00.63293+07:00",
+            "stopTime": "2021-09-28T09:28:06.177379+07:00",
+            "status": {
+                "batchStatus": "COMPLETED",
+                "exitCode": "OK",
+                "exitDescription": "Success"
+            },
+            "resultStatus": "OK",
+            "result": {
+                "content": [
+                    {
+                        "career": "ค้าขายของชำ"
+                    }
+                ],
+                "pageable": "INSTANCE",
+                "totalPages": 1,
+                "totalElements": 1,
+                "last": true,
+                "number": 0,
+                "size": 1,
+                "numberOfElements": 1,
+                "sort": {
+                    "sorted": false,
+                    "unsorted": true,
+                    "empty": true
+                },
+                "first": true,
+                "empty": false
+            }
+        },
+        {
+            "searchId": 23,
+            "dataSetId": "dopa-moi-dopa-border-passes",
+            "parameters": {
+                "thaiNin": "3180100093667"
+            },
+            "startTime": "2021-09-28T09:28:06.24207+07:00",
+            "stopTime": "2021-09-28T09:28:08.58293+07:00",
+            "status": {
+                "batchStatus": "COMPLETED",
+                "exitCode": "OK",
+                "exitDescription": "Success"
+            },
+            "resultStatus": "INTERNAL_SERVER_ERROR",
+            "result": null
+        },
+        {
+            "searchId": 23,
+            "dataSetId": "agoth-charge-victim",
+            "parameters": {
+                "thaiNin": "3180100093667"
+            },
+            "startTime": "2021-09-28T09:28:08.637575+07:00",
+            "stopTime": "2021-09-28T09:28:08.923582+07:00",
+            "status": {
+                "batchStatus": "COMPLETED",
+                "exitCode": "OK",
+                "exitDescription": "Success"
+            },
+            "resultStatus": "OK",
+            "result": {
+                "content": [],
+                "pageable": "INSTANCE",
+                "totalPages": 1,
+                "totalElements": 0,
+                "last": true,
+                "number": 0,
+                "size": 0,
+                "numberOfElements": 0,
+                "sort": {
+                    "sorted": false,
+                    "unsorted": true,
+                    "empty": true
+                },
+                "first": true,
+                "empty": true
+            }
+        },
+        {
+            "searchId": 23,
+            "dataSetId": "rtp-criminal",
+            "parameters": {
+                "thaiNin": "3180100093667"
+            },
+            "startTime": "2021-09-28T09:28:08.977449+07:00",
+            "stopTime": "2021-09-28T09:28:09.14776+07:00",
+            "status": {
+                "batchStatus": "FAILED",
+                "exitCode": "NOT_FOUND",
+                "exitDescription": "{\"timestamp\":\"2021-09-28T02:28:09.140+00:00\",\"status\":404,\"error\":\"Not Found\",\"message\":\"\",\"path\":\"/api/qm/v2/rtp/criminals\"}"
+            },
+            "resultStatus": "NOT_FOUND",
+            "result": null
+        },
+        {
+            "searchId": 23,
+            "dataSetId": "rlpd-requestors",
+            "parameters": {
+                "thaiNin": "3180100093667"
+            },
+            "startTime": "2021-09-28T09:28:09.196607+07:00",
+            "stopTime": "2021-09-28T09:28:09.200438+07:00",
+            "status": {
+                "batchStatus": "FAILED",
+                "exitCode": "BAD_GATEWAY",
+                "exitDescription": "LoadBalancer does not contain an instance for the service dxc-qm-rlpd-requestors-service"
+            },
+            "resultStatus": "SERVICE_UNAVAILABLE",
+            "result": null
+        },
+        {
+            "searchId": 23,
+            "dataSetId": "rlpd-crime-victim-compensation",
+            "parameters": {
+                "thaiNin": "3180100093667"
+            },
+            "startTime": "2021-09-28T09:28:09.245689+07:00",
+            "stopTime": "2021-09-28T09:28:09.313958+07:00",
+            "status": {
+                "batchStatus": "COMPLETED",
+                "exitCode": "OK",
+                "exitDescription": "Success"
+            },
+            "resultStatus": "OK",
+            "result": {
+                "content": [],
+                "pageable": "INSTANCE",
+                "totalPages": 1,
+                "totalElements": 0,
+                "last": true,
+                "number": 0,
+                "size": 0,
+                "numberOfElements": 0,
+                "sort": {
+                    "sorted": false,
+                    "unsorted": true,
+                    "empty": true
+                },
+                "first": true,
+                "empty": true
+            }
+        },
+        {
+            "searchId": 23,
+            "dataSetId": "coj-arrest-warrants",
+            "parameters": {
+                "thaiNin": "3180100093667"
+            },
+            "startTime": "2021-09-28T09:28:09.367501+07:00",
+            "stopTime": "2021-09-28T09:28:09.371352+07:00",
+            "status": {
+                "batchStatus": "FAILED",
+                "exitCode": "BAD_GATEWAY",
+                "exitDescription": "LoadBalancer does not contain an instance for the service dxc-qm-coj-arrest-warrants-service"
+            },
+            "resultStatus": "SERVICE_UNAVAILABLE",
+            "result": null
+        },
+        {
+            "searchId": 23,
+            "dataSetId": "agoth-charge-subject",
+            "parameters": {
+                "thaiNin": "3180100093667"
+            },
+            "startTime": "2021-09-28T09:28:09.417669+07:00",
+            "stopTime": "2021-09-28T09:28:09.498554+07:00",
+            "status": {
+                "batchStatus": "COMPLETED",
+                "exitCode": "OK",
+                "exitDescription": "Success"
+            },
+            "resultStatus": "OK",
+            "result": {
+                "content": [
+                    {
+                        "career": "รับจ้าง"
+                    }
+                ],
+                "pageable": "INSTANCE",
+                "totalPages": 1,
+                "totalElements": 1,
+                "last": true,
+                "number": 0,
+                "size": 1,
+                "numberOfElements": 1,
+                "sort": {
+                    "sorted": false,
+                    "unsorted": true,
+                    "empty": true
+                },
+                "first": true,
+                "empty": false
+            }
+        }
+    ]
+}

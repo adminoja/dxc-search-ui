@@ -1,0 +1,174 @@
+<div *ngIf="attorneyCasesCount">
+  <div class="container">
+    <div data-toggle="collapse" data-target="#attorneyCasescollapse" class="col-md-11"
+      class="row card singlereport-timeline-item list-normal-design-head-collapse">
+      <span class="list-normal-design-underline depart">สำนักงานอัยการ: </span>
+      <span class="list-normal-design-underline departdata">สำนวนคดี</span>
+      <span class="list-normal-design-underline count">จำนวน: {{attorneyCasesCount}} รายการ</span>
+    </div>
+    <div id="attorneyCasescollapse" class="collapse" style="margin-top: -3%;">
+      <div class="col-md-11" *ngFor="let attorneyCasesItem of attorneyCasesResults"
+          class="row singlereport-timeline-item">
+        <input type="hidden" value="สำนวนคดี" #attorneyCasesTitle>
+        <input type="hidden" value="assets/dist/img/ago.png" #attorneyCasesdepartmentImg>
+        <div class="list-normal-design-head-collapse">
+          <span style="color: #0070C0;" class="report-section-source-title">(สำนวนคดี)</span>
+          <button class="btn btn-primary btn-icon btn-icon-mini btn-round waves-effect pull-right" type="button"
+            href="#attorneyCases" data-toggle="modal" data-target="#attorneyCases"
+            (click)="selectRow(attorneyCasesItem,attorneyCasesTitle.value,attorneyCasesdepartmentImg.value)">
+            <div class="demo-google-material-icon">
+              <i class="material-icons" style="color:white;">call_made</i>
+              <span class="icon-name"></span>
+            </div>
+          </button>
+
+          <div style="padding-left:15px;">
+            <strong class="report-field-title">ชื่อผู้ต้องหา
+            </strong>&nbsp;&nbsp;
+            <span class="report-field-value" style="text-decoration:underline">
+              {{attorneyCasesItem.accusedsText}}
+            </span>&nbsp;&nbsp;
+            <strong class="report-field-title">ข้อหา
+            </strong>&nbsp;&nbsp;
+            <span class="report-field-value" style="text-decoration:underline">
+              {{attorneyCasesItem.accusedchargeChargeName}}
+            </span>&nbsp;&nbsp;
+            <strong class="report-field-title">วันที่ยื่นฟ้อง
+            </strong>&nbsp;&nbsp;
+            <span class="report-field-value" style="text-decoration:underline">
+              {{attorneyCasesItem.courtresultCourtDate | converseDate}}
+            </span>&nbsp;&nbsp;
+            <strong class="report-field-title">วันที่ศาลพิพากษา
+            </strong>&nbsp;&nbsp;
+            <span class="report-field-value" style="text-decoration:underline">
+              {{attorneyCasesItem.courtresultJudgementDate | converseDate}}
+            </span>&nbsp;&nbsp;
+            <strong class="report-field-title">คำพิพากษา
+            </strong>&nbsp;&nbsp;
+            <span class="report-field-value" style="text-decoration:underline">
+              {{attorneyCasesItem.courtresultJudgementName}}
+            </span>&nbsp;&nbsp;
+            <strong class="report-field-title">หน่วยงานเจ้าของสำนวน
+            </strong>&nbsp;&nbsp;
+            <span class="report-field-value" style="text-decoration:underline">
+              {{attorneyCasesItem.generallcPoliceName}}
+            </span>&nbsp;&nbsp;
+          </div>
+
+        </div> 
+      </div>       
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="attorneyCases" tabindex="-1" role="dialog" style="margin-left: 150px">
+  <div class="modal-dialog modal-lg" role="document" style="height: 630px;">
+    <div class="modal-content" style="overflow: auto;height: 50px;width: 1261px; border-style:ridge;">
+      <div class="modal-header">
+
+      </div>
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+          X
+        </button>
+        <div class="btn-toolbar pull-right" role="toolbar" style="margin-top: 7px;">
+          <div class="btn-group">
+            <a routerLink="/{{reportName}}" (click)="pdfPreviewlocal()" target="_blank">
+              <button type="button" class="float-right btn btn-danger"><i class="uil-down-arrow"></i> PDF </button>
+            </a>
+          </div>
+        </div>
+        <div class="panel-default1">
+          <div class="panel-heading hidden-print">
+            <div class="panel-title">
+              <img src="{{img}}" align="absmiddle" width="25px">{{title}}</div>
+          </div>
+          <div class="panel-body">
+            <div class="col-md-3 hidden-print">
+              <a class="thumbnail hidden-xs hidden-sm " style="text-align: center; cursor: default">
+                <img src="{{departmentImg}}" style="width: 64px; height:64px;">
+                <br>{{departmentTitle}}</a>
+
+              <div class="panel1 panel-default1">
+                <div class="panel-heading1">
+                  <span class="glyphicon  glyphicon-info-sign"></span> ข้อมูลพื้นฐาน</div>
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <h6 class="list-group-item-heading text-info">เลขประจำตัวประชาชน :</h6>
+                        <span class="pull-right" data-attributename="citizenCardNumber" data-value="N/A"
+                          data-role="dxc-hyperlink">
+                          <a href="#/dxcui0014/dxcui0018/%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%87%E0%B8%B2%E0%B8%99%20Single%20Report/{{person?.citizenCardNumber}}/0/0/0/0/0"
+                            target="_blank">
+                            <div class="demo-google-material-icon">{{person?.citizenCardNumber}}
+                              <i class="material-icons">link</i>
+                            </div>
+                          </a>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <h6 class="list-group-item-heading text-info">ชื่อ :</h6>
+                        <span class="pull-right" data-attributename="firstName" data-value="N/A"
+                          data-role="dxc-hyperlink">
+                          {{person?.fullName}} </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <h6 class="list-group-item-heading text-info">เพศ :</h6>
+                        <span class="pull-right" data-attributename="sex" data-value="N/A" data-role="dxc-hyperlink">
+                          {{person?.sex}}</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <h6 class="list-group-item-heading text-info">วันเกิด :</h6>
+                        <span class="pull-right" data-attributename="dateOfBirth" data-value="N/A"
+                          data-role="dxc-hyperlink">
+                          {{person?.dateOfBirth}}</span>
+                      </td>
+                    </tr>
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="col-md-9">
+
+              <!-- Nav tabs -->
+              <ul class="nav nav-tabs">
+                <li class="nav-item">
+                  <a class="nav-link active" data-toggle="tab" href="#tab1">มุมมองรายงาน</a>
+                </li>
+                <!-- <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#tab2">ทดสอบ2</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#tab3">ทดสอบ3</a>
+                </li> -->
+              </ul>
+              <!-- Tab panes -->
+              <div class="tab-content" style="margin-top: 5px;">
+                <div role="tabpanel" class="tab-pane in active" id="tab1">
+                  <div [innerHTML]="viewhtmlReport"></div>
+                </div>
+                <!-- <div role="tabpanel" class="tab-pane" id="tab2">
+                  <p>ทดสอบ2</p>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="tab3">
+                  <p>ทดสอบ3</p>
+
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

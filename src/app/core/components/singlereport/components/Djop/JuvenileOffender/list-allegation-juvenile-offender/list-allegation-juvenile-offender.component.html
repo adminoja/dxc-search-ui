@@ -1,0 +1,190 @@
+<div *ngIf="juvenileOffenderCount !==0 && !inputAlgationsJuvenileOffender">
+  <div *ngIf="report_name != 'รายงาน Single Report'; else SingleReport">
+    <!-- <div *ngFor="let djopJuvenileOffenderItem of juvenileOffenderResults"> -->
+      <div *ngIf="exitCode[0].exitCode; else exit">
+        <div class="card border-secondary border col-md-12">
+          <div class="card mb-md-0 mb-3">
+            <div class="card-body">
+              <div>
+                <span class="text-success font-20"><u>กรมพินิจและคุ้มครองเด็กและเยาวชน: </u></span>
+                <span class="text-white font-20"><u>เด็กหรือเยาวชนผู้กระทำผิด </u></span>
+                <span class="text-danger font-20"><u>{{exitCode[0].exitCode | changeStatus}}</u></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- </div> -->
+  <ng-template #exit>
+    <div class="card border-secondary border col-md-12">
+      <!-- Portlet card -->
+      <div class="card mb-md-0 mb-3">
+        <div class="card-body">
+          <div data-toggle="collapse" data-target="#juvenileOffendercollapse" role="button" aria-expanded="true">
+            <span class="text-success font-20"><u>กรมพินิจและคุ้มครองเด็กและเยาวชน: </u></span>
+            <span class="text-white font-20"><u>เด็กหรือเยาวชนผู้กระทำผิด </u></span>
+            <span class="text-warning font-20"><u>จำนวน: {{juvenileOffenderCount}} รายการ </u></span>
+          </div>
+          <div id="juvenileOffendercollapse" class="collapse pt-3">
+            <div class="col-md-12" *ngFor="let juvenileOffenderItem of juvenileOffenderResults"
+              class="singlereport-timeline-item">
+              <img src="assets/dist/img/dxc-img/symbol/datatype/32/djop-juvenile-offender.png">&nbsp;
+              <input type="hidden" value="เด็กหรือเยาวชนผู้กระทำผิด" #juvenileOffenderTitle>
+              <input type="hidden" value="assets/dist/img/djop.png" #juvenileOffenderdepartmentImg>
+              <span class="text-success font-20"><u>เด็กหรือเยาวชนผู้กระทำผิด</u></span>
+              <button class="btn btn-info" style="float: right;" type="button" href="#juvenile-offender-width-modal"
+                data-toggle="modal" data-target="#juvenile-offender-width-modal"
+                (click)="selectRow(juvenileOffenderItem,juvenileOffenderTitle.value,juvenileOffenderdepartmentImg.value)">
+                <span class="icon-name"><i class="mdi mdi-arrow-top-right" style="color:white;"></i></span>
+              </button>
+              <div style="padding-left:15px; margin-top: 3%;">
+                <span class="text-white font-20">ชื่อ</span>&nbsp;&nbsp;
+                <span class="text-success font-20"
+                  style="text-decoration:underline">{{juvenileOffenderItem.firstName | filter:""}}
+                  {{juvenileOffenderItem.lastName | filter:""}}
+                </span>&nbsp;&nbsp;
+                <span class="text-white font-20">ถูกจับดำเนินคดีเมื่อ</span>&nbsp;&nbsp;
+                <span class="text-success font-20" style="text-decoration:underline">-</span>&nbsp;&nbsp;
+                <span class="text-white font-20">ฐานความผิด</span>&nbsp;&nbsp;
+                <span class="text-success font-20" style="text-decoration:underline">
+                  {{juvenileOffenderItem.allegation | filter:"" }}</span>&nbsp;&nbsp;
+                <span class="text-white font-20">หน่วยงานเจ้าของคดี</span>&nbsp;&nbsp;
+                <span class="text-success font-20" style="text-decoration:underline">
+                  {{juvenileOffenderItem.unitName | filter:"" }}</span>&nbsp;&nbsp;
+                <span class="text-white font-20">วันที่รับตัว</span>&nbsp;&nbsp;
+                <span class="text-success font-20" style="text-decoration:underline">
+                  {{juvenileOffenderItem.receiveDate | converseDate }}</span>&nbsp;&nbsp;
+                <span class="text-white font-20">ณ</span>&nbsp;&nbsp;
+                <span class="text-success font-20" style="text-decoration:underline">
+                  &nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;
+                <span class="text-white font-20">วันที่ปล่อยตัว</span>&nbsp;&nbsp;
+                <span class="text-success font-20" style="text-decoration:underline">
+                  {{juvenileOffenderItem.releaseDate | converseDate }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- end card-->
+  </ng-template>
+  <ng-template #SingleReport>
+    <div class="card border-secondary border col-md-12">
+      <!-- Portlet card -->
+      <div class="card mb-md-0 mb-3">
+        <div class="card-body">
+          <div data-toggle="collapse" data-target="#juvenileOffendercollapse" role="button" aria-expanded="true">
+            <span class="text-success font-20"><u>กรมพินิจและคุ้มครองเด็กและเยาวชน: </u></span>
+            <span class="text-white font-20"><u>เด็กหรือเยาวชนผู้กระทำผิด </u></span>
+            <span class="text-warning font-20"><u>จำนวน: {{juvenileOffenderCount}} รายการ </u></span>
+          </div>
+          <div id="juvenileOffendercollapse" class="collapse pt-3">
+            <div class="col-md-12" *ngFor="let juvenileOffenderItem of juvenileOffenderResults"
+              class="singlereport-timeline-item">
+              <img src="assets/dist/img/dxc-img/symbol/datatype/32/djop-juvenile-offender.png">&nbsp;
+              <input type="hidden" value="เด็กหรือเยาวชนผู้กระทำผิด" #juvenileOffenderTitle>
+              <input type="hidden" value="assets/dist/img/djop.png" #juvenileOffenderdepartmentImg>
+              <span class="text-success font-20"><u>เด็กหรือเยาวชนผู้กระทำผิด</u></span>
+              <button class="btn btn-info" style="float: right;" type="button" href="#juvenile-offender-width-modal"
+                data-toggle="modal" data-target="#juvenile-offender-width-modal"
+                (click)="selectRow(juvenileOffenderItem,juvenileOffenderTitle.value,juvenileOffenderdepartmentImg.value)">
+                <span class="icon-name"><i class="mdi mdi-arrow-top-right" style="color:white;"></i></span>
+              </button>
+              <div style="padding-left:15px; margin-top: 3%;">
+                <span class="text-white font-20">ชื่อ</span>&nbsp;&nbsp;
+                <span class="text-success font-20"
+                  style="text-decoration:underline">{{juvenileOffenderItem.firstName | filter:""}}
+                  {{juvenileOffenderItem.lastName | filter:""}}
+                </span>&nbsp;&nbsp;
+                <span class="text-white font-20">ถูกจับดำเนินคดีเมื่อ</span>&nbsp;&nbsp;
+                <span class="text-success font-20" style="text-decoration:underline">-</span>&nbsp;&nbsp;
+                <span class="text-white font-20">ฐานความผิด</span>&nbsp;&nbsp;
+                <span class="text-success font-20" style="text-decoration:underline">
+                  {{juvenileOffenderItem.allegation | filter:"" }}</span>&nbsp;&nbsp;
+                <span class="text-white font-20">หน่วยงานเจ้าของคดี</span>&nbsp;&nbsp;
+                <span class="text-success font-20" style="text-decoration:underline">
+                  {{juvenileOffenderItem.unitName | filter:"" }}</span>&nbsp;&nbsp;
+                <span class="text-white font-20">วันที่รับตัว</span>&nbsp;&nbsp;
+                <span class="text-success font-20" style="text-decoration:underline">
+                  {{juvenileOffenderItem.receiveDate | converseDate }}</span>&nbsp;&nbsp;
+                <span class="text-white font-20">ณ</span>&nbsp;&nbsp;
+                <span class="text-success font-20" style="text-decoration:underline">
+                  &nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;
+                <span class="text-white font-20">วันที่ปล่อยตัว</span>&nbsp;&nbsp;
+                <span class="text-success font-20" style="text-decoration:underline">
+                  {{juvenileOffenderItem.releaseDate | converseDate }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- end card-->
+  </ng-template>
+</div>
+
+<div *ngIf="inputAlgationsJuvenileOffender">
+    <div class="card border-secondary border col-md-12">
+      <!-- Portlet card -->
+      <div class="card mb-md-0 mb-3">
+        <div class="card-body">
+          <div data-toggle="collapse" data-target="#juvenileOffendercollapse" role="button" aria-expanded="true">
+            <span class="text-success font-20"><u>กรมพินิจและคุ้มครองเด็กและเยาวชน: </u></span>
+            <span class="text-white font-20"><u>เด็กหรือเยาวชนผู้กระทำผิด </u></span>
+          </div>
+          <div id="juvenileOffendercollapse" class="collapse pt-3">
+            <div class="col-md-12" class="singlereport-timeline-item">
+              <img src="assets/dist/img/dxc-img/symbol/datatype/32/djop-juvenile-offender.png">&nbsp;
+              <input type="hidden" value="เด็กหรือเยาวชนผู้กระทำผิด" #juvenileOffenderTitle>
+              <input type="hidden" value="assets/dist/img/djop.png" #juvenileOffenderdepartmentImg>
+              <span class="text-success font-20"><u>เด็กหรือเยาวชนผู้กระทำผิด</u></span>
+              <button class="btn btn-info" style="float: right;" type="button" href="#juvenile-offender-width-modal"
+                data-toggle="modal" data-target="#juvenile-offender-width-modal"
+                (click)="selectRow(inputAlgationsJuvenileOffender,juvenileOffenderTitle.value,juvenileOffenderdepartmentImg.value)">
+                <span class="icon-name"><i class="mdi mdi-arrow-top-right" style="color:white;"></i></span>
+              </button>
+              <div style="padding-left:15px; margin-top: 3%;">
+                <span class="text-white font-20">ชื่อ</span>&nbsp;&nbsp;
+                <span class="text-success font-20"
+                  style="text-decoration:underline">{{inputAlgationsJuvenileOffender.firstName | filter:""}}
+                  {{inputAlgationsJuvenileOffender.lastName | filter:""}}
+                </span>&nbsp;&nbsp;
+                <span class="text-white font-20">ถูกจับดำเนินคดีเมื่อ</span>&nbsp;&nbsp;
+                <span class="text-success font-20" style="text-decoration:underline">-</span>&nbsp;&nbsp;
+                <span class="text-white font-20">ฐานความผิด</span>&nbsp;&nbsp;
+                <span class="text-success font-20" style="text-decoration:underline">
+                  {{inputAlgationsJuvenileOffender.allegation | filter:"" }}</span>&nbsp;&nbsp;
+                <span class="text-white font-20">หน่วยงานเจ้าของคดี</span>&nbsp;&nbsp;
+                <span class="text-success font-20" style="text-decoration:underline">
+                  {{inputAlgationsJuvenileOffender.unitName | filter:"" }}</span>&nbsp;&nbsp;
+                <span class="text-white font-20">วันที่รับตัว</span>&nbsp;&nbsp;
+                <span class="text-success font-20" style="text-decoration:underline">
+                  {{inputAlgationsJuvenileOffender.receiveDate | converseDate }}</span>&nbsp;&nbsp;
+                <span class="text-white font-20">ณ</span>&nbsp;&nbsp;
+                <span class="text-success font-20" style="text-decoration:underline">
+                  &nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;
+                <span class="text-white font-20">วันที่ปล่อยตัว</span>&nbsp;&nbsp;
+                <span class="text-success font-20" style="text-decoration:underline">
+                  {{inputAlgationsJuvenileOffender.releaseDate | converseDate }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- end card-->
+</div>
+
+<div *ngIf="report_name != 'รายงาน Single Report'">
+  <div *ngIf="!juvenileOffenderCount && !inputAlgationsJuvenileOffender">
+    <div class="card border-secondary border col-md-12">
+      <div class="card mb-md-0 mb-3">
+        <div class="card-body">
+          <div>
+            <span class="text-success font-20"><u>กรมพินิจและคุ้มครองเด็กและเยาวชน: </u></span>
+            <span class="text-white font-20"><u>เด็กหรือเยาวชนผู้กระทำผิด </u></span>
+            <span class="text-danger font-20"><u> (ไม่พบข้อมูล) </u></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

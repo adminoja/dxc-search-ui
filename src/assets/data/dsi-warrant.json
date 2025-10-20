@@ -1,0 +1,31 @@
+{
+    "content": [
+        {
+            "id": null,
+            "status_record": 1,
+            "lawsuit_id": "242/2554",
+            "case_no": "37/2552",
+            "barker_number": null,
+            "barker": "พ.ต.ท.ไกรวิทย์ อรสว่าง",
+            "court": "ศาลอาญากรุงเทพใต้",
+            "date_enforcement": "2011-04-28",
+            "guilt": "กระทำผิดตามพระราชบัญญัติหลักทรัพย์และตลาดหลักทรัพย์ พ.ศ.2535 มาตรา 307,308,311,313,314,315",
+            "prescription": "10",
+            "start_date": "2011-04-28",
+            "finish_date": "2022-11-26",
+            "note": null,
+            "status": "1",
+            "id_card": "3101403224262",
+            "Accused": "นายสุริยา ลาภวิสุทธิสิน",
+            "accused_address": "1087/18-19 ถ.เพชรบุรีตัดใหม่ แขวงมักกะสัน เขตราชเทวี กรุงเทพ",
+            "arrested": "0",
+            "date_arrest": null,
+            "Proceedings": null,
+            "adjudge": null,
+            "escape": null,
+            "date_update": null,
+            "unit_create": null,
+            "num": null
+        }
+    ]
+}

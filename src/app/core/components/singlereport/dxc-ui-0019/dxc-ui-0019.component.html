@@ -1,0 +1,1166 @@
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-content" style="overflow: auto;height: 281px;width: 500px; border-style:ridge;">
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">ค้นหา</h4>
+      <button type="button" class="close" aria-label="ปิด" (click)="d(dataSearch.citizenCardNumber)">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div *ngIf="dataSearch.citizenCardNumber!=='';else dataCitizenCardNumberNull">
+        ข้อมูลที่คุณเลือกมีหมายเลขประจำตัวประชาชนอยู่ด้วย
+        คุณต้องการให้ระบบค้นข้อมูลอีกครั้งจาก หมายเลขประจำตัวประชาชน {{dataSearch.citizenCardNumber}}
+        หรือไม่? </div>
+      <ng-template #dataCitizenCardNumberNull>ข้อมูลที่คุณเลือกมีหมายเลขประจำตัวประชาชนอยู่ด้วย
+        คุณต้องการให้ระบบค้นข้อมูลอีกครั้งจาก หมายเลขประจำตัวประชาชน
+        <div style="color: red">ไม่มีเลขบัตรประชาชน</div> หรือไม่?
+      </ng-template>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="c(dataSearch.citizenCardNumber)">ค้นหา</button>
+    </div>
+  </div>
+</ng-template>
+
+<div class="container-fluid" *ngIf="report_name=='รายงาน Single Report'">
+  <div class="row">
+    <!-- start chat users-->
+    <div class="col-xl-4 col-lg-6 order-lg-1 order-xl-1" *ngIf="!outputCitizencardNumber">
+      <div class="card">
+        <div class="card-body mt-2">
+          <ul class="nav nav-tabs">
+            <li class="nav-item mb-2">
+              <a href="/secured/v2/index.html#/dxcui0014/dxcui00141/รายงาน Single Report" data-toggle="link" aria-expanded="false"
+                class="py-2" style="color: white;" class="font-16">
+                สืบค้น <- คลิกที่นี่เพื่อกลับไปหน้าฟอร์มสืบค้น</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a href="#favUsers" data-toggle="tab" aria-expanded="true" class="nav-link py-2">
+                Favourties
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#friendUsers" data-toggle="tab" aria-expanded="true" class="nav-link py-2">
+                Friends
+              </a>
+            </li> -->
+          </ul> <!-- end nav-->
+          <div class="tab-content" *ngIf="true">
+            <div class="tab-pane show active p-3" id="newpost">
+
+              <!-- start search box -->
+              <!-- <div class="app-search">
+                <form>
+                  <div class="form-group position-relative">
+                    <input type="search" class="form-control" placeholder="People, groups & messages..." />
+                    <span class="mdi mdi-magnify search-icon"></span>
+                  </div>
+                </form>
+              </div> -->
+              <!-- end search box -->
+
+              <!-- users -->
+              <div class="row">
+                <div class="col">
+                  <div data-simplebar style="max-height: 800px">
+                    <div *ngIf="true">
+                      <!--Algation-->
+                      <app-list-left-regseize (outputAlgationsRegseize)="reciveMessegeDataRegseize($event)"></app-list-left-regseize>
+                      <app-list-left-prisoner (outputAlgationsPrisoner)="reciveMessegeDataPrisoner($event)"></app-list-left-prisoner>
+                      <app-list-left-remandee (outputAlgationsRemandee)="reciveMessegeDataRemandee($event)"></app-list-left-remandee>
+                      <app-list-left-probations (outputAlgationsProbationer)="reciveMessegeDataProbationer($event)"></app-list-left-probations>
+                      <!-- <app-list-left-juvenile-offender (outputAlgationsJuvenileOffender)="reciveMessegeDataJuvenileOffender($event)"></app-list-left-juvenile-offender> -->
+                      <app-list-left-corruption-accuseds></app-list-left-corruption-accuseds>
+                      <app-list-left-fisheriesillegal></app-list-left-fisheriesillegal>
+                      <app-list-left-narcotic-offender (outputAlgationsNarcoticOffender)="reciveMessegeDataNarcoticOffender($event)"></app-list-left-narcotic-offender>
+                      <app-list-left-money-laundering-case></app-list-left-money-laundering-case>
+                      <app-list-left-warrant></app-list-left-warrant>
+                      <app-list-left-criminal (outputAlgationsCriminal)="reciveMessegeDataCriminal($event)"></app-list-left-criminal>
+                      <app-list-left-charge-subject (outputAllegationChargeSubject)="reciveMessegeDataChargeSubject($event)"></app-list-left-charge-subject>
+                      <app-list-left-released-offender (outputAlgationsReleasedOffender)="reciveMessegeDataReleasedOffender($event)"></app-list-left-released-offender>
+                      <app-list-left-criminal-case (outputAlgationsCriminalCase)="reciveMessegeDataCriminalCase($event)"></app-list-left-criminal-case>
+                      <app-list-left-criminal-record (outputAllgationsCriminalRecord)="reciveMessegeDataCriminalRecord($event)"></app-list-left-criminal-record>
+                      <app-list-left-juvenile-offender65 (outputAlgationsJuvenileOffender65)="reciveMessegeDataJuvenileOffender65($event)"></app-list-left-juvenile-offender65>
+
+                      <!--Normal-->
+                      <app-list-left-requestors (outputNormalRequestors)="reciveMessegeDataRequestors($event)"></app-list-left-requestors>
+                      <app-list-left-addresses></app-list-left-addresses>
+                      <app-list-left-face-photos></app-list-left-face-photos>
+                      <app-list-left-workforce-developments></app-list-left-workforce-developments>
+                      <app-list-left-persons></app-list-left-persons>
+                      <app-list-left-thaiidcard></app-list-left-thaiidcard>
+                      <app-list-left-health-insurance-rights></app-list-left-health-insurance-rights>
+                      <app-list-left-borderpasses></app-list-left-borderpasses>
+                      <app-list-left-marriagecertificates></app-list-left-marriagecertificates>
+                      <app-list-left-por4></app-list-left-por4>
+                      <app-list-left-land-and-condominium-titles></app-list-left-land-and-condominium-titles>
+                      <app-list-left-aliens></app-list-left-aliens>
+                      <app-list-left-employee-employment></app-list-left-employee-employment>
+                      <app-list-left-jfo-case></app-list-left-jfo-case>
+                      <app-list-left-jfo-case64 (outputNormalJfoCase64)="reciveMessegeDataJfoCase64($event)"></app-list-left-jfo-case64>
+                      <app-list-left-bankruptcy-case (outputNormalBankruptcyCase)="reciveMessegeDataBankruptcyCase($event)"></app-list-left-bankruptcy-case>
+                      <app-list-left-divorce-certificates></app-list-left-divorce-certificates>
+                      <app-list-left-educationbackgroundes></app-list-left-educationbackgroundes>
+                      <app-list-left-students></app-list-left-students>
+                      <app-list-left-alien-workforces></app-list-left-alien-workforces>
+                      <app-list-left-death-certificates></app-list-left-death-certificates>
+                      <app-list-left-new-born-babies></app-list-left-new-born-babies>
+                      <app-list-left-agoth-charge-victim (outputNormalChargeVictim)="reciveMessegeDataChargeVictim($event)"></app-list-left-agoth-charge-victim>
+                      <app-list-left-driver-license></app-list-left-driver-license>
+                      <app-list-left-corpse (outputNormalCorpse)="reciveMessegeDataCorpse($event)"></app-list-left-corpse>
+                      <app-list-left-report-verification></app-list-left-report-verification>
+                      <!-- <app-list-left-missing-person></app-list-left-missing-person> -->
+                      <app-list-left-person-changename-primary></app-list-left-person-changename-primary>
+                      <app-list-left-crime-victim-compensation (outputNormalCrimeVictimCompensation)="reciveMessegeDataCrimeVictimCompensation($event)"></app-list-left-crime-victim-compensation>
+                      <!-- <app-list-left-crime-defendant-compensation (outputNormalCrimeDefendantCompensation)="reciveMessegeDataCrimeDefendantCompensation($event)"></app-list-left-crime-defendant-compensation> -->
+                      <app-list-left-car-license></app-list-left-car-license>
+                      <app-list-left-person-changelastname></app-list-left-person-changelastname>
+                      <app-list-left-missing-person-case (outputNormalMissingPersonCase)="reciveMessegeDataMissingPersonCase($event)"></app-list-left-missing-person-case>
+                      <app-list-left-registrant (outputNormalRegistrant)="reciveMessegeDataRegistrant($event)"></app-list-left-registrant>
+                    </div>
+                  </div> <!-- end slimscroll-->
+                </div> <!-- End col -->
+              </div>
+              <!-- end users -->
+            </div> <!-- end Tab Pane-->
+          </div> <!-- end tab content-->
+        </div> <!-- end card-body-->
+      </div> <!-- end card-->
+    </div>
+    <!-- end chat users-->
+    <!-- start user detail -->
+    <div class="col-xl-8 col-lg-8 order-lg-1 order-xl-2" *ngIf="outputCitizencardNumber">
+      <div class="card">
+        <div class="card-body">
+          <a routerLink="/{{reportclick}}" (click)="pdfPreview()" target="_blank">
+            <button type="button" class="float-right btn btn-danger"><i class="uil-down-arrow"></i> PDF </button>
+          </a>
+          <app-list-top-face-photos></app-list-top-face-photos>
+
+          <div class="col-lg-12">
+            <app-list-top-persons></app-list-top-persons>
+          </div>
+
+          <div *ngIf="report_name=='รายงาน Single Report'">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="panel-group" id="accordion">
+                  <div class="panel ">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true">
+                          <span class="report-section-title font-20"
+                            style="font-size: 20px; font-weight: bold; color: whitesmoke; border: 1; border-color: black;"><u>ประวัติการกระทำผิด ({{countAlgationsDb}})</u></span>
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in show">
+                      <div *ngIf="true">
+                        <app-list-allegation-narcotic-offender></app-list-allegation-narcotic-offender>
+                        <app-list-algations-probations></app-list-algations-probations>
+                        <!-- <app-list-allegation-juvenile-offender></app-list-allegation-juvenile-offender> -->
+                        <app-list-algations-prisoner></app-list-algations-prisoner>
+                        <app-list-allegation-regseize></app-list-allegation-regseize>
+                        <app-list-allegaiton-remandee></app-list-allegaiton-remandee>
+                        <app-list-allegation-money-laundering-case></app-list-allegation-money-laundering-case>
+                        <app-list-algations-corruption-accuseds></app-list-algations-corruption-accuseds>
+                        <app-list-normal-fisheriesillegal></app-list-normal-fisheriesillegal>
+                        <app-list-allegation-criminal></app-list-allegation-criminal>
+                        <app-list-allegation-warrant></app-list-allegation-warrant>
+                        <app-list-allegation-criminal-case></app-list-allegation-criminal-case>
+                        <app-list-allegation-criminal-record></app-list-allegation-criminal-record>
+                        <app-list-allegation-traffic-case></app-list-allegation-traffic-case>
+                        <app-list-normal-warrant-of-arrest></app-list-normal-warrant-of-arrest>
+                        <app-list-allegation-charge-subject></app-list-allegation-charge-subject>
+                        <app-list-allegation-released-offender></app-list-allegation-released-offender>
+                        <app-list-allgetion-coj-arrest-warrants></app-list-allgetion-coj-arrest-warrants>
+                        <app-list-allegation-juvenile-offender65></app-list-allegation-juvenile-offender65>
+                        <app-list-allgations-probationer-narcotics></app-list-allgations-probationer-narcotics>
+                        <!-- <app-list-allegation-prisoner-bankrupt></app-list-allegation-prisoner-bankrupt> -->
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel ">
+                    <div class="panel-heading ">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                          <span class="report-section-title font-20"
+                            style=" border: 1; border-color: black; font-size: 20px; font-weight: bold; color: whitesmoke;"><u>ประวัติทั่วไป ({{countNormalDb}})</u></span>
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse in">
+                      <div *ngIf="true">
+                        <app-list-normal-persons></app-list-normal-persons>
+                        <app-list-normal-thaiidcard></app-list-normal-thaiidcard>
+                        <app-list-normal-addresses></app-list-normal-addresses>
+                        <app-list-normal-birthcertificates></app-list-normal-birthcertificates>
+                        <app-list-normal-aliens></app-list-normal-aliens>
+                        <app-list-normal-borderpasses></app-list-normal-borderpasses>
+                        <app-list-normal-death-certificates></app-list-normal-death-certificates>
+                        <app-list-normal-divorce-certificates></app-list-normal-divorce-certificates>
+                        <app-list-normal-education-backgroundes></app-list-normal-education-backgroundes>
+                        <app-list-normal-marriagecertificates></app-list-normal-marriagecertificates>
+                        <app-list-normal-face-photos></app-list-normal-face-photos>
+                        <app-list-normal-students></app-list-normal-students>
+                        <app-list-normal-por4></app-list-normal-por4>
+                        <app-list-normal-person-changename-primary></app-list-normal-person-changename-primary>
+                        <app-list-normal-person-changelastname></app-list-normal-person-changelastname>
+                        <app-list-normal-requestors></app-list-normal-requestors>
+                        <!-- <app-list-normal-crime-defendant-compensation></app-list-normal-crime-defendant-compensation> -->
+                        <app-list-normal-crime-victim-compensation></app-list-normal-crime-victim-compensation>
+                        <app-list-normal-bankruptcy-case></app-list-normal-bankruptcy-case>
+                        <app-list-normal-missing-person></app-list-normal-missing-person>
+                        <app-list-normal-corpse></app-list-normal-corpse>
+                        <app-list-normal-report-verification></app-list-normal-report-verification>
+                        <app-list-normal-land-and-condominium-titles></app-list-normal-land-and-condominium-titles>
+                        <app-list-normal-health-insurance-rights></app-list-normal-health-insurance-rights>
+                        <app-list-normal-workforce-developments></app-list-normal-workforce-developments>
+                        <app-list-normal-new-born-babies></app-list-normal-new-born-babies>
+                        <app-list-normal-missing-person-case></app-list-normal-missing-person-case>
+                        <app-list-normal-jfo-case></app-list-normal-jfo-case>
+                        <app-list-normal-jfo-case64></app-list-normal-jfo-case64>
+                        <app-list-normal-agoth-charge-victim></app-list-normal-agoth-charge-victim>
+                        <!-- <app-list-normal-alien-workforces></app-list-normal-alien-workforces> -->
+                        <app-list-normal-driver-license></app-list-normal-driver-license>
+                        <app-list-normal-car-license></app-list-normal-car-license>
+                        <app-list-normal-employee-employment></app-list-normal-employee-employment>
+                        <app-list-normal-employment></app-list-normal-employment>
+                        <app-list-normal-thailand-passport></app-list-normal-thailand-passport>
+                        <app-list-normal-cripple></app-list-normal-cripple>
+                        <app-list-normal-register-of-taxpayers></app-list-normal-register-of-taxpayers>
+                        <app-list-normal-registrant></app-list-normal-registrant>
+                        <app-list-normal-travel-information></app-list-normal-travel-information>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- end card-body -->
+      </div> <!-- end card-->
+    </div> <!-- end col -->
+
+    <!-- outputAlgationsPrisoner -->
+    <div class="col-xl-8 col-lg-8 order-lg-1 order-xl-2" *ngIf="outputAlgationsPrisoner">
+      <div class="card">
+        <div class="card-body">
+          <a routerLink="/{{reportclick}}" (click)="pdfPreview()" target="_blank">
+            <button type="button" class="float-right btn btn-danger"><i class="uil-down-arrow"></i> PDF </button>
+          </a>
+          <app-list-top-face-photos></app-list-top-face-photos>
+
+          <div class="col-lg-12">
+            <app-list-top-persons></app-list-top-persons>
+          </div>
+
+          <div *ngIf="report_name=='รายงาน Single Report'">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="panel-group" id="accordion">
+                  <div class="panel ">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true">
+                          <span class="report-section-title font-20"
+                            style="font-size: 20px; font-weight: bold; color: whitesmoke; border: 1; border-color: black;"><u>ประวัติการกระทำผิด</u></span>
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in show">
+                      <div *ngIf="true">
+                        <app-list-algations-prisoner [inputAlgationsPrisoner]="outputAlgationsPrisoner"></app-list-algations-prisoner>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- end card-body -->
+      </div> <!-- end card-->
+    </div> <!-- end col -->
+
+    <!-- outputAlgationsProbationer -->
+    <div class="col-xl-8 col-lg-8 order-lg-1 order-xl-2" *ngIf="outputAlgationsProbationer">
+      <div class="card">
+        <div class="card-body">
+          <a routerLink="/{{reportclick}}" (click)="pdfPreview()" target="_blank">
+            <button type="button" class="float-right btn btn-danger"><i class="uil-down-arrow"></i> PDF </button>
+          </a>
+          <app-list-top-face-photos></app-list-top-face-photos>
+
+          <div class="col-lg-12">
+            <app-list-top-persons></app-list-top-persons>
+          </div>
+
+          <div *ngIf="report_name=='รายงาน Single Report'">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="panel-group" id="accordion">
+                  <div class="panel ">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true">
+                          <span class="report-section-title font-20"
+                            style="font-size: 20px; font-weight: bold; color: whitesmoke; border: 1; border-color: black;"><u>ประวัติการกระทำผิด</u></span>
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in show">
+                      <div *ngIf="true">
+                        <app-list-algations-probations [inputAlgationsProbationer]="outputAlgationsProbationer"></app-list-algations-probations>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- end card-body -->
+      </div> <!-- end card-->
+    </div> <!-- end col -->
+
+    <!-- outputAlgationsRegseize -->
+    <div class="col-xl-8 col-lg-8 order-lg-1 order-xl-2" *ngIf="outputAlgationsRegseize">
+      <div class="card">
+        <div class="card-body">
+          <a routerLink="/{{reportclick}}" (click)="pdfPreview()" target="_blank">
+            <button type="button" class="float-right btn btn-danger"><i class="uil-down-arrow"></i> PDF </button>
+          </a>
+          <app-list-top-face-photos></app-list-top-face-photos>
+
+          <div class="col-lg-12">
+            <app-list-top-persons></app-list-top-persons>
+          </div>
+
+          <div *ngIf="report_name=='รายงาน Single Report'">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="panel-group" id="accordion">
+                  <div class="panel ">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true">
+                          <span class="report-section-title font-20"
+                            style="font-size: 20px; font-weight: bold; color: whitesmoke; border: 1; border-color: black;"><u>ประวัติการกระทำผิด</u></span>
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in show">
+                      <div *ngIf="true">
+                        <app-list-allegation-regseize [inputAlgationsRegseize]="outputAlgationsRegseize"></app-list-allegation-regseize>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- end card-body -->
+      </div> <!-- end card-->
+    </div> <!-- end col -->
+
+    <!-- outputAlgationsRemandee -->
+    <div class="col-xl-8 col-lg-8 order-lg-1 order-xl-2" *ngIf="outputAlgationsRemandee">
+      <div class="card">
+        <div class="card-body">
+          <a routerLink="/{{reportclick}}" (click)="pdfPreview()" target="_blank">
+            <button type="button" class="float-right btn btn-danger"><i class="uil-down-arrow"></i> PDF </button>
+          </a>
+          <app-list-top-face-photos></app-list-top-face-photos>
+
+          <div class="col-lg-12">
+            <app-list-top-persons></app-list-top-persons>
+          </div>
+
+          <div *ngIf="report_name=='รายงาน Single Report'">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="panel-group" id="accordion">
+                  <div class="panel ">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true">
+                          <span class="report-section-title font-20"
+                            style="font-size: 20px; font-weight: bold; color: whitesmoke; border: 1; border-color: black;"><u>ประวัติการกระทำผิด</u></span>
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in show">
+                      <div *ngIf="true">
+                        <app-list-allegaiton-remandee [inputAlgationsRemandee]="outputAlgationsRemandee"></app-list-allegaiton-remandee>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- end card-body -->
+      </div> <!-- end card-->
+    </div> <!-- end col -->
+
+    <!-- outputAlgationsNarcoticOffender -->
+    <div class="col-xl-8 col-lg-8 order-lg-1 order-xl-2" *ngIf="outputAlgationsNarcoticOffender">
+      <div class="card">
+        <div class="card-body">
+          <a routerLink="/{{reportclick}}" (click)="pdfPreview()" target="_blank">
+            <button type="button" class="float-right btn btn-danger"><i class="uil-down-arrow"></i> PDF </button>
+          </a>
+          <app-list-top-face-photos></app-list-top-face-photos>
+
+          <div class="col-lg-12">
+            <app-list-top-persons></app-list-top-persons>
+          </div>
+
+          <div *ngIf="report_name=='รายงาน Single Report'">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="panel-group" id="accordion">
+                  <div class="panel ">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true">
+                          <span class="report-section-title font-20"
+                            style="font-size: 20px; font-weight: bold; color: whitesmoke; border: 1; border-color: black;"><u>ประวัติการกระทำผิด</u></span>
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in show">
+                      <div *ngIf="true">
+                        <app-list-allegation-narcotic-offender [inputAlgationsNarcoticOffender]="outputAlgationsNarcoticOffender"></app-list-allegation-narcotic-offender>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- end card-body -->
+      </div> <!-- end card-->
+    </div> <!-- end col -->
+
+    <!-- outputAlgationsReleasedOffender -->
+    <div class="col-xl-8 col-lg-8 order-lg-1 order-xl-2" *ngIf="outputAlgationsReleasedOffender">
+      <div class="card">
+        <div class="card-body">
+          <a routerLink="/{{reportclick}}" (click)="pdfPreview()" target="_blank">
+            <button type="button" class="float-right btn btn-danger"><i class="uil-down-arrow"></i> PDF </button>
+          </a>
+          <app-list-top-face-photos></app-list-top-face-photos>
+
+          <div class="col-lg-12">
+            <app-list-top-persons></app-list-top-persons>
+          </div>
+
+          <div *ngIf="report_name=='รายงาน Single Report'">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="panel-group" id="accordion">
+                  <div class="panel ">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true">
+                          <span class="report-section-title font-20"
+                            style="font-size: 20px; font-weight: bold; color: whitesmoke; border: 1; border-color: black;"><u>ประวัติการกระทำผิด</u></span>
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in show">
+                      <div *ngIf="true">
+                        <app-list-allegation-released-offender [inputAlgationsReleasedOffender]="outputAlgationsReleasedOffender"></app-list-allegation-released-offender>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- end card-body -->
+      </div> <!-- end card-->
+    </div> <!-- end col -->
+
+    <!-- outputAlgationsCriminal -->
+    <div class="col-xl-8 col-lg-8 order-lg-1 order-xl-2" *ngIf="outputAlgationsCriminal">
+      <div class="card">
+        <div class="card-body">
+          <a routerLink="/{{reportclick}}" (click)="pdfPreview()" target="_blank">
+            <button type="button" class="float-right btn btn-danger"><i class="uil-down-arrow"></i> PDF </button>
+          </a>
+          <app-list-top-face-photos></app-list-top-face-photos>
+
+          <div class="col-lg-12">
+            <app-list-top-persons></app-list-top-persons>
+          </div>
+
+          <div *ngIf="report_name=='รายงาน Single Report'">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="panel-group" id="accordion">
+                  <div class="panel ">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true">
+                          <span class="report-section-title font-20"
+                            style="font-size: 20px; font-weight: bold; color: whitesmoke; border: 1; border-color: black;"><u>ประวัติการกระทำผิด</u></span>
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in show">
+                      <div *ngIf="true">
+                        <app-list-allegation-criminal [inputAlgationsCriminal]="outputAlgationsCriminal"></app-list-allegation-criminal>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- end card-body -->
+      </div> <!-- end card-->
+    </div> <!-- end col -->
+
+    <!-- outputAlgationsJuvenileOffender -->
+    <div class="col-xl-8 col-lg-8 order-lg-1 order-xl-2" *ngIf="outputAlgationsJuvenileOffender">
+      <div class="card">
+        <div class="card-body">
+          <a routerLink="/{{reportclick}}" (click)="pdfPreview()" target="_blank">
+            <button type="button" class="float-right btn btn-danger"><i class="uil-down-arrow"></i> PDF </button>
+          </a>
+          <app-list-top-face-photos></app-list-top-face-photos>
+
+          <div class="col-lg-12">
+            <app-list-top-persons></app-list-top-persons>
+          </div>
+
+          <div *ngIf="report_name=='รายงาน Single Report'">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="panel-group" id="accordion">
+                  <div class="panel ">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true">
+                          <span class="report-section-title font-20"
+                            style="font-size: 20px; font-weight: bold; color: whitesmoke; border: 1; border-color: black;"><u>ประวัติการกระทำผิด</u></span>
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in show">
+                      <div *ngIf="true">
+                        <app-list-allegation-juvenile-offender [inputAlgationsJuvenileOffender]="outputAlgationsJuvenileOffender"></app-list-allegation-juvenile-offender>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- end card-body -->
+      </div> <!-- end card-->
+    </div> <!-- end col -->
+
+    <!-- outputAllgationsCriminalRecord -->
+    <div class="col-xl-8 col-lg-8 order-lg-1 order-xl-2" *ngIf="outputAllgationsCriminalRecord">
+      <div class="card">
+        <div class="card-body">
+          <a routerLink="/{{reportclick}}" (click)="pdfPreview()" target="_blank">
+            <button type="button" class="float-right btn btn-danger"><i class="uil-down-arrow"></i> PDF </button>
+          </a>
+          <app-list-top-face-photos></app-list-top-face-photos>
+
+          <div class="col-lg-12">
+            <app-list-top-persons></app-list-top-persons>
+          </div>
+
+          <div *ngIf="report_name=='รายงาน Single Report'">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="panel-group" id="accordion">
+                  <div class="panel ">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true">
+                          <span class="report-section-title font-20"
+                            style="font-size: 20px; font-weight: bold; color: whitesmoke; border: 1; border-color: black;"><u>ประวัติการกระทำผิด</u></span>
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in show">
+                      <div *ngIf="true">
+                        <app-list-allegation-criminal-record [inputAllgationsCriminalRecord]="outputAllgationsCriminalRecord"></app-list-allegation-criminal-record>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- end card-body -->
+      </div> <!-- end card-->
+    </div> <!-- end col -->
+
+    <!-- outputNormalMissingPersonCase -->
+    <div class="col-xl-8 col-lg-8 order-lg-1 order-xl-2" *ngIf="outputNormalMissingPersonCase">
+      <div class="card">
+        <div class="card-body">
+          <a routerLink="/{{reportclick}}" (click)="pdfPreview()" target="_blank">
+            <button type="button" class="float-right btn btn-danger"><i class="uil-down-arrow"></i> PDF </button>
+          </a>
+          <app-list-top-face-photos></app-list-top-face-photos>
+
+          <div class="col-lg-12">
+            <app-list-top-persons></app-list-top-persons>
+          </div>
+
+          <div *ngIf="report_name=='รายงาน Single Report'">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="panel-group" id="accordion">
+                  <div class="panel ">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true">
+                          <span class="report-section-title font-20"
+                            style="font-size: 20px; font-weight: bold; color: whitesmoke; border: 1; border-color: black;"><u>ประวัติทั่วไป</u></span>
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in show">
+                      <div *ngIf="true">
+                        <app-list-normal-missing-person-case [inputNormalMissingPersonCase]="outputNormalMissingPersonCase"></app-list-normal-missing-person-case>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- end card-body -->
+      </div> <!-- end card-->
+    </div> <!-- end col -->
+
+    <!-- outputNormalCrimeVictimCompensation -->
+    <div class="col-xl-8 col-lg-8 order-lg-1 order-xl-2" *ngIf="outputNormalCrimeVictimCompensation">
+      <div class="card">
+        <div class="card-body">
+          <a routerLink="/{{reportclick}}" (click)="pdfPreview()" target="_blank">
+            <button type="button" class="float-right btn btn-danger"><i class="uil-down-arrow"></i> PDF </button>
+          </a>
+          <app-list-top-face-photos></app-list-top-face-photos>
+
+          <div class="col-lg-12">
+            <app-list-top-persons></app-list-top-persons>
+          </div>
+
+          <div *ngIf="report_name=='รายงาน Single Report'">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="panel-group" id="accordion">
+                  <div class="panel ">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true">
+                          <span class="report-section-title font-20"
+                            style="font-size: 20px; font-weight: bold; color: whitesmoke; border: 1; border-color: black;"><u>ประวัติทั่วไป</u></span>
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in show">
+                      <div *ngIf="true">
+                        <app-list-normal-crime-victim-compensation [inputNormalCrimeVictimCompensation]="outputNormalCrimeVictimCompensation"></app-list-normal-crime-victim-compensation>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- end card-body -->
+      </div> <!-- end card-->
+    </div> <!-- end col -->
+
+    <!-- outputNormalRequestors -->
+    <div class="col-xl-8 col-lg-8 order-lg-1 order-xl-2" *ngIf="outputNormalRequestors">
+      <div class="card">
+        <div class="card-body">
+          <a routerLink="/{{reportclick}}" (click)="pdfPreview()" target="_blank">
+            <button type="button" class="float-right btn btn-danger"><i class="uil-down-arrow"></i> PDF </button>
+          </a>
+          <app-list-top-face-photos></app-list-top-face-photos>
+
+          <div class="col-lg-12">
+            <app-list-top-persons></app-list-top-persons>
+          </div>
+
+          <div *ngIf="report_name=='รายงาน Single Report'">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="panel-group" id="accordion">
+                  <div class="panel ">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true">
+                          <span class="report-section-title font-20"
+                            style="font-size: 20px; font-weight: bold; color: whitesmoke; border: 1; border-color: black;"><u>ประวัติทั่วไป</u></span>
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in show">
+                      <div *ngIf="true">
+                        <app-list-normal-requestors [inputNormalRequestors]="outputNormalRequestors"></app-list-normal-requestors>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- end card-body -->
+      </div> <!-- end card-->
+    </div> <!-- end col -->
+
+    <!-- outputNormalChargeVictim -->
+    <div class="col-xl-8 col-lg-8 order-lg-1 order-xl-2" *ngIf="outputNormalChargeVictim">
+      <div class="card">
+        <div class="card-body">
+          <a routerLink="/{{reportclick}}" (click)="pdfPreview()" target="_blank">
+            <button type="button" class="float-right btn btn-danger"><i class="uil-down-arrow"></i> PDF </button>
+          </a>
+          <app-list-top-face-photos></app-list-top-face-photos>
+
+          <div class="col-lg-12">
+            <app-list-top-persons></app-list-top-persons>
+          </div>
+
+          <div *ngIf="report_name=='รายงาน Single Report'">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="panel-group" id="accordion">
+                  <div class="panel ">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true">
+                          <span class="report-section-title font-20"
+                            style="font-size: 20px; font-weight: bold; color: whitesmoke; border: 1; border-color: black;"><u>ประวัติทั่วไป</u></span>
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in show">
+                      <div *ngIf="true">
+                        <app-list-normal-agoth-charge-victim [inputNormalChargeVictim]="outputNormalChargeVictim"></app-list-normal-agoth-charge-victim>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- end card-body -->
+      </div> <!-- end card-->
+    </div> <!-- end col -->
+
+    <!-- outputNormalCorpse -->
+    <div class="col-xl-8 col-lg-8 order-lg-1 order-xl-2" *ngIf="outputNormalCorpse">
+      <div class="card">
+        <div class="card-body">
+          <a routerLink="/{{reportclick}}" (click)="pdfPreview()" target="_blank">
+            <button type="button" class="float-right btn btn-danger"><i class="uil-down-arrow"></i> PDF </button>
+          </a>
+          <app-list-top-face-photos></app-list-top-face-photos>
+
+          <div class="col-lg-12">
+            <app-list-top-persons></app-list-top-persons>
+          </div>
+
+          <div *ngIf="report_name=='รายงาน Single Report'">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="panel-group" id="accordion">
+                  <div class="panel ">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true">
+                          <span class="report-section-title font-20"
+                            style="font-size: 20px; font-weight: bold; color: whitesmoke; border: 1; border-color: black;"><u>ประวัติทั่วไป</u></span>
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in show">
+                      <div *ngIf="true">
+                        <app-list-normal-corpse [inputNormalCorpse]="outputNormalCorpse"></app-list-normal-corpse>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- end card-body -->
+      </div> <!-- end card-->
+    </div> <!-- end col -->
+
+    <!-- outputNormalBankruptcyCase -->
+    <div class="col-xl-8 col-lg-8 order-lg-1 order-xl-2" *ngIf="outputNormalBankruptcyCase">
+      <div class="card">
+        <div class="card-body">
+          <a routerLink="/{{reportclick}}" (click)="pdfPreview()" target="_blank">
+            <button type="button" class="float-right btn btn-danger"><i class="uil-down-arrow"></i> PDF </button>
+          </a>
+          <app-list-top-face-photos></app-list-top-face-photos>
+
+          <div class="col-lg-12">
+            <app-list-top-persons></app-list-top-persons>
+          </div>
+
+          <div *ngIf="report_name=='รายงาน Single Report'">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="panel-group" id="accordion">
+                  <div class="panel ">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true">
+                          <span class="report-section-title font-20"
+                            style="font-size: 20px; font-weight: bold; color: whitesmoke; border: 1; border-color: black;"><u>ประวัติทั่วไป</u></span>
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in show">
+                      <div *ngIf="true">
+                        <app-list-normal-bankruptcy-case [inputNormalBankruptcyCase]="outputNormalBankruptcyCase"></app-list-normal-bankruptcy-case>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- end card-body -->
+      </div> <!-- end card-->
+    </div> <!-- end col -->
+
+    <!-- outputAllegationChargeSubject -->
+    <div class="col-xl-8 col-lg-8 order-lg-1 order-xl-2" *ngIf="outputAllegationChargeSubject">
+      <div class="card">
+        <div class="card-body">
+          <a routerLink="/{{reportclick}}" (click)="pdfPreview()" target="_blank">
+            <button type="button" class="float-right btn btn-danger"><i class="uil-down-arrow"></i> PDF </button>
+          </a>
+          <app-list-top-face-photos></app-list-top-face-photos>
+
+          <div class="col-lg-12">
+            <app-list-top-persons></app-list-top-persons>
+          </div>
+
+          <div *ngIf="report_name=='รายงาน Single Report'">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="panel-group" id="accordion">
+                  <div class="panel ">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true">
+                          <span class="report-section-title font-20"
+                            style="font-size: 20px; font-weight: bold; color: whitesmoke; border: 1; border-color: black;"><u>ประวัติทั่วไป</u></span>
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in show">
+                      <div *ngIf="true">
+                        <app-list-allegation-charge-subject [inputAllegationChargeSubject]="outputAllegationChargeSubject"></app-list-allegation-charge-subject>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- end card-body -->
+      </div> <!-- end card-->
+    </div> <!-- end col -->
+
+    <!-- outputNormalRegistrant -->
+    <div class="col-xl-8 col-lg-8 order-lg-1 order-xl-2" *ngIf="outputNormalRegistrant">
+      <div class="card">
+        <div class="card-body">
+          <a routerLink="/{{reportclick}}" (click)="pdfPreview()" target="_blank">
+            <button type="button" class="float-right btn btn-danger"><i class="uil-down-arrow"></i> PDF </button>
+          </a>
+          <app-list-top-face-photos></app-list-top-face-photos>
+
+          <div class="col-lg-12">
+            <app-list-top-persons></app-list-top-persons>
+          </div>
+
+          <div *ngIf="report_name=='รายงาน Single Report'">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="panel-group" id="accordion">
+                  <div class="panel ">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true">
+                          <span class="report-section-title font-20"
+                            style="font-size: 20px; font-weight: bold; color: whitesmoke; border: 1; border-color: black;"><u>ประวัติทั่วไป</u></span>
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in show">
+                      <div *ngIf="true">
+                        <app-list-normal-registrant [inputNormalRegistrant]="outputNormalRegistrant"></app-list-normal-registrant>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- end card-body -->
+      </div> <!-- end card-->
+    </div> <!-- end col -->
+
+    <!-- outputNormalJfoCase64 -->
+    <div class="col-xl-8 col-lg-8 order-lg-1 order-xl-2" *ngIf="outputNormalJfoCase64">
+      <div class="card">
+        <div class="card-body">
+          <a routerLink="/{{reportclick}}" (click)="pdfPreview()" target="_blank">
+            <button type="button" class="float-right btn btn-danger"><i class="uil-down-arrow"></i> PDF </button>
+          </a>
+          <app-list-top-face-photos></app-list-top-face-photos>
+
+          <div class="col-lg-12">
+            <app-list-top-persons></app-list-top-persons>
+          </div>
+
+          <div *ngIf="report_name=='รายงาน Single Report'">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="panel-group" id="accordion">
+                  <div class="panel ">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true">
+                          <span class="report-section-title font-20"
+                            style="font-size: 20px; font-weight: bold; color: whitesmoke; border: 1; border-color: black;"><u>ประวัติทั่วไป</u></span>
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in show">
+                      <div *ngIf="true">
+                        <app-list-normal-jfo-case64 [inputNormalJfoCase64]="outputNormalJfoCase64"></app-list-normal-jfo-case64>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- end card-body -->
+      </div> <!-- end card-->
+    </div> <!-- end col -->
+
+      <!-- outputAlgationsCriminalCase -->
+      <div class="col-xl-8 col-lg-8 order-lg-1 order-xl-2" *ngIf="outputAlgationsCriminalCase">
+        <div class="card">
+          <div class="card-body">
+            <a routerLink="/{{reportclick}}" (click)="pdfPreview()" target="_blank">
+              <button type="button" class="float-right btn btn-danger"><i class="uil-down-arrow"></i> PDF </button>
+            </a>
+            <app-list-top-face-photos></app-list-top-face-photos>
+  
+            <div class="col-lg-12">
+              <app-list-top-persons></app-list-top-persons>
+            </div>
+  
+            <div *ngIf="report_name=='รายงาน Single Report'">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="panel-group" id="accordion">
+                    <div class="panel ">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true">
+                            <span class="report-section-title font-20"
+                              style="font-size: 20px; font-weight: bold; color: whitesmoke; border: 1; border-color: black;"><u>ประวัติการกระทำผิด</u></span>
+                          </a>
+                        </h4>
+                      </div>
+                      <div id="collapseOne" class="panel-collapse collapse in show">
+                        <div *ngIf="true">
+                          <app-list-allegation-criminal-case [inputAlgationsCriminalCase]="outputAlgationsCriminalCase"></app-list-allegation-criminal-case>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- end card-body -->
+        </div> <!-- end card-->
+      </div> <!-- end col -->
+    
+    <!-- outputAlgationsJuvenileOffender65 -->
+    <div class="col-xl-8 col-lg-8 order-lg-1 order-xl-2" *ngIf="outputAlgationsJuvenileOffender65">
+      <div class="card">
+        <div class="card-body">
+          <a routerLink="/{{reportclick}}" (click)="pdfPreview()" target="_blank">
+            <button type="button" class="float-right btn btn-danger"><i class="uil-down-arrow"></i> PDF </button>
+          </a>
+          <app-list-top-face-photos></app-list-top-face-photos>
+
+          <div class="col-lg-12">
+            <app-list-top-persons></app-list-top-persons>
+          </div>
+
+          <div *ngIf="report_name=='รายงาน Single Report'">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="panel-group" id="accordion">
+                  <div class="panel ">
+                    <div class="panel-heading">
+                      <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true">
+                          <span class="report-section-title font-20"
+                            style="font-size: 20px; font-weight: bold; color: whitesmoke; border: 1; border-color: black;"><u>ประวัติการกระทำผิด</u></span>
+                        </a>
+                      </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in show">
+                      <div *ngIf="true">
+                        <app-list-allegation-juvenile-offender65 [inputAlgationsJuvenileOffender65]="outputAlgationsJuvenileOffender65"></app-list-allegation-juvenile-offender65>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- end card-body -->
+      </div> <!-- end card-->
+    </div> <!-- end col -->
+    <!-- end user detail -->
+  </div> <!-- end row-->
+</div>
+<!-- <div class="container-fluid" *ngIf="report_name=='กรมคุมประพฤติ'">
+ <app-report-coj></app-report-coj>
+</div> -->
+<app-dxc-loader></app-dxc-loader>
+<!-- <app-footer></app-footer> -->
+<!-- </div> -->
+
+<div class="modal fade" id="asd" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document" style="height: 630px;">
+    <div class="modal-content" style="overflow: auto;height: 50px;width: 1261px; border-style:ridge;">
+      <div class="modal-header">
+
+      </div>
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+          X
+        </button>
+        <div class="btn-toolbar pull-right" role="toolbar" style="margin-top: 7px;">
+          <div class="btn-group">
+            <a routerLink="/{{reportName}}" (click)="pdfPreviewlocal()" target="_blank">
+              <img class="toggle" id="print_content_tabs_2" style="cursor: pointer; width: 16px; height: 16px"
+                src="assets/dist/img/pdf.png">PDF</a>
+          </div>
+        </div>
+        <div class="panel-default1">
+          <div class="panel-heading hidden-print">
+            <div class="panel-title">
+              <img src="{{img}}" align="absmiddle" width="25px">{{title}}</div>
+          </div>
+          <div class="panel-body">
+            <div class="col-md-3 hidden-print">
+              <a class="thumbnail hidden-xs hidden-sm " style="text-align: center; cursor: default">
+                <img src="{{departmentImg}}" style="width: 64px; height:64px;">
+                <br>{{departmentTitle}}</a>
+
+              <div class="panel1 panel-default1">
+                <div class="panel-heading1">
+                  <span class="glyphicon  glyphicon-info-sign"></span> ข้อมูลพื้นฐาน</div>
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <h6 class="list-group-item-heading text-info">เลขประจำตัวประชาชน :</h6>
+                        <span class="pull-right" data-attributename="citizenCardNumber" data-value="N/A"
+                          data-role="dxc-hyperlink">
+                          <a href="#/dxcui0014/dxcui0018/%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%87%E0%B8%B2%E0%B8%99%20Single%20Report/{{person?.citizenCardNumber}}/0/0/0"
+                            target="_blank">
+                            <div class="demo-google-material-icon">{{person?.citizenCardNumber}}
+                              <i class="material-icons">link</i>
+                            </div>
+                          </a>
+                        </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <h6 class="list-group-item-heading text-info">ชื่อ :</h6>
+                        <span class="pull-right" data-attributename="firstName" data-value="N/A"
+                          data-role="dxc-hyperlink">
+                          {{person?.fullName}} </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <h6 class="list-group-item-heading text-info">เพศ :</h6>
+                        <span class="pull-right" data-attributename="sex" data-value="N/A" data-role="dxc-hyperlink">
+                          {{person?.sex}}</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <h6 class="list-group-item-heading text-info">วันเกิด :</h6>
+                        <span class="pull-right" data-attributename="dateOfBirth" data-value="N/A"
+                          data-role="dxc-hyperlink">
+                          {{person?.dateOfBirth}}</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="col-md-9">
+
+              <!-- Nav tabs -->
+              <ul class="nav nav-tabs">
+                <li class="nav-item">
+                  <a class="nav-link active" data-toggle="tab" href="#tab1">มุมมองรายงาน</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#tab2">ทดสอบ2</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#tab3">ทดสอบ3</a>
+                  </li> -->
+              </ul>
+              <!-- Tab panes -->
+              <div class="tab-content" style="margin-top: 5px;">
+                <div role="tabpanel" class="tab-pane in active" id="tab1">
+                  <div [innerHTML]="viewhtmlReport"></div>
+                </div>
+                <!-- <div role="tabpanel" class="tab-pane" id="tab2">
+                    <p>ทดสอบ2</p>
+                  </div>
+                  <div role="tabpanel" class="tab-pane" id="tab3">
+                    <p>ทดสอบ3</p>
+
+                  </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- <app-footer></app-footer> -->

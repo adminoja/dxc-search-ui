@@ -1,0 +1,21 @@
+{
+    "content": [
+        {   
+            "juristicType": "นิติบุคคลตามกฎหมายเอกชน",
+            "registerDate": "2010-11-11",
+            "juristicId": "123456",
+            "oldJuristicId": "null",
+            "juristicName": "เทส",
+            "juristicNameEng": "Test",
+            "numberOfCommittee": "2",
+            "registerCapital": "100000",
+            "paidRegisterCapital": "80000",
+            "numberOfObjective": "5",
+            "numberOfPageOfObjective": "4",
+            "address": "141/1 หมู่ 5 ตำบลหาดเล็ก อำเภอคลองใหญ่ จังหวัดตราด 23110",
+            "juristicStatus": "เสร็จการชําระบัญชี",
+            "tsic": "B05",
+            "committees": "aaaaaaa"
+        }
+    ]
+}

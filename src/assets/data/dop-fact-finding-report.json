@@ -1,0 +1,28 @@
+{
+    "content" : [
+        {
+            "consideration": "พักการลงโทษ",
+            "redNo": "124/2562;",
+            "court": "กรุงเทพมหานคร",
+            "prison": "กรุงเทพมหานคร",
+            "officeName": "สำนักงานคุมประพฤติกรุงเทพมหานคร 7",
+            "registerNumber": "101",
+            "firstName": "สมชาย",
+            "lastName": "สมหวัง",
+            "guiltyName": "พ.ร.บ.ยาเสพติด",
+            "nickName": "ชาย",
+            "status": "โสด",
+            "sponsorFristName": "-",
+            "sponsorLastName": "-",
+            "sponsorStatus": "-",
+            "houseNumber": "127",
+            "village": "127",
+            "road": "127",
+            "subDistrict": "127",
+            "district": "127",
+            "prvince": "กรุงเทพมหานคร",
+            "phoneNumber": "0891271234",
+            "commentProbationOfficer" : "no comment"
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "content" : [
+        {
+            "academicYear": "2024",
+            "courseName": "Computer Science",
+            "degreeName": "Bachelor of Science",
+            "departmentNameThai": "ภาควิชาวิทยาการคอมพิวเตอร์",
+            "educationLevelName": "ปริญญาตรี",
+            "firstName": "สมชาย",
+            "gpax": 3.45,
+            "graduateDate": "2025-03-15",
+            "lastName": "ใจดี",
+            "majorName": "ซอฟต์แวร์",
+            "personID": "1234567890123",
+            "prefixName": "นาย",
+            "programName": "หลักสูตรวิทยาศาสตรบัณฑิต",
+            "schoolID": "S001",
+            "schoolName": "คณะวิทยาศาสตร์",
+            "semester": "2"
+        }
+    ]
+}
+  

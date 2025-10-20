@@ -1,0 +1,107 @@
+{
+  "content": [
+    {
+      "status": {
+        "code": "1000",
+        "description": "Success"
+      },
+      "data": {
+        "organizationJuristicPerson": {
+          "organizationJuristicID": "0105554001954",
+          "organizationOldJuristicID": null,
+          "organizationJuristicNameTH": "บริษัท ไทย โซลูชั่น อินทิเกรเตด  จำกัด",
+          "organizationJuristicNameEN": "THAI SOLUTION INTEGRATED COMPANY LIMITED",
+          "organizationJuristicType": "บริษัทจำกัด",
+          "organizationJuristicRegisterDate": "20110107",
+          "organizationJuristicStatus": "ยังดำเนินกิจการอยู่",
+          "organizationJuristicObjective": [
+            {
+              "juristicObjective": "R",
+              "juristicObjectiveCode": "46521",
+              "juristicObjectiveTextTH": "การขายส่งอุปกรณ์และชิ้นส่วนอิเล็กทรอนิกส์",
+              "juristicObjectiveTextEN": "Wholesale of electronic equipment and parts"
+            },
+            {
+              "juristicObjective": "F",
+              "juristicObjectiveCode": "41002",
+              "juristicObjectiveTextTH": "การก่อสร้างอาคารที่ไม่ใช่ที่พักอาศัย",
+              "juristicObjectiveTextEN": "Construction of non-residential buildings"
+            }
+          ],
+          "organizationJuristicObjectiveItems": "63",
+          "organizationJuristicObjectivePages": "6",
+          "organizationJuristicRegisterCapital": "3500000.00",
+          "organizationJuristicPaidUpCapital": null,
+          "organizationJuristicPersonList": [
+            {
+              "juristicPersonSequence": 1,
+              "juristicPersonType": "กรรมการ",
+              "juristicPerson": {
+                "personNameTH": {
+                  "personNameTitleTextTH": "นาย",
+                  "personFirstNameTH": "สุพัฒน์",
+                  "personMiddleNameTH": "",
+                  "personLastNameTH": "มโนมัยพันธุ์"
+                }
+              },
+              "juristicPersonInvestType": "",
+              "juristicPersonInvestAmount": ""
+            }
+          ],
+          "organizationJuristicBranchName": "สำนักงานใหญ่",
+          "organizationJuristicAddress": {
+            "addressType": {
+              "address": "111/268 ซอยแจ้งวัฒนะ 19 ถนนแจ้งวัฒนะ ",
+              "building": "",
+              "roomNo": "",
+              "floor": "",
+              "addressNo": "111/268",
+              "moo": "",
+              "yaek": "",
+              "soi": "ซอยแจ้งวัฒนะ 19",
+              "trok": "",
+              "village": "",
+              "road": "แจ้งวัฒนะ",
+              "citySubDivision": {
+                "citySubDivisionCode": "12060400",
+                "citySubDivisionTextTH": "บางพูด"
+              },
+              "city": {
+                "cityCode": "1206",
+                "cityTextTH": "ปากเกร็ด"
+              },
+              "countrySubDivision": {
+                "countrySubDivisionCode": "TH-12",
+                "countrySubDivisionTextTH": "นนทบุรี"
+              }
+            }
+          },
+          "organizationJuristicPersonDescription": [
+            {
+              "organizationJuristicPersonDescriptionSequence": 1,
+              "organizationJuristicPersonDescriptionType": "อำนาจกรรมการ",
+              "organizationJuristicPersonDescriptionDetail": "กรรมการหนึ่งคนลงลายมือชื่อและประทับตราสำคัญของบริษัท"
+            },
+            {
+              "organizationJuristicPersonDescriptionSequence": 2,
+              "organizationJuristicPersonDescriptionType": "รายการอื่นซึ่งเห็นสมควรจะให้ประชาชนทราบ",
+              "organizationJuristicPersonDescriptionDetail": "ไม่มี"
+            },
+            {
+              "organizationJuristicPersonDescriptionSequence": 3,
+              "organizationJuristicPersonDescriptionType": "ประวัติการเปลี่ยนชื่อนิติบุคคล",
+              "organizationJuristicPersonDescriptionDetail": "บริษัทนี้เดิมชื่อ บริษัท ไทยรับเบอร์ซัพพลาย จำกัด ได้จดทะเบียนเปลี่ยนชื่อเป็น บริษัท ไทย โซลูชั่นอินทิเกรเตด จำกัด เมื่อวันที่ 4 กุมภาพันธ์ 2556"
+            },
+            {
+              "organizationJuristicPersonDescriptionSequence": 4,
+              "organizationJuristicPersonDescriptionType": "ข้อความหมายเหตุ",
+              "organizationJuristicPersonDescriptionDetail": "นิติบุคคลที่จดทะเบียนแล้วเมื่อมีลูกจ้าง ให้ติดต่อสำนักงานประกันสังคมเขตพื้นที่จังหวัดภายใน 30 วัน เพื่อปฏิบัติตามกฎหมายว่าด้วยการประกันสังคม และกฎหมายว่าด้วยเงินทดแทน"
+            }
+          ],
+          "financialSubmitRecord": "นิติบุคคลนี้ได้ส่งงบการเงินปี 2566",
+          "digitalIDFlag": "Y"
+        }
+      }
+    }
+  ]
+}

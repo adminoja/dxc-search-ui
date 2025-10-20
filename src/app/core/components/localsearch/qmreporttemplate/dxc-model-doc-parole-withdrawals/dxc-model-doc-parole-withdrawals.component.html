@@ -1,0 +1,147 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{{dataSourceName}} {{dataModelName}}</title>
+
+<style>body{font-size:12px}</style>
+</head>
+
+<body>
+<table style="border-style: solid; border-color: #000; width: 100%;" border="1px">
+    <tbody>
+    <tr>
+        <td align="center">ข้อมูลเพิกถอนการพักการลงโทษที่กระทำผิดเงื่อนไขคุมระพฤติ(อาญา)</td>
+    </tr>
+    </tbody>
+</table>
+<p>&nbsp;</p>
+<table style="width: 100%;" border="0">
+    <tbody>
+    <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>รหัสข้อมูล</td>
+        <td style="color: blue;">{{id}}</td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>ลำดัีบที่</td>
+        <td style="color: blue;">&nbsp;</td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>รหัสผู้ต้องขัง</td>
+        <td style="color: blue;">{{selectData.prisonerId}}</td>
+    </tr>
+    <tr>
+        <td style="font-size: 17px; padding-bottom: 5px;" colspan="6"><strong>ข้อมูลผู้ต้องขัง</strong></td>
+    </tr>
+    <tr>
+        <td style="width: 110px;" colspan="1">เลขประจำตัวประชาชน</td>
+        <td style="color: blue;" colspan="5" data-attributename="citizenCardNumber" data-role="dxc-hyperlink" data-value="[[citizenCardNumber]]">{{selectData.citizenCardNumber}}</td>
+    </tr>
+    <tr>
+        <td>ชื่อ</td>
+        <td style="color: blue;">{{selectData.firstName}}</td>
+        <td>สกุล</td>
+        <td style="color: blue;">{{selectData.lastName}}</td>
+        <td>เพศ</td>
+        <td style="color: blue;">{{selectData.sex}}</td>
+    </tr>
+    <tr>
+        <td>วันเดือนปีเกิด</td>
+        <td style="color: blue;">{{selectData.dateOfBirth}}</td>
+        <td>สัญชาติ</td>
+        <td style="color: blue;">{{selectData.nationality}}</td>
+        <td>ศาสนา</td>
+        <td style="color: blue;">{{selectData.religious}}</td>
+    </tr>
+    <tr>
+        <td colspan="6">&nbsp;</td>
+    </tr>
+    <tr>
+        <td style="font-size: 17px; padding-bottom: 5px;" colspan="6"><strong>ข้อมูลเพิกถอนพักการลงโทษ</strong></td>
+    </tr>
+    <tr>
+        <td>เรือนจำปล่อย</td>
+        <td style="color: blue;" colspan="2">&nbsp;{{selectData.releaseCorrectionalFacilityName}}</td>
+        <td colspan="1">จังหวัด</td>
+        <td style="color: blue;" colspan="2">&nbsp;{{selectData.releaseCorrectionalFacilityLocationProvinceName}}</td>
+    </tr>
+    <tr>
+        <td>สนง.คุมประพฤติ</td>
+        <td style="color: blue;" colspan="2">&nbsp;{{selectData.assignedProbationFacilityName}}</td>
+        <td colspan="1">จังหวัด</td>
+        <td style="color: blue;" colspan="2">&nbsp;&nbsp;{{selectData.assignedProbationFacilityLocationProvinceName}}</td>
+    </tr>
+    <tr>
+        <td colspan="6">&nbsp;</td>
+    </tr>
+    <tr>
+        <td style="font-size: 17px; padding-bottom: 5px;" colspan="6"><strong>คดีเดิม</strong></td>
+    </tr>
+    <tr>
+        <td>เลขคดีดำ</td>
+        <td style="color: blue;" colspan="2">&nbsp; N/A </td>
+        <td>เลขคดีแดง</td>
+        <td style="color: blue;" colspan="2">&nbsp;{{selectData.oldCaseRedCaseNo}}</td>
+    </tr>
+
+    <tr>
+        <td>หมวดข้อหา</td>
+        <td style="color: blue;" colspan="2">&nbsp;{{selectData.oldCaseChargeCategoryText}}</td>
+        <td>ข้อหา</td>
+        <td style="color: blue;" colspan="2">&nbsp;{{selectData.oldCaseChargeDescriptionText}}</td>
+    </tr>
+
+
+    <tr>
+        <td>วันปล่อย</td>
+        <td style="color: blue;" colspan="2">&nbsp;{{selectData.releaseDate}}</td>
+        <td>วันพ้นโทษ</td>
+        <!-- <td style="color: blue;" colspan="2">&nbsp;&nbsp;{{selectData.sentenceCompletionDate}}</td> -->
+    </tr>
+    <tr>
+        <td colspan="6">&nbsp;</td>
+    </tr>
+    <tr>
+        <td style="font-size: 17px; padding-bottom: 5px;" colspan="6"><strong>คดีใหม่</strong></td>
+    </tr>
+    <tr>
+        <td>เลขคดีดำ</td>
+        <td style="color: blue;" colspan="2">&nbsp;{{selectData.newCaseBlackCaseNo}}</td>
+        <td>เลขคดีแดง</td>
+        <td style="color: blue;" colspan="2">&nbsp;{{selectData.newCaseRedCaseNo}}</td>
+    </tr>
+    <tr>
+        <td>หมวดข้อหา</td>
+        <td style="color: blue;" colspan="2">&nbsp;{{selectData.newCaseChargeCategoryText}}</td>
+        <td>ข้อหา</td>
+        <td style="color: blue;" colspan="2">&nbsp;{{selectData.newCaseChargeDescriptionText}}</td>
+    </tr>
+    <tr>
+        <td>วันเพิกถอน</td>
+        <td style="color: blue;" colspan="2">&nbsp;{{selectData.withdrawalDate}}</td>
+        <td>เรือนจำคุมขัง</td>
+        <td style="color: blue;" colspan="2">&nbsp;{{selectData.confinedCorrectionalFacilityLocationProvinceName}} </td>
+    </tr>
+    <tr>
+        <td>การจับกุม</td>
+        <td style="color: blue;" colspan="2">&nbsp;{{selectData.isArrestedText}}</td>
+        <td></td>
+        <td style="color: blue;" colspan="2">&nbsp;</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
+
+<iframe id="result" style="width:100%; height: 95vh;"></iframe>

@@ -1,0 +1,30 @@
+{
+    "content": [
+        {
+            "allegation": "N/A",
+            "arrestedDate": "-",
+            "citizenCardNumber": "5101299061532",
+            "dataId": "-",
+            "eventDate": "-",
+            "firstName": "ประสิทธิ์",
+            "lastName": "ชื่นวิไล",
+            "policeCaseNumber": "",
+            "policeCaseOffice": "N/A",
+            "id": "130",
+            "birthDate": "-",
+            "sex": "หญิง",
+            "crimeDate": "-",
+            "lastAddress": "1199/1 ถนนจันทร์ แขวงทุ่งวัดดอน ยานนาวา",
+            "lastAddressProvince": "10",
+            "occupation": "รับจ้างทั่วไป",
+            "fatherFullName": "นายสด",
+            "motherFullName": "นางเอ็ง",
+            "courtName": "สภ.อ่าวลึก จว.กระบี่",
+            "policeCaseId": "727",
+            "investigationResult": "-",
+            "imprisonmentResult": "-",
+            "judgement": "จำ 9 ปี  เมื่อ 29 พ.ค. 35",
+            "dataSubmitDate": "2558-11-25T00:52:30+07:00"
+        }
+    ]
+}

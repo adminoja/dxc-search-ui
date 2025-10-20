@@ -1,0 +1,80 @@
+  <div *ngIf="moiDopaPersonChangenamePrimaryCount !==0 ">
+    <!-- <div *ngFor="let moiDopaBorderPassesItem of moiDopaBorderPassesResults"> -->
+      <div *ngIf="exitCode[0].exitCode; else exit">
+        <div *ngIf="report_name != 'รายงาน Single Report'">
+          <div class="card border-secondary border col-md-12">
+            <div class="card mb-md-0 mb-3">
+              <div class="card-body">
+                <div>
+                  <span class="text-success font-20"><u>กรมการปกครอง: </u></span>
+                  <span class="text-white font-20"><u>ฐานข้อมูลการจดทะเบียนเปลี่ยนชื่อตัว (Linkage) </u></span>
+                  <span class="text-danger font-20"><u>{{exitCode[0].exitCode | changeStatus}}</u></span>
+                  <span *ngIf="exitCode[0].Results && exitCode[0].exitCode == 'NOT_FOUND'" class="text-danger font-20">
+                    <u> (ไม่พบข้อมูล) </u>
+                  </span>
+                  <span *ngIf="exitCode[0].Results == '[]' && exitCode[0].exitCode == 'OK'" class="text-danger font-20">
+                    <u> (ไม่พบข้อมูล) </u>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- </div> -->
+  <ng-template #exit>
+    <div class="card border-secondary border col-md-12">
+      <!-- Portlet card -->
+      <div class="card mb-md-0 mb-3">
+        <div class="card-body">
+          <div data-toggle="collapse" data-target="#personChangenamePrimary" role="button" aria-expanded="true"
+            aria-controls="personChangenamePrimary">
+            <span class="text-success font-20"><u>กรมการปกครอง: </u></span>
+            <span class="text-white font-20"><u>ฐานข้อมูลการจดทะเบียนเปลี่ยนชื่อตัว (Linkage) </u></span>
+            <span class="text-warning font-20"><u>จำนวน: {{moiDopaPersonChangenamePrimaryCount}} รายการ </u></span>
+          </div>
+          <div id="personChangenamePrimary" class="collapse pt-3">
+            <div class="col-md-12" *ngFor="let moiDopaPersonChangenamePrimaryItem of moiDopaPersonChangenamePrimaryResults"
+              class="singlereport-timeline-item">
+              <img src="assets/dist/img/dxc-img/symbol/datatype/32/moi-dopa-person-changename-primary.png">&nbsp;
+              <input type="hidden" value="ฐานข้อมูลการจดทะเบียนเปลี่ยนชื่อตัว (Linkage)" #moiDopaPersonChangenamePrimaryTitle>
+              <input type="hidden" value="assets/dist/img/dopa.png" #moiDopaPersonChangenamePrimaryImg>
+              <span class="text-success font-20"><u>ฐานข้อมูลการจดทะเบียนเปลี่ยนชื่อตัว (Linkage)</u></span>
+              <button class="btn btn-info" style="float: right;" type="button" href="#changename-primary-full-width-modal" data-toggle="modal" data-target="#changename-primary-full-width-modal"
+                (click)="selectRow(moiDopaPersonChangenamePrimaryItem,moiDopaPersonChangenamePrimaryTitle.value,moiDopaPersonChangenamePrimaryImg.value)">
+                <span class="icon-name"><i class="mdi mdi-arrow-top-right" style="color:white;"></i></span>
+              </button>
+              <div style="padding-left:15px; margin-top: 3%;">
+                <span class="text-white font-20">ชื่อตัวของผู้ขอใบอนุญาต</span>&nbsp;&nbsp;
+                <span class="text-success font-20"><u>{{moiDopaPersonChangenamePrimaryItem.firstName | filter:""}}</u></span>&nbsp;&nbsp;
+                <span class="text-white font-20">ชื่อสกุลที่ร่วมใช้</span>&nbsp;&nbsp;
+                <span class="text-success font-20"><u>{{moiDopaPersonChangenamePrimaryItem.newName | filter:""}}</u></span>&nbsp;&nbsp;
+                <span class="text-white font-20">วันเดือนปีที่ออกหนังสืออนุญาต</span>&nbsp;&nbsp;
+                <span class="text-success font-20"><u>{{moiDopaPersonChangenamePrimaryItem.docDate | thaidate }}</u></span>&nbsp;&nbsp;
+                <span class="text-white font-20">จังหวัดที่ออกหนังสืออนุญาต</span>&nbsp;&nbsp;
+                <span class="text-success font-20"><u>{{moiDopaPersonChangenamePrimaryItem.docPlaceProvince | filter:""}}</u></span>&nbsp;&nbsp;
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- end card-->
+  </ng-template>
+</div>
+
+<div *ngIf="report_name != 'รายงาน Single Report'">
+  <div *ngIf="!moiDopaPersonChangenamePrimaryCount">
+    <div class="card border-secondary border col-md-12">
+      <div class="card mb-md-0 mb-3">
+        <div class="card-body">
+          <div>
+            <span class="text-success font-20"><u>กรมการปกครอง: </u></span>
+            <span class="text-white font-20"><u>ฐานข้อมูลการจดทะเบียนเปลี่ยนชื่อตัว (Linkage) </u></span>
+            <span class="text-danger font-20"><u>(ไม่พบข้อมูล)</u></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  

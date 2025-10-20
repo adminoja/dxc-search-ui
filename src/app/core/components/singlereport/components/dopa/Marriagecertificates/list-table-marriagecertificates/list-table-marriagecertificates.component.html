@@ -1,0 +1,95 @@
+<div *ngIf="moiDopaMarriageCertificatesCount">
+    <div *ngFor="let moiDopaMarriageCertificatesItem of moiDopaMarriageCertificatesResults">
+        <div *ngIf="moiDopaMarriageCertificatesItem.exitCode; else exit">
+          <div *ngIf="report_name != 'รายงาน Single Report'">
+            <div class="card border-secondary border col-md-12">
+              <div class="card mb-md-0 mb-3">
+                <div class="card-body">
+                  <div>
+                    <span class="text-success font-20"><u>กรมการปกครอง: </u></span>
+                    <span class="text-white font-20"><u>ข้อมูลทะเบียนสมรส (Linkage) </u></span>
+                    <span class="text-danger font-20"><u>{{moiDopaMarriageCertificatesItem.exitCode | changeStatus}}</u></span>
+                    <span *ngIf="moiDopaMarriageCertificatesItem.Results && moiDopaMarriageCertificatesItem.exitCode == 'NOT_FOUND'" class="text-danger font-20">
+                      <u> (ไม่พบข้อมูล) </u>
+                    </span>
+                    <span *ngIf="moiDopaMarriageCertificatesItem.Results == '[]' && moiDopaMarriageCertificatesItem.exitCode == 'OK'" class="text-danger font-20">
+                      <u> (ไม่พบข้อมูล) </u>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <ng-template #exit>
+        <div class="card border-secondary border col-md-12">
+            <div class="card mb-md-0 mb-3">
+                <div class="card-body">
+                    <div data-toggle="collapse" data-target="#moiDopaMarriageCertificatesTableCollapse" role="button" aria-expanded="true">
+                        <span class="text-success font-20"><u>กรมการปกครอง: </u></span>
+                        <span class="text-white font-20"><u>ข้อมูลทะเบียนสมรส (Linkage) </u></span>
+                        <span class="text-warning font-20"><u>จำนวน: {{moiDopaMarriageCertificatesCount}} รายการ </u></span>
+                    </div>
+                    <div id="moiDopaMarriageCertificatesTableCollapse" class="collapse pt-3">
+                        <div class="col-md-12" *ngFor="let moiDopaMarriageCertificatesItem of moiDopaMarriageCertificatesResults" class="singlereport-timeline-item">
+                            <div class="col-md-12" class="singlereport-timeline-item">
+                                <input type="hidden" value="ข้อมูลทะเบียนสมรส (Linkage)" #moiDopaMarriageCertificatesTitle>
+                                <input type="hidden" value="assets/dist/img/dopa.png" #moiDopaMarriageCertificatesdepartmentImg>
+                                <span class="text-success font-20"><u>ข้อมูลทะเบียนสมรส (Linkage)</u></span>
+                                <table class="table-striped table-centered mb-0 mt-3 text-20">
+                                    <thead>
+                                        <tr>
+                                            <th>ชื่อตัวฝ่ายชาย</th>
+                                            <th>ชื่อสกุลฝ่ายชาย</th>
+                                            <th>ชื่อตัวฝ่ายหญิง</th>
+                                            <th>ชื่อสกุลฝ่ายหญิง</th>
+                                            <th>วันเดือนปีที่จดทะเบียนสมรส</th>
+                                            <th>สนท.ที่จดทะเบียนสมรส</th>
+                                            <th>จังหวัดที่จดทะเบียนสมรส</th>
+                                            <th>รายละเอียด</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>{{ moiDopaMarriageCertificatesItem.maleFirstName | filter:""}}</td>
+                                            <td>{{ moiDopaMarriageCertificatesItem.maleLastName | filter:""}}</td>
+                                            <td>{{ moiDopaMarriageCertificatesItem.femaleFirstName | filter:""}}</td>
+                                            <td>{{ moiDopaMarriageCertificatesItem.femaleLastName | filter:""}}</td>
+                                            <td>{{ moiDopaMarriageCertificatesItem.marryDate | thaidate }}</td>
+                                            <td>{{ moiDopaMarriageCertificatesItem.marryPlaceDesc | filter:"" }}</td>
+                                            <td>{{ moiDopaMarriageCertificatesItem.marryPlaceProvince | filter:"" }}</td>
+                                            <td class="text-center">
+                                                <button class="btn btn-info" type="button" href="#marriage-certificates-table-width-modal"
+                                                    data-toggle="modal" data-target="#marriage-certificates-table-width-modal"
+                                                    (click)="selectRow(moiDopaMarriageCertificatesItem,moiDopaMarriageCertificatesTitle.value,moiDopaMarriageCertificatesdepartmentImg.value)">
+                                                    <span class="icon-name"><i class="mdi mdi-arrow-top-right" style="color:white;"></i></span>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</div>
+
+<div *ngIf="report_name != 'รายงาน Single Report'">
+    <div *ngIf="!moiDopaMarriageCertificatesCount">
+      <div class="card border-secondary border col-md-12">
+        <div class="card mb-md-0 mb-3">
+          <div class="card-body">
+            <div>
+              <span class="text-success font-20"><u>กรมการปกครอง: </u></span>
+              <span class="text-white font-20"><u>ข้อมูลทะเบียนสมรส (Linkage) </u></span>
+              <span class="text-danger font-20"><u>(ไม่พบข้อมูล)</u></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

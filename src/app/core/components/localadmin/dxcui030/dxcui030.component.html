@@ -1,0 +1,271 @@
+<!-- <div class="row">
+  <div class="col-md-7 col-md-offset-3 panel" style="vertical-align: middle; width: 100%; position: absolute;left: 320px;top: 10%">
+    <form class="form-horizontal " [formGroup]="reasonForm" (ngSubmit)="onSubmit()">
+      <div class="font" style="margin-top:20px;">
+
+        <h5 style="text-align: center">
+          ท่านมีจำนวนวันที่ได้รับอนุญาตให้เข้าใช้งานระบบอีก
+        </h5>
+        <div style="text-align: center">
+          <h3>
+            xxx วัน
+          </h3>
+        </div>
+        <hr>
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4>
+              วัตถุประสงค์สำหรับการเข้าใช้งาน
+            </h4>
+          </div>
+          <div class="panel-body" style="background-color: white; padding: 2%;">
+            <div>
+              <label>
+                test
+              </label>
+              <div>
+                <input class="form-control" type="text" style="width: 100%" formControlName="citizenCardNumber">
+              </div>
+            </div>
+            <div>
+              <label>
+                เกี่ยวข้องกับคดี test
+              </label>
+              <div>
+                <input class="form-control" type="text" style="width: 100%" formControlName="officerNumber">
+              </div>
+            </div>
+            <div>
+              <label>
+                เหตุผลในการเข้าใช้งาน:test
+              </label>
+              <div class="control-group">
+                <select class="form-control" required="required" min="0" formControlName="departmentCode">
+                  <option value="">--กรุณาเลือก--</option>
+                  <option value="ปฏิบัติหน้าที่">1. ปฏิบัติหน้าที่</option>
+                  <option value="อบรม">2. อบรม</option>
+                  <option value="ทดสอบระบบ">3. ทดสอบระบบ</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <label>
+                เหตุผลอื่นๆ:test
+              </label>
+              <div>
+                <textarea rows="3" style="width: 100%" formControlName="reasons"></textarea>
+              </div>
+            </div>
+            <div>
+              <input type="checkbox" formControlName="agree">
+              ข้าพเจ้าจะไม่สืบค้นข้อมูลที่ไม่เกี่ยวข้องกับเหตุผลที่ระบุไว้นี้
+              และข้าพเจ้ายินดีรับผิดชอบต่อความเสียหายต่างๆที่เกิดขึ้นจากการใช้ระบบที่ผิดวัตถุประสงค์ และละเมิด
+              พระราชบัญญัติข้อมูลข่าวสารของราชการ พ.ศ. 2540
+              และข้าพเจ้ายินยอมให้ผู้ดูแลระบบสามารถตรวสสอบประวัติการใช้งานและส่งประวัติการใช้งานให้แก่ผู้บังคับบัญชาของข้าพเจ้าได้
+            </div>
+            <div style="margin-top: 80px">
+              <div align="right">
+                <input class="btn btn-info" type="submit" value="เข้าสู่ระบบ">
+                <a>
+                  <input class="btn btn-danger" type="button" value="ออกจากระบบ">
+                </a>
+                <br />
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </form>
+
+  </div>
+</div> -->
+
+<!-- <div class="content home">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="col-md-12">
+          <div class="font" style="margin-top:20px;">
+
+            <div data-w="1" id="panel" class="panel panel-default">
+              <div class="panel-heading " style="cursor: pointer">
+                <h2>
+                  ฟอร์มเพิ่มผู้ใช้งานใหม่
+                </h2>
+              </div>
+              <div class="panel-body">
+                <form class="form-horizontal " [formGroup]="reasonForm" (ngSubmit)="onSubmit()">
+                  <div class="form-group col-sm-6">
+                    <label for="citizenCardNumber" class="control-label required">เลขประจำตัวประชาชน</label>
+                    <input type="text" pattern="[0-9]{13}" class="form-control" formControlName="citizenCardNumber"
+                      minlength="13" maxlength="13" />
+
+                  </div>
+
+                  <div class="form-group col-sm-6">
+                    <label for="username" class="control-label optional">Username</label>
+                    <input class="form-control" type="text" formControlName="username" />
+                  </div>
+
+                  <div class="form-group col-sm-6">
+                    <label for="username" class="control-label optional">ชื่อ(ไทย)</label>
+                    <input class="form-control" type="text" formControlName="firstName">
+                  </div>
+
+                  <div class="form-group col-sm-6">
+                    <label for="username" class="control-label optional">นามสกุล(ไทย)</label>
+                    <input class="form-control" type="text" formControlName="lastName">
+                  </div>
+
+                  <div class="form-group col-sm-6">
+                    <label for="username" class="control-label optional">ชื่อ(ภาษาอังกฤษ)</label>
+                    <input class="form-control" type="text" formControlName="firstNameEn">
+                  </div>
+
+                  <div class="form-group col-sm-6">
+                    <label for="username" class="control-label optional">นามสกุล(ภาษาอังกฤษ)</label>
+                    <input class="form-control" type="text" formControlName="lastNameEn">
+                  </div>
+                  <div class="form-group col-sm-6">
+                    <label for="username" class="control-label optional">สังกัดหน่วยงาน</label>
+                    <select class="form-control" required="required" min="0" formControlName="departmentCode">
+                      <option value="" selected="selected">--------เลือก----------</option>
+                      <option value="3">กรมคุมประพฤติ</option>
+                      <option value="4">กรมคุ้มครองสิทธิและเสรีภาพ</option>
+                      <option value="5">สำนักงานกิจการยุติธรรม</option>
+                      <option value="6">สำนักงานปลัดกระทรวงยุติธรรม</option>
+                      <option value="7">สำนักงานป้องกันและปราบปรามการฟอกเงิน(ปปง.)</option>
+                      <option value="8">กรมสอบสวนคดีพิเศษ</option>
+                      <option value="9">สำนักงานอัยการสูงสุด</option>
+                      <option value="10">กรมพินิจและคุ้มครองเด็กและเยาวชน</option>
+                      <option value="12">กรมราชทัณฑ์</option>
+                      <option value="13">กรมบังคับคดี</option>
+                      <option value="15">สำนักงานคณะกรรมการป้องกันและปราบปรามยาเสพติด(ป.ป.ส.)</option>
+                      <option value="16">สำนักงานตำรวจแห่งชาติ</option>
+                      <option value="19">กรมการปกครอง</option>
+                      <option value="21">กรมการขนส่งทางบก</option>
+                      <option value="31">กอ.รมน.ภาค 4 ส่วนหน้า</option>
+                      <option value="51">สำนักงานคณะกรรมการป้องกันและปราบปรามการทุจริตในภาครัฐ(ป.ป.ท.)</option>
+                      <option value="52">สถาบันนิติวิทยาศาสตร์</option>
+                      <option value="57">ศอ.บต.</option>
+                      <option value="58">สำนักงานประกันสังคม</option>
+                      <option value="250">ศูนย์ปฏิบัติการนายกรัฐมนตรี (PMOC)</option>
+                      <option value="270">หน่วยข่าวกรองทางทหาร</option>
+                      <option value="271">สำนักข่าวกรองแห่งชาติ</option>
+                      <option value="273">กระทรวงการคลัง</option>
+                      <option value="276">สำนักงานคณะกรรมการการเลือกตั้ง</option>
+                      <option value="277">กรมพัฒนาธุรกิจการค้า</option>
+                      <option value="279">ส่วนนโยบายและยุทธศาสตร์ยุติธรรมชุมชนและยุติธรรมจังหวัด (สชจ.)</option>
+                      <option value="280">กรมประมง</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group col-sm-6">
+                    <label for="username" class="control-label optional">จังหวัด</label>
+                    <select class="form-control" required="required" min="0" formControlName="province">
+                      <option value="" selected="selected">--------เลือก----------</option>
+                      <option value="10">กรุงเทพมหานคร</option>
+                      <option value="11">สมุทรปราการ</option>
+                      <option value="12">นนทบุรี</option>
+                      <option value="13">ปทุมธานี</option>
+                      <option value="14">พระนครศรีอยุธยา</option>
+                      <option value="15">อ่างทอง</option>
+                      <option value="16">ลพบุรี</option>
+                      <option value="17">สิงห์บุรี</option>
+                      <option value="18">ชัยนาท</option>
+                      <option value="19">สระบุรี</option>
+                      <option value="20">ชลบุรี</option>
+                      <option value="21">ระยอง</option>
+                      <option value="22">จันทบุรี</option>
+                      <option value="23">ตราด</option>
+                      <option value="24">ฉะเชิงเทรา</option>
+                      <option value="25">ปราจีนบุรี</option>
+                      <option value="26">นครนายก</option>
+                      <option value="27">สระแก้ว</option>
+                      <option value="30">นครราชสีมา</option>
+                      <option value="31">บุรีรัมย์</option>
+                      <option value="32">สุรินทร์</option>
+                      <option value="33">ศรีสะเกษ</option>
+                      <option value="34">อุบลราชธานี</option>
+                      <option value="35">ยโสธร</option>
+                      <option value="36">ชัยภูมิ</option>
+                      <option value="37">อำนาจเจริญ</option>
+                      <option value="39">หนองบัวลำภู</option>
+                      <option value="40">ขอนแก่น</option>
+                      <option value="41">อุดรธานี</option>
+                      <option value="42">เลย</option>
+                      <option value="43">หนองคาย</option>
+                      <option value="44">มหาสารคาม</option>
+                      <option value="45">ร้อยเอ็ด</option>
+                      <option value="46">กาฬสินธุ์</option>
+                      <option value="47">สกลนคร</option>
+                      <option value="48">นครพนม</option>
+                      <option value="49">มุกดาหาร</option>
+                      <option value="50">เชียงใหม่</option>
+                      <option value="51">ลำพูน</option>
+                      <option value="52">ลำปาง</option>
+                      <option value="53">อุตรดิตถ์</option>
+                      <option value="54">แพร่</option>
+                      <option value="55">น่าน</option>
+                      <option value="56">พะเยา</option>
+                      <option value="57">เชียงราย</option>
+                      <option value="58">แม่ฮ่องสอน</option>
+                      <option value="60">นครสวรรค์</option>
+                      <option value="61">อุทัยธานี</option>
+                      <option value="62">กำแพงเพชร</option>
+                      <option value="63">ตาก</option>
+                      <option value="64">สุโขทัย</option>
+                      <option value="65">พิษณุโลก</option>
+                      <option value="66">พิจิตร</option>
+                      <option value="67">เพชรบูรณ์</option>
+                      <option value="70">ราชบุรี</option>
+                      <option value="71">กาญจนบุรี</option>
+                      <option value="72">สุพรรณบุรี</option>
+                      <option value="73">นครปฐม</option>
+                      <option value="74">สมุทรสาคร</option>
+                      <option value="75">สมุทรสงคราม</option>
+                      <option value="76">เพชรบุรี</option>
+                      <option value="77">ประจวบคีรีขันธ์</option>
+                      <option value="80">นครศรีธรรมราช</option>
+                      <option value="81">กระบี่</option>
+                      <option value="82">พังงา</option>
+                      <option value="83">ภูเก็ต</option>
+                      <option value="84">สุราษฎร์ธานี</option>
+                      <option value="85">ระนอง</option>
+                      <option value="86">ชุมพร</option>
+                      <option value="90">สงขลา</option>
+                      <option value="91">สตูล</option>
+                      <option value="92">ตรัง</option>
+                      <option value="93">พัทลุง</option>
+                      <option value="94">ปัตตานี</option>
+                      <option value="95">ยะลา</option>
+                      <option value="96">นราธิวาส</option>
+                      <option value="97">บึงกาฬ</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group col-sm-6">
+                    <label for="username" class="control-label optional">สังกัด/สำนักงาน</label>
+                    <input class="form-control" type="text" formControlName="subordinate">
+                  </div>
+
+                  <div class="form-group col-sm-6">
+                    <label for="username" class="control-label optional">ตำแหน่ง/หน้าที่</label>
+                    <input class="form-control" type="text" formControlName="position">
+                  </div>
+
+                  <div class="form-group col-sm-12 pull-right">
+                    <input type="submit" name="save" id="save" value="SAVE" class="btn btn-primary pull-right">
+                  </div>
+                </form>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->

@@ -1,0 +1,84 @@
+<div *ngIf="juvenileOffender65Count">
+  <div class="card border-secondary border col-md-12">
+  
+    <div class="card mb-md-0 mb-3">
+      <div class="card-body">
+        <div data-toggle="collapse" data-target="#juvenileOffender65collapse" role="button" aria-expanded="true" 
+          aria-controls="juvenileOffender65">
+          <span class="text-success font-20"><u>กรมพินิจและคุ้มครองเด็กและเยาวชน: </u></span>
+          <span class="text-white font-20"><u>เด็กหรือเยาวชนผู้กระทำผิด </u></span>
+          <span class="text-warning font-20"><u>จำนวน: {{juvenileOffender65Count}} รายการ </u></span>
+        </div>
+        <div id="juvenileOffender65collapse" class="collapse pt-3">
+          <div class="col-md-12" *ngFor="let juvenileOffender65Item of juvenileOffender65Results"
+            class="singlereport-timeline-item">
+            <img src="assets/dist/img/dxc-img/symbol/datatype/32/djop-juvenile-offender.png">&nbsp;
+            <input type="hidden" value="เด็กหรือเยาวชนผู้กระทำผิด" #juvenileOffender65Title>
+            <input type="hidden" value="assets/dist/img/djop.png" #juvenileOffender65departmentImg>
+            <span class="text-success font-20"><u>เด็กหรือเยาวชนผู้กระทำผิด</u></span>
+            <button class="btn btn-info" style="float: right;" type="button" href="#juvenile-offender65-width-modal"
+              data-toggle="modal" data-target="#juvenile-offender65-width-modal"
+              (click)="selectRow(juvenileOffender65Item,juvenileOffender65Title.value,juvenileOffender65departmentImg.value)">
+              <span class="icon-name"><i class="mdi mdi-arrow-top-right" style="color:white;"></i></span>
+            </button>
+            <div style="padding-left:15px; margin-top: 3%;">
+              <span class="text-white font-20">ชื่อ</span>&nbsp;&nbsp;
+              <span class="text-success font-20"><u>
+                {{juvenileOffender65Item.jvnFname | filter:""}}</u></span>&nbsp;&nbsp;
+              <span class="text-white font-20">นามสกุล</span>&nbsp;&nbsp;
+              <span class="text-success font-20"><u>
+                {{juvenileOffender65Item.jvnLname | filter:""}}</u></span>&nbsp;&nbsp;
+              <span class="text-white font-20">วันที่ศูนย์ฝึกรับตัว</span>&nbsp;&nbsp;
+              <span class="text-success font-20"><u>
+                {{juvenileOffender65Item.caseDetailList[0].registerDate | filter:"" }}</u></span>&nbsp;&nbsp;
+              <span class="text-white font-20">ชื่อฐานความผิดข้อหา</span>&nbsp;&nbsp;
+              <span class="text-success font-20"><u>
+                {{juvenileOffender65Item.caseDetailList[0].allegationName | filter:"" }}</u></span>&nbsp;&nbsp;
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+</div>
+
+<div *ngIf="inputAlgationsJuvenileOffender65">
+<div class="card border-secondary border col-md-12">
+  
+  <div class="card mb-md-0 mb-3">
+    <div class="card-body">
+      <div data-toggle="collapse" data-target="#juvenileOffender65collapse" role="button" aria-expanded="true" 
+        aria-controls="juvenileOffender65">
+        <span class="text-success font-20"><u>กรมพินิจและคุ้มครองเด็กและเยาวชน: </u></span>
+        <span class="text-white font-20"><u>เด็กหรือเยาวชนผู้กระทำผิด </u></span>
+        <span class="text-warning font-20"><u>จำนวน: {{juvenileOffender65Count}} รายการ </u></span>
+      </div>
+      <div id="juvenileOffender65collapse" class="collapse pt-3">
+          <img src="assets/dist/img/dxc-img/symbol/datatype/32/djop-juvenile-offender.png">&nbsp;
+          <input type="hidden" value="เด็กหรือเยาวชนผู้กระทำผิด" #juvenileOffender65Title>
+          <input type="hidden" value="assets/dist/img/djop.png" #juvenileOffender65departmentImg>
+          <span class="text-success font-20"><u>เด็กหรือเยาวชนผู้กระทำผิด</u></span>
+          <button class="btn btn-info" style="float: right;" type="button" href="#juvenile-offender65-width-modal"
+            data-toggle="modal" data-target="#juvenile-offender65-width-modal"
+            (click)="selectRow(inputAlgationsJuvenileOffender65,juvenileOffender65Title.value,juvenileOffender65departmentImg.value)">
+            <span class="icon-name"><i class="mdi mdi-arrow-top-right" style="color:white;"></i></span>
+          </button>
+          <div style="padding-left:15px; margin-top: 3%;">
+            <span class="text-white font-20">ชื่อ</span>&nbsp;&nbsp;
+            <span class="text-success font-20"><u>
+              {{inputAlgationsJuvenileOffender65.jvnFname | filter:""}}</u></span>&nbsp;&nbsp;
+            <span class="text-white font-20">นามสกุล</span>&nbsp;&nbsp;
+            <span class="text-success font-20"><u>
+              {{inputAlgationsJuvenileOffender65.jvnLname | filter:""}}</u></span>&nbsp;&nbsp;
+            <span class="text-white font-20">วันที่รับตัว</span>&nbsp;&nbsp;
+            <span class="text-success font-20"><u>
+              {{inputAlgationsJuvenileOffender65.caseDetailList[0].receiveDate | filter:"" }}</u></span>&nbsp;&nbsp;
+            <span class="text-white font-20">ชื่อข้อหาหลัก</span>&nbsp;&nbsp;
+            <span class="text-success font-20"><u>
+              {{inputAlgationsJuvenileOffender65.caseDetailList[0].allegationName | filter:"" }}</u></span>&nbsp;&nbsp;
+          </div>
+      </div>
+    </div>
+  </div>
+</div> 
+</div>

@@ -1,0 +1,85 @@
+<div *ngIf="moiDopaMarriageCertificatesCount">
+  <div *ngFor="let moiDopaMarriageCertificatesItem of moiDopaMarriageCertificatesResults">
+    <div *ngIf="moiDopaMarriageCertificatesItem.exitCode; else exit">
+      <div *ngIf="report_name != 'รายงาน Single Report'">
+        <div class="card border-secondary border col-md-12">
+          <div class="card mb-md-0 mb-3">
+            <div class="card-body">
+              <div>
+                <span class="text-success font-20"><u>กรมการปกครอง: </u></span>
+                <span class="text-white font-20"><u>ข้อมูลทะเบียนสมรส (Linkage) </u></span>
+                <span class="text-danger font-20"><u>{{moiDopaMarriageCertificatesItem.exitCode | changeStatus}}</u></span>
+                <span *ngIf="moiDopaMarriageCertificatesItem.Results && moiDopaMarriageCertificatesItem.exitCode == 'NOT_FOUND'" class="text-danger font-20">
+                  <u> (ไม่พบข้อมูล) </u>
+                </span>
+                <span *ngIf="moiDopaMarriageCertificatesItem.Results == '[]' && moiDopaMarriageCertificatesItem.exitCode == 'OK'" class="text-danger font-20">
+                  <u> (ไม่พบข้อมูล) </u>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ng-template #exit>
+    <div class="card border-secondary border col-md-12">
+      <!-- Portlet card -->
+      <div class="card mb-md-0 mb-3">
+        <div class="card-body">
+          <div data-toggle="collapse" data-target="#moiDopaMarriageCertificatesCollapse" role="button" aria-expanded="true">
+            <span class="text-success font-20"><u>กรมการปกครอง: </u></span>
+            <span class="text-white font-20"><u>ข้อมูลทะเบียนสมรส (Linkage) </u></span>
+            <span class="text-warning font-20"><u>จำนวน: {{moiDopaMarriageCertificatesCount}} รายการ </u></span>
+          </div>
+          <div id="moiDopaMarriageCertificatesCollapse" class="collapse pt-3">
+            <div class="col-md-12" *ngFor="let moiDopaMarriageCertificatesItem of moiDopaMarriageCertificatesResults"
+              class="singlereport-timeline-item">
+              <img src="assets/dist/img/dxc-img/symbol/datatype/32/moi-dopa-marriage-certificates.png">&nbsp;
+              <input type="hidden" value="ข้อมูลทะเบียนสมรส (Linkage)" #moiDopaMarriageCertificatesTitle>
+              <input type="hidden" value="assets/dist/img/dopa.png" #moiDopaMarriageCertificatesdepartmentImg>
+              <span class="text-success font-20"><u>ข้อมูลทะเบียนสมรส (Linkage)</u></span>
+              <button class="btn btn-info" style="float: right;" type="button" href="#marriage-certificates-full-width-modal"
+                data-toggle="modal" data-target="#marriage-certificates-full-width-modal"
+                (click)="selectRow(moiDopaMarriageCertificatesItem,moiDopaMarriageCertificatesTitle.value,moiDopaMarriageCertificatesdepartmentImg.value)">
+                <span class="icon-name"><i class="mdi mdi-arrow-top-right" style="color:white;"></i></span>
+              </button>
+              <div style="padding-left:15px; margin-top: 3%;">
+                <span class="text-white font-20">ชื่อตัวฝ่ายชาย</span>&nbsp;&nbsp;
+                <span class="text-success font-20" style="text-decoration:underline">{{moiDopaMarriageCertificatesItem.maleFirstName | filter:"" }}</span>&nbsp;&nbsp;
+                <span class="text-white font-20">ชื่อสกุลฝ่ายชาย</span>&nbsp;&nbsp;
+                <span class="text-success font-20" style="text-decoration:underline">{{moiDopaMarriageCertificatesItem.maleLastName | filter:"" }}</span>&nbsp;&nbsp;
+                <span class="text-white font-20">ชื่อตัวฝ่ายหญิง</span>&nbsp;&nbsp;
+                <span class="text-success font-20" style="text-decoration:underline">{{moiDopaMarriageCertificatesItem.femaleFirstName | filter:"" }}</span>&nbsp;&nbsp;
+                <span class="text-white font-20">ชื่อสกุลฝ่ายหญิง</span>&nbsp;&nbsp;
+                <span class="text-success font-20" style="text-decoration:underline">{{moiDopaMarriageCertificatesItem.femaleLastName | filter:"" }}</span>&nbsp;&nbsp;
+                <span class="text-white font-20">วันเดือนปีที่จดทะเบียนสมรส</span>&nbsp;&nbsp;
+                <span class="text-success font-20" style="text-decoration:underline">{{moiDopaMarriageCertificatesItem.marryDate | thaidate }}</span>&nbsp;&nbsp;
+                <span class="text-white font-20">สนท.ที่จดทะเบียนสมรส</span>&nbsp;&nbsp;
+                <span class="text-success font-20" style="text-decoration:underline">{{moiDopaMarriageCertificatesItem.marryPlaceDesc | filter:"" }}</span>&nbsp;&nbsp;
+                <span class="text-white font-20">จังหวัดที่จดทะเบียนสมรส</span>&nbsp;&nbsp;
+                <span class="text-success font-20" style="text-decoration:underline">{{moiDopaMarriageCertificatesItem.marryPlaceProvince | filter:"" }}</span>&nbsp;&nbsp;
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- end card-->
+  </ng-template>
+</div>
+
+<div *ngIf="report_name != 'รายงาน Single Report'">
+  <div *ngIf="!moiDopaMarriageCertificatesCount">
+    <div class="card border-secondary border col-md-12">
+      <div class="card mb-md-0 mb-3">
+        <div class="card-body">
+          <div>
+            <span class="text-success font-20"><u>กรมการปกครอง: </u></span>
+            <span class="text-white font-20"><u>ข้อมูลทะเบียนสมรส (Linkage) </u></span>
+            <span class="text-danger font-20"><u>(ไม่พบข้อมูล)</u></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,73 @@
+<div *ngIf="arrestWarrantsCount">
+    <div *ngIf="exitCode[0].exitCode; else exit">
+        <div *ngIf="report_name != 'รายงาน Single Report'">
+          <div class="card border-secondary border col-md-12">
+            <div class="card mb-md-0 mb-3">
+                <div class="card-body">
+                    <div>
+                        <span class="text-success font-20"><u>สำนักงานศาลยุติธรรม: </u></span>
+                        <span class="text-white font-20"><u>ฐานข้อมูลหมายจับศาล </u></span>
+                        <span class="text-danger font-20"><u>{{exitCode[0].exitCode | changeStatus}}</u></span>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <ng-template #exit>
+        <div class="card border-secondary border col-md-12">
+            <div class="card mb-md-0 mb-3">
+                <div class="card-body">
+                    <div data-toggle="collapse" data-target="#arrestWarrantsTablecollapse" role="button" aria-expanded="true"
+                        aria-controls="arrestWarrantscollapse">
+                        <span class="text-success font-20"><u>สำนักงานศาลยุติธรรม:</u></span>
+                        <span class="text-white font-20"><u> ฐานข้อมูลหมายจับศาล</u></span>
+                        <span class="text-warning font-20"><u> จำนวน: {{arrestWarrantsCount}} รายการ</u></span>
+                    </div>
+                    <div id="arrestWarrantsTablecollapse" class="collapse pt-3">
+                        <div class="col-md-12" class="singlereport-timeline-item">
+                            <div class="col-md-12" class="singlereport-timeline-item" *ngFor="let arrestWarrantsItem of arrestWarrantsResults">
+                                <input type="hidden" value="ฐานข้อมูลหมายจับศาล" #arrestWarrantsTitle>
+                                <input type="hidden" value="assets/dist/img/coj.png" #arrestWarrantsImg>
+                                <img src="assets/dist/img/dxc-img/symbol/datatype/32/coj-arrest-warrants.png" width="25px">
+                                <span class="text-success font-20">&nbsp;<u>ฐานข้อมูลหมายจับศาล</u></span>
+
+                                <table class="table-striped table-centered mb-0 mt-3 text-20">
+                                    <thead>
+                                        <tr>
+                                            <th>ที่อยู่</th>
+                                            <th>เบอร์โทรศัพท์</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>{{ arrestWarrantsItem.address | filter:""}}</td>
+                                            <td>{{ arrestWarrantsItem.phone | filter:""}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</div>
+
+<div *ngIf="report_name != 'รายงาน Single Report'">
+    <div *ngIf="!arrestWarrantsCount">
+      <div class="card border-secondary border col-md-12">
+          <div class="card mb-md-0 mb-3">
+              <div class="card-body">
+                  <div>
+                      <span class="text-success font-20"><u>สำนักงานศาลยุติธรรม: </u></span>
+                      <span class="text-white font-20"><u>ฐานข้อมูลหมายจับศาล </u></span>
+                      <span class="text-danger font-20"><u> (ไม่พบข้อมูล) </u></span>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+</div>
+

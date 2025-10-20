@@ -1,0 +1,80 @@
+<div *ngIf="mofRegistrantCount !==0 && !inputNormalRegistrant">
+    <div class="card border-secondary border col-md-12">
+      <!-- Portlet card -->
+      <div class="card mb-md-0 mb-3">
+        <div class="card-body">
+          <div data-toggle="collapse" data-target="#registrant" role="button" aria-expanded="true"
+            aria-controls="registrant">
+            <span class="text-success font-20"><u>กระทรวงการคลัง: </u></span>
+            <span class="text-white font-20"><u>ทะเบียนผู้มีรายได้น้อย </u></span>
+            <span class="text-warning font-20"><u>จำนวน: {{mofRegistrantCount}} รายการ </u></span>
+          </div>
+          <div id="registrant" class="collapse pt-3">
+            <div class="col-md-12" *ngFor="let mofRegistrantItem of mofRegistrantResults"
+              class="singlereport-timeline-item">
+              <img src="assets/dist/img/dxc-img/symbol/datatype/32/mof-konjon.png">&nbsp;
+              <input type="hidden" value="ทะเบียนผู้มีรายได้น้อย" #mofRegistrantTitle>
+              <input type="hidden" value="assets/dist/img/dopa.png" #mofRegistrantImg>
+              <span class="text-success font-20"><u>ทะเบียนผู้มีรายได้น้อย</u></span>
+              <button class="btn btn-info" style="float: right;" type="button" href="#registrant-full-width-modal" data-toggle="modal" data-target="#registrant-full-width-modal"
+                (click)="selectRow(mofRegistrantItem,mofRegistrantTitle.value,mofRegistrantImg.value)">
+                <span class="icon-name"><i class="mdi mdi-arrow-top-right" style="color:white;"></i></span>
+              </button>
+              <div style="padding-left:15px; margin-top: 3%;">
+                <span class="text-white font-20">ชื่อ</span>&nbsp;&nbsp;
+                <span class="text-success font-20"><u>{{mofRegistrantItem.firstName | filter:""}}</u></span>&nbsp;&nbsp;
+                <span class="text-white font-20">นามสกุล</span>&nbsp;&nbsp;
+                <span class="text-success font-20">&nbsp;<u>{{mofRegistrantItem.lastName | filter:""}}</u>&nbsp;</span>&nbsp;&nbsp;
+                <span class="text-white font-20">วันเดือนปีเกิด</span>&nbsp;&nbsp;
+                <span class="text-success font-20"><u>{{mofRegistrantItem.dateOfBirth | converseDate}}</u></span>&nbsp;&nbsp;
+                <span class="text-white font-20">วันที่ลงทะเบียน</span>&nbsp;&nbsp;
+                <span class="text-success font-20"><u>{{mofRegistrantItem.registerDate | converseDate}}</u></span>&nbsp;&nbsp;
+                <span class="text-white font-20">ประเภทการลงทะเบียน</span>&nbsp;&nbsp;
+                <span class="text-success font-20"><u>{{mofRegistrantItem.entryTry | filter:""}}</u></span>&nbsp;&nbsp;
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- end card-->
+</div>
+
+<div *ngIf="inputNormalRegistrant">
+  <div class="card border-secondary border col-md-12">
+    <!-- Portlet card -->
+    <div class="card mb-md-0 mb-3">
+      <div class="card-body">
+        <div data-toggle="collapse" data-target="#registrant" role="button" aria-expanded="true"
+          aria-controls="registrant">
+          <span class="text-success font-20"><u>กระทรวงการคลัง: </u></span>
+          <span class="text-white font-20"><u>ทะเบียนผู้มีรายได้น้อย </u></span>
+        </div>
+        <div id="registrant" class="collapse pt-3">
+          <div class="col-md-12" class="singlereport-timeline-item">
+            <img src="assets/dist/img/dxc-img/symbol/datatype/32/mof-konjon.png">&nbsp;
+            <input type="hidden" value="ทะเบียนผู้มีรายได้น้อย" #mofRegistrantTitle>
+            <input type="hidden" value="assets/dist/img/dopa.png" #mofRegistrantImg>
+            <span class="text-success font-20"><u>ทะเบียนผู้มีรายได้น้อย</u></span>
+            <button class="btn btn-info" style="float: right;" type="button" href="#registrant-full-width-modal" data-toggle="modal" data-target="#registrant-full-width-modal"
+              (click)="selectRow(inputNormalRegistrant,mofRegistrantTitle.value,mofRegistrantImg.value)">
+              <span class="icon-name"><i class="mdi mdi-arrow-top-right" style="color:white;"></i></span>
+            </button>
+            <div style="padding-left:15px; margin-top: 3%;">
+              <span class="text-white font-20">ชื่อ</span>&nbsp;&nbsp;
+              <span class="text-success font-20"><u>{{inputNormalRegistrant.firstName | filter:""}}</u></span>&nbsp;&nbsp;
+              <span class="text-white font-20">นามสกุล</span>&nbsp;&nbsp;
+              <span class="text-success font-20">&nbsp;<u>{{inputNormalRegistrant.lastName | filter:""}}</u>&nbsp;</span>&nbsp;&nbsp;
+              <span class="text-white font-20">วันเดือนปีเกิด</span>&nbsp;&nbsp;
+              <span class="text-success font-20"><u>{{inputNormalRegistrant.dateOfBirth | converseDate}}</u></span>&nbsp;&nbsp;
+              <span class="text-white font-20">วันที่ลงทะเบียน</span>&nbsp;&nbsp;
+              <span class="text-success font-20"><u>{{inputNormalRegistrant.registerDate | converseDate}}</u></span>&nbsp;&nbsp;
+              <span class="text-white font-20">ประเภทการลงทะเบียน</span>&nbsp;&nbsp;
+              <span class="text-success font-20"><u>{{inputNormalRegistrant.entryTry | filter:""}}</u></span>&nbsp;&nbsp;
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> <!-- end card-->
+</div>
+  

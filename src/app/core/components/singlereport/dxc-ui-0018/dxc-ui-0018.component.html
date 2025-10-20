@@ -1,0 +1,129 @@
+  <div class="font-20">
+    <div class="card" style="margin-top: 20px;" *ngIf="!showDetail && report_name=='รายงาน Single Report'">
+      <div class="header" style="text-align: center;">
+        <h3>
+          <strong>{{lblResultSearch}} จำนวน {{countService}} บริการ</strong>
+        </h3>
+      </div>
+      <div class="body">
+        <div class="table-responsive">
+          <table class="table center-aligned-table" style="text-align:center;">
+            <thead>
+              <tr>
+                <th>เลขที่</th>
+                <th>รายงาน Single Report</th>
+                <th>สถานะ</th>
+                <th>แสดงสถานะการค้นหา</th>
+                <th>รายงาน</th>
+                <th>ดาวน์โหลด</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>{{lblId}}</th>
+                <td>
+                  <div *ngIf="lblStatus>0;else reportwaiting">
+                    <a>{{report_name}}</a>
+                  </div>
+                  <ng-template #reportwaiting>{{report_name}}</ng-template>
+                </td>
+                <td><progress value="{{lblStatus}}" max="100"></progress>{{lblStatus | number :'2.1-2'}}%</td>
+                <td>
+                  <div>
+                    <button class="btn btn-primary font-20 text-white" (click)="showDetail=true"
+                      style="cursor: pointer;" [disabled]="checkLblStatus()">{{lblResult}}</button>
+                  </div>
+                </td>
+                <td style="text-align:center;">
+                  <button class="btn btn-primary btn-round font-20" style="cursor: pointer;"
+                  (click)="pdfPreview()" [disabled]="checkLblStatus()">แสดงรายงาน</button>
+                </td>
+                <td style="text-align:center;">
+                  <div *ngIf="lblStatus == 100;else downloadwaiting">
+                    <button type="button" class="btn btn-danger">
+                    <a target="_blank" [routerLink]="[reportclick]" (click)="pfdDownload()"
+                      class=" text-white font-18">
+                      <i class="uil-down-arrow"></i> PDF 
+                    </a>
+                  </button>
+                  </div>
+                  <ng-template #downloadwaiting> <a style=" cursor: pointer;">
+                      <i class="zmdi zmdi-download"></i>
+                    </a></ng-template>
+                  
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="report_name != 'รายงาน Single Report'" class="container-fluid">
+      <div class="row">
+          <div class="col-lg-12">
+              <h3 class="page-title mt-3">Specialize Report > สืบค้นข้อมูลรวมประวัติบุคคล สำหรับ{{report_name}}</h3>
+              <div class="card mt-3">
+                  <div class="card-body">
+                      <div class="mt-3">
+                          <h4 class="font-22 text-center">กำลังดำเนินการค้นหา...</h4>
+                      </div>
+                      <div class="text-center mt-3 mb-3">
+                        <button type="button" class="btn btn-primary font-20 mr-2" (click)="btnBackSearch_Click()">กลับไปหน้าสืบค้น</button>
+                        <button type="button" class="btn btn-primary font-20" (click)="btnSearch_Click()">ดูสถานะการค้นหา</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+    <div class="card" style="margin-top: 20px;" *ngIf="showDetail">
+      <div class="body">
+        <button class="btn btn-primary btn-round font-20" style="cursor: pointer; float: right;"
+          (click)="pdfPreview()" [disabled]="checkLblStatus()">แสดงรายงาน</button>
+        <div class="panel-heading" style="text-align: center;">
+          <h4 style="margin-left: 100px;">
+          </h4>
+          <h3>
+            <strong>แสดงสถานะการสืบค้นข้อมูล</strong>
+          </h3>
+        </div>
+        <div class="table-responsive">
+          <table class="table center-aligned-table">
+            <thead>
+              <tr>
+                <th>ลำดับ</th>
+                <th>ฐานข้อมูล</th>
+                <th>เจ้าของ</th>
+                <th>ผลการสืบค้น</th>
+                <th>รายการ</th>
+              </tr>
+            </thead>
+            <tbody *ngFor="let table_data of table_datas">
+              <tr *ngIf="table_data.httpSuccess">
+                <td>{{table_data.no}}</td>
+                <td><img height="50px" width="50px" src="{{table_data.img_db}}"> {{table_data.title_sub}}</td>
+                <td><img height="50px" width="50px" src="{{table_data.img_source}}"></td>
+                <td>
+                  <div [innerHTML]="table_data.httpSuccess"></div>
+                </td>
+                <td class="text-center">{{table_data.length}}</td>
+              </tr>
+              <tr *ngIf="table_data.httpError">
+                <td>{{table_data.no}}</td>
+                <td><img height="50px" width="50px" src="{{table_data.img_db}}"> {{table_data.title_sub}}</td>
+                <td><img height="50px" width="50px" src="{{table_data.img_source}}"></td>
+                <td>
+                  <div [innerHTML]="table_data.httpError"></div>
+                </td>
+                <td class="text-center">{{table_data.length}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-dxc-loader></app-dxc-loader>
+  <!-- <app-footer></app-footer> -->
+<!-- </section> -->

@@ -1,0 +1,90 @@
+<div *ngIf="alienCount">
+  <div *ngFor="let aliensItem of aliensResults">
+    <div *ngIf="aliensItem.exitCode; else exit">
+      <div *ngIf="report_name != 'รายงาน Single Report'">
+        <div class="card border-secondary border col-md-12">
+          <div class="card mb-md-0 mb-3">
+            <div class="card-body">
+              <div>
+                <span class="text-success font-20"><u>กรมการปกครอง:</u></span>
+                <span class="text-white font-20"><u> ข้อมูลทะเบียนบุคคลต่างด้าว (Linkage) </u></span>
+                <span class="text-danger font-20"><u>{{aliensItem.exitCode | changeStatus}}</u></span>
+                <span *ngIf="aliensItem.Results && aliensItem.exitCode == 'NOT_FOUND'" class="text-danger font-20"><u> (ไม่พบข้อมูล) </u></span>
+                <span *ngIf="aliensItem.Results == '[]' && aliensItem.exitCode == 'OK'" class="text-danger font-20"><u> (ไม่พบข้อมูล) </u></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ng-template #exit>
+    <div class="card border-secondary border col-md-12">
+        <!-- Portlet card -->
+        <div class="card mb-md-0 mb-3">
+            <div class="card-body">
+                <div data-toggle="collapse" data-target="#moidopaaliencollapse" role="button" aria-expanded="true" aria-controls="moidopaalien">
+                    <span class="text-success font-20"><u>กรมการปกครอง:</u></span>
+                    <span class="text-white font-20"><u> ข้อมูลทะเบียนบุคคลต่างด้าว (Linkage) </u></span>
+                    <span class="text-warning font-20"><u> จำนวน: {{alienCount}} รายการ </u></span>
+                </div>
+                <div id="moidopaaliencollapse" class="collapse pt-3">
+                    <div class="col-md-12" *ngFor="let aliensItem of aliensResults" class="singlereport-timeline-item">
+                          <input type="hidden" value="ข้อมูลทะเบียนบุคคลต่างด้าว (Linkage)" #aliensTitle>
+                          <input type="hidden" value="assets/dist/img/dopa.png" #aliensdepartmentImg>
+                          <span class="text-success font-20">
+                            <img src="assets/dist/img/dxc-img/symbol/datatype/32/moi-dopa-alien.png"> 
+                            &nbsp;<u>ข้อมูลทะเบียนบุคคลต่างด้าว (Linkage)</u></span>
+                          <button
+                            class="btn btn-info" style="float: right;" type="button"
+                            href="#alien-full-width-modal" data-toggle="modal" data-target="#alien-full-width-modal"
+                            (click)="selectRow(aliensItem,aliensTitle.value,aliensdepartmentImg.value)">
+                              <span class="icon-name"><i class="mdi mdi-arrow-top-right" style="color:white;"></i></span>
+                          </button>
+                          <div style="padding-left:15px;">
+                            <span class="text-white font-20">ชื่อตัว</span>&nbsp;&nbsp;
+                            <span class="text-success font-20" style="text-decoration:underline">
+                              {{aliensItem.firstName | filter:""}}
+                            </span>&nbsp;&nbsp;
+                            <span class="text-white font-20">ชื่อสกุล</span>&nbsp;&nbsp;
+                            <span class="text-success font-20" style="text-decoration:underline">
+                              {{aliensItem.lastName}}
+                            </span>&nbsp;&nbsp;
+                            <span class="text-white font-20">เพศ</span>&nbsp;&nbsp;
+                            <span class="text-success font-20" style="text-decoration:underline">
+                              {{aliensItem.genderDesc | filter:""}}
+                            </span>&nbsp;&nbsp;
+                            <span class="text-white font-20">สถานภาพบุคคล</span>&nbsp;&nbsp;
+                            <span class="text-success font-20" style="text-decoration:underline">
+                              {{aliensItem.statusOfPersonDesc | filter:""}}
+                            </span>&nbsp;&nbsp;
+                            <span class="text-white font-20">วันเดือนปีที่ ที่เข้ามาในประเทศไทย</span>&nbsp;&nbsp;
+                            <span class="text-success font-20" style="text-decoration:underline">
+                              {{aliensItem.dateInThai | thaidate }}
+                            </span>&nbsp;&nbsp;
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  <!-- end card-->
+    </div>
+  </ng-template>
+</div>
+
+
+<div *ngIf="report_name != 'รายงาน Single Report'">
+  <div *ngIf="!alienCount">
+    <div class="card border-secondary border col-md-12">
+        <div class="card mb-md-0 mb-3">
+            <div class="card-body">
+                <div>
+                    <span class="text-success font-20"><u>กรมการปกครอง:</u></span>
+                    <span class="text-white font-20"><u> ข้อมูลทะเบียนบุคคลต่างด้าว (Linkage) </u></span>
+                    <span class="text-danger font-20"><u> (ไม่พบข้อมูล) </u></span>
+                </div>
+            </div>
+        </div>
+    </div> 
+  </div>
+</div>

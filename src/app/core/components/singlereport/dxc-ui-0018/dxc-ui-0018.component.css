@@ -1,0 +1,55 @@
+.loader {
+  border: 10px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 10px solid #3498db;
+  width: 50px;
+  height: 50px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+.loader1 {
+  border: 10px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 10px solid #3498db;
+  width: 30px;
+  height: 30px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.show {
+  background-image: url('https://search.dxc.go.th/secured/assets/dist/img/list.png');
+  background-repeat:no-repeat;
+  width: 24px; 
+  height: 24px;
+}
+
+.hide {
+  background-image: url('https://search.dxc.go.th/secured/assets/dist/img/list.png');
+  width: 24px; 
+  height: 24px;
+  
+}
+.help {
+  cursor: help;
+}
+
+.btnt {
+  border: none;
+  background-color: inherit;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+}
+

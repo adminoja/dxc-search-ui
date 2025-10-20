@@ -1,0 +1,48 @@
+<div class="container">
+  <!-- Content here -->
+  <h3>จำนวน {{countService}} บริการ</h3>
+  <!-- <table class="table table-striped">
+    <tbody>
+      <tr>
+        <th scope="row" *ngFor="let chkfilter of chkfilters"><input (click)="saveFilter(chk.value)" type="checkbox" value="{{chkfilter.database.db}}" #chk
+            id="{{chkfilter.database.db}}">{{chkfilter.database.title}}</th>
+      </tr>
+    </tbody>
+  </table> -->
+  <select #chk (change)="saveFilter(chk.value)">
+    <option>เลือกฐานข้อมูล</option>
+    <option *ngFor="let chkfilter of chkfilters" id="{{chkfilter.database.db}}" value="{{chkfilter.database.db}}">
+      {{chkfilter.database.title}}</option>
+  </select>
+
+  <!-- <button (click)="getFilter()" class="btn btn-outline-secondary" type="button" id="button-addon1">Clear</button> -->
+  <div class="bd-example" *ngIf="databaseEnvs">
+    <div *ngFor="let databaseEnv of databaseEnvs">
+      <div class="card-group">
+        <div class="card">
+          <img src="{{databaseEnv.database.img}}" alt="..." width="40px" height="40px">
+          <div class="card-body">
+            <h5 class="card-title">{{databaseEnv.database.title}}</h5>
+            <p class="card-text">สถานะ : ใช้งานได้</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">title: {{databaseEnv.database.title}}</li>
+            <li class="list-group-item">url: {{databaseEnv.database.url}}</li>
+            <li class="list-group-item">img: {{databaseEnv.database.img}}</li>
+            <li class="list-group-item">model: {{databaseEnv.database.img}}</li>
+            <li class="list-group-item">remark1: {{databaseEnv.database.remark1}}</li>
+            <li class="list-group-item">schema: {{databaseEnv.database.schema}}</li>
+            <li class="list-group-item">service: {{databaseEnv.database.service}}</li>
+            <li class="list-group-item">report: {{databaseEnv.database.report}}</li>
+            <li class="list-group-item">db: {{databaseEnv.database.db}}</li>
+            <li class="list-group-item">singleSearch: {{databaseEnv.database.singleSearch}}</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link">Local Search</a>
+            <a href="#" class="card-link">Single Report</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

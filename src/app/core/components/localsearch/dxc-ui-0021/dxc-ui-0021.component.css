@@ -1,0 +1,65 @@
+.overlay {
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    pointer-events: none;
+    opacity: 0;
+  }
+  .model__content {
+    text-align: center;
+  }
+  .modaltest {
+    background-color: #fff;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 540px;
+    padding-bottom: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 100;
+    pointer-events: none;
+    opacity: 0;
+        -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+  }
+  .button-launch {
+      display: block;
+      margin: auto;
+      margin-top: 100px;
+      background-color: #aee7be;
+      color: white;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-weight: bold;
+      padding: 15px 50px;
+      border-radius: 56px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+      width: 345px;
+  }
+  input[type="checkbox"]:checked ~ .modal {
+    pointer-events: auto;
+    opacity: 1;
+  }
+  input[type="checkbox"]:checked ~ .overlay {
+    pointer-events: auto;
+    opacity: 0.75;
+  }
+  .button-close {
+      width: 70px;
+      display: block;
+      margin: auto;
+      background-color: #aee7be;
+      color: white;
+      font-size: 0.9rem;
+      border-radius: 56px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+      padding: 8px 25px;
+      letter-spacing: 0.2em;
+      text-align: center;
+  }

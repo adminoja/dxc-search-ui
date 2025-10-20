@@ -1,0 +1,19 @@
+{
+    "content": [
+        {   
+            "CitizenID": "1234567890123",
+            "FirstNameTH": "ทดสอบ",
+            "LastNameTH": "ทดสอบ",
+            "FirstNameEN": "test",
+            "LastNameEN": "test",
+            "Sex": "หญิง",
+            "Height": "167",
+            "BirthPlace": "กรุงเทพ",
+            "PassportNo": "123456",
+            "PassportStatus": "ใช้งานได้",
+            "PassportType": "หนังสือเดินทางประชาชน",
+            "IssueDate": "25600530",
+            "ExpireDate": "25640530"
+        }
+    ]
+}

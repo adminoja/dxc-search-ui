@@ -1,0 +1,5494 @@
+<div class="body">
+  <div class="container-fluid">
+    <div style="margin-top:10px; width:90%">
+      <form>
+        <table style="width:90%" border="0">
+          <tbody>
+            <tr>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 10%;"></td>
+              <td style="width: 10%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+
+            </tr>
+
+            <tr>
+              <td style="height: 5px; font-weight: bold;" colspan="18">ค.ป. 3</td>
+            </tr>
+            <tr>
+              <td style="font-weight: bold;" colspan="10">แบบบันทึกข้อมูลจําเลย</td>
+              <td style="font-weight: bold;" colspan="5">เลขทะเบียนสืบเสาะที่</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="2"></td>
+            </tr>
+            <tr>
+              <td colspan="10"></td>
+              <td style="font-weight: bold;" colspan="5">สำนักงานคุมประพฤติ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="3"></td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+
+      <form>
+        <table style="width:90%" border="0">
+          <tr>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 10%;"></td>
+            <td style="width: 10%;"></td>
+
+          </tr>
+
+          <tr>
+            <td style="font-weight: bold;" colspan="6">ให้กรอกข้อมูลและทําเครื่องหมาย/ในช่อง</td>
+            <td>
+              <input type="checkbox" />
+            </td>
+            <td style="font-weight: bold;" colspan="9">
+              ตามข้อเท็จจริงหรือให้พนักงานคุมประพฤติสอบถามและบันทึกข้อมูล</td>
+          </tr>
+
+        </table>
+      </form>
+
+    </div>
+
+    <div>
+
+
+      <form style="border:2px solid black; width: 91%;">
+        <form style="border-bottom:2px solid black;">
+          <table>
+            <tbody>
+              <tr>
+                <td style="width: 100%;"></td>
+              </tr>
+              <tr>
+                <td style="font-weight: bold;" colspan="15">1.ประวัติครอบครัวและภูมิหลัง</td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+
+        <form style="border-bottom:2px solid black;">
+          <table>
+            <tbody style="margin-bottom:5px;">
+              <tr>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+              </tr>
+              <tr>
+                <td colspan="4">ชื่อและชื่อสกุลจริง (นาย / นาง/ นางสาว)</td>
+                <td class="colorfont" style="border-bottom: black 1px dotted; text-align:center;" colspan="3"
+                  *ngFor="let citizenItem of moidopapersonResults">
+                  <div *ngIf="true">{{citizenItem.firstName}} {{citizenItem.lastName}}</div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+
+        <form style="border-bottom:2px solid black;">
+          <table style="width:90%" border="0">
+            <tbody>
+              <tr>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+
+              </tr>
+              <tr>
+                <td colspan="4">
+              <tr>
+                <td colspan="5"></td>
+                <td style="font-weight: bold; text-align:center;" colspan="4">ชื่อเล่น / ชื่อรอง /
+                  ชื่ออื่น ๆ
+                </td>
+              </tr>
+              <tr>
+                <td colspan="4"></td>
+                <td style="border-bottom: black 1px dotted; text-align:center;" colspan="3"></td>
+              </tr>
+              </td>
+              <td style="border-left:2px solid black;" colspan="2">
+                <tr>
+                  <th colspan="3"></th>
+                  <th style="text-align:center;" colspan="4">เชื้อชาติ</th>
+                </tr>
+
+                <tr>
+                  <th colspan="2"></th>
+                  <th>
+                    <input type="checkbox" />
+                  </th>
+                  <th style="font-weight: bold;">ไทย</th>
+                  <th>
+                    <input type="checkbox" />
+                  </th>
+                  <th style="font-weight: bold;">อื่นๆ</th>
+                  <td style="border-bottom: black 1px dotted; text-align:center;" colspan="3"></td>
+                </tr>
+              </td>
+
+              <td style="border-left:2px solid black;" colspan="2">
+                <tr>
+                  <th colspan="3"></th>
+                  <th style="text-align:center;" colspan="4">สัญชาติ</th>
+                </tr>
+                <tr>
+                  <th colspan="2"></th>
+                  <th>
+                    <input type="checkbox" />
+                  </th>
+                  <th style="font-weight: bold;">ไทย</th>
+                  <th>
+                    <input type="checkbox" />
+                  </th>
+                  <th style="font-weight: bold;">อื่นๆ</th>
+                  <td class="colorfont" style="border-bottom: black 1px dotted; text-align:center;" colspan="3"
+                    *ngFor="let citizenItem of moidopapersonResults">
+                    <div *ngIf="true">{{citizenItem.nationality}}</div>
+                  </td>
+                </tr>
+              </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </form>
+
+        <form>
+          <table>
+            <tbody>
+              <tr>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+
+              </tr>
+              <tr>
+                <td colspan="2">
+              <tr>
+                <td colspan="2"></td>
+                <td style="font-weight: bold; text-align:center;" colspan="3">เกิดที่จังหวัด</td>
+              </tr>
+              <tr>
+                <td colspan="2"></td>
+                <td class="colorfont" style="border-bottom: black 1px dotted; text-align:center;" colspan="3"
+                  *ngFor="let citizenItem of moidopapersonResults">
+                  <div *ngIf="true">{{citizenItem.homeProvince}}</div>
+                </td>
+              </tr>
+              </td>
+
+              <td style="border-left:2px solid black;" colspan="3">
+                <tr>
+                  <td colspan="3"></td>
+                  <td style="font-weight: bold; text-align:center;" colspan="3">เกิด วันที่ เดือน พ.ศ.
+                  </td>
+                </tr>
+
+                <tr>
+                  <td colspan="2"></td>
+                  <td class="colorfont" style="border-bottom: black 1px dotted; text-align:center;" colspan="3"
+                    *ngFor="let citizenItem of moidopapersonResults">
+                    <div *ngIf="true">
+                      {{citizenItem.dateOfBirth | filter:""}}</div>
+                  </td>
+                </tr>
+              </td>
+
+              <td style="border-left:2px solid black;">
+                <tr>
+                  <td colspan="2"></td>
+                  <td style="font-weight: bold; text-align:center;" colspan="3">อายุ</td>
+                </tr>
+
+                <tr>
+                  <td colspan="2"></td>
+                  <td class="colorfont" style="border-bottom: black 1px dotted; text-align:center;" colspan="3"
+                    *ngFor="let citizenItem of moidopapersonResults">
+                    <div *ngIf="true">{{citizenItem.age}}</div>
+                  </td>
+                </tr>
+              </td>
+
+              <td style="border-left:2px solid black;" colspan="2">
+                <tr>
+                  <th colspan="3"></th>
+                  <th style="text-align:center;" colspan="4">ศาสนา</th>
+                </tr>
+                <tr>
+
+                  <th>
+                    <input type="checkbox" />
+                  </th>
+                  <th style="font-weight: bold;">พุทธ</th>
+                  <th>
+                    <input type="checkbox" />
+                  </th>
+                  <th style="font-weight: bold;">อิสลาม</th>
+                  <th>
+                    <input type="checkbox" />
+                  </th>
+                  <th style="font-weight: bold;">คริสต์</th>
+                  <th>
+                    <input type="checkbox" />
+                  </th>
+                  <th style="font-weight: bold;">อื่นๆ</th>
+                  <td class="colorfont" style="border-bottom: black 1px dotted; text-align:center;" colspan="3"
+                    *ngFor="let citizenItem of moidopapersonResults">
+                    <div *ngIf="true">{{citizenItem.religion}}</div>
+                  </td>
+                </tr>
+              </td>
+
+              </tr>
+
+
+
+
+
+            </tbody>
+          </table>
+        </form>
+
+      </form>
+
+
+      <!-- //เปิดform 2 -->
+      <form style="border:2px solid black; margin-top:30px; width: 91%;">
+        <form style="border-bottom:2px solid black;">
+          <table style="width:99%">
+            <tbody>
+              <tr>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+
+              </tr>
+              <tr>
+                <td style="font-weight: bold; width:50%;">ที่อยู่ปัจจุบัน</td>
+                <td style="border-left:2px solid black; font-weight: bold; width:50%;" colspan="10">
+                  ที่อยู่ตามทะเบียนบ้าน</td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+
+        <form style="border-bottom:2px solid black;">
+          <table style="width:102%">
+            <tbody style="margin-bottom:5px;">
+              <tr>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 3%;"></td>
+                <td style="width: 3%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+              </tr>
+              <tr style="width:102%;">
+                <td style="width:49%;">
+              <tr>
+                <td>
+
+                </td>
+                <td style="color:white;" colspan="9">เช่นเดียวกับ
+                  ที่อยู่ปัจจุบัน(ไม่ต้องเขียนรายละเอียด)</td>
+              </tr>
+              <tr>
+                <td>
+
+                </td>
+                <td style="color:white;">ต่างจากที่อยู่ปัจจุบัน ดังนี้</td>
+              </tr>
+              <tr>
+                <td>เลขที่</td>
+                <td class="colorfont" style="border-bottom: black 1px dotted; text-align:center;" colspan="3"
+                  *ngFor="let citizenItem of moidopapersonResults">
+                  <div *ngIf="true">{{citizenItem.homeNumber}}</div>
+                </td>
+                <td>หมู่ที่</td>
+                <td class="colorfont" style="border-bottom: black 1px dotted; text-align:center;" colspan="3"
+                  *ngFor="let citizenItem of moidopapersonResults">
+                  <div *ngIf="true">{{citizenItem.homeMoo}}</div>
+                </td>
+
+
+              </tr>
+              <tr>
+                <td>บ้าน/ตรอก/ซอย</td>
+                <td class="colorfont" style="border-bottom: black 1px dotted; text-align:center;" colspan="3"
+                  *ngFor="let citizenItem of moidopapersonResults">
+                  <div *ngIf="true">{{citizenItem.homeTrock}} {{citizenItem.homeSoy}}</div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>ถนน</td>
+                <td class="colorfont" style="border-bottom: black 1px dotted; text-align:center;" colspan="3"
+                  *ngFor="let citizenItem of moidopapersonResults">
+                  <div *ngIf="true">{{citizenItem.homeRoad}}</div>
+                </td>
+              </tr>
+              <tr>
+                <td>ตำบล/แขวง</td>
+                <td class="colorfont" style="border-bottom: black 1px dotted; text-align:center;" colspan="3"
+                  *ngFor="let citizenItem of moidopapersonResults">
+                  <div *ngIf="true">{{citizenItem.homeTumbon}}</div>
+                </td>
+              </tr>
+              <tr>
+                <td>อำเภอ/เขต</td>
+                <td class="colorfont" style="border-bottom: black 1px dotted; text-align:center;" colspan="3"
+                  *ngFor="let citizenItem of moidopapersonResults">
+                  <div *ngIf="true">{{citizenItem.homeAmphur}}</div>
+                </td>
+              </tr>
+              <tr>
+                <td>จังหวัด</td>
+                <td class="colorfont" style="border-bottom: black 1px dotted; text-align:center;" colspan="3"
+                  *ngFor="let citizenItem of moidopapersonResults">
+                  <div *ngIf="true">{{citizenItem.homeProvince}}</div>
+                </td>
+              </tr>
+              <tr>
+                <td>รหัสไปรษรีย์</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;"></td>
+              </tr>
+              <tr>
+                <td>โทร</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;"></td>
+              </tr>
+
+              <tr>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td style="font-weight: bold;">บ้านตนเอง</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td style="font-weight: bold;">บ้านบิดามารดา</td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td style="font-weight: bold;">บ้านญาติ</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td style="font-weight: bold;">บ้านเพื่อน</td>
+              </tr>
+
+              <tr>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td style="font-weight: bold;">บ้านคนรู้จัก</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td style="font-weight: bold;">บ้านเช่า</td>
+              </tr>
+              <tr>
+                <td style="width:24%;">เจ้าของบ้านชื่อ</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;"></td>
+              </tr>
+
+              <tr>
+                <td style="width:40%;">ชื่อกำนัน/ผู้ใหญ่บ้าน</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;"></td>
+              </tr>
+
+              <tr style="margin-bottom:20px;">
+                <td style="width:40%;">พักอาศัยอยุ่เป็นระยะเวลา</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;"></td>ปี
+              </tr>
+
+
+
+
+              </td>
+
+              <td style="border-left:2px solid black; width:50%;">
+                <tr>
+                  <th>
+                    <input type="checkbox" />
+                  </th>
+                  <th style="font-weight: bold;" colspan="9">เช่นเดียวกับ
+                    ที่อยู่ปัจจุบัน(ไม่ต้องเขียนรายละเอียด)</th>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="checkbox" />
+                  </td>
+                  <td style="font-weight: bold;">ต่างจากที่อยู่ปัจจุบัน ดังนี้</td>
+                </tr>
+                <tr>
+                  <td>เลขที่</td>
+                  <td style="border-bottom: black 1px dotted; text-align:center;"></td>
+                  <td>หมู่ที่</td>
+                  <td style="border-bottom: black 1px dotted; text-align:center;"></td>
+
+
+                </tr>
+                <tr>
+                  <td>บ้าน/ตรอก/ซอย</td>
+                  <td style="border-bottom: black 1px dotted; text-align:center;"></td>
+                </tr>
+
+                <tr>
+                  <td>ถนน</td>
+                  <td style="border-bottom: black 1px dotted; text-align:center;"></td>
+                </tr>
+                <tr>
+                  <td>ตำบล/แขวง</td>
+                  <td style="border-bottom: black 1px dotted; text-align:center;"></td>
+                </tr>
+                <tr>
+                  <td>อำเภอ/เขต</td>
+                  <td style="border-bottom: black 1px dotted; text-align:center;"></td>
+                </tr>
+                <tr>
+                  <td>จังหวัด</td>
+                  <td style="border-bottom: black 1px dotted; text-align:center;"></td>
+                </tr>
+                <tr>
+                  <td>รหัสไปรษรีย์</td>
+                  <td style="border-bottom: black 1px dotted; text-align:center;"></td>
+                </tr>
+                <tr>
+                  <td>โทร</td>
+                  <td style="border-bottom: black 1px dotted; text-align:center;"></td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="checkbox" />
+                  </td>
+                  <td style="font-weight: bold;">บ้านตนเอง</td>
+                  <td>
+                    <input type="checkbox" />
+                  </td>
+                  <td style="font-weight: bold;">บ้านบิดามารดา</td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="checkbox" />
+                  </td>
+                  <td style="font-weight: bold;">บ้านญาติ</td>
+                  <td>
+                    <input type="checkbox" />
+                  </td>
+                  <td style="font-weight: bold;">บ้านเพื่อน</td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <input type="checkbox" />
+                  </td>
+                  <td style="font-weight: bold;">บ้านคนรู้จัก</td>
+                  <td>
+                    <input type="checkbox" />
+                  </td>
+                  <td style="font-weight: bold;">บ้านเช่า</td>
+                </tr>
+
+                <tr>
+                  <td style="width:24%;">เจ้าของบ้านชื่อ</td>
+                  <td style="border-bottom: black 1px dotted; text-align:center;"></td>
+                </tr>
+
+                <tr>
+                  <td style="width:40%;">ชื่อกำนัน/ผู้ใหญ่บ้าน</td>
+                  <td style="border-bottom: black 1px dotted; text-align:center;"></td>
+                </tr>
+
+                <tr>
+                  <td style="width:40%;">พักอาศัยอยุ่เป็นระยะเวลา</td>
+                  <td style="border-bottom: black 1px dotted; text-align:center;"></td>ปี
+                </tr>
+
+              </td>
+
+              </tr>
+            </tbody>
+          </table>
+        </form>
+
+        <form>
+          <table style="width:90%" border="0">
+            <tbody>
+              <tr>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+
+              </tr>
+              <tr>
+                <td colspan="9">ที่อยู่อื่นที่ติดต่อได้/รายละเอียดเพิ่มเติม</td>
+              </tr>
+              <tr>
+                <td style="height: 10px;" colspan="11"></td>
+              </tr>
+              <tr>
+
+                <td style="border-bottom: black 1px dotted;" colspan="9"></td>
+              </tr>
+
+            </tbody>
+          </table>
+        </form>
+      </form>
+
+      <!-- //ปิด form2 -->
+
+      <!-- //ลงชื่อหน้า1 -->
+      <form>
+        <table style="width:90%" border="0">
+          <tr>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 10%;"></td>
+            <td style="width: 10%;"></td>
+
+          </tr>
+          <tr>
+            <td style="height: 20px;" colspan="11"></td>
+          </tr>
+          <tr>
+            <td colspan="10"></td>
+            <td colspan="2">( ลงชื่อ )</td>
+            <td style="border-bottom: black 1px dotted;" colspan="3"></td>จำเลย
+          </tr>
+
+          <tr>
+            <td style="height: 30px;" colspan="11"></td>
+          </tr>
+          <tr>
+            <td colspan="3"></td>
+            <td colspan="3"></td>
+            <td colspan="3"></td>
+            <td></td>
+            <td>( 2 )</td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td style="height: 30px;" colspan="11"></td>
+          </tr>
+
+        </table>
+      </form>
+      <!-- //ปิดลงชื่อหน้า1 -->
+
+      <!-- //เปิดหน้า2 -->
+      <form style="border:2px solid black; width: 91%;">
+        <form style="border-bottom:2px solid black;">
+          <table style="width: 100%;">
+            <tbody>
+
+              <tr>
+                <td style="font-weight: bold;" colspan="15">ครอบครัวและผู้ใกล้ชิด</td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+
+        <form>
+          <table style="width: 100%;">
+            <tbody style="margin-bottom:5px;">
+              <tr>
+                <td style="width: 1%;"></td>
+                <td style="width: 3%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 2%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+
+
+              </tr>
+              <tr>
+                <td style="font-weight: bold;">บิดา</td>
+                <td colspan="2">ชื่อ-ชื่อสกุล</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;" colspan="5"></td>
+              </tr>
+
+              <tr>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="2">เสียชีวิตไปแล้ว</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;"></td>ปี
+                <td>เนื่องจาก</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;" colspan="4"></td>
+              </tr>
+
+              <tr>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="3">ยังมีชีวิตอยู่ ปัจจุบันอายุ</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;"></td>ปี
+
+              </tr>
+
+              <tr>
+                <td colspan="3">บิดาประกอบอาชีพ</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;"></td> รายได้
+                <td>วัน/เดือน/ปีละ</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;"></td> บาท
+
+              </tr>
+
+              <tr>
+                <td>ที่อยู่</td>
+                <td style="border-bottom: black 1px dotted;" colspan="6"></td>
+                <td>โทร</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;"></td>
+
+              </tr>
+
+              <tr>
+                <td colspan="2">สถานที่ทำงาน</td>
+                <td style="border-bottom: black 1px dotted;" colspan="5"></td>
+                <td>โทร</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;"></td>
+
+              </tr>
+
+
+              <tr>
+                <td style="font-weight: bold;">มารดา</td>
+                <td colspan="2">ชื่อ-ชื่อสกุล</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;" colspan="5"></td>
+              </tr>
+
+              <tr>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="2">เสียชีวิตไปแล้ว</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;"></td>ปี
+                <td>เนื่องจาก</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;" colspan="4"></td>
+              </tr>
+
+              <tr>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="3">ยังมีชีวิตอยู่ ปัจจุบันอายุ</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;"></td>ปี
+
+              </tr>
+
+              <tr>
+                <td colspan="3">มารดาประกอบอาชีพ</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;"></td> รายได้
+                <td>วัน/เดือน/ปีละ</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;"></td> บาท
+
+              </tr>
+
+              <tr>
+                <td>ที่อยู่</td>
+                <td style="border-bottom: black 1px dotted;" colspan="6"></td>
+                <td>โทร</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;"></td>
+
+              </tr>
+
+              <tr>
+                <td colspan="2">สถานที่ทำงาน</td>
+                <td style="border-bottom: black 1px dotted;" colspan="5"></td>
+                <td>โทร</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;"></td>
+
+              </tr>
+
+              <tr>
+                <td></td>
+                <td colspan="3">ความสัมพันธ์กับบิดามารดา</td>
+                <td style="border-bottom: black 1px dotted;" colspan="5"></td>
+
+              </tr>
+              <tr>
+                <td style="height: 20px;" colspan="9"></td>
+              </tr>
+              <tr>
+                <td style="border-bottom: black 1px dotted;" colspan="9"></td>
+              </tr>
+
+              <tr>
+                <td style="height: 20px;" colspan="9"></td>
+              </tr>
+              <tr>
+                <td style="border-bottom: black 1px dotted;" colspan="9"></td>
+              </tr>
+
+              <tr>
+                <td style="height: 20px;" colspan="9"></td>
+              </tr>
+              <tr>
+                <td style="border-bottom: black 1px dotted;" colspan="9"></td>
+              </tr>
+
+              <tr>
+                <td style="height: 20px;" colspan="9"></td>
+              </tr>
+              <tr>
+                <td style="border-bottom: black 1px dotted;" colspan="9"></td>
+              </tr>
+
+              <tr>
+                <td style="height: 20px;" colspan="9"></td>
+              </tr>
+              <tr>
+                <td style="border-bottom: black 1px dotted;" colspan="5"></td>
+              </tr>
+
+              <tr>
+                <td></td>
+                <td colspan="3">ความสัมพันธ์ระหว่างบิดากับมารดา</td>
+                <td style="border-bottom: black 1px dotted;" colspan="5"></td>
+
+              </tr>
+              <tr>
+                <td style="height: 20px;" colspan="9"></td>
+              </tr>
+              <tr>
+                <td style="border-bottom: black 1px dotted;" colspan="9"></td>
+              </tr>
+
+              <tr>
+                <td style="height: 20px;" colspan="9"></td>
+              </tr>
+              <tr>
+                <td style="border-bottom: black 1px dotted;" colspan="9"></td>
+              </tr>
+
+              <tr>
+                <td style="height: 20px;" colspan="9"></td>
+              </tr>
+              <tr>
+                <td style="border-bottom: black 1px dotted;" colspan="9"></td>
+              </tr>
+
+              <tr>
+                <td style="height: 20px;" colspan="9"></td>
+              </tr>
+              <tr>
+                <td style="border-bottom: black 1px dotted;" colspan="9"></td>
+              </tr>
+
+              <tr>
+                <td style="height: 20px;" colspan="9"></td>
+              </tr>
+              <tr>
+                <td style="border-bottom: black 1px dotted;" colspan="9"></td>
+              </tr>
+
+            </tbody>
+          </table>
+        </form>
+      </form>
+
+
+      <!-- //ปิดหน้า2 -->
+      <!-- //ลงชื่อหน้า2 -->
+      <form>
+        <table style="width:90%" border="0">
+          <tr>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 10%;"></td>
+            <td style="width: 10%;"></td>
+
+          </tr>
+          <tr>
+            <td style="height: 20px;" colspan="11"></td>
+          </tr>
+          <tr>
+            <td colspan="10"></td>
+            <td colspan="2">( ลงชื่อ )</td>
+            <td style="border-bottom: black 1px dotted;" colspan="3"></td>จำเลย
+          </tr>
+
+          <tr>
+            <td style="height: 30px;" colspan="11"></td>
+          </tr>
+          <tr>
+            <td colspan="3"></td>
+            <td colspan="3"></td>
+            <td colspan="3"></td>
+            <td></td>
+            <td>( 3 )</td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td style="height: 30px;" colspan="11"></td>
+          </tr>
+
+        </table>
+      </form>
+      <!-- //ปิดลงชื่อหน้า2 -->
+
+      <!-- //เปิดหน้า3 -->
+      <form style="border:2px solid black; width: 91%;">
+
+        <form>
+          <table style="width: 100%;">
+            <tbody style="margin-bottom:5px;">
+              <tr>
+                <td style="width: 1%;"></td>
+                <td style="width: 3%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 2%;"></td>
+                <td style="width: 5%;"></td>
+              </tr>
+              <tr>
+                <td colspan="2">พี่น้อง</td>
+                <td style="font-weight: bold; height: 5px; text-decoration: underline;" colspan="4">
+                  ร่วมบิดาและมารดาเดียวกัน</td>
+                <td colspan="4">รวมทั้งตัวข้าพเจ้าด้วยจำนวน</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;"></td>คน
+                <td colspan="3">ข้าพเจ้าเป็นบุตรคนที่</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;"></td>
+              </tr>
+
+              <tr>
+                <td style="font-weight: bold; height: 5px;" colspan="15">
+                  โดยมีพี่น้องที่สามารถติดต่อได้
+                  คือ</td>
+
+              </tr>
+
+              <tr>
+                <td colspan="2"> </td>
+                <td style="border-bottom: black 1px dotted; text-align:center;" colspan="5"></td>
+                <td colspan="3">อายุ</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;"></td>ปี
+                <td>อาชีพ</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;" colspan="3"></td>
+              </tr>
+
+              <tr>
+                <td colspan="2">ที่อยู่</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;" colspan="10"></td>
+                <td>โทร</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;" colspan="3"></td>
+
+              </tr>
+
+              <tr>
+                <td colspan="2">( 2 )</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;" colspan="5"></td>
+                <td colspan="3">อายุ</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;"></td>ปี
+                <td>อาชีพ</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;" colspan="3"></td>
+              </tr>
+
+              <tr>
+                <td colspan="2">ที่อยู่</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;" colspan="10"></td>
+                <td>โทร</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;" colspan="3"></td>
+
+              </tr>
+
+              <tr>
+                <td colspan="2">( 3 )</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;" colspan="5"></td>
+                <td colspan="3">อายุ</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;"></td>ปี
+                <td>อาชีพ</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;" colspan="3"></td>
+              </tr>
+
+              <tr>
+                <td colspan="2">ที่อยู่</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;" colspan="10"></td>
+                <td>โทร</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;" colspan="3"></td>
+
+              </tr>
+              <tr>
+                <td style="height: 20px;" colspan="9"></td>
+              </tr>
+
+              <tr>
+                <td></td>
+                <td colspan="3">ความสัมพันธ์กับพี่น้อง</td>
+                <td style="border-bottom: black 1px dotted;" colspan="12"></td>
+
+              </tr>
+              <tr>
+                <td style="height: 20px;" colspan="9"></td>
+              </tr>
+              <tr>
+                <td style="border-bottom: black 1px dotted;" colspan="16"></td>
+              </tr>
+
+              <tr>
+                <td style="height: 20px;" colspan="9"></td>
+              </tr>
+              <tr>
+                <td style="border-bottom: black 1px dotted;" colspan="16"></td>
+              </tr>
+
+              <tr>
+                <td style="height: 20px;" colspan="9"></td>
+              </tr>
+              <tr>
+                <td style="border-bottom: black 1px dotted;" colspan="16"></td>
+              </tr>
+
+              <tr>
+                <td style="height: 20px;" colspan="9"></td>
+              </tr>
+              <tr>
+                <td style="border-bottom: black 1px dotted;" colspan="16"></td>
+              </tr>
+
+              <tr>
+                <td style="height: 20px;" colspan="9"></td>
+              </tr>
+              <tr>
+                <td style="border-bottom: black 1px dotted;" colspan="16"></td>
+              </tr>
+
+            </tbody>
+          </table>
+        </form>
+      </form>
+      <div style="margin-top:30px;"></div>
+      <form style="border:2px solid black; width: 91%;">
+        <form style="border-bottom:2px solid black;">
+          <table style="width: 100%;">
+            <tbody>
+
+              <tr>
+                <td style="font-weight: bold;" colspan="15">สถานภาพการสมรส</td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+
+        <form>
+          <table style="width: 100%;">
+            <tbody style="margin-bottom:5px;">
+              <tr>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+              </tr>
+              <tr>
+                <td colspan="2"></td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="2">โสด</td>
+              </tr>
+
+              <tr>
+                <td colspan="2"></td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="2">ม่าย</td>
+                <td></td>
+                <td>โดย</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="3">จดทะเบียนหย่า</td>
+                <td></td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="2">เลิกร้าง</td>
+                <td></td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="3">คู่ครองเสียชีวิต</td>
+
+              </tr>
+
+              <tr>
+                <td colspan="2"></td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="3">มีครอบครัวแล้ว</td>
+
+                <td>โดย</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="4">จดทะเบียนสมรส</td>
+                <td></td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="4">ไม่จดทะเบียนสมรส</td>
+
+              </tr>
+
+              <tr>
+                <td colspan="2"></td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="7">เคยมีภรรยา/สามี มาก่อน จำนวน</td>
+                <td style="border-bottom: black 1px dotted;" colspan="2"></td>คน
+              </tr>
+
+              <tr>
+                <td colspan="3"></td>
+                <td colspan="6">โดยมีบุตรกับภรรยา/สามีคนที่</td>
+                <td style="border-bottom: black 1px dotted;" colspan="2"></td>จำนวน
+                <td style="border-bottom: black 1px dotted;" colspan="2"></td>คน
+              </tr>
+              <tr>
+                <td colspan="3"></td>
+                <td colspan="5">บุตรอยู่ในความดูแลของ</td>
+                <td style="border-bottom: black 1px dotted;" colspan="12"></td>
+
+              </tr>
+              <tr>
+                <td colspan="3"></td>
+                <td colspan="6">และมีบุตรกับภรรยา/สามีคนที่</td>
+                <td style="border-bottom: black 1px dotted;" colspan="2"></td>จำนวน
+                <td style="border-bottom: black 1px dotted;" colspan="2"></td>คน
+              </tr>
+              <tr>
+                <td colspan="3"></td>
+                <td colspan="5">บุตรอยู่ในความดูแลของ</td>
+                <td style="border-bottom: black 1px dotted;" colspan="12"></td>
+
+              </tr>
+              <tr>
+                <td style="height: 20px;" colspan="20"></td>
+              </tr>
+
+              <tr>
+
+                <td style="font-weight: bold;" colspan="6">ภรรยา/สามี คนปัจจุบันชื่อ</td>
+                <td style="border-bottom: black 1px dotted;" colspan="12"></td>
+                <td>อายุ</td>
+                <td style="border-bottom: black 1px dotted;"></td>ปี
+
+              </tr>
+
+
+              <tr>
+
+                <td>ที่อยุ่</td>
+                <td style="border-bottom: black 1px dotted;" colspan="11"></td>
+                <td>โทร</td>
+                <td style="border-bottom: black 1px dotted;" colspan="3"></td>
+                <td>อาชีพ</td>
+                <td style="border-bottom: black 1px dotted;" colspan="3"></td>
+
+              </tr>
+
+              <tr>
+
+                <td colspan="4">รายได้ วัน / เดือน / ปีละ</td>
+                <td style="border-bottom: black 1px dotted;" colspan="6"></td>บาท
+                <td colspan="3">สถานที่ทำงาน</td>
+                <td style="border-bottom: black 1px dotted;" colspan="3"></td>
+                <td>โทร</td>
+                <td style="border-bottom: black 1px dotted;" colspan="3"></td>
+
+              </tr>
+
+
+            </tbody>
+          </table>
+        </form>
+      </form>
+
+      <!-- //ปิดหน้า3 -->
+
+      <!-- //เปิดลงชื่อหน้า3 -->
+      <form>
+        <table style="width:90%" border="0">
+          <tr>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 10%;"></td>
+            <td style="width: 10%;"></td>
+
+          </tr>
+          <tr>
+            <td style="height: 20px;" colspan="11"></td>
+          </tr>
+          <tr>
+            <td colspan="10"></td>
+            <td colspan="2">( ลงชื่อ )</td>
+            <td style="border-bottom: black 1px dotted;" colspan="3"></td>จำเลย
+          </tr>
+
+          <tr>
+            <td style="height: 30px;" colspan="11"></td>
+          </tr>
+          <tr>
+            <td colspan="3"></td>
+            <td colspan="3"></td>
+            <td colspan="3"></td>
+            <td></td>
+            <td>( 4 )</td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td style="height: 30px;" colspan="11"></td>
+          </tr>
+
+        </table>
+      </form>
+      <!-- //ปิดลงชื่อหน้า3 -->
+
+      <!-- //เปิดหน้า4 -->
+
+      <form style="border:2px solid black; width: 91%;">
+
+        <form>
+          <table style="width: 100%;">
+            <tbody style="margin-bottom:5px;">
+              <tr>
+                <td style="width: 1%;"></td>
+                <td style="width: 3%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 2%;"></td>
+                <td style="width: 5%;"></td>
+              </tr>
+
+              <tr>
+                <td colspan="7">ข้าพเจ้ามีบุตรกับสามี/ภรรยาคนปัจจุบัน</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;" colspan="5"></td> คน
+                คือ
+
+              </tr>
+
+              <tr>
+                <td colspan="2">( 1 )</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;" colspan="5"></td>
+                <td colspan="3">อายุ</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;"></td>ปี
+                <td>อาชีพ</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;" colspan="3"></td>
+              </tr>
+
+              <tr>
+                <td colspan="2">ที่อยู่</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;" colspan="10"></td>
+                <td>โทร</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;" colspan="3"></td>
+
+              </tr>
+
+              <tr>
+                <td colspan="2">( 2 )</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;" colspan="5"></td>
+                <td colspan="3">อายุ</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;"></td>ปี
+                <td>อาชีพ</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;" colspan="3"></td>
+              </tr>
+
+              <tr>
+                <td colspan="2">ที่อยู่</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;" colspan="10"></td>
+                <td>โทร</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;" colspan="3"></td>
+
+              </tr>
+
+              <tr>
+                <td colspan="2">( 3 )</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;" colspan="5"></td>
+                <td colspan="3">อายุ</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;"></td>ปี
+                <td>อาชีพ</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;" colspan="3"></td>
+              </tr>
+
+              <tr>
+                <td colspan="2">ที่อยู่</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;" colspan="10"></td>
+                <td>โทร</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;" colspan="3"></td>
+
+              </tr>
+              <tr>
+                <td colspan="2">( 4 )</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;" colspan="5"></td>
+                <td colspan="3">อายุ</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;"></td>ปี
+                <td>อาชีพ</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;" colspan="3"></td>
+              </tr>
+
+              <tr>
+                <td colspan="2">ที่อยู่</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;" colspan="10"></td>
+                <td>โทร</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;" colspan="3"></td>
+
+              </tr>
+              <tr>
+                <td colspan="2">( 5 )</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;" colspan="5"></td>
+                <td colspan="3">อายุ</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;"></td>ปี
+                <td>อาชีพ</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;" colspan="3"></td>
+              </tr>
+
+              <tr>
+                <td colspan="2">ที่อยู่</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;" colspan="10"></td>
+                <td>โทร</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;" colspan="3"></td>
+
+              </tr>
+              <tr>
+                <td colspan="5">ข้าพเจ้าใกล้ชิดกับบุคคลที่</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;" colspan="2"></td>
+                <td colspan="3">มากที่สุด</td>
+              </tr>
+
+
+              <tr>
+                <td colspan="5">ความสัมพันธ์ในครอบครัว</td>
+              </tr>
+              <tr>
+                <td style="height: 20px;" colspan="9"></td>
+              </tr>
+              <tr>
+                <td style="border-bottom: black 1px dotted;" colspan="16"></td>
+              </tr>
+
+              <tr>
+                <td style="height: 20px;" colspan="9"></td>
+              </tr>
+              <tr>
+                <td style="border-bottom: black 1px dotted;" colspan="16"></td>
+              </tr>
+
+              <tr>
+                <td style="height: 20px;" colspan="9"></td>
+              </tr>
+              <tr>
+                <td style="border-bottom: black 1px dotted;" colspan="16"></td>
+              </tr>
+
+              <tr>
+                <td style="height: 20px;" colspan="9"></td>
+              </tr>
+              <tr>
+                <td style="border-bottom: black 1px dotted;" colspan="16"></td>
+              </tr>
+
+              <tr>
+                <td style="height: 20px;" colspan="9"></td>
+              </tr>
+              <tr>
+                <td style="border-bottom: black 1px dotted;" colspan="16"></td>
+              </tr>
+
+            </tbody>
+          </table>
+        </form>
+      </form>
+
+      <form style="border:2px solid black; margin-top:30px; width: 91%;">
+        <form style="border-bottom:2px solid black;">
+          <table style="width:102%">
+            <tbody style="margin-bottom:5px;">
+              <tr>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 3%;"></td>
+                <td style="width: 3%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+              </tr>
+              <tr style="width:102%;">
+                <td style="width:49%;">
+              <tr>
+                <td style="font-weight: bold;" colspan="7">บุคคลที่ข้าพเจ้าต้องอุปการะเลี้ยงดูมี</td>
+                <td style="border-bottom: black 1px dotted; text-align:center; width:20%;"></td>คน
+
+              </tr>
+              <tr>
+                <td>คือ</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td>บิดา</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td>มารดา</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td style="width:20%;">คู่สมรส</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td>บุตร</td>
+                <td style="border-bottom: black 1px dotted; text-align:center; width:10%;"></td>คน
+              </tr>
+
+              <tr>
+                <td></td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="3">บุคคลอื่น (ระบุ)</td>
+                <td style="border-bottom: black 1px dotted; text-align:center; width:40%;"></td>
+              </tr>
+              </td>
+              <td style="border-left:2px solid black; width:50%;">
+                <tr>
+                  <td style="font-weight: bold;" colspan="8">
+                    บุคคลที่ให้ความอุปการะช่วยเหลือข้าพเจ้าในปัจจุบัน
+                    คือ
+                  </td>
+                </tr>
+                <tr>
+                  <td>1. ชื่อ</td>
+                  <td style="border-bottom: black 1px dotted; text-align:center; width:75%;"></td>
+                </tr>
+                <tr>
+                  <td>เกี่ยวข้องเป็น</td>
+                  <td style="border-bottom: black 1px dotted; text-align:center; width:75%;"></td>
+                </tr>
+
+                <tr>
+                  <td>2. ชื่อ</td>
+                  <td style="border-bottom: black 1px dotted; text-align:center; width:75%;"></td>
+                </tr>
+                <tr>
+                  <td>เกี่ยวข้องเป็น</td>
+                  <td style="border-bottom: black 1px dotted; text-align:center; width:75%;"></td>
+                </tr>
+              </td>
+
+              </tr>
+            </tbody>
+          </table>
+        </form>
+
+        <form style="border-bottom:2px solid black;">
+          <table style="width:90%" border="0">
+            <tbody>
+              <tr>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+
+              </tr>
+              <tr>
+                <td colspan="6">บุคคลในครอบครัวข้าพเจ้า</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td>ไม่มี</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td>มี</td>
+                <td colspan="10">ประวัติถูกจับกุมดำเนินคดีอาญา หรือต้องโทษจำคุก คือ</td>
+              </tr>
+              <tr>
+                <td style="height: 10px;" colspan="11"></td>
+              </tr>
+              <tr>
+                <td>( 1 )</td>
+                <td style="border-bottom: black 1px dotted;" colspan="8"></td>
+                <td colspan="3">เกี่ยวข้องเป็น</td>
+                <td style="border-bottom: black 1px dotted;" colspan="5"></td>
+                <td colspan="3">ของข้าพเจ้า</td>
+              </tr>
+              <tr>
+                <td colspan="3">ถูกจับข้อหา</td>
+                <td style="border-bottom: black 1px dotted;" colspan="6"></td>
+                <td colspan="3">ผลคดี</td>
+                <td style="border-bottom: black 1px dotted;" colspan="5"></td>
+              </tr>
+
+              <tr>
+                <td>( 2 )</td>
+                <td style="border-bottom: black 1px dotted;" colspan="8"></td>
+                <td colspan="4">เกี่ยวข้องเป็น</td>
+                <td style="border-bottom: black 1px dotted;" colspan="4"></td>
+                <td colspan="3">ของข้าพเจ้า</td>
+              </tr>
+              <tr>
+                <td colspan="3">ถูกจับข้อหา</td>
+                <td style="border-bottom: black 1px dotted;" colspan="6"></td>
+                <td colspan="3">ผลคดี</td>
+                <td style="border-bottom: black 1px dotted;" colspan="5"></td>
+              </tr>
+
+            </tbody>
+          </table>
+        </form>
+
+        <form>
+          <table style="width:90%" border="0">
+            <tbody>
+              <tr>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+
+              </tr>
+              <tr>
+                <td colspan="6">บุคคลในครอบครัวข้าพเจ้า</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td>ไม่มี</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td>มี</td>
+                <td colspan="10">ประวัติเกี่ยวข้องกับยาและสารเสพติดให้โทษ คือ</td>
+              </tr>
+              <tr>
+                <td style="height: 10px;" colspan="11"></td>
+              </tr>
+              <tr>
+                <td>( 1 )</td>
+                <td style="border-bottom: black 1px dotted;" colspan="8"></td>
+                <td colspan="3">เกี่ยวข้องเป็น</td>
+                <td style="border-bottom: black 1px dotted;" colspan="5"></td>
+                <td colspan="3">ของข้าพเจ้า</td>
+              </tr>
+              <tr>
+                <td colspan="8">เกี่ยวข้องกับยาหรือสารเสพติดประเภท</td>
+                <td style="border-bottom: black 1px dotted;" colspan="9"></td>
+
+              </tr>
+
+              <tr>
+                <td>( 2 )</td>
+                <td style="border-bottom: black 1px dotted;" colspan="8"></td>
+                <td colspan="4">เกี่ยวข้องเป็น</td>
+                <td style="border-bottom: black 1px dotted;" colspan="4"></td>
+                <td colspan="3">ของข้าพเจ้า</td>
+              </tr>
+              <tr>
+                <td colspan="8">เกี่ยวข้องกับยาหรือสารเสพติดประเภท</td>
+                <td style="border-bottom: black 1px dotted;" colspan="9"></td>
+
+              </tr>
+
+
+            </tbody>
+          </table>
+        </form>
+      </form>
+
+      <!-- //ปิดหน้า4 -->
+
+      <!-- //เปิดลงชื่อหน้า4 -->
+      <form>
+        <table style="width:90%" border="0">
+          <tr>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 10%;"></td>
+            <td style="width: 10%;"></td>
+
+          </tr>
+          <tr>
+            <td style="height: 20px;" colspan="11"></td>
+          </tr>
+          <tr>
+            <td colspan="10"></td>
+            <td colspan="2">( ลงชื่อ )</td>
+            <td style="border-bottom: black 1px dotted;" colspan="3"></td>จำเลย
+          </tr>
+
+          <tr>
+            <td style="height: 30px;" colspan="11"></td>
+          </tr>
+          <tr>
+            <td colspan="3"></td>
+            <td colspan="3"></td>
+            <td colspan="3"></td>
+            <td></td>
+            <td>( 5 )</td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td style="height: 30px;" colspan="11"></td>
+          </tr>
+
+        </table>
+      </form>
+      <!-- //ปิดลงชื่อหน้า4 -->
+
+      <!-- //เปิดหน้า5 -->
+      <form style="border:2px solid black; width: 91%;">
+
+        <form>
+          <table style="width: 100%;">
+            <tbody style="margin-bottom:5px;">
+              <tr>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+              </tr>
+
+              <tr>
+                <td colspan="16">
+                  ชื่อและที่อยุ่ที่สามารถติดต่อได้ของบุคคลที่ข้าพเจ้ารู้จักคุ้นเคยใกล้ชิด
+                  (เช่น ญาติ เพื่อน
+                  เพื่อนบ้าน เพื่อนร่วมงาน ผู้นำชุมชน ผู้นำทางศาสนา ครู ฯลฯ)</td>
+              </tr>
+
+              <tr>
+                <td colspan="3">( 1 ) ชื่อ-ชื่อสกุล</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;" colspan="5"></td>
+                <td colspan="3">เกี่ยวข้องเป็น</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;" colspan="5"></td>
+              </tr>
+
+              <tr>
+                <td colspan="2">รู้จักมานาน</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;" colspan="10"></td> ปี
+                <td>อาชีพ</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;" colspan="2"></td>
+              </tr>
+
+              <tr>
+                <td colspan="2">ที่อยู่</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;" colspan="10"></td>
+                <td>โทร</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;" colspan="3"></td>
+
+              </tr>
+
+              <tr>
+                <td colspan="3">( 2 ) ชื่อ-ชื่อสกุล</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;" colspan="5"></td>
+                <td colspan="3">เกี่ยวข้องเป็น</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;" colspan="5"></td>
+              </tr>
+
+              <tr>
+                <td colspan="2">รู้จักมานาน</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;" colspan="10"></td> ปี
+                <td>อาชีพ</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;" colspan="2"></td>
+              </tr>
+
+              <tr>
+                <td colspan="2">ที่อยู่</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;" colspan="10"></td>
+                <td>โทร</td>
+                <td style="border-bottom: black 1px dotted; text-align:center;" colspan="3"></td>
+
+              </tr>
+
+
+
+
+            </tbody>
+          </table>
+        </form>
+      </form>
+      <div style="margin-top:30px;"></div>
+      <form style="border:1px solid black; width: 91%;">
+        <table style="width:90%" border="1">
+          <tr>
+            <td colspan="2" style="border-bottom:1px solid black;">
+              <strong>การศึกษา</strong>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" name="checkbox" id="checkbox">
+              <label for="checkbox">ไม่เคยเข้าเรียนในสถานศึกษาใด</label>
+            </td>
+            <td>
+              <input type="checkbox" name="checkbox4" id="checkbox4">
+              <label for="checkbox4">ยังศึกษาอยู่ชั้น</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" name="checkbox2" id="checkbox2">
+              <label for="checkbox2">จบการศึกษาชั้น</label>
+            </td>
+            <td>ชื่อสถานศึกษา...........................................</td>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" name="checkbox3" id="checkbox3">
+              <label for="checkbox3">เมื่อ
+                พ.ศ........................................อายุ................ปี</label>
+            </td>
+            <td>
+              อำเภอ...................................................................................
+            </td>
+          </tr>
+          <tr>
+            <td>
+              ชื่อสถานศึกษา...............................................................................................
+            </td>
+            <td>
+              จังหวัด....................................................................................
+            </td>
+          </tr>
+          <tr>
+            <td>อำเภอ...................................จังหวัด....................................
+            </td>
+            <td>ชื่ออาจารย์ที่ปรึกษา..................................................................
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              รายละเอียดเพิ่มเติม.......................................................................................................................................................................................
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              .....................................................................................................................................................................................................
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              .....................................................................................................................................................................................................
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              .....................................................................................................................................................................................................
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              .....................................................................................................................................................................................................
+            </td>
+          </tr>
+
+        </table>
+      </form>
+
+
+
+
+      <div style="margin-left:30px;"></div>
+      <form style="border:2px solid black; margin-top:30px; width: 91%;">
+        <form style="border-bottom:2px solid black;">
+          <table style="width:90%">
+            <tbody>
+
+              <tr>
+                <td style="font-weight: bold;">การประกอบอาชีพ</td>
+
+              </tr>
+            </tbody>
+          </table>
+        </form>
+
+        <form style="border-bottom:2px solid black;">
+          <table style="width:100%">
+            <tbody>
+              <tr>
+                <td style="font-weight: bold;">ข้าพเจ้าเคยประกอบอาชีพดังนี้</td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+
+        <form style="border-bottom:2px solid black;">
+          <table style="width:100%; text-align:center;" border="1">
+            <tr>
+              <th>ปี พ.ศ.</th>
+              <th>ลักษณะงาน/สถานที่ทำงาน</th>
+              <th>ตำแหน่ง</th>
+              <th>รายได้ต่อวัน/เดือน/ปี</th>
+              <th>เหตุที่ออกจากงาน/เลิกอาชีพ</th>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+        </form>
+
+      </form>
+
+
+      <!-- //ปิดหน้า5 -->
+
+      <!-- //เปิดลงชื่อหน้า5 -->
+      <form>
+        <table style="width:100%" border="0">
+          <tr>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 10%;"></td>
+            <td style="width: 10%;"></td>
+
+          </tr>
+          <tr>
+            <td style="height: 20px;" colspan="11"></td>
+          </tr>
+          <tr>
+            <td colspan="10"></td>
+            <td colspan="2">( ลงชื่อ )</td>
+            <td style="border-bottom: black 1px dotted;" colspan="3"></td>จำเลย
+          </tr>
+
+          <tr>
+            <td style="height: 30px;" colspan="11"></td>
+          </tr>
+          <tr>
+            <td colspan="3"></td>
+            <td colspan="3"></td>
+            <td colspan="3"></td>
+            <td></td>
+            <td>( 6 )</td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td style="height: 30px;" colspan="11"></td>
+          </tr>
+
+        </table>
+      </form>
+      <!-- //ปิดลงชื่อหน้า5 -->
+
+      <!-- //เปิดหน้า6 -->
+      <form style="border:2px solid black; width: 91%;">
+
+        <form>
+          <table style="width: 100%;">
+            <tbody style="margin-bottom:5px;">
+              <tr>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+              </tr>
+
+
+              <tr>
+                <td></td>
+                <td colspan="5">รายละเอียดเพิ่มเติม</td>
+              </tr>
+              <tr>
+                <td style="height: 20px;" colspan="14"></td>
+              </tr>
+              <tr>
+                <td style="border-bottom: black 1px dotted;" colspan="20"></td>
+              </tr>
+
+              <tr>
+                <td style="height: 20px;" colspan="9"></td>
+              </tr>
+              <tr>
+                <td style="border-bottom: black 1px dotted;" colspan="20"></td>
+              </tr>
+
+              <tr>
+                <td style="height: 20px;" colspan="9"></td>
+              </tr>
+              <tr>
+                <td style="border-bottom: black 1px dotted;" colspan="20"></td>
+              </tr>
+
+              <tr>
+                <td style="height: 20px;" colspan="9"></td>
+              </tr>
+              <tr>
+                <td style="border-bottom: black 1px dotted;" colspan="20"></td>
+              </tr>
+
+              <tr>
+                <td style="height: 20px;" colspan="9"></td>
+              </tr>
+              <tr>
+                <td style="border-bottom: black 1px dotted;" colspan="20"></td>
+              </tr>
+
+
+              <tr>
+                <td colspan="3">ปัจจุบันข้าพเจ้า</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="5">ไม่ได้ประกอบอาชีพ เพราะ</td>
+                <td style="border-bottom: black 1px dotted;" colspan="11"></td>
+              </tr>
+
+              <tr>
+                <td colspan="7">แต่ข้าพเจ้าได้รับเงินค่าใช้จ่ายจาก</td>
+                <td style="border-bottom: black 1px dotted;" colspan="13"></td>
+              </tr>
+
+              <tr>
+                <td colspan="3"></td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="3">ประกอบอาชีพ</td>
+                <td style="border-bottom: black 1px dotted;" colspan="6"></td>
+                <td colspan="2">ตำแหน่ง</td>
+                <td style="border-bottom: black 1px dotted;" colspan="5"></td>
+              </tr>
+              <tr>
+
+                <td colspan="4">รายได้ วัน/เดือน/ปีละ</td>
+                <td style="border-bottom: black 1px dotted;" colspan="7"></td> บาท
+                <td colspan="3">ทำงานนี้มานาน</td>
+                <td style="border-bottom: black 1px dotted;" colspan="6"></td>
+              </tr>
+
+              <tr>
+
+                <td colspan="4">ชื่อสถานที่ทำงาน</td>
+                <td style="border-bottom: black 1px dotted;" colspan="10"></td>
+                <td>โทร</td>
+                <td style="border-bottom: black 1px dotted;" colspan="5"></td>
+              </tr>
+              <tr>
+
+                <td colspan="5">ชื่อนายจ้าง/หัวหน้างาน</td>
+                <td style="border-bottom: black 1px dotted;" colspan="9"></td>
+                <td>โทร</td>
+                <td style="border-bottom: black 1px dotted;" colspan="5"></td>
+              </tr>
+
+              <tr>
+                <td colspan="7">นอกจากทำงานประจำแล้ว ข้าพเจ้า</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="5">ไม่มีอาชีพเสริมอื่น ๆ อีก</td>
+              </tr>
+
+              <tr>
+                <td colspan="7"></td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="3">มีอาชีพเสริม</td>
+              </tr>
+
+              <tr>
+
+                <td>คือ</td>
+                <td style="border-bottom: black 1px dotted;" colspan="10"></td>
+
+              </tr>
+
+
+              <tr>
+
+                <td colspan="4">สถานที่ทำงาน</td>
+                <td style="border-bottom: black 1px dotted;" colspan="10"></td>
+                <td>โทร</td>
+                <td style="border-bottom: black 1px dotted;" colspan="5"></td>
+              </tr>
+
+              <tr>
+
+                <td colspan="5">มีรายได้ วัน/เดือน/ปีละ</td>
+                <td style="border-bottom: black 1px dotted;" colspan="2"></td>บาท
+
+              </tr>
+              <tr>
+
+                <td colspan="7">ข้าพเจ้ามีความรู้ความสามาถพิเศษด้าน</td>
+                <td style="border-bottom: black 1px dotted;" colspan="10"></td>
+
+              </tr>
+
+              <tr>
+
+                <td colspan="5">สถานะทางการเงิน/หนี้สิน</td>
+                <td style="border-bottom: black 1px dotted;" colspan="13"></td>
+
+              </tr>
+
+            </tbody>
+          </table>
+        </form>
+      </form>
+
+      <div style="margin-top:30px;"></div>
+      <form style="border:2px solid black; width: 91%;">
+        <form style="border-bottom:2px solid black;">
+          <table style="width:100%">
+            <tbody>
+              <tr>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+
+              </tr>
+              <tr>
+                <td style="font-weight: bold; width:50%;">การรับราชการทหารกองประจำการ</td>
+
+              </tr>
+            </tbody>
+          </table>
+        </form>
+
+        <form style="border-bottom:2px solid black;">
+          <table style="width:100%">
+            <tbody style="margin-bottom:5px;">
+              <tr>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+              </tr>
+              <tr>
+                <td>ข้าพเจ้า</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="8">ไม่เคยรับราชการทหารกองประจำการ เพราะ</td>
+                <td style="border-bottom: black 1px dotted;" colspan="10"></td>
+              </tr>
+
+              <tr>
+                <td></td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="7">เคยเป็นทหารกองประจำการเมื่อ พ.ศ.</td>
+                <td style="border-bottom: black 1px dotted;" colspan="5"></td>
+                <td>สังกัด</td>
+                <td style="border-bottom: black 1px dotted;" colspan="5"></td>
+              </tr>
+
+              <tr>
+                <td></td>
+                <td>ที่ตั้ง</td>
+                <td style="border-bottom: black 1px dotted;" colspan="18"></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td colspan="5">เคยปฎิบัติราชการพิเศษที่</td>
+                <td style="border-bottom: black 1px dotted;" colspan="14"></td>
+              </tr>
+
+              <tr>
+                <td></td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="2">ไม่เคย</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="8">เคย กระทำผิดในระหว่างเป็นทหาร</td>
+                <td style="border-bottom: black 1px dotted;" colspan="6"></td> ครั้ง
+              </tr>
+
+              <tr>
+                <td>คือ</td>
+                <td style="border-bottom: black 1px dotted;" colspan="20"></td>
+              </tr>
+
+            </tbody>
+          </table>
+        </form>
+      </form>
+
+
+      <!-- //ปิดหน้า6 -->
+      <!-- //เปิดลงชื่อหน้า6 -->
+      <form>
+        <table style="width:100%" border="0">
+          <tr>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 10%;"></td>
+            <td style="width: 10%;"></td>
+
+          </tr>
+          <tr>
+            <td style="height: 20px;" colspan="11"></td>
+          </tr>
+          <tr>
+            <td colspan="10"></td>
+            <td colspan="2">( ลงชื่อ )</td>
+            <td style="border-bottom: black 1px dotted;" colspan="3"></td>จำเลย
+          </tr>
+
+          <tr>
+            <td style="height: 30px;" colspan="11"></td>
+          </tr>
+          <tr>
+            <td colspan="3"></td>
+            <td colspan="3"></td>
+            <td colspan="3"></td>
+            <td></td>
+            <td>( 7 )</td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td style="height: 30px;" colspan="11"></td>
+          </tr>
+
+        </table>
+      </form>
+      <!-- //ปิดลงชื่อหน้า6 -->
+
+      <!-- //เปิดหน้า7 -->
+
+      <form style="border:2px solid black; width: 91%;">
+        <form style="border-bottom:2px solid black;">
+          <table style="width:100%">
+            <tbody>
+              <tr>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+
+              </tr>
+              <tr>
+                <td style="font-weight: bold;" colspan="5">นิสัยและความประพฤติ</td>
+                <td colspan="5">(ตอบได้มากกว่า 1 ข้อ)</td>
+
+              </tr>
+            </tbody>
+          </table>
+        </form>
+
+        <form>
+          <table style="width:100%">
+            <tbody style="margin-bottom:5px;">
+              <tr>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+              </tr>
+              <tr>
+                <td colspan="7">ข้าพเจ้าใช้เวลาว่างส่วนใหญ่</td>
+
+              </tr>
+
+              <tr>
+                <td></td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="5">ทำงานพิเศษหรืองานบ้าน</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="3">อ่านหนังสือ</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="4">นอนพักผ่อนที่บ้าน</td>
+              </tr>
+
+              <tr>
+                <td></td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="5">ฟัง/เล่นดนตรี</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="3">ไปหาเพื่อน</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="4">เล่นกีฬา</td>
+                <td style="border-bottom: black 1px dotted;" colspan="2"></td>
+              </tr>
+
+              <tr>
+                <td></td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="2">ไปเที่ยว</td>
+                <td style="border-bottom: black 1px dotted;" colspan="3"></td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="3">ไม่มีเวลาว่าง</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="4">อิื่นๆ</td>
+                <td style="border-bottom: black 1px dotted;" colspan="2"></td>
+              </tr>
+
+              <tr>
+                <td colspan="9">ข้าพเจ้ามีนิสัย / อารมณ์ความรู้สึก</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="5">คล้อยตามผู้อื่นได้ง่าย</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="5">เป็นคนร่าเริ่งชอบพบปะผู้อื่น</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="5">รู้สึกเบื่อหน่าย ท้อแท้</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="5">ไม่เชื่ออะไรง่ายๆ</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="5">ใจเย็น รับฟังผู้อื่น</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="5">รู้สึกไม่มีความสุข/เศร้าหมอง</td>
+              </tr>
+
+              <tr>
+                <td></td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="5">เป็นคนเฉยๆไม่ชอบพบปะผู้อื่น</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="5">หงุดหงิด เอาแต่ใจตนเอง</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="5">รู้สึกอ่อนไหวต่อคำวิจารณ์ของผู้อื่น</td>
+              </tr>
+
+              <tr>
+                <td></td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="5">ต้องการเป็นที่ยอมรับของผู้อื่น</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="5">อารมณ์ร้อน วู่วาม โกรธง่าย</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="5">มักมีเรื่องทะเลาะบาดหมางกับผู้อื่น</td>
+              </tr>
+
+              <tr>
+                <td></td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="8">นอนไม่หลับ เพราะคิดมาก หรือกังวลใจ</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="8">คนอะไรวนไปวนมา ตัดสินใจไม่ค่อยได้</td>
+
+              </tr>
+
+
+              <tr>
+                <td></td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="8">มีอาการเจ็บป่วยทางกายโดยหาสาเหตุไม่ได้</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="8">ทำอะไรลงไปโดยไม่สามารถควบคุมตัวเองได้</td>
+
+              </tr>
+
+              <tr>
+                <td></td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="17">เวลาโกรธ มักจะระบายความรู้สึกกับ สิ่งของ สัตว์เลี้ยง บุคคลรอบข้าง
+                  หรือทำร้ายตัวเอง</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="17">เคยก่อเหตุทำร้ายร่างกายบุคคลในครอบครัว หรือบุคคลอื่น</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="17">เคยลักทรัพย์สินของบุคคลในครอบครัว หรือผู้อื่น</td>
+              </tr>
+
+              <tr>
+                <td></td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="17">มักจะไม่ทำตามกฎระเบียบ แบบแผนของสังคม</td>
+              </tr>
+
+              <tr>
+                <td></td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td>อื่น ๆ</td>
+                <td style="border-bottom: black 1px dotted;" colspan="16"></td>
+              </tr>
+
+              <tr>
+                <td>ข้าพเจ้า</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="3">ไม่สูบบุหรี่</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="4">สูบบุหรี่นานๆครั้ง</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="5">สูบบุหรี่ ประจำวันละ</td>
+                <td style="border-bottom: black 1px dotted;" colspan="2"></td>ซอง
+              </tr>
+
+              <tr>
+                <td></td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="3">ไม่ดื่นสุรา</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="4">ดื่มสุรานานๆครั้ง</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="5">ดื่มสุรา ประจำวันละ</td>
+                <td style="border-bottom: black 1px dotted;" colspan="2"></td>ซอง
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="3">ไม่เล่นการพนัน</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="5">เล่นการพนัน</td>
+                <td style="border-bottom: black 1px dotted;" colspan="9"></td>
+              </tr>
+
+              <tr>
+                <td colspan="20">บุคคลที่ข้าพเจ้าคบเป็นเพื่อนโดยทั่วไปไม่มีความประพฤติเสียหายโดย</td>
+              </tr>
+
+              <tr>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="5">เป็นเพื่อนร่วมสถานศึกษา</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="5">เป็นเพื่อนร่วมงาน</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="5">เป็นเพื่อนบ้าน</td>
+
+              </tr>
+
+              <tr>
+                <td colspan="5">บางคนมีความประพฤติ เช่น</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="6">เสพสารเสพติดเป็นครั้งคราว</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="7">เคยถูกจับกุมดำเนินคดี</td>
+              </tr>
+
+              <tr>
+                <td colspan="5"></td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="6">บางคนเป็นผู้ค้ายาเสพติด</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="7">มีเรื่องทะเลาะวิวาทกับผู้อื่นเป็นครั้งคราว</td>
+              </tr>
+
+
+            </tbody>
+          </table>
+        </form>
+      </form>
+
+      <div style="margin-top:30px;"></div>
+      <form style="border:2px solid black; width: 91%;">
+        <form>
+          <table style="width: 100%;">
+            <tbody style="margin-bottom:5px;">
+              <tr>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+              </tr>
+
+
+              <tr>
+                <td></td>
+                <td style="font-weight: bold;" colspan="5">นิสัยความประพฤติอื่นๆ</td>
+              </tr>
+
+              <tr>
+                <td style="border-bottom: black 1px dotted;" colspan="20"></td>
+              </tr>
+
+            </tbody>
+          </table>
+        </form>
+      </form>
+
+      <!-- //ปิดหน้า7 -->
+
+      <!-- //เปิดลงชื่อหน้า7 -->
+      <form>
+        <table style="width:100%" border="0">
+          <tr>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 10%;"></td>
+            <td style="width: 10%;"></td>
+
+          </tr>
+          <tr>
+            <td style="height: 20px;" colspan="11"></td>
+          </tr>
+          <tr>
+            <td colspan="10"></td>
+            <td colspan="2">( ลงชื่อ )</td>
+            <td style="border-bottom: black 1px dotted;" colspan="3"></td>จำเลย
+          </tr>
+
+          <tr>
+            <td style="height: 30px;" colspan="11"></td>
+          </tr>
+          <tr>
+            <td colspan="3"></td>
+            <td colspan="3"></td>
+            <td colspan="3"></td>
+            <td></td>
+            <td>( 8 )</td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td style="height: 30px;" colspan="11"></td>
+          </tr>
+
+        </table>
+      </form>
+      <!-- //ปิดลงชื่อหน้า7 -->
+
+      <form style="border:1px solid black; width:90%">
+        <table style="width:100%">
+          <tbody style="margin-bottom:5px;">
+            <tr>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+            </tr>
+            <tr>
+              <td style="font-weight: bold; border-bottom:1px solid black;" colspan="20">
+                สุขภาพและรูปพรรณ</td>
+            </tr>
+            <tr>
+
+              <td colspan="4">สุขภาพร่างกาย</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="2">แข็งแรง</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="4">ไม่ค่อยแข็งแรง</td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="2">ทรุดโทรม</td>
+            </tr>
+            <tr>
+              <td colspan="4"></td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="4">มีโรคประจำตัวคือ</td>
+              <td style="border-bottom: black 1px dotted;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="5"></td>
+              <td colspan="7">เคยป่วยเป็นโรคทางกายที่ร้ายแรง คือ</td>
+              <td style="border-bottom: black 1px dotted;" colspan="8"></td>
+            </tr>
+            <tr>
+              <td colspan="5"></td>
+              <td colspan="4">เคยเข้ารับการรักษาที่</td>
+              <td style="border-bottom: black 1px dotted;" colspan="5"></td>
+              <td>เมื่อ</td>
+              <td style="border-bottom: black 1px dotted;" colspan="5"></td>
+            </tr>
+            <tr>
+              <td colspan="5"></td>
+              <td colspan="4">ผลการรักษา</td>
+              <td style="border-bottom: black 1px dotted;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="5"></td>
+              <td colspan="4">อาการปัจจุบัน</td>
+              <td style="border-bottom: black 1px dotted;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="10">สุขภาพจิต/ภาวะทางอารมณ์และบุคลิกภาพ</td>
+            </tr>
+            <tr>
+              <td colspan="4"></td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td>ปกติ</td>
+              <td style="border-bottom: black 1px dotted;" colspan="14"></td>
+            </tr>
+            <tr>
+              <td colspan="4"></td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td colspan="8">เคยมีการป่วยทางจิต ประสาท คือ</td>
+              <td style="border-bottom: black 1px dotted;" colspan="7"></td>
+            </tr>
+            <tr>
+              <td colspan="5"></td>
+              <td colspan="4">เคยเข้ารับการรักษาที่</td>
+              <td style="border-bottom: black 1px dotted;" colspan="5"></td>
+              <td>เมื่อ</td>
+              <td style="border-bottom: black 1px dotted;" colspan="5"></td>
+            </tr>
+            <tr>
+              <td colspan="5"></td>
+              <td colspan="4">ผลการรักษา</td>
+              <td style="border-bottom: black 1px dotted;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="5"></td>
+              <td colspan="4">อาการปัจจุบัน</td>
+              <td style="border-bottom: black 1px dotted;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td style="font-weight: bold;" colspan="2">ข้อสังเกต</td>
+              <td colspan="7">(เกี่ยวกับบุคลิกภาพ ท่าทางของจำเลย)</td>
+              <td style="border-bottom: black 1px dotted;" colspan="11"></td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+
+
+      <div style="margin-top:30px;"></div>
+      <form style="border-bottom:1px solid black; width: 91%;">
+        <table id="tablecollapse" border="1">
+          <tr>
+            <td colspan="4">
+              <strong>รูปร่าง</strong>
+            </td>
+            <td colspan="4">
+              <strong>รูปหน้า </strong>
+            </td>
+            <td colspan="4">
+              <strong>ศีรษะ</strong>
+            </td>
+          </tr>
+          <tr>
+            <td width="6%">
+              <span>
+
+                เตี้ย
+              </span>
+            </td>
+            <td width="10%">
+              <span>
+
+                สันทัด
+
+              </span>
+            </td>
+            <td width="5%">
+              <span>
+
+                สูง
+
+              </span>
+            </td>
+            <td width="7%">
+              <span>.......</span>
+            </td>
+            <td width="7%">
+              <span>
+
+                กลม
+
+              </span>
+            </td>
+            <td width="9%">
+              <span>
+
+                รูปไข่
+
+              </span>
+            </td>
+            <td width="17%">
+              <span>
+
+                สามเหลี่ยม
+
+              </span>
+            </td>
+            <td width="10%">
+              <span>..........</span>
+            </td>
+            <td width="6%">
+              <span>
+
+                ทุย
+
+              </span>
+            </td>
+            <td width="7%">
+              <span>
+
+                แบน
+
+              </span>
+            </td>
+            <td width="6%">
+              <span>
+
+                เถิก
+
+              </span>
+            </td>
+            <td width="10%">
+              <span>.........</span>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <strong>สีตา</strong>
+            </td>
+            <td colspan="2">
+              <strong>สีผม</strong>
+            </td>
+            <td colspan="4">
+              <strong>สีผิว</strong>
+            </td>
+            <td colspan="2">
+              <strong>ส่วนสูง</strong>
+            </td>
+            <td colspan="2">
+              <strong>น้ำหนัก</strong>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span>ดำ</span>
+            </td>
+            <td>
+              <span>........</span>
+            </td>
+            <td>
+              <span>
+
+                ดำ
+
+              </span>
+            </td>
+            <td>.......</td>
+            <td>
+              ดำ
+            </td>
+            <td>
+              ดำแดง
+            </td>
+            <td>
+              ขาว
+            </td>
+            <td>......</td>
+            <td colspan="2">&nbsp;ซม.</td>
+            <td colspan="2">&nbsp;กก.</td>
+          </tr>
+
+        </table>
+        <table width="41%" border="1" id="tablecollapse">
+          <tr>
+            <td width="15%">
+              <strong>ตำหนิ/พิการ</strong>
+            </td>
+            <td width="85%">&nbsp;</td>
+          </tr>
+        </table>
+        <table width="41%" border="1" id="tablecollapse">
+          <tr>
+            <td width="15%">
+              <input type="checkbox" name="ไม่มี" id="ไม่มี">
+
+              <label for="ไม่มี">ไม่มี</label>
+            </td>
+            <td>
+              <input type="checkbox" name="มี" id="มี">
+
+              <label for="มี">มี ร่องรอยการกรีด ที่</label> ......................................
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" name="ไม่มี2" id="ไม่มี2">
+              <label for="ไม่มี2">ไม่มี</label>
+            </td>
+            <td>
+              <input type="checkbox" name="มี2" id="มี2">
+
+              <label for="มี2">มี ร่องรอยเข็มฉีดยา ที่</label> ......................................
+            </td>
+          </tr>
+        </table>
+        <table id="tablecollapse" border="1">
+          <tr>
+            <td width="206">
+              <span>
+                <strong>รอยสัก / รูป</strong>
+              </span>
+            </td>
+            <td width="233">
+              <strong>บริเวณ</strong>
+            </td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+        </table>
+
+      </form>
+
+
+
+      <!-- //เปิดลงชื่อหน้า8 -->
+      <form>
+        <table style="width:100%" border="0">
+          <tr>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 10%;"></td>
+            <td style="width: 10%;"></td>
+
+          </tr>
+          <tr>
+            <td style="height: 20px;" colspan="11"></td>
+          </tr>
+          <tr>
+            <td colspan="10"></td>
+            <td colspan="2">( ลงชื่อ )</td>
+            <td style="border-bottom: black 1px dotted;" colspan="3"></td>จำเลย
+          </tr>
+
+          <tr>
+            <td style="height: 30px;" colspan="11"></td>
+          </tr>
+          <tr>
+            <td colspan="3"></td>
+            <td colspan="3"></td>
+            <td colspan="3"></td>
+            <td></td>
+            <td>( 9 )</td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td style="height: 30px;" colspan="11"></td>
+          </tr>
+
+        </table>
+      </form>
+      <!-- //ปิดลงชื่อหน้า8 -->
+
+      <!-- //เปิดหน้า9 -->
+      <form style="border:2px solid black; width:91%;">
+        <form style="border-bottom:2px solid black;">
+          <table style="width:100%">
+            <tbody>
+              <tr>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+
+              </tr>
+              <tr>
+                <td style="font-weight: bold;" colspan="6">2.ประวัติการกระทำความผิด</td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+
+        <form>
+          <table style="width:100%">
+            <tbody style="margin-bottom:5px;">
+              <tr>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+              </tr>
+              <tr>
+                <td style="font-weight: bold;">ข้าพเจ้า</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td style="font-weight: bold;" colspan="18">
+                  ไม่มีคดีอาญาอื่นๆที่ยังอยู่ในชั้นพนักงานสอบสวน
+                  หรืออยู่ในชั้นศาลขณะนี้
+                </td>
+              </tr>
+
+              <tr>
+                <td></td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td style="font-weight: bold;" colspan="18">มี
+                  คดีอาญาอื่นๆที่ยังอยู่ในชั้นพนักงานสอบสวน หรืออยุ่ในชั้นศาลขณะนี้ ดังนี้</td>
+
+              </tr>
+              <tr>
+                <td colspan="3"></td>
+                <td colspan="4">1. สถานีตำรวจ/ศาล</td>
+                <td style="border-bottom: black 1px dotted;" colspan="5"></td>
+                <td colspan="4">ฐานความผิด</td>
+                <td style="border-bottom: black 1px dotted;" colspan="5"></td>
+              </tr>
+              <tr>
+                <td colspan="3">ข้อมูลเพิ่มเติม</td>
+                <td style="border-bottom: black 1px dotted;" colspan="17"></td>
+
+              </tr>
+              <tr>
+                <td colspan="3"></td>
+                <td colspan="4">2. สถานีตำรวจ/ศาล</td>
+                <td style="border-bottom: black 1px dotted;" colspan="5"></td>
+                <td colspan="4">ฐานความผิด</td>
+                <td style="border-bottom: black 1px dotted;" colspan="5"></td>
+              </tr>
+              <tr>
+                <td colspan="3">ข้อมูลเพิ่มเติม</td>
+                <td style="border-bottom: black 1px dotted;" colspan="17"></td>
+
+              </tr>
+            </tbody>
+          </table>
+        </form>
+
+        <form>
+          <table style="width:100%">
+            <tbody style="margin-bottom:5px;">
+              <tr>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+              </tr>
+              <tr>
+                <td style="font-weight: bold;" colspan="7">ข้าพเจ้า เคยมีประวัติการถูกจับกุมดำเนินคดี
+                </td>
+                <td class="colorfont" style="border-bottom: black 1px dotted; text-align: center;">
+                  <!-- {{countprisonerResults}}</td> -->
+                <td style="font-weight: bold;" colspan="4">ครั้ง ดังนี้</td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+
+        <form>
+          <table style="width:100%">
+            <tbody style="margin-bottom:5px;" *ngFor="let prisonerItem of prisonerResults;let i = index">
+              <tr>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+              </tr>
+
+              <tr>
+                <td style="font-weight: bold; text-decoration: underline;" colspan="2">ครั้งที่ {{i+1 |
+                      thainumber:i+1}}</td>
+                <td colspan="2">สถานีตำรวจ</td>
+                <td style="border-bottom: black 1px dotted;"></td>
+                <td colspan="1">ข้อหา</td>
+                <td class="colorfont" style="border-bottom: black 1px dotted; " colspan="14" *ngIf="true">
+                  {{prisonerItem.allegation}}</td>
+              </tr>
+
+              <tr>
+                <td colspan="2">เมื่อวันที่</td>
+                <!-- <td class="colorfont" style="border-bottom: black 1px dotted; text-align:center;" colspan="3" *ngFor="let prisonerItem of prisonerResults">
+                      <div *ngIf="prisonerShow">{{prisonerItem.sentenceDate}}</div>
+                    </td> -->
+                <td class="colorfont" style="border-bottom: black 1px dotted; " colspan="7" *ngIf="true">{{prisonerItem.sentenceDate}}</td>
+                <td colspan="4">ใช้ชื่อในการกระทำผิดว่า</td>
+                <td style="border-bottom: black 1px dotted;" colspan="7"></td>
+              </tr>
+
+              <tr>
+                <td style="font-weight: bold; text-decoration: underline;" colspan="2">ผลคดี</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td style="font-weight: bold;" colspan="5">ได้รับการปล่อยตัวพ้นข้อหา</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td style="font-weight: bold;" colspan="4">ในชั้นตำรวจ/อัยการ</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td style="font-weight: bold;" colspan="2">ในชั้นศาล</td>
+                <td style="border-bottom: black 1px dotted;" colspan="4"></td>
+              </tr>
+              <tr>
+                <td colspan="2"></td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td style="font-weight: bold;" colspan="4">ได้รับโทษ ศาล</td>
+                <td style="border-bottom: black 1px dotted;"></td>
+                <td style="font-weight: bold;" colspan="2">พิพากษา</td>
+                <td class="colorfont" style="border-bottom: black 1px dotted; " colspan="7" *ngIf="true">
+                  {{prisonerItem.judgement}}</td>
+              </tr>
+
+              <tr>
+                <td colspan="2"></td>
+                <td style="font-weight: bold;" colspan="4">พ้นโทษจำคุกจาก</td>
+                <td class="colorfont" style="border-bottom: black 1px dotted; " colspan="7" *ngIf="true">
+                  {{prisonerItem.prisonName}}</td>
+                <td style="font-weight: bold;">เมื่อ</td>
+                <td class="colorfont" style="border-bottom: black 1px dotted; " colspan="4" *ngIf="true">{{prisonerItem.releaseDate}}</td>
+              </tr>
+
+              <tr>
+                <td colspan="2"></td>
+                <td style="font-weight: bold;">คดีนี้</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td>ผ่าน</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="14">ไม่ผ่าน ขั้นตอนการสืบเสาะและพินิจ/การควบคุมและสอดส่อง</td>
+              </tr>
+
+              <tr>
+                <td colspan="2"></td>
+                <td colspan="5">ผลการคุมความประพฤติ</td>
+                <td style="border-bottom: black 1px dotted;" colspan="13"></td>
+              </tr>
+
+            </tbody>
+          </table>
+        </form>
+      </form>
+
+      <!-- ปิดหน้า9 -->
+
+      <!-- //เปิดลงชื่อหน้า9 -->
+      <form>
+        <table style="width:100%" border="0">
+          <tr>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 10%;"></td>
+            <td style="width: 10%;"></td>
+
+          </tr>
+          <tr>
+            <td style="height: 20px;" colspan="11"></td>
+          </tr>
+          <tr>
+            <td colspan="10"></td>
+            <td colspan="2">( ลงชื่อ )</td>
+            <td style="border-bottom: black 1px dotted;" colspan="3"></td>จำเลย
+          </tr>
+
+          <tr>
+            <td style="height: 30px;" colspan="11"></td>
+          </tr>
+          <tr>
+            <td colspan="3"></td>
+            <td colspan="3"></td>
+            <td colspan="3"></td>
+            <td></td>
+            <td colspan="2">( 10 )</td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td style="height: 30px;" colspan="11"></td>
+          </tr>
+
+        </table>
+      </form>
+      <!-- //ปิดลงชื่อหน้า9-->
+
+      <!-- //เปิดหน้า10 -->
+      <div style="margin-top:30px;"></div>
+      <!-- <form style="border:2px solid black;">
+            <form>
+              <table style="width: 100%;">
+                <tbody style="margin-bottom:5px;">
+                  <tr>
+                    <td style="width: 5%;"></td>
+                    <td style="width: 5%;"></td>
+                    <td style="width: 5%;"></td>
+                    <td style="width: 5%;"></td>
+                    <td style="width: 5%;"></td>
+                    <td style="width: 5%;"></td>
+                    <td style="width: 5%;"></td>
+                    <td style="width: 5%;"></td>
+                    <td style="width: 5%;"></td>
+                    <td style="width: 5%;"></td>
+                    <td style="width: 5%;"></td>
+                    <td style="width: 5%;"></td>
+                    <td style="width: 5%;"></td>
+                    <td style="width: 5%;"></td>
+                    <td style="width: 5%;"></td>
+                    <td style="width: 5%;"></td>
+                    <td style="width: 5%;"></td>
+                    <td style="width: 5%;"></td>
+                    <td style="width: 5%;"></td>
+                    <td style="width: 5%;"></td>
+                  </tr>
+
+                  <tr>
+                    <td style="font-weight: bold; text-decoration: underline;" colspan="2">ครั้งที่4</td>
+                    <td colspan="3">สถานีตำรวจ</td>
+                    <td style="border-bottom: black 1px dotted;" colspan="5"></td>
+                    <td colspan="2">ข้อหา</td>
+                    <td style="border-bottom: black 1px dotted;" colspan="5"></td>
+                  </tr>
+
+                  <tr>
+                    <td colspan="3">เมื่อวันที่</td>
+                    <td style="border-bottom: black 1px dotted;"></td>
+                    <td colspan="2">เดือน</td>
+                    <td style="border-bottom: black 1px dotted;" colspan="2"></td>
+                    <td colspan="2">พ.ศ.</td>
+                    <td style="border-bottom: black 1px dotted;"></td>
+                    <td colspan="5">ใช้ชื่อในการกระทำผิดว่า</td>
+                    <td style="border-bottom: black 1px dotted;" colspan="5"></td>
+                  </tr>
+
+                  <tr>
+                    <td style="font-weight: bold; text-decoration: underline;" colspan="2">ผลคดี</td>
+                    <td>
+                      <input type="checkbox" />
+                    </td>
+                    <td style="font-weight: bold;" colspan="6">ได้รับการปล่อยตัวพ้นข้อหา</td>
+                    <td>
+                      <input type="checkbox" />
+                    </td>
+                    <td style="font-weight: bold;" colspan="4">ในชั้นตำรวจ/อัยการ</td>
+                    <td>
+                      <input type="checkbox" />
+                    </td>
+                    <td style="font-weight: bold;" colspan="3">ในชั้นศาล</td>
+                    <td style="border-bottom: black 1px dotted;" colspan="2"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <input type="checkbox" />
+                    </td>
+                    <td style="font-weight: bold;" colspan="4">ได้รับโทษ ศาล</td>
+                    <td style="border-bottom: black 1px dotted;"></td>
+                    <td style="font-weight: bold;" colspan="2">พิพากษา</td>
+                    <td style="border-bottom: black 1px dotted;" colspan="12"></td>
+                  </tr>
+
+                  <tr>
+                    <td colspan="2"></td>
+                    <td style="font-weight: bold;" colspan="4">พ้นโทษจำคุกจาก</td>
+                    <td style="border-bottom: black 1px dotted;" colspan="6"></td>
+                    <td style="font-weight: bold;">เมื่อ</td>
+                    <td style="border-bottom: black 1px dotted;" colspan="6"></td>
+                  </tr>
+
+                  <tr>
+                    <td colspan="2"></td>
+                    <td style="font-weight: bold;">คดีนี้</td>
+                    <td>
+                      <input type="checkbox" />
+                    </td>
+                    <td>ผ่าน</td>
+                    <td>
+                      <input type="checkbox" />
+                    </td>
+                    <td colspan="14">ไม่ผ่าน ขั้นตอนการสืบเสาะและพินิจ/การควบคุมและสอดส่อง</td>
+                  </tr>
+
+                  <tr>
+                    <td colspan="2"></td>
+                    <td colspan="5">ผลการคุมความประพฤติ</td>
+                    <td style="border-bottom: black 1px dotted;" colspan="6"></td>
+                  </tr>
+
+
+
+                  <tr>
+                    <td style="font-weight: bold; text-decoration: underline;" colspan="2">ครั้งที่5</td>
+                    <td colspan="3">สถานีตำรวจ</td>
+                    <td style="border-bottom: black 1px dotted;" colspan="5"></td>
+                    <td colspan="2">ข้อหา</td>
+                    <td style="border-bottom: black 1px dotted;" colspan="5"></td>
+                  </tr>
+
+                  <tr>
+                    <td colspan="3">เมื่อวันที่</td>
+                    <td style="border-bottom: black 1px dotted;"></td>
+                    <td colspan="2">เดือน</td>
+                    <td style="border-bottom: black 1px dotted;" colspan="2"></td>
+                    <td colspan="2">พ.ศ.</td>
+                    <td style="border-bottom: black 1px dotted;"></td>
+                    <td colspan="5">ใช้ชื่อในการกระทำผิดว่า</td>
+                    <td style="border-bottom: black 1px dotted;" colspan="5"></td>
+                  </tr>
+
+                  <tr>
+                    <td style="font-weight: bold; text-decoration: underline;" colspan="2">ผลคดี</td>
+                    <td>
+                      <input type="checkbox" />
+                    </td>
+                    <td style="font-weight: bold;" colspan="6">ได้รับการปล่อยตัวพ้นข้อหา</td>
+                    <td>
+                      <input type="checkbox" />
+                    </td>
+                    <td style="font-weight: bold;" colspan="4">ในชั้นตำรวจ/อัยการ</td>
+                    <td>
+                      <input type="checkbox" />
+                    </td>
+                    <td style="font-weight: bold;" colspan="3">ในชั้นศาล</td>
+                    <td style="border-bottom: black 1px dotted;" colspan="2"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <input type="checkbox" />
+                    </td>
+                    <td style="font-weight: bold;" colspan="4">ได้รับโทษ ศาล</td>
+                    <td style="border-bottom: black 1px dotted;"></td>
+                    <td style="font-weight: bold;" colspan="2">พิพากษา</td>
+                    <td style="border-bottom: black 1px dotted;" colspan="12"></td>
+                  </tr>
+
+                  <tr>
+                    <td colspan="2"></td>
+                    <td style="font-weight: bold;" colspan="4">พ้นโทษจำคุกจาก</td>
+                    <td style="border-bottom: black 1px dotted;" colspan="6"></td>
+                    <td style="font-weight: bold;">เมื่อ</td>
+                    <td style="border-bottom: black 1px dotted;" colspan="6"></td>
+                  </tr>
+
+                  <tr>
+                    <td colspan="2"></td>
+                    <td style="font-weight: bold;">คดีนี้</td>
+                    <td>
+                      <input type="checkbox" />
+                    </td>
+                    <td>ผ่าน</td>
+                    <td>
+                      <input type="checkbox" />
+                    </td>
+                    <td colspan="14">ไม่ผ่าน ขั้นตอนการสืบเสาะและพินิจ/การควบคุมและสอดส่อง</td>
+                  </tr>
+
+                  <tr>
+                    <td colspan="2"></td>
+                    <td colspan="5">ผลการคุมความประพฤติ</td>
+                    <td style="border-bottom: black 1px dotted;" colspan="6"></td>
+                  </tr>
+
+                  <tr>
+                    <td style="font-weight: bold; text-decoration: underline;" colspan="2">ครั้งที่6</td>
+                    <td colspan="3">สถานีตำรวจ</td>
+                    <td style="border-bottom: black 1px dotted;" colspan="5"></td>
+                    <td colspan="2">ข้อหา</td>
+                    <td style="border-bottom: black 1px dotted;" colspan="5"></td>
+                  </tr>
+
+                  <tr>
+                    <td colspan="3">เมื่อวันที่</td>
+                    <td style="border-bottom: black 1px dotted;"></td>
+                    <td colspan="2">เดือน</td>
+                    <td style="border-bottom: black 1px dotted;" colspan="2"></td>
+                    <td colspan="2">พ.ศ.</td>
+                    <td style="border-bottom: black 1px dotted;"></td>
+                    <td colspan="5">ใช้ชื่อในการกระทำผิดว่า</td>
+                    <td style="border-bottom: black 1px dotted;" colspan="5"></td>
+                  </tr>
+
+                  <tr>
+                    <td style="font-weight: bold; text-decoration: underline;" colspan="2">ผลคดี</td>
+                    <td>
+                      <input type="checkbox" />
+                    </td>
+                    <td style="font-weight: bold;" colspan="6">ได้รับการปล่อยตัวพ้นข้อหา</td>
+                    <td>
+                      <input type="checkbox" />
+                    </td>
+                    <td style="font-weight: bold;" colspan="4">ในชั้นตำรวจ/อัยการ</td>
+                    <td>
+                      <input type="checkbox" />
+                    </td>
+                    <td style="font-weight: bold;" colspan="3">ในชั้นศาล</td>
+                    <td style="border-bottom: black 1px dotted;" colspan="2"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <input type="checkbox" />
+                    </td>
+                    <td style="font-weight: bold;" colspan="4">ได้รับโทษ ศาล</td>
+                    <td style="border-bottom: black 1px dotted;"></td>
+                    <td style="font-weight: bold;" colspan="2">พิพากษา</td>
+                    <td style="border-bottom: black 1px dotted;" colspan="12"></td>
+                  </tr>
+
+                  <tr>
+                    <td colspan="2"></td>
+                    <td style="font-weight: bold;" colspan="4">พ้นโทษจำคุกจาก</td>
+                    <td style="border-bottom: black 1px dotted;" colspan="6"></td>
+                    <td style="font-weight: bold;">เมื่อ</td>
+                    <td style="border-bottom: black 1px dotted;" colspan="6"></td>
+                  </tr>
+
+                  <tr>
+                    <td colspan="2"></td>
+                    <td style="font-weight: bold;">คดีนี้</td>
+                    <td>
+                      <input type="checkbox" />
+                    </td>
+                    <td>ผ่าน</td>
+                    <td>
+                      <input type="checkbox" />
+                    </td>
+                    <td colspan="14">ไม่ผ่าน ขั้นตอนการสืบเสาะและพินิจ/การควบคุมและสอดส่อง</td>
+                  </tr>
+
+                  <tr>
+                    <td colspan="2"></td>
+                    <td colspan="5">ผลการคุมความประพฤติ</td>
+                    <td style="border-bottom: black 1px dotted;" colspan="6"></td>
+                  </tr>
+
+                  <tr>
+                    <td colspan="2"></td>
+                    <td colspan="8">เพิ่มเติมเกี่ยวกับประวัติการกระทำความผิด</td>
+                    <td style="border-bottom: black 1px dotted;" colspan="10"></td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </form>
+          </form> -->
+
+      <!-- //ปิดหน้า10 -->
+
+      <!-- //เปิดลงชื่อหน้า10 -->
+
+      <!-- //ปิดลงชื่อหน้า10-->
+
+      <!-- //เปิดหน้า11 -->
+      <form style="border:2px solid black; width:91%;">
+        <form style="border-bottom:2px solid black;">
+          <table style="width:100%">
+            <tbody>
+              <tr>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+
+              </tr>
+              <tr>
+                <td style="font-weight: bold;" colspan="15">การเกี่ยวข้องกับยา และสารเสพติดให้โทษ</td>
+
+
+              </tr>
+            </tbody>
+          </table>
+        </form>
+
+        <form>
+          <table style="width:100%">
+            <tbody style="margin-bottom:5px;">
+              <tr>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+              </tr>
+              <tr>
+                <td colspan="15">ข้าพเจ้าเกี่ยวข้องกับยาและสารเสพติดให้โทษ ดังนี้</td>
+              </tr>
+              <tr>
+                <td style="font-weight: bold;" colspan="7">ประวัติการเสพยา</td>
+              </tr>
+
+              <tr>
+                <td style="font-weight: bold;" colspan="4">1.กัญชา</td>
+                <td colspan="4">เสพครั้งแรกเมื่อ</td>
+                <td style="border-bottom: black 1px dotted;" colspan="5"></td>
+                <td>เพราะ</td>
+                <td style="border-bottom: black 1px dotted;" colspan="6"></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td style="font-weight: bold;" colspan="2">โดยวิธี</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+
+                <td colspan="4">ผสมบุหรีสูบ</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+
+                <td colspan="4">ใช้บ้อง</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td>อื่นๆ</td>
+                <td style="border-bottom: black 1px dotted;" colspan="5"></td>
+              </tr>
+
+              <tr>
+                <td></td>
+                <td style="font-weight: bold;" colspan="2">ปัจจุบัน</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+
+                <td colspan="4">อยู่ระหว่างการรักษา</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+
+                <td colspan="5">ยังคงเสพอยุ่โดยวิธี</td>
+                <td style="border-bottom: black 1px dotted;" colspan="5"></td>
+              </tr>
+
+
+              <tr>
+                <td colspan="3"></td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+
+                <td colspan="4">เลิกเสพแล้วตั้งแต่</td>
+
+                <td style="border-bottom: black 1px dotted;" colspan="12"></td>
+              </tr>
+
+              <tr>
+                <td style="font-weight: bold;" colspan="5">ก่อนถูกจับกุม/ปัจจุบัน</td>
+                <td colspan="4">ข้าพเจ้าเสพ วันละ</td>
+                <td style="border-bottom: black 1px dotted;" colspan="3"></td>ครั้ง
+                <td colspan="5">ปริมาณการเสพครั้งละ</td>
+                <td style="border-bottom: black 1px dotted;" colspan="3"></td>
+              </tr>
+
+
+              <tr>
+                <td style="font-weight: bold;" colspan="4">2.มอร์ฟีน/เฮโรอีน</td>
+                <td colspan="4">เสพครั้งแรกเมื่อ</td>
+                <td style="border-bottom: black 1px dotted;" colspan="5"></td>
+                <td>เพราะ</td>
+                <td style="border-bottom: black 1px dotted;" colspan="6"></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td style="font-weight: bold;" colspan="2">โดยวิธี</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+
+                <td colspan="4">ฉีดเข้าเส้นโลหิต</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td>อื่นๆ</td>
+                <td style="border-bottom: black 1px dotted;" colspan="15"></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td style="font-weight: bold;" colspan="2">ปัจจุบัน</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+
+                <td colspan="4">อยู่ระหว่างการรักษา</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+
+                <td colspan="5">ยังคงเสพอยุ่โดยวิธี</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td style="border-bottom: black 1px dotted;" colspan="5"></td>
+              </tr>
+
+              <tr>
+                <td colspan="3"></td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+
+                <td colspan="4">เลิกเสพแล้วตั้งแต่</td>
+
+                <td style="border-bottom: black 1px dotted;" colspan="12"></td>
+              </tr>
+
+              <tr>
+                <td style="font-weight: bold;" colspan="5">ก่อนถูกจับกุม/ปัจจุบัน</td>
+                <td colspan="4">ข้าพเจ้าเสพ วันละ</td>
+                <td style="border-bottom: black 1px dotted;" colspan="3"></td>ครั้ง
+                <td colspan="5">ปริมาณการเสพครั้งละ</td>
+                <td style="border-bottom: black 1px dotted;" colspan="3"></td>
+              </tr>
+
+
+
+
+              <tr>
+                <td style="font-weight: bold;" colspan="4">3.แอมเฟตามีน</td>
+                <td colspan="4">เสพครั้งแรกเมื่อ</td>
+                <td style="border-bottom: black 1px dotted;" colspan="5"></td>
+                <td>เพราะ</td>
+                <td style="border-bottom: black 1px dotted;" colspan="6"></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td style="font-weight: bold;" colspan="2">โดยวิธี</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+
+                <td colspan="4">รับประทาน</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="6">ละลายน้ำแล้วฉีดเข้าเส้นโลหิต</td>
+                <td style="border-bottom: black 1px dotted;" colspan="5"></td>
+              </tr>
+
+              <tr>
+                <td colspan="3"></td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+
+                <td colspan="4">สูดควัน</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td>อื่นๆ</td>
+                <td style="border-bottom: black 1px dotted;" colspan="10"></td>
+              </tr>
+
+
+              <tr>
+                <td></td>
+                <td style="font-weight: bold;" colspan="2">ปัจจุบัน</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+
+                <td colspan="4">อยู่ระหว่างการรักษา</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+
+                <td colspan="5">ยังคงเสพอยุ่โดยวิธี</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td style="border-bottom: black 1px dotted;" colspan="5"></td>
+              </tr>
+
+              <tr>
+                <td colspan="3"></td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+
+                <td colspan="4">เลิกเสพแล้วตั้งแต่</td>
+
+                <td style="border-bottom: black 1px dotted;" colspan="12"></td>
+              </tr>
+
+              <tr>
+                <td style="font-weight: bold;" colspan="5">ก่อนถูกจับกุม/ปัจจุบัน</td>
+                <td colspan="4">ข้าพเจ้าเสพ วันละ</td>
+                <td style="border-bottom: black 1px dotted;" colspan="3"></td>ครั้ง
+                <td colspan="5">ปริมาณการเสพครั้งละ</td>
+                <td style="border-bottom: black 1px dotted;" colspan="3"></td>
+              </tr>
+
+
+              <tr>
+                <td style="font-weight: bold;" colspan="6">4.เมทแอมเฟตามีน(ยาบ้า)</td>
+                <td colspan="4">เสพครั้งแรกเมื่อ</td>
+                <td style="border-bottom: black 1px dotted;" colspan="4"></td>
+                <td>เพราะ</td>
+                <td style="border-bottom: black 1px dotted;" colspan="5"></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td style="font-weight: bold;" colspan="2">โดยวิธี</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+
+                <td colspan="4">รับประทาน</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="6">ละลายน้ำแล้วฉีดเข้าเส้นโลหิต</td>
+                <td style="border-bottom: black 1px dotted;" colspan="5"></td>
+              </tr>
+
+              <tr>
+                <td colspan="3"></td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+
+                <td colspan="4">สูดควัน</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td>อื่นๆ</td>
+                <td style="border-bottom: black 1px dotted;" colspan="10"></td>
+              </tr>
+
+
+              <tr>
+                <td></td>
+                <td style="font-weight: bold;" colspan="2">ปัจจุบัน</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+
+                <td colspan="4">อยู่ระหว่างการรักษา</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+
+                <td colspan="5">ยังคงเสพอยุ่โดยวิธี</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td style="border-bottom: black 1px dotted;" colspan="5"></td>
+              </tr>
+
+              <tr>
+                <td colspan="3"></td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+
+                <td colspan="4">เลิกเสพแล้วตั้งแต่</td>
+
+                <td style="border-bottom: black 1px dotted;" colspan="12"></td>
+              </tr>
+
+              <tr>
+                <td style="font-weight: bold;" colspan="5">ก่อนถูกจับกุม/ปัจจุบัน</td>
+                <td colspan="4">ข้าพเจ้าเสพ วันละ</td>
+                <td style="border-bottom: black 1px dotted;" colspan="3"></td>ครั้ง
+                <td colspan="5">ปริมาณการเสพครั้งละ</td>
+                <td style="border-bottom: black 1px dotted;" colspan="3"></td>
+              </tr>
+
+
+
+              <tr>
+                <td style="font-weight: bold;" colspan="9">5.ยาวัตถุออกฤทธิ์ต่อจิตประสาท ประเภท</td>
+                <td style="border-bottom: black 1px dotted;" colspan="11"></td>
+              </tr>
+
+              <tr>
+                <td colspan="4">เสพครั้งแรกเมื่อ</td>
+                <td style="border-bottom: black 1px dotted;" colspan="8"></td>
+                <td>เพราะ</td>
+                <td style="border-bottom: black 1px dotted;" colspan="7"></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td style="font-weight: bold;" colspan="2">โดยวิธี</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+
+                <td colspan="4">รับประทาน</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="6">ละลายน้ำแล้วฉีดเข้าเส้นโลหิต</td>
+                <td style="border-bottom: black 1px dotted;" colspan="5"></td>
+              </tr>
+              <tr>
+                <td colspan="3"></td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td>อื่นๆ</td>
+                <td style="border-bottom: black 1px dotted;" colspan="5"></td>
+              </tr>
+
+
+
+              <tr>
+                <td colspan="3"></td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+
+                <td colspan="4">สูดควัน</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td>อื่นๆ</td>
+                <td style="border-bottom: black 1px dotted;" colspan="10"></td>
+              </tr>
+
+
+              <tr>
+                <td></td>
+                <td style="font-weight: bold;" colspan="2">ปัจจุบัน</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+
+                <td colspan="4">อยู่ระหว่างการรักษา</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+
+                <td colspan="5">ยังคงเสพอยุ่โดยวิธี</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td style="border-bottom: black 1px dotted;" colspan="5"></td>
+              </tr>
+
+              <tr>
+                <td colspan="3"></td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+
+                <td colspan="4">เลิกเสพแล้วตั้งแต่</td>
+
+                <td style="border-bottom: black 1px dotted;" colspan="12"></td>
+              </tr>
+
+              <tr>
+                <td style="font-weight: bold;" colspan="5">ก่อนถูกจับกุม/ปัจจุบัน</td>
+                <td colspan="4">ข้าพเจ้าเสพ วันละ</td>
+                <td style="border-bottom: black 1px dotted;" colspan="3"></td>ครั้ง
+                <td colspan="5">ปริมาณการเสพครั้งละ</td>
+                <td style="border-bottom: black 1px dotted;" colspan="3"></td>
+              </tr>
+
+
+
+
+
+
+            </tbody>
+          </table>
+        </form>
+      </form>
+
+
+
+      <!-- //ปิดหน้า11 -->
+      <!-- //เปิดลงชื่อหน้า11 -->
+      <form>
+        <table style="width:100%" border="0">
+          <tr>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 10%;"></td>
+            <td style="width: 10%;"></td>
+
+          </tr>
+          <tr>
+            <td style="height: 20px;" colspan="11"></td>
+          </tr>
+          <tr>
+            <td colspan="10"></td>
+            <td colspan="2">( ลงชื่อ )</td>
+            <td style="border-bottom: black 1px dotted;" colspan="3"></td>จำเลย
+          </tr>
+
+          <tr>
+            <td style="height: 30px;" colspan="11"></td>
+          </tr>
+          <tr>
+            <td colspan="3"></td>
+            <td colspan="3"></td>
+            <td colspan="3"></td>
+            <td></td>
+            <td colspan="2">( 11 )</td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td style="height: 30px;" colspan="11"></td>
+          </tr>
+
+        </table>
+      </form>
+      <!-- //ปิดลงชื่อหน้า11-->
+
+      <!-- //เปิดหน้า12 -->
+      <div style="margin-top:30px;"></div>
+      <form style="border:2px solid black; width:91%;">
+        <form>
+          <table style="width: 100%;">
+            <tbody style="margin-bottom:5px;">
+              <tr>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+              </tr>
+
+              <tr>
+                <td style="font-weight: bold;" colspan="5">6.สารระเหย ประเภท</td>
+                <td style="border-bottom: black 1px dotted;" colspan="11"></td>
+              </tr>
+
+              <tr>
+                <td colspan="4">สูดดมครั้งแรกเมื่อ</td>
+                <td style="border-bottom: black 1px dotted;" colspan="8"></td>
+                <td>เพราะ</td>
+                <td style="border-bottom: black 1px dotted;" colspan="7"></td>
+              </tr>
+
+              <tr>
+                <td></td>
+                <td style="font-weight: bold;" colspan="2">ปัจจุบัน</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+
+                <td colspan="4">อยู่ระหว่างการรักษา</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+
+                <td colspan="5">ยังคงสูดดมอยุ่</td>
+              </tr>
+
+              <tr>
+                <td colspan="3"></td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+
+                <td colspan="4">เลิกสูดดมแล้วตั้งแต่</td>
+
+                <td style="border-bottom: black 1px dotted;" colspan="12"></td>
+              </tr>
+
+              <tr>
+                <td style="font-weight: bold;" colspan="5">ก่อนถูกจับกุม/ปัจจุบัน</td>
+                <td colspan="4">ข้าพเจ้าเสพ วันละ</td>
+                <td style="border-bottom: black 1px dotted;" colspan="3"></td>ครั้ง
+                <td colspan="5">ปริมาณการเสพครั้งละ</td>
+                <td style="border-bottom: black 1px dotted;" colspan="3"></td>
+              </tr>
+
+              <tr>
+                <td style="font-weight: bold;" colspan="9">7.อื่นๆ(พืชกระท่อม ฝื่น ฯลฯ)</td>
+                <td style="border-bottom: black 1px dotted;" colspan="11"></td>
+              </tr>
+
+              <tr>
+                <td colspan="10">ส่วนใหญ่ข้าพเจ้าเสพยาหรือสารเสพติดที่</td>
+              </tr>
+
+              <tr>
+                <td></td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="3">บ้านตนเอง</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+
+                <td colspan="4">ในบริเวณใกล้บ้าน</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="3">บ้านเพื่อน</td>
+
+              </tr>
+
+              <tr>
+                <td></td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="5">ในแหล่งที่ซื้อยาเสพติด ที่</td>
+                <td style="border-bottom: black 1px dotted;" colspan="3"></td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="3">อื่นๆ</td>
+                <td style="border-bottom: black 1px dotted;" colspan="6"></td>
+
+              </tr>
+
+              <tr>
+                <td></td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="3">เสพคนเดียว</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="5">เสพร่วมกับเพื่อน ชื่อ</td>
+                <td style="border-bottom: black 1px dotted;" colspan="6"></td>
+
+              </tr>
+              <tr>
+                <td style="font-weight: bold;" colspan="10">
+                  การรับจ้างซื้อยาเสพติด/วัตถุออกฤกธิ์ต่อจิตประสาท</td>
+              </tr>
+
+              <tr>
+                <td></td>
+                <td>ข้าพเจ้า</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="2">ไม่เคย</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="12">เคย รับจ้างซื้อยาเสพติด/วัตถุออกฤทธิ์ต่อจิตประสาท ประเภท</td>
+                <td style="border-bottom: black 1px dotted;" colspan="3"></td>
+
+              </tr>
+              <tr>
+
+                <td colspan="3">ได้รับค่าจ้างเป็น</td>
+                <td style="border-bottom: black 1px dotted;" colspan="17"></td>
+
+              </tr>
+              <tr>
+
+                <td colspan="2">ครั้งละ</td>
+                <td style="border-bottom: black 1px dotted;" colspan="5"></td>
+                <td colspan="4">ระยะเวลาการจำหน่าย</td>
+                <td style="border-bottom: black 1px dotted;" colspan="9"></td>
+
+              </tr>
+              <tr>
+                <td style="font-weight: bold;" colspan="10">
+                  การจำหน่ายยาเสพติด/วัตถุออกฤกธิ์ต่อจิตประสาท
+                </td>
+              </tr>
+
+              <tr>
+                <td></td>
+                <td>ข้าพเจ้า</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="2">ไม่เคย</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="12">เคย จำหน่ายยาเสพติด/วัตถุออกฤทธิ์ต่อจิตประสาท ประเภท</td>
+                <td style="border-bottom: black 1px dotted;" colspan="3"></td>
+
+              </tr>
+              <tr>
+
+                <td colspan="3">ได้รับค่าจ้างเป็น</td>
+                <td style="border-bottom: black 1px dotted;" colspan="17"></td>
+
+              </tr>
+              <tr>
+
+                <td colspan="2">ครั้งละ</td>
+                <td style="border-bottom: black 1px dotted;" colspan="5"></td>
+                <td colspan="4">ระยะเวลาการจำหน่าย</td>
+                <td style="border-bottom: black 1px dotted;" colspan="9"></td>
+
+              </tr>
+
+              <tr>
+
+                <td colspan="12">บุคคลใกล้ชิดที่ทราบว่าข้าพเจ้าเกี่ยวข้องกับยาเสพติดให้โทษคือ</td>
+                <td style="border-bottom: black 1px dotted;" colspan="8"></td>
+
+              </tr>
+              <tr>
+                <td></td>
+                <td colspan="3">ข้าพเจ้ารู้สึก</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="3">ผิด/รู้สึกละอาย</td>
+              </tr>
+
+              <tr>
+                <td colspan="4"></td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="8">เฉยๆไม่ทุกข์ร้อนและยังคงเสพเรื่อยมา</td>
+              </tr>
+              <tr>
+                <td colspan="4"></td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="7">รำคาญไม่ต้องการให้ผู้ใดมายุ่งเกี่ยว</td>
+              </tr>
+              <tr>
+                <td colspan="4"></td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="3">อื่นๆ(ระบุ)</td>
+                <td style="border-bottom: black 1px dotted;" colspan="12"></td>
+              </tr>
+              <tr>
+                <td colspan="3">บุคคลใกล้ชิด</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="2">เคย</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="5">ไม่เคยว่ากล่าวตักเตือน</td>
+              </tr>
+              <tr>
+                <td colspan="3">ข้าพเจ้า</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="2">ปฎิบัติตาม</td>
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td colspan="4">ไม่ปฎิบัติตาม เพราะ</td>
+                <td style="border-bottom: black 1px dotted;" colspan="10"></td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+      </form>
+      <!-- //ปิดหน้า12 -->
+      <!-- //เปิดลงชื่อหน้า12 -->
+      <form>
+        <table style="width:100%" border="0">
+          <tr>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 10%;"></td>
+            <td style="width: 10%;"></td>
+
+          </tr>
+          <tr>
+            <td style="height: 20px;" colspan="11"></td>
+          </tr>
+          <tr>
+            <td colspan="10"></td>
+            <td colspan="2">( ลงชื่อ )</td>
+            <td style="border-bottom: black 1px dotted;" colspan="3"></td>จำเลย
+          </tr>
+
+          <tr>
+            <td style="height: 30px;" colspan="11"></td>
+          </tr>
+          <tr>
+            <td colspan="3"></td>
+            <td colspan="3"></td>
+            <td colspan="3"></td>
+            <td></td>
+            <td colspan="2">( 12 )</td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td style="height: 30px;" colspan="11"></td>
+          </tr>
+
+        </table>
+      </form>
+      <!-- //ปิดลงชื่อหน้า12-->
+
+
+      <!-- //เปิดหน้า13 -->
+      <div style="margin-top:30px;"></div>
+      <form style="border:2px solid black; margin-top:30px; width:91%;">
+        <form style="border-bottom:2px solid black;">
+          <table style="width:100%">
+            <tbody>
+              <tr>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+              </tr>
+              <tr>
+                <td colspan="13">ข้าพเจ้าเคยรับการบำบัดรักษาอาการติดยา/สารเสพติดให้โทษมาแล้ว</td>
+                <td style="border-bottom: black 1px dotted;" colspan="3">........ครั้ง ดังนี้</td>
+
+              </tr>
+            </tbody>
+          </table>
+        </form>
+
+        <form style="border-bottom:2px solid black;">
+          <table style="width:100%; text-align:center;" border="1">
+            <tr>
+              <th>ครั้งที่</th>
+              <th>พ.ศ.</th>
+              <th>สถานที่บำบัดรักษา</th>
+              <th>ยา/สารเสพติด</th>
+              <th>ระยะเวลา</th>
+              <th>ผลการบำบัดรักษา (ครบไม่ครบเลิกเสพได้นาน เท่าใด)</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td style="border-bottom: black 1px dotted;"></td>
+              <td style="border-bottom: black 1px dotted;"></td>
+              <td style="border-bottom: black 1px dotted;"></td>
+              <td style="border-bottom: black 1px dotted;"></td>
+              <td style="border-bottom: black 1px dotted;"></td>
+            </tr>
+          </table>
+        </form>
+      </form>
+
+      <div style="margin-top:30px;"></div>
+      <div>
+        <form style="border:2px solid black; width:91%;">
+          <form>
+            <table style="width: 100%;">
+              <tbody style="margin-bottom:5px;">
+                <tr>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td colspan="12">เพิ่มเติมเกี่ยวกับประวัติการเกี่ยวข้องกับยาหรือสารเสพติดให้</td>
+                </tr>
+                <tr>
+                  <td>โทษ</td>
+                  <td style="border-bottom: black 1px dotted;" colspan="19"></td>
+                </tr>
+              </tbody>
+            </table>
+          </form>
+        </form>
+      </div>
+
+      <!-- //ปิดหน้า13 -->
+      <!-- //เปิดลงชื่อหน้า13 -->
+      <form>
+        <table style="width:100%" border="0">
+          <tr>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 10%;"></td>
+            <td style="width: 10%;"></td>
+
+          </tr>
+          <tr>
+            <td style="height: 20px;" colspan="11"></td>
+          </tr>
+          <tr>
+            <td colspan="10"></td>
+            <td colspan="2">( ลงชื่อ )</td>
+            <td style="border-bottom: black 1px dotted;" colspan="3"></td>จำเลย
+          </tr>
+
+          <tr>
+            <td style="height: 30px;" colspan="11"></td>
+          </tr>
+          <tr>
+            <td colspan="3"></td>
+            <td colspan="3"></td>
+            <td colspan="3"></td>
+            <td></td>
+            <td colspan="2">( 13 )</td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td style="height: 30px;" colspan="11"></td>
+          </tr>
+
+        </table>
+      </form>
+      <!-- //ปิดลงชื่อหน้า13-->
+
+
+      <!-- //เปิดหน้า14 -->
+      <div style="margin-top:30px;"></div>
+      <form style="border:2px solid black; width:91%;">
+        <form style="border-bottom:2px solid black;">
+          <table style="width:100%">
+            <tbody>
+              <tr>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+
+              </tr>
+              <tr>
+                <td style="font-weight: bold;" colspan="10">3.สภาพความผิดและพฤติการณ์แห่งคดี</td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+        <div>
+          <form>
+            <table style="width:100%">
+              <tbody style="margin-bottom:5px;">
+                <tr>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td colspan="6">จากคำให้การของจำเลย</td>
+                  <td style="border-bottom: black 1px dotted;" colspan="13">
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td colspan="6">สาเหตุที่กระทำความผิดในครั้งนี้</td>
+                  <td style="border-bottom: black 1px dotted;" colspan="12"></td>
+                </tr>
+              </tbody>
+            </table>
+          </form>
+        </div>
+      </form>
+
+      <!-- //ปิดหน้า14 -->
+      <!-- //เปิดลงชื่อหน้า14 -->
+      <form>
+        <table style="width:100%" border="0">
+          <tr>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 10%;"></td>
+            <td style="width: 10%;"></td>
+
+          </tr>
+          <tr>
+            <td style="height: 20px;" colspan="11"></td>
+          </tr>
+          <tr>
+            <td colspan="10"></td>
+            <td colspan="2">( ลงชื่อ )</td>
+            <td style="border-bottom: black 1px dotted;" colspan="3"></td>จำเลย
+          </tr>
+
+          <tr>
+            <td style="height: 30px;" colspan="11"></td>
+          </tr>
+          <tr>
+            <td colspan="3"></td>
+            <td colspan="3"></td>
+            <td colspan="3"></td>
+            <td></td>
+            <td colspan="2">( 14 )</td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td style="height: 30px;" colspan="11"></td>
+          </tr>
+
+        </table>
+      </form>
+      <!-- //ปิดลงชื่อหน้า14-->
+
+      <!-- //เปิดหน้า15 -->
+      <div style="margin-top:30px;"></div>
+      <div>
+        <form style="border:2px solid black; width:91%;">
+          <form>
+            <table style="width:100%">
+              <tbody style="margin-bottom:5px;">
+                <tr>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td colspan="6">ความเสียหายและการบรรเทาผลร้าย</td>
+                  <td style="border-bottom: black 1px dotted;" colspan="13">
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td colspan="6">พฤติการณ์ที่เกี่ยวข้อง/อื่นๆ(เช่นความสัมพันธ์ระหว่างคู่ความ หรือ
+                    เกี่ยวกับรถที่ขับ ฯลฯ)
+                  </td>
+                  <td style="border-bottom: black 1px dotted;" colspan="13"></td>
+                </tr>
+                <tr>
+                  <td colspan="6">ข้าพเจ้ากระทำผิดเมื่อ วันที่</td>
+                  <td style="border-bottom: black 1px dotted;" colspan="4"></td>
+                  <td>เดือน</td>
+                  <td style="border-bottom: black 1px dotted;" colspan="4"></td>
+                  <td>พ.ศ.</td>
+                  <td style="border-bottom: black 1px dotted;" colspan="4"></td>
+                </tr>
+                <tr>
+                  <td colspan="6">ถูกจับกุม/เข้ามอบตัวเมื่อวันที่</td>
+                  <td style="border-bottom: black 1px dotted;" colspan="4"></td>
+                  <td>เดือน</td>
+                  <td style="border-bottom: black 1px dotted;" colspan="4"></td>
+                  <td>พ.ศ.</td>
+                  <td style="border-bottom: black 1px dotted;" colspan="4"></td>
+                </tr>
+
+                <tr>
+                  <td colspan="6">สถานการควบคุมตัว</td>
+                </tr>
+
+                <tr>
+                  <td colspan="2"></td>
+                  <td>
+                    <input type="checkbox" />
+                  </td>
+                  <td colspan="5">ได้รับการปล่อยตัวชั่วคราว</td>
+                </tr>
+
+                <tr>
+                  <td colspan="2"></td>
+                  <td>
+                    <input type="checkbox" />
+                  </td>
+                  <td colspan="2">ต้องขัง</td>
+                  <td style="border-bottom: black 1px dotted;"></td> วัน
+                  <td colspan="4">นับถึงวัน พิพากษาคดี</td>
+                </tr>
+
+                <tr>
+                  <td colspan="3"></td>
+                  <td>ที่</td>
+                  <td style="border-bottom: black 1px dotted;" colspan="10"></td>
+                </tr>
+
+                <tr>
+                  <td colspan="2"></td>
+                  <td>
+                    <input type="checkbox" />
+                  </td>
+                  <td colspan="5">ในระหว่างสอบสวน</td>
+                  <td>
+                    <input type="checkbox" />
+                  </td>
+                  <td colspan="5">ในระหว่างพิจารณาคดี</td>
+                </tr>
+
+
+              </tbody>
+            </table>
+          </form>
+        </form>
+      </div>
+      <!-- //ปิดหน้า15 -->
+
+      <!-- //เปิดลงชื่อหน้า15 -->
+      <form>
+        <table style="width:100%" border="0">
+          <tr>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 10%;"></td>
+            <td style="width: 10%;"></td>
+
+          </tr>
+          <tr>
+            <td style="height: 20px;" colspan="11"></td>
+          </tr>
+          <tr>
+            <td colspan="10"></td>
+            <td colspan="2">( ลงชื่อ )</td>
+            <td style="border-bottom: black 1px dotted;" colspan="3"></td>จำเลย
+          </tr>
+
+          <tr>
+            <td style="height: 30px;" colspan="11"></td>
+          </tr>
+          <tr>
+            <td colspan="3"></td>
+            <td colspan="3"></td>
+            <td colspan="3"></td>
+            <td></td>
+            <td colspan="2">( 15 )</td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td style="height: 30px;" colspan="11"></td>
+          </tr>
+
+        </table>
+      </form>
+      <!-- //ปิดลงชื่อหน้า15-->
+
+
+
+      <!-- //เปิดหน้า16 -->
+
+      <div style="margin-top:30px;"></div>
+
+      <form style="border:1px solid black; width:91%;">
+        <table width="100%" border="1" align="center">
+          <tr>
+            <td width="55%">จำเลยร่วม/คู่คดี</td>
+            <td width="45%">ชื่อและที่ทำงานทนายความ</td>
+          </tr>
+          <tr>
+            <td>
+              1.......................................................................................................................
+            </td>
+            <td>.............................................................................</td>
+          </tr>
+          <tr>
+            <td>
+              2........................................................................................................................
+            </td>
+            <td>.............................................................................</td>
+          </tr>
+          <tr>
+            <td>
+              3........................................................................................................................
+            </td>
+            <td>.............................................................................</td>
+          </tr>
+          <tr>
+            <td>
+              4........................................................................................................................
+            </td>
+            <td>.............................................................................</td>
+          </tr>
+          <tr>
+            <td>คดีนี้
+              <input type="checkbox" name="checkbox" id="checkbox">
+              <label for="checkbox">ไม่มีผู้เสียหาย
+                <input type="checkbox" name="checkbox2" id="checkbox2"> มีผู้เสียหาย จำนวน
+                ..................................คน</label>
+            </td>
+            <td>................................................................................</td>
+          </tr>
+          <tr>
+            <td style="font-weight: bold;" colspan="5">ความรู้สึกต่อการกระทำผิดครั้งนี้</td>
+          </tr>
+
+          <tr>
+            <td colspan="6">
+              <input type="checkbox" /> สำนึกผิด อยากกลับตัวเป็นคนดี</td>
+          </tr>
+          <tr>
+            <td colspan="4">
+              <input type="checkbox" /> เฉยๆ ไม่ทุกข์ร้อน</td>
+          </tr>
+          <tr>
+            <td colspan="4">
+              <input type="checkbox" /> คิดว่าไม่เป็นความผิด/ไม่เห็นว่าจำเป็นต้องแก้ไข
+              ปรับปรุงตนเองแต่อย่างใด</td>
+          </tr>
+          <tr>
+            <td colspan="5">
+              <input type="checkbox" /> คิดว่าตนเองบริสุทธิ์</td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input type="checkbox" /> อื่นๆ</td>
+
+          </tr>
+        </table>
+      </form>
+
+
+
+
+      <div style="margin-top:30px;"></div>
+      <form style="border:2px solid black; width:91%;">
+        <form style="border-bottom:2px solid black;">
+          <table style="width:100%">
+            <tbody>
+              <tr>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+
+              </tr>
+              <tr>
+                <td style="font-weight: bold;" colspan="10">4.เหตุที่ควรจะได้รับความปรานีจากศาล</td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+        <div>
+          <form>
+            <table style="width:100%">
+              <tbody style="margin-bottom:5px;">
+                <tr>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td colspan="15">ข้าพเจ้าควรจะได้รับปราณีจากศาลให้ลงโทษในสถานเบา
+                    โดยข้าพเจ้ามีเหตุอันควรปรานี ดังนี้
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="checkbox" />
+                  </td>
+                  <td colspan="10">มีภาระต้องเลี้ยงดู บิดา มารดา ภรรยา บุตร อื่นๆ(ระบุ)</td>
+                  <td style="border-bottom: black 1px dotted;" colspan="5"></td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="checkbox" />
+                  </td>
+                  <td colspan="10">ไม่เคยมีประวัติถูกจับกุมดำเนินคดีอาญาใดมาก่อน</td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="checkbox" />
+                  </td>
+                  <td colspan="10">ได้ชดใช้ค่าเสียหายหรือบรรเทาผลร้าย จนผู้เสียหายพอใจแล้ว</td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="checkbox" />
+                  </td>
+                  <td>อื่นๆ</td>
+                  <td style="border-bottom: black 1px dotted;" colspan="5"></td>
+                </tr>
+              </tbody>
+            </table>
+          </form>
+        </div>
+      </form>
+
+
+      <div style="margin-top:30px;"></div>
+      <form style="border:2px solid black; width:91%;">
+        <form style="border-bottom:2px solid black;">
+          <table style="width:100%">
+            <tbody>
+              <tr>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+                <td style="width: 5%;"></td>
+
+              </tr>
+              <tr>
+                <td style="font-weight: bold;" colspan="15">5.ความต้องการ
+                  และความยินยอมของจำเลยเกี่ยวกับวิธีการควบคุมความประพฤติ</td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+        <div>
+          <form>
+            <table style="width:100%">
+              <tbody style="margin-bottom:5px;">
+                <tr>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                </tr>
+                <tr>
+                  <td style="font-weight: bold;" colspan="2">ข้าพเจ้า</td>
+                  <td>
+                    <input type="checkbox" />
+                  </td>
+                  <td style="font-weight: bold;" colspan="10">
+                    ไม่ต้องการให้ศาลสั่งใช้วิธีการคุมความประพฤติ
+                    เพราะ
+                  </td>
+                  <td style="border-bottom: black 1px dotted;" colspan="5"></td>
+                </tr>
+                <tr>
+                  <td colspan="2"></td>
+                  <td>
+                    <input type="checkbox" />
+                  </td>
+                  <td colspan="14">ต้องการให้ศาลสั่งใช้วิธีการควบคุมความประพฤติ
+                    และรับรองว่าจะปฎิบัติตามเงื่อนไขที่ศาลกำหนด</td>
+                </tr>
+
+                <tr>
+                  <td colspan="3"></td>
+                  <td style="font-weight: bold;" colspan="2">ข้าพเจ้า</td>
+                  <td>
+                    <input type="checkbox" />
+                  </td>
+                  <td style="font-weight: bold;" colspan="14">
+                    ยินดีทำงานบริการสังคมและงานสาธารณประโยชน์ตามที่พนักงานคุมประพฤติและข้าพเจ้าเห็นสมควร
+                  </td>
+                </tr>
+                <tr>
+
+                <tr>
+                  <td colspan="5"></td>
+                  <td>
+                    <input type="checkbox" />
+                  </td>
+                  <td style="font-weight: bold;" colspan="10">
+                    ไม่ยินดีทำงานบริการสังคมและงานสาธารณประโยชน์
+                    เพราะ
+                  </td>
+                  <td style="border-bottom: black 1px dotted;" colspan="4"></td>
+                </tr>
+
+                <tr>
+                  <td colspan="2"></td>
+                  <td>
+                    <input type="checkbox" />
+                  </td>
+                  <td colspan="13">ยินยอมให้ใช้อุปกรณ์อิเล็กทรอนิกส์ หรืออุปกรณ์อื่นใดในการติดตามตัว
+                    เพราะ</td>
+                  <td style="border-bottom: black 1px dotted;" colspan="4"></td>
+                </tr>
+                <tr>
+                  <td colspan="2"></td>
+                  <td>
+                    <input type="checkbox" />
+                  </td>
+                  <td colspan="13">ไม่ยินยอมให้ใช้อุปกรณ์อิเล็กทรอนิกส์
+                    หรืออุปกรณ์อื่นใดในการติดตามตัว
+                    เพราะ
+                  </td>
+                  <td style="border-bottom: black 1px dotted;" colspan="4"></td>
+                </tr>
+
+
+              </tbody>
+            </table>
+          </form>
+        </div>
+      </form>
+      <!-- //ปิดหน้า16 -->
+
+
+      <!-- //เปิดลงชื่อหน้า16 -->
+      <form>
+        <table style="width:100%" border="0">
+          <tr>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 5%;"></td>
+            <td style="width: 10%;"></td>
+            <td style="width: 10%;"></td>
+
+          </tr>
+          <tr>
+            <td style="height: 20px;" colspan="11"></td>
+          </tr>
+          <tr>
+            <td style="height: 3px;" colspan="11"></td>
+          </tr>
+          <tr>
+            <td colspan="3"></td>
+            <td style="font-weight: bold;" colspan="12">ข้าพเจ้าขอรับรองรองว่า เป็นความจริงทุกประการ
+              จึงลงลายมือชื่อไว้เป็นพยานหลักฐาน</td>
+          </tr>
+
+          <tr>
+            <td style="height: 3px;" colspan="11"></td>
+          </tr>
+          <tr>
+            <td colspan="4"></td>
+            <td colspan="2">ลงชื่อ</td>
+            <td style="border-bottom: black 1px dotted; text-align:center;" colspan="6"></td>
+            <td colspan="3">จำเลย</td>
+          </tr>
+
+          <tr>
+            <td style="height: 3px;" colspan="11"></td>
+          </tr>
+          <tr>
+            <td colspan="5"></td>
+            (
+            <td style="border-bottom: black 1px dotted; text-align:center;" colspan="6"></td>)
+          </tr>
+          <tr>
+            <td style="height: 3px;" colspan="11"></td>
+          </tr>
+          <tr>
+            <td style="height: 3px;" colspan="11"></td>
+          </tr>
+          <tr>
+            <td colspan="4"></td>
+            <td colspan="2">ลงชื่อ</td>
+            <td style="border-bottom: black 1px dotted; text-align:center;" colspan="6"></td>
+            <td colspan="4">พนักงานคุมประพฤติ</td>
+          </tr>
+
+          <tr>
+            <td style="height: 3px;" colspan="11"></td>
+          </tr>
+          <tr>
+            <td colspan="5"></td>
+            (
+            <td style="border-bottom: black 1px dotted; text-align:center;" colspan="6"></td>)
+          </tr>
+          <tr>
+            <td style="height: 3px;" colspan="11"></td>
+          </tr>
+
+          <tr>
+            <td style="height: 30px;" colspan="11"></td>
+          </tr>
+          <tr>
+            <td colspan="3"></td>
+            <td colspan="3"></td>
+            <td colspan="3"></td>
+            <td colspan="2">( 16 )</td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td style="height: 30px;" colspan="11"></td>
+          </tr>
+
+        </table>
+      </form>
+      <!-- //ปิดลงชื่อหน้า16-->
+
+      <!-- //เปิดหน้า 17 -->
+      <div style="margin-top:30px;"></div>
+      <div>
+        <form style="border:2px solid black; width:91%;">
+          <form>
+            <table style="width:100%">
+              <tbody style="margin-bottom:5px;">
+                <tr>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                  <td style="width: 5%;"></td>
+                </tr>
+                <tr>
+                  <td colspan="7"></td>
+                  <td style="font-weight: bold;" colspan="7">แผนที่บ้านปัจจุบันของจำเลย</td>
+
+                </tr>
+                <tr>
+                  <td style="font-weight: bold;" colspan="2">เลขที่</td>
+                  <td style="border-bottom: black 1px dotted;" colspan="2">
+                  <td style="font-weight: bold;">หมู่</td>
+                  <td style="border-bottom: black 1px dotted;" colspan="3">
+                  <td style="font-weight: bold;" colspan="4">บ้าน/ตรอก/ซอย</td>
+                  <td style="border-bottom: black 1px dotted;"></td>
+                  <td style="font-weight: bold;" colspan="2">ถนน</td>
+                  <td style="border-bottom: black 1px dotted;" colspan="5"></td>
+                </tr>
+                <tr>
+                  <td style="font-weight: bold;" colspan="3">ตำบล/แขวง</td>
+                  <td style="border-bottom: black 1px dotted;" colspan="5">
+                  <td style="font-weight: bold;" colspan="3">อำเภอ/เขต</td>
+                  <td style="border-bottom: black 1px dotted;" colspan="4">
+                  <td style="font-weight: bold;" colspan="2">จังหวัด</td>
+                  <td style="border-bottom: black 1px dotted;" colspan="3">
+
+                </tr>
+                <tr>
+                  <td style="font-weight: bold;" colspan="3">ลักษณะบ้าน</td>
+                  <td style="border-bottom: black 1px dotted;" colspan="15">
+
+                </tr>
+
+              </tbody>
+            </table>
+          </form>
+        </form>
+      </div>
+      <!-- //ปิดหน้า17 -->
+
+    </div>
+
+  </div>
+</div>

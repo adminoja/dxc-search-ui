@@ -1,0 +1,12 @@
+{
+  "realm": "DXC",
+  "auth-server-url": "https://sso-stg.dxc.go.th/auth/",
+  "ssl-required": "external",
+  "resource": "dxc-search-server",
+  "verify-token-audience": true,
+  "credentials": {
+    "secret": "4c171aeb-08af-4893-b3d8-f486883f15ab"
+  },
+  "confidential-port": 0,
+  "policy-enforcer": {}
+}

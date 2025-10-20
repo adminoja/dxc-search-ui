@@ -1,0 +1,176 @@
+<div class="wrapper text-white">
+  <!-- ========== Left Sidebar Start ========== -->
+  <div class="left-side-menu">
+
+    <!-- LOGO -->
+    <a href="/secured/v2/index.html#/localsearch" class="logo text-center logo-light">
+      <span class="logo-lg">
+        <img src="assets/dist/img/Logo-light.png" alt="" height="64">
+      </span>
+      <span class="logo-sm">
+        <img src="assets/dist/img/Logo-sm-light.png" alt="" height="32">
+      </span>
+    </a>
+
+    <!-- LOGO -->
+    <a href="/secured/v2/index.html#/localsearch" class="logo text-center logo-dark">
+      <span class="logo-lg">
+        <img src="assets/dist/img/DXC-05.png" alt="" height="64">
+      </span>
+      <span class="logo-sm">
+        <img src="assets/dist/img/DXC-05.png" alt="" height="64">
+      </span>
+    </a>
+
+    <div class="h-100" id="left-side-menu-container" data-simplebar>
+
+      <!--- Sidemenu -->
+      <ul class="metismenu side-nav">
+
+        <li class="side-nav-title side-nav-item" style="border: 1px solid rgba(123, 123, 123, 0.5);">
+          <h4 class="text-white">เมนู</h4>
+        </li>
+        <li class="side-nav-item" style="border: 1px solid rgba(123, 123, 123, 0.5);">
+          <a href="/secured/v2/index.html#/dxcui0014/dxcui00141/รายงาน Single Report" class="side-nav-link text-white font-20">
+            <i class="mdi mdi-file-document-box-search  mdi-24px"></i>
+            <span>Single Report</span>
+          </a>
+          <a href="/secured/v2/index.html#/localsearch" class="side-nav-link text-white font-20">
+              <i class="mdi mdi-database-refresh  mdi-24px"></i>
+              <span>Local Search</span>
+            </a>
+            <a href="/secured/v2/index.html#/singlereport" class="side-nav-link text-white font-20">
+              <i class="mdi mdi-file-document-box-search  mdi-24px"></i>
+              <span>Specialize Report</span>
+          </a>
+          <!-- <a *ngIf="accountType == 2 && accountType != 3 && accountType != 1" href="https://admin.dxc.go.th/secured/index.html#/logDep" class="side-nav-link text-white font-20" target="_blank">
+              <i class="mdi mdi-file-document-outline  mdi-24px"></i>
+              <span>ระบบบริหารจัดการ DXC (DXC ADMIN)</span>
+          </a>
+          <a *ngIf="accountType == 3 && accountType != 2 && accountType != 1" href="https://admin.dxc.go.th/secured/index.html#/admin-global-logDep" class="side-nav-link text-white font-20" target="_blank">
+              <i class="mdi mdi-file-document-outline  mdi-24px"></i>
+              <span>ระบบบริหารจัดการ DXC (DXC ADMIN)</span>
+          </a> -->
+          <a data-toggle="modal" data-target="#sign-out" 
+              class="side-nav-link pointer text-white font-20">
+              <i class="mdi mdi-power  mdi-24px"></i>
+              <span>ออกจากระบบ</span>
+          </a>
+        </li>
+        
+      </ul>
+      <!-- End Sidebar -->
+
+      <div class="clearfix"></div>
+
+    </div>
+    <!-- Sidebar -left -->
+  </div>
+
+  <div id="sign-out" class="modal fade" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="standard-modalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="standard-modalLabel">ออกจากระบบ</h3>
+            </div>
+            <div class="modal-body font-20 text-center">
+              คุณต้องการออกจากระบบใช่หรือไม่ <br>
+              ระบบจะนำท่านไปที่หน้า login <br>
+              URL : https://search.dxc.go.th/
+            </div>
+            <div class="modal-footer">
+              <a href="https://search.dxc.go.th/sso/sign-out" (click)="logout()" type="button" class="btn btn-primary font-18">ตกลง</a>
+              <button type="button" class="btn btn-danger font-18" data-dismiss="modal" data-target="#sign-out" data-toggle="modal">ยกเลิก</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+  <!-- Left Sidebar End -->
+  <!-- ============================================================== -->
+  <!-- Start Page Content here -->
+  <!-- ============================================================== -->
+  <div class="content-page">
+    <div class="content">
+      <!-- Topbar Start -->
+      <div class="navbar-custom">
+        <ul class="list-unstyled topbar-right-menu float-left mb-0">
+          <li class="notification-list"><a class="nav-link right-bar-toggle" href="javascript: void(0);">
+            </a></li>
+        </ul>
+        <!-- <ul class="list-unstyled topbar-right-menu float-left mb-0">
+          <li class="notification-list"><a type="button" class="nav-link right-bar-toggle" href="javascript: void(0);">
+            </a>Login ThaID</li>
+        </ul> -->
+        <ul class="list-unstyled topbar-right-menu float-right mb-0">
+          <li class="notification-list">
+            <button *ngIf="!isLoggedInThaiD" type="button" class="btn btn-info font-18 mt-2" (click)="loginThaID()">
+              <span class="account-user-avatar">
+                <img src="assets/dist/img/ThaID2.png" style="width: 32px; height: 32px;">
+              </span>
+              Login ThaID 
+            </button>
+          </li>
+          <li class="dropdown notification-list">
+            <a class="nav-link dropdown-toggle nav-user arrow-none mr-0" data-toggle="dropdown" href="#" role="button"
+              aria-haspopup="false" aria-expanded="false">
+              <span class="account-user-avatar">
+                <img src="assets/images/users/avatar-1.jpg" alt="user-image" class="rounded-circle">
+              </span>
+              <span>
+                <span class="account-user-name text-white">{{firstName}} {{lastName}}</span>
+                <span class="account-position text-white">{{departmentCode | revert}}</span>
+              </span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated topbar-dropdown-menu profile-dropdown">
+              <!-- item-->
+              <div class=" dropdown-header noti-title">
+                <h6 class="text-overflow m-0 text-white font-16">เมนู</h6>
+              </div>
+
+              <!-- item-->
+              <a href="javascript:void(0);" class="dropdown-item notify-item font-16">
+                <i class="mdi mdi-account-circle mr-1"></i>
+                <span class="text-white "><a href="https://ssc.dxc.go.th/secured/index.html#/managementmodule/management" class="side-nav-link text-white" target="_blank">ข้อมูลผู้ใช้งาน</a></span>
+              </a>
+
+              <!-- item-->
+                <a data-toggle="modal" data-target="#sign-out" class="dropdown-item pointer notify-item font-16">
+                <i class="mdi mdi-logout mr-1"></i>
+                <span class="text-white ">ออกจากระบบ</span>
+              </a>
+
+            </div>
+          </li>
+
+        </ul>
+        <button class="button-menu-mobile open-left disable-btn">
+          <i class="mdi mdi-menu"></i>
+        </button>
+        <div class="text-left d-none d-lg-block">
+          <div class="input-group-append">
+            <h2 class="mt-3">ระบบสืบค้นประวัติการกระทำผิด เวอร์ชัน 2</h2>
+          </div>
+        </div>
+      </div>
+      <!-- end Topbar -->
+      <router-outlet></router-outlet>
+    </div>
+
+    <!-- Footer Start -->
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12 text-white text-center ">
+            <span>Copyright © โดยสำนักงานกิจการยุติธรรม. พ.ศ.2563(เวอร์ชัน : 2)</span> <br>
+            <span>ติดต่อสอบถาม : โทรศัพท์ 02-141-3792, 02-141-3738 (ในเวลาราชการ), อีเมล : support&#64;dxc.go.th, IDLine : dxcsupport</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- end Footer -->
+
+    <!-- ============================================================== -->
+    <!-- End Page content -->
+    <!-- ============================================================== -->
+  </div>
+</div>

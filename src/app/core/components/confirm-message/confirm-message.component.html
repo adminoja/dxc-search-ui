@@ -1,0 +1,36 @@
+<!-- <div id="test" class="modal fade" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog"
+    aria-labelledby="testModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="exampleModalLongTitle">ยืนยันการค้นหา</h4>
+            </div>
+            <div class="modal-body font-20 text-white text-center">
+                คุณต้องการเปิดรายงาน Single Report ของ <br>
+                หมายเลขบัตรประชาชนนี้ {{citizen}} ใช่หรือไม่
+            </div>
+            <div class="modal-footer">
+                <a href="{{uri}}" class="btn btn-danger" (click)="close()">ยกเลิก</a>
+                <a href="#/dxcui0014/dxcui0018/%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%87%E0%B8%B2%E0%B8%99%20Single%20Report/{{citizen}}/0/0/0/0" class="btn btn-primary" (click)="close()">ตกลง</a>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div id="right-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="exampleModalLongTitle">ยืนยันการค้นหา</h4>
+            </div>
+            <div class="modal-body font-20 text-white text-center">
+                คุณต้องการเปิดรายงาน Single Report ของ <br>
+                หมายเลขบัตรประชาชนนี้ {{citizen}} ใช่หรือไม่
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="closetab()">ยกเลิก</button>
+                <a class="btn btn-primary" href="#/dxcui0014/dxcui0018/%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%87%E0%B8%B2%E0%B8%99%20Single%20Report/{{citizen}}/0/0/0/0/0" (click)="close()">ตกลง</a>				
+            </div>
+        </div>
+    </div><!-- /.modal-content -->
+</div><!-- /.modal-dialog -->

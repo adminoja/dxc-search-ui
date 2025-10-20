@@ -1,0 +1,206 @@
+<!-- Start Content-->
+<div class="container-fluid">
+
+  <!-- start page title -->
+  <div class="row">
+    <div class="col-12">
+      <div class="page-title-box">
+        <div class="page-title-right">
+          <ol class="breadcrumb m-0 font-20">
+            <li class="breadcrumb-item"><a href="/secured/v2/index.html#/localsearch">Home</a></li>
+            <li class="breadcrumb-item active">Local Search</li>
+          </ol>
+        </div>
+        <h3 class="page-title font-20">{{departmentTitle}} ({{title}})</h3>
+      </div>
+    </div>
+  </div>
+  <!-- end page title -->
+
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+          <div class="row mb-2">
+            <div class="col-sm-12">
+              <!-- <a href="javascript:void(0);" class="btn btn-danger mb-2"><i class="mdi mdi-plus-circle mr-2"></i> Add
+                  Products</a> -->
+              <form #f="ngForm" (ngSubmit)="btnLocalsearch_Click(f,0,$event)">
+                <div class="input-group m-1" *ngFor="let basicsearch of Basic_search">
+                  <div class="col-sm-12" *ngIf="basicsearch.keypress; else keypress">
+                    <input ngModel required type="{{basicsearch.type}}" class="form-control font-20" placeholder="{{basicsearch.title}}" maxlength="{{basicsearch.maxlength}}" 
+                  pattern="{{basicsearch.pattern}}" name="{{basicsearch.name}}" id="{{basicsearch.name}}" (keyup)="onValid($event,f.controls[basicsearch.name]?.invalid)">
+                  </div>
+                  <ng-template class="col-sm-12" #keypress>
+                    <!-- <div *ngIf="basicsearch.dropdown != 'dropdown'; else dropdown" class="col-sm-12"> -->
+                    <div *ngIf="basicsearch.dropdown != 'dropdown' && basicsearch.dropdown != 'vehTypeRef' && basicsearch.dropdown != 'offLocCodes' && basicsearch.dropdown != 'courtCode'; else dropdown" class="col-sm-12">
+                      <input ngModel required type="{{basicsearch.type}}" class="form-control font-20" placeholder="{{basicsearch.title}}" maxlength="{{basicsearch.maxlength}}" 
+                      pattern="{{basicsearch.pattern}}" name="{{basicsearch.name}}" id="{{basicsearch.name}}" (keyup)="onValid($event,f.controls[basicsearch.name]?.invalid)">
+                    </div>
+                  </ng-template>
+                  <ng-template #dropdown>
+                    <div *ngIf="basicsearch.dropdown != 'vehTypeRef' && basicsearch.dropdown != 'offLocCodes' && basicsearch.dropdown != 'courtCode'; else courtCode" class="col-sm-12">
+                      <!-- <div class="col-sm-12"> -->
+                        <input [(ngModel)]="selectedCivil" list="civil" autocomplete="off" placeholder="เลือกศาล" class="form-control font-20" name="listCivil" id="listCivil" (ngModelChange)="onChange()">
+                        <datalist class="form-control font-20" id="civil" class="col-sm-12">
+                            <option *ngFor="let civilData of civilDatas" data-value="{{civilData.court_name}}" [value]="civilData.abbr"></option>
+                        </datalist>
+                        <input [(ngModel)]="successCivil" type="hidden" class="form-control font-20" placeholder="{{basicsearch.title}}" maxlength="{{basicsearch.maxlength}}" 
+                        pattern="{{basicsearch.pattern}}" name="{{basicsearch.name}}" id="{{basicsearch.name}}">
+                      <!-- </div> -->
+                    </div>
+                  </ng-template>
+                  <ng-template #courtCode>
+                    <div *ngIf="basicsearch.dropdown != 'vehTypeRef' && basicsearch.dropdown != 'offLocCodes' && basicsearch.dropdown != 'dropdown'; else vehTypeRef" class="col-sm-12">
+                      <!-- <div class="col-sm-12"> -->
+                        <input [(ngModel)]="selectedCivil" list="court" autocomplete="off" placeholder="เลือกศาล" class="form-control font-20" name="listcourt" id="listcourt" (ngModelChange)="onChangeCourt()">
+                        <datalist class="form-control font-20" id="court" class="col-sm-12" >
+                            <option *ngFor="let civilData of civilDatas" data-value="{{civilData.court_name}}" [value]="civilData.court_code"></option>
+                        </datalist>
+                        <input [(ngModel)]="successCourt" type="hidden" class="form-control font-20" placeholder="{{basicsearch.title}}" maxlength="{{basicsearch.maxlength}}" 
+                        pattern="{{basicsearch.pattern}}" name="{{basicsearch.name}}" id="{{basicsearch.name}}" >
+                      <!-- </div> -->
+                    </div>
+                  </ng-template>
+                  <ng-template #vehTypeRef>
+                    <div *ngIf="basicsearch.dropdown != 'offLocCodes'" class="col-sm-12">
+                      <select class="form-control font-20" required [(ngModel)]="successVehicleTypeRef" name="{{basicsearch.name}}" id="{{basicsearch.name}}" (change)="onValid($event,f.controls[basicsearch.name]?.invalid)">
+                        <option value="เลือกประเภท" selected="selected">เลือกประเภท</option>
+                        <option *ngFor="let carvehTypeRef of carvehTypeRefs" [value]="carvehTypeRef.vehicleTypeRef">{{carvehTypeRef.vehicleTypeDesc}}</option>
+                      </select>
+                    </div>
+                  </ng-template>
+                  <div class="col-sm-12" *ngIf="basicsearch.dropdown == 'offLocCodes'">
+                    <select class="form-control font-20" required [(ngModel)]="successCarOffLocCode" name="{{basicsearch.name}}" id="{{basicsearch.name}}" (change)="onValid($event,f.controls[basicsearch.name]?.invalid)">
+                      <option value="เลือกจังหวัด" selected="selected">เลือกจังหวัด</option>
+                      <option *ngFor="let carOffLocCode of carOffLocCodes" [value]="carOffLocCode.offLocCode">{{carOffLocCode.value}}</option>
+                    </select>
+                  </div>
+                  
+
+                    <!-- <em *ngIf="f.controls[basicsearch.name]?.invalid">*</em> -->
+                </div>
+                <div class="input-group">
+                  <!-- <button class="btn btn-primary search-icon" type="submit"><i class="dripicons-search"></i> ค้นหา</button> -->
+                  <ul class="list-inline wizard mb-0">
+                    <!-- <li class="previous list-inline-item disabled">
+                          <a href="#" class="btn btn-info">Previous</a>
+                      </li> -->
+                    <li class="next list-inline-item float-right ml-3 mt-2">
+                      <button class="btn btn-info font-20" type="submit" [disabled]="isValid"><i class="dripicons-search"></i>ค้นหา</button>
+                    </li>
+                  </ul>
+                </div>
+              </form>
+              <div class="mt-2 ml-3" *ngIf="title !== 'ฐานข้อมูลคำพิพากษาฉบับเต็ม'">
+                <p class="font-16 badge badge-outline-warning">หมายเหตุ : </p> <span class="font-18"> {{remark}}</span>
+              </div>
+              <div  class="mt-2 ml-3" *ngIf="title === 'ฐานข้อมูลคำพิพากษาฉบับเต็ม'">
+                <p class="font-16 badge badge-outline-warning">หมายเหตุ : </p> 
+                <span class="font-18"> มีข้อมูลตั้งแต่ปี พ.ศ.2559 จนถึงปัจจุบัน 
+                  <br> *เนื่องจากไฟล์คำพิพากษาฉบับเต็มมีขนาดใหญ่ อาจใช้เวลาในการดาวน์โหลด 
+                  <br> *หมายเลขคดีดำตัวแรกขึ้นต้นด้วยพยัญชนะ ไม่มีจุด และไม่เว้นวรรค</span>
+              </div>
+            </div>
+            <!-- end col-->
+          </div>
+
+          <div class="table-responsive font-20">
+            <!-- <table class="table table-centered w-100 dt-responsive nowrap" id="products-datatable">
+                <thead class="thead-light">
+                  <tr>
+                    <th class="all" *ngFor="let arrayCell of cells">{{arrayCell.title}}</th>
+                    <th style="width: 85px;">Action</th>
+                  </tr>
+                </thead>
+                <tbody data-toggle="modal" data-target="#full-width-modal">
+                  <tr *ngFor="let arrData of obj" (click)="openDialog(arrData)">
+                    <td *ngFor="let arrayCell of cells">
+                      <div *ngIf="arrayCell.id=='sex'; else elseSex">
+                        {{arrData[arrayCell.id] | converseSex}}
+                      </div>
+                      <ng-template #elseSex>
+                        <ng-container *ngIf="arrayCell.id=='probationStatus';else elseDate">
+                          {{arrData[arrayCell.id] | converseStatus}}
+                        </ng-container>
+                      </ng-template>
+                      <ng-template #elseDate>
+                        <ng-container *ngIf="arrayCell.id=='issueDate';else elseDateOfBirth">
+                          {{arrData[arrayCell.id] | converseDate}}
+                        </ng-container>
+                      </ng-template>
+                      <ng-template #elseDateOfBirth>
+                        <ng-container *ngIf="arrayCell.id=='dateOfBirth';else elseStatus">
+                          {{arrData[arrayCell.id] | converseDate}}
+                        </ng-container>
+                      </ng-template>
+                      <ng-template #elseStatus>
+                        {{arrData[arrayCell.id] | filter:arrData['birthDate'] | filter:arrData['probationStartDateSrc'] | filter:arrData['birthDateSrc']
+                                    | filter:arrData['probationPlannedEndDateSrc'] | filter:arrData['seizeCaseDate'] | filter:arrData['personBirthDate']
+                                    | filter:arrData['entryDate'] | filter:arrData['sentenceDate'] | filter:arrData['releaseDate']}}
+                      </ng-template>
+                    </td>
+                    <td class="table-action">
+                      <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-eye"></i></a>
+                      <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-square-edit-outline"></i></a>
+                      <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table> -->
+                <table #dataTable id="table1" class="table table-striped nowrap w-100 text-white font-20">
+                  <tbody data-toggle="modal" data-target="#full-width-modal" style="cursor: pointer;">
+                    <div *ngIf="IsuploadSearch" class="spinner-border text-dark"></div>
+                  </tbody>
+                </table>
+                <div *ngIf="title == 'ฐานข้อมูลทะเบียนราษฎร (ค้นหาด้วยชื่อตัว-ชื่อสกุล) (Linkage)'">
+                  <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-end">
+                      <li class="page-item font-20"><a class="page-link">จำนวนหน้า</a></li>
+                      <div *ngFor="let offset of htmlStr; let i = index" [attr.data-index]="i">
+                        <li [class.active]="selectedIndex === i" class="page-item font-20" #btnValue id="{{i}}" value="{{offset}}" (click)="pageOffset(btnValue.value, i)">
+                          <a class="page-link" style="cursor: pointer;">{{i+1}}</a>
+                        </li>
+                      </div>
+                    </ul>
+                  </nav>
+                </div>
+                
+                <!-- <table class="text-white font-20 mb-0 ml-3 mr-3">
+                  <tbody>
+                    <tr>
+                      <td>จำนวนหน้า : </td>
+                      <td  class="text-right">
+                        <button #btnValue id="{{i}}" value="{{offset}}" (click)="pageOffset(btnValue.value)">{{i+1}}</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table> -->
+          </div>
+        </div> <!-- end card-body-->
+      </div> <!-- end card-->
+    </div> <!-- end col -->
+  </div>
+  <!-- end row -->
+
+</div> <!-- container -->
+<app-errormessage-ui [messageErrorUI]="errorStatus" [debugMessage]="debugMessage"></app-errormessage-ui>
+
+<!-- <script>
+      $('.js-example-basic-single').select2();
+</script> -->
+<div id="standard-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="standard-modalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          </div>
+          <div class="modal-body font-20 text-center">
+              กรุณารอสักครู่ กำลังโหลดข้อมูล
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">ปิด</button>
+          </div>
+      </div>
+  </div>
+</div>

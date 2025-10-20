@@ -1,0 +1,98 @@
+<div *ngIf="moidopapersonCount">
+    <div *ngFor="let moidopapersonItem of moidopapersonResults">
+        <div *ngIf="moidopapersonItem.exitCode; else exit">
+          <div *ngIf="report_name != 'รายงาน Single Report'">
+            <div class="card border-secondary border col-md-12">
+              <div class="card mb-md-0 mb-3">
+                <div class="card-body">
+                  <div>
+                    <span class="text-success font-20"><u>กรมการปกครอง: </u></span>
+                    <span class="text-white font-20"><u>ทะเบียนราษฎร (Linkage) </u></span>
+                    <span class="text-danger font-20"><u>{{moidopapersonItem.exitCode | changeStatus}}</u></span>
+                    <span *ngIf="moidopapersonItem.Results && moidopapersonItem.exitCode == 'NOT_FOUND'" class="text-danger font-20">
+                      <u> (ไม่พบข้อมูล) </u>
+                    </span>
+                    <span *ngIf="moidopapersonItem.Results == '[]' && moidopapersonItem.exitCode == 'OK'" class="text-danger font-20">
+                      <u> (ไม่พบข้อมูล) </u>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <ng-template #exit>
+        <div class="card border-secondary border col-md-12">
+            <div class="card mb-md-0 mb-3">
+                <div class="card-body">
+                    <div data-toggle="collapse" data-target="#moidopapersonTablecollapse" role="button" aria-expanded="true"
+                        aria-controls="moidopapersoncollapse">
+                        <span class="text-success font-20"><u>กรมการปกครอง: </u></span>
+                        <span class="text-white font-20"><u>ทะเบียนราษฎร (Linkage)
+                            </u></span>
+                        <span class="text-warning font-20"><u>จำนวน: {{moidopapersonCount}}
+                                รายการ
+                            </u></span>
+                    </div>
+                    <div id="moidopapersonTablecollapse" class="collapse pt-3">
+                        <div class="col-md-12" *ngFor="let moidopapersonItem of moidopapersonResults" class="singlereport-timeline-item">
+                            <div class="col-md-12" class="singlereport-timeline-item">
+                                <input type="hidden" value="ทะเบียนราษฎร (Linkage)" #moidopapersonTitle>
+                                <input type="hidden" value="assets/dist/img/dopa.png" #moidopapersonImg>
+                                <img src="assets/dist/img/dxc-img/symbol/datatype/32/dopa-citizen.png" width="25px">
+                                <span class="text-success font-20">&nbsp;<u>ทะเบียนราษฎร (Linkage)</u></span>
+                                <table class="table-striped table-centered mb-0 mt-3 text-20">
+                                    <thead>
+                                        <tr>
+                                            <th>ชื่อตัว</th>
+                                            <th>ชื่อสกุล</th>
+                                            <th>อายุ</th>
+                                            <th>วันเดือนปี เกิด</th>
+                                            <th>สัญชาติ</th>
+                                            <th>สถานะภาพบุคคล</th>
+                                            <th>รายละเอียด</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>{{ moidopapersonItem.firstName | filter:""}}</td>
+                                            <td>{{ moidopapersonItem.lastName | filter:""}}</td>
+                                            <td>{{ moidopapersonItem.age | filter:""}}</td>
+                                            <td>{{ moidopapersonItem.dateOfBirth | thaidate}}</td>
+                                            <td>{{ moidopapersonItem.nationalityDesc | filter:""}}</td>
+                                            <td>{{ moidopapersonItem.statusOfPersonDesc | filter:""}}</td>
+                                            <td class="text-center">
+                                                <button class="btn btn-info" type="button" href="#person-table-full-width-modal" data-toggle="modal"
+                                                data-target="#person-table-full-width-modal"
+                                                (click)="selectRow(moidopapersonItem,moidopapersonTitle.value,moidopapersonImg.value)">
+                                                <span class="icon-name"><i class="mdi mdi-arrow-top-right" style="color:white;"></i></span>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</div>
+
+<div *ngIf="report_name != 'รายงาน Single Report'">
+    <div *ngIf="!moidopapersonCount">
+      <div class="card border-secondary border col-md-12">
+        <div class="card mb-md-0 mb-3">
+          <div class="card-body">
+            <div>
+              <span class="text-success font-20"><u>กรมการปกครอง: </u></span>
+              <span class="text-white font-20"><u>ทะเบียนราษฎร (Linkage) </u></span>
+              <span class="text-danger font-20"><u>(ไม่พบข้อมูล)</u></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

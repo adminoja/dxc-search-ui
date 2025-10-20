@@ -1,0 +1,131 @@
+<!-- กรมคุมประพฤติ -->
+<div *ngIf="probationerCount !==0 && !inputAlgationsProbationer">
+  <!-- <div *ngFor="let probationerItem of probationerResults"> -->
+    <div *ngIf="exitCode[0].exitCode; else exit">
+      <div *ngIf="report_name != 'รายงาน Single Report'">
+        <div class="card border-secondary border col-md-12">
+          <div class="card mb-md-0 mb-3">
+            <div class="card-body">
+              <div>
+                <span class="text-success font-20"><u>กรมคุมประพฤติ: </u></span>
+                <span class="text-white font-20"><u>ผู้ถูกคุมประพฤติ </u></span>
+                <span class="text-danger font-20"><u>{{exitCode[0].exitCode | changeStatus}}</u></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- </div> -->
+  <ng-template #exit>
+    <div class="card border-secondary border col-md-12">
+        <!-- Portlet card -->
+        <div class="card mb-md-0 mb-3">
+            <div class="card-body">
+                <div data-toggle="collapse" data-target="#dopprobationee" role="button" aria-expanded="true" aria-controls="dopprobationee">
+                    <span class="text-success font-20"><u>กรมคุมประพฤติ: </u></span>
+                    <span class="text-white font-20"><u>ผู้ถูกคุมประพฤติ </u></span>
+                    <span class="text-warning font-20"><u>จำนวน: {{probationerCount}} รายการ </u></span>
+                </div>
+                <div id="dopprobationee" class="collapse pt-3">
+                    <div class="col-md-12" *ngFor="let probationerItem of probationerResults" class="singlereport-timeline-item">
+                          <img src="assets/dist/img/dxc-img/symbol/datatype/32/dop-probationee.png">&nbsp;
+                          <input type="hidden" value="ผู้ถูกคุมประพฤติ" #probationerTitle>
+                          <input type="hidden" value="assets/dist/img/dop.png" #probationerdepartmentImg>
+                          <span class="text-success font-20"><u>ผู้ถูกคุมประพฤติ</u></span>
+                          <button
+                            class="btn btn-info" style="float: right;" type="button" href="#probations-full-width-modal" data-toggle="modal" data-target="#probations-full-width-modal"
+                            (click)="selectRow(probationerItem,probationerTitle.value,probationerdepartmentImg.value)">
+                              <span class="icon-name"><i class="mdi mdi-arrow-top-right" style="color:white;"></i></span>
+                          </button>
+                          <div style="padding-left:15px; margin-top: 3%;">
+                            <span class="text-white font-20">ชื่อ</span>&nbsp;&nbsp;
+                            <span class="text-success font-20" style="text-decoration:underline">
+                              {{probationerItem.firstName | filter:""}}
+                              {{probationerItem.lastName | filter:""}}</span>&nbsp;&nbsp;
+                            <span class="text-white font-20">ถูกศาลสั่งคุมประพฤติเมื่อ</span>&nbsp;&nbsp;
+                            <span class="text-success font-20" style="text-decoration:underline">&nbsp;{{probationerItem.probationStartDate | converseDate}}&nbsp;</span>&nbsp;&nbsp;
+                            <span class="text-white font-20">ฐานความผิด</span>&nbsp;&nbsp;
+                            <span class="text-success font-20" style="text-decoration:underline">
+                              {{probationerItem.predicateOffence | filter:""}}</span>&nbsp;&nbsp;
+                            <span class="text-white font-20">หน่วยงานคุมประพฤติ</span>&nbsp;&nbsp;
+                            <span class="text-success font-20" style="text-decoration:underline">
+                              {{probationerItem.officeName | filter:""}}</span>&nbsp;&nbsp;
+                            <span class="text-white font-20">วันที่ครบกำหนดคุมประพฤติ</span>&nbsp;&nbsp;
+                            <span class="text-success font-20" style="text-decoration:underline">
+                              {{probationerItem.probationPlannedEndDateSrc | converseDate}}</span>&nbsp;&nbsp;
+                            <span class="text-white font-20">วันที่พ้นคุมประพฤติ</span>&nbsp;&nbsp;
+                            <span class="text-success font-20" style="text-decoration:underline">
+                              {{probationerItem.probationActualEndDateSrc | converseDate}}</span>&nbsp;&nbsp;
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- end card-->
+  </ng-template>
+</div>
+
+<div *ngIf="inputAlgationsProbationer">
+  <div class="card border-secondary border col-md-12">
+      <!-- Portlet card -->
+      <div class="card mb-md-0 mb-3">
+          <div class="card-body">
+              <div data-toggle="collapse" data-target="#dopprobationee" role="button" aria-expanded="true" aria-controls="dopprobationee">
+                  <span class="text-success font-20"><u>กรมคุมประพฤติ: </u></span>
+                  <span class="text-white font-20"><u>ผู้ถูกคุมประพฤติ </u></span>
+              </div>
+              <div id="dopprobationee" class="collapse pt-3">
+                <div class="col-md-12" class="singlereport-timeline-item">
+                  <img src="assets/dist/img/dxc-img/symbol/datatype/32/dop-probationee.png">&nbsp;
+                  <input type="hidden" value="ผู้ถูกคุมประพฤติ" #probationerTitle>
+                  <input type="hidden" value="assets/dist/img/dop.png" #probationerdepartmentImg>
+                  <span class="text-success font-20"><u>ผู้ถูกคุมประพฤติ</u></span>
+                  <button
+                    class="btn btn-info" style="float: right;" type="button" href="#probations-full-width-modal" data-toggle="modal" data-target="#probations-full-width-modal"
+                    (click)="selectRow(inputAlgationsProbationer,probationerTitle.value,probationerdepartmentImg.value)">
+                    <span class="icon-name"><i class="mdi mdi-arrow-top-right" style="color:white;"></i></span>
+                  </button>
+                  <div style="padding-left:15px; margin-top: 3%;">
+                    <span class="text-white font-20">ชื่อ</span>&nbsp;&nbsp;
+                    <span class="text-success font-20" style="text-decoration:underline">
+                        {{inputAlgationsProbationer.firstName | filter:""}}
+                        {{inputAlgationsProbationer.lastName | filter:""}}</span>&nbsp;&nbsp;
+                    <span class="text-white font-20">ถูกศาลสั่งคุมประพฤติเมื่อ</span>&nbsp;&nbsp;
+                    <span class="text-success font-20" style="text-decoration:underline">&nbsp;{{inputAlgationsProbationer.probationStartDate | converseDate}}&nbsp;</span>&nbsp;&nbsp;
+                    <span class="text-white font-20">ฐานความผิด</span>&nbsp;&nbsp;
+                    <span class="text-success font-20" style="text-decoration:underline">
+                        {{inputAlgationsProbationer.predicateOffence | filter:""}}</span>&nbsp;&nbsp;
+                    <span class="text-white font-20">หน่วยงานคุมประพฤติ</span>&nbsp;&nbsp;
+                    <span class="text-success font-20" style="text-decoration:underline">
+                        {{inputAlgationsProbationer.officeName | filter:""}}</span>&nbsp;&nbsp;
+                    <span class="text-white font-20">วันที่ครบกำหนดคุมประพฤติ</span>&nbsp;&nbsp;
+                    <span class="text-success font-20" style="text-decoration:underline">
+                        {{inputAlgationsProbationer.probationPlannedEndDateSrc | converseDate}}</span>&nbsp;&nbsp;
+                    <span class="text-white font-20">วันที่พ้นคุมประพฤติ</span>&nbsp;&nbsp;
+                    <span class="text-success font-20" style="text-decoration:underline">
+                        {{inputAlgationsProbationer.probationActualEndDateSrc | converseDate}}</span>&nbsp;&nbsp;
+                  </div>
+              </div>
+            </div>
+          </div>
+      </div>
+  </div> <!-- end card-->
+</div>
+
+<div *ngIf="report_name != 'รายงาน Single Report'">
+  <div *ngIf="!probationerCount && !inputAlgationsProbationer">
+    <div class="card border-secondary border col-md-12">
+        <div class="card mb-md-0 mb-3">
+            <div class="card-body">
+                <div>
+                    <span class="text-success font-20"><u>กรมคุมประพฤติ: </u></span>
+                    <span class="text-white font-20"><u>ผู้ถูกคุมประพฤติ </u></span>
+                    <span class="text-danger font-20"><u> (ไม่พบข้อมูล) </u></span>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+

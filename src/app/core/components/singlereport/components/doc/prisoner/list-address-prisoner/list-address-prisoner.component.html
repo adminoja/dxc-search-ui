@@ -1,0 +1,63 @@
+<!-- กรมราชทัณฑ์ -->
+<div *ngIf="prisonerResults">
+  <div *ngFor="let prisonerItem of prisonerResults">
+    <div class="row singlereport-timeline-item">
+
+      <div class='col-md-11'>
+        <div class='section-criminal-results'
+          style='text-indent:25px; font-size: 16px; line-height:30px; padding-top: 0px ;margin-top: 0pxp;'>
+          <span style='text-decoration:underline; color: #0070C0; font-weight: bold; '
+            class='report-section-source-title'>กรมราชทัณฑ์ </span>
+          <span style='text-decoration:underline; color: #C00000; font-weight: bold; font-style: italic;'
+            class='report-section-data-title'>(ผู้ต้องขัง(คดีที่พิพากษาแล้ว))</span>
+          <div style='padding-left:15px;'>
+            <strong class='report-field-title'>เลขบัตรประชาชน</strong>&nbsp;&nbsp;
+            <span class='report-field-value text-info'>{{prisonerItem.citizenCardNumber
+            | filter:'0'}} </span>&nbsp;
+            <strong class='report-field-title'>ชื่อ</strong>&nbsp;&nbsp;
+            <span class='report-field-value text-info'>{{prisonerItem.firstName
+            | filter:""}} </span>&nbsp;
+            <strong class='report-field-title'>นามสกุล</strong>&nbsp;&nbsp;
+            <span class='report-field-value text-info'>{{prisonerItem.lastName
+            | filter:""}} </span>&nbsp;
+            <strong class='report-field-title'>เพศ</strong>&nbsp;&nbsp;
+            <span class='report-field-value text-info'>{{prisonerItem.sex
+            | filter:""}} </span>&nbsp;
+            <div>
+              <strong class='report-field-title'>เลขที่</strong>&nbsp;&nbsp;
+              <span class='report-field-value text-info'>{{prisonerItem.addressNoText
+              | filter:""}} </span>&nbsp;
+              <strong class='report-field-title'>หมู่ที่</strong>&nbsp;&nbsp;
+              <span class='report-field-value text-info'>{{prisonerItem.addressMooText
+              | filter:""}} </span>&nbsp;
+              <strong class='report-field-title'>หมู่บ้าน</strong>&nbsp;&nbsp;
+              <span class='report-field-value text-info'>{{prisonerItem.addressMooBanText
+              | filter:""}} </span>&nbsp;
+              <strong class='report-field-title'>ถนน</strong>&nbsp;&nbsp;
+              <span class='report-field-value text-info'>{{prisonerItem.addressRoadText
+              | filter:""}} </span>&nbsp;
+              <strong class='report-field-title'>ซอย</strong>&nbsp;&nbsp;
+              <span class='report-field-value text-info'>{{prisonerItem.addressSoiText
+              | filter:""}} </span>&nbsp;
+              <strong class='report-field-title'>ตำบล</strong>&nbsp;&nbsp;
+              <span class='report-field-value text-info'>{{prisonerItem.addressTumbonText
+              | filter:""}} </span>&nbsp;
+              <strong class='report-field-title'>อำเภอ</strong>&nbsp;&nbsp;
+              <span class='report-field-value text-info'>{{prisonerItem.addressAmphurText
+              | filter:""}} </span>&nbsp;
+            </div>
+            <div>
+              <strong class='report-field-title'>จังหวัด</strong>&nbsp;&nbsp;
+              <span class='report-field-value text-info'>{{prisonerItem.addressProvinceText
+              | filter:""}} </span>&nbsp;
+              <strong class='report-field-title'>รหัสไปรษณีย์</strong>&nbsp;&nbsp;
+              <span class='report-field-value text-info'>{{prisonerItem.addressPostCode |
+              filter:'0' }} </span>&nbsp;
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

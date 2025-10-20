@@ -1,0 +1,78 @@
+<div *ngIf="moiDopaBorderPassesCount !==0 ">
+  <!-- <div *ngFor="let moiDopaBorderPassesItem of moiDopaBorderPassesResults"> -->
+    <div *ngIf="exitCode[0].exitCode; else exit">
+      <div *ngIf="report_name != 'รายงาน Single Report'">
+        <div class="card border-secondary border col-md-12">
+          <div class="card mb-md-0 mb-3">
+            <div class="card-body">
+              <div>
+                <span class="text-success font-20"><u>กรมการปกครอง: </u></span>
+                <span class="text-white font-20"><u>ข้อมูลผู้ขอออกหนังสือผ่านแดนทั้งหมด (Linkage) </u></span>
+                <span class="text-danger font-20"><u>{{exitCode[0].exitCode | changeStatus}}</u></span>
+                <span *ngIf="exitCode[0].Results && exitCode[0].exitCode == 'NOT_FOUND'" class="text-danger font-20">
+                  <u> (ไม่พบข้อมูล) </u>
+                </span>
+                <span *ngIf="exitCode[0].Results == '[]' && exitCode[0].exitCode == 'OK'" class="text-danger font-20">
+                  <u> (ไม่พบข้อมูล) </u>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- </div> -->
+    <ng-template #exit>
+        <div class="card border-secondary border col-md-12">
+            <div class="card mb-md-0 mb-3">
+                <div class="card-body">
+                    <div data-toggle="collapse" data-target="#moiDopaBorderPassesTablecollapse" role="button" aria-expanded="true"
+                        aria-controls="moiDopaBorderPassescollapse">
+                        <span class="text-success font-20"><u>กรมการปกครอง:</u></span>
+                        <span class="text-white font-20"><u> ข้อมูลผู้ขอออกหนังสือผ่านแดนทั้งหมด (Linkage)</u></span>
+                        <span class="text-warning font-20"><u> จำนวน: {{moiDopaBorderPassesCount}} รายการ</u></span>
+                    </div> 
+                    <div id="moiDopaBorderPassesTablecollapse" class="collapse pt-3">
+                        <div class="col-md-12" class="singlereport-timeline-item">
+                            <div class="col-md-12" class="singlereport-timeline-item" *ngFor="let moiDopaBorderPassesItem of moiDopaBorderPassesResults">
+                                <input type="hidden" value="ข้อมูลผู้ขอออกหนังสือผ่านแดนทั้งหมด (Linkage)" #moiDopaBorderPassesTitle>
+                                <input type="hidden" value="assets/dist/img/dopa.png" #moiDopaBorderPassesImg>
+                                <img src="assets/dist/img/dxc-img/symbol/datatype/32/moi-dopa-border-passes.png" width="25px">
+                                <span class="text-success font-20">&nbsp;<u>ข้อมูลผู้ขอออกหนังสือผ่านแดนทั้งหมด (Linkage)</u></span>
+
+                                <table class="table-striped table-centered mb-0 mt-3 text-20">
+                                    <thead>
+                                        <tr>
+                                            <th>อาชีพ</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>{{ moiDopaBorderPassesItem.career | filter:""}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</div>
+
+<div *ngIf="report_name != 'รายงาน Single Report'">
+  <div *ngIf="!moiDopaBorderPassesCount">
+    <div class="card border-secondary border col-md-12">
+        <div class="card mb-md-0 mb-3">
+            <div class="card-body">
+                <div>
+                    <span class="text-success font-20"><u>กรมการปกครอง: </u></span>
+                    <span class="text-white font-20"><u>ข้อมูลผู้ขอออกหนังสือผ่านแดนทั้งหมด (Linkage) </u></span>
+                    <span class="text-danger font-20"><u> (ไม่พบข้อมูล) </u></span>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>

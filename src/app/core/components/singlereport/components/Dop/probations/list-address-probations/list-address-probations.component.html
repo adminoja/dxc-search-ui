@@ -1,0 +1,56 @@
+<div *ngIf="probationerResults">
+  <div *ngFor="let probationerItem of probationerResults">
+    <div class="row singlereport-timeline-item">
+
+      <div class='col-md-11'>
+        <div class='section-criminal-results'
+          style='text-indent:25px; font-size: 16px; line-height:30px; padding-top: 0px ;margin-top: 0pxp;'>
+          <span style='text-decoration:underline; color: #0070C0; font-weight: bold; '
+            class='report-section-source-title'>กรมคุมประพฤติ </span>
+          <span style='text-decoration:underline; color: #C00000; font-weight: bold; font-style: italic;'
+            class='report-section-data-title'>(ที่อยู่)</span>
+          <div style='padding-left:15px;'>
+            <strong class='report-field-title'>เลขบัตรประชาชน</strong>&nbsp;&nbsp;
+            <span class='report-field-value text-info'>{{probationerItem.citizenCardNumber
+            | filter:'0'}} </span>&nbsp;
+            <strong class='report-field-title'>ชื่อ</strong>&nbsp;&nbsp;
+            <span class='report-field-value text-info'>{{probationerItem.firstName
+            | filter:""}} </span>&nbsp;
+            <strong class='report-field-title'>นามสกุล</strong>&nbsp;&nbsp;
+            <span class='report-field-value text-info'>{{probationerItem.lastName
+            | filter:""}} </span>&nbsp;
+            <strong class='report-field-title'>เพศ</strong>&nbsp;&nbsp;
+            <span class='report-field-value text-info'>{{probationerItem.sex
+            | filter:""}} </span>&nbsp;
+            <div>
+              <strong class='report-field-title'>เลขที่</strong>&nbsp;&nbsp;
+              <span class='report-field-value text-info'>{{probationerItem.homeNumber
+              | filter:""}} </span>&nbsp;
+              <strong class='report-field-title'>หมู่ที่</strong>&nbsp;&nbsp;
+              <span class='report-field-value text-info'>{{probationerItem.moo
+              | filter:""}} </span>&nbsp;
+              <strong class='report-field-title'>หมู่บ้าน</strong>&nbsp;&nbsp;
+              <span class='report-field-value text-info'>{{probationerItem.village
+              | filter:""}} </span>&nbsp;
+              <strong class='report-field-title'>ถนน</strong>&nbsp;&nbsp;
+              <span class='report-field-value text-info'>{{probationerItem.street
+              | filter:""}} </span>&nbsp;
+              <strong class='report-field-title'>ซอย</strong>&nbsp;&nbsp;
+              <span class='report-field-value text-info'>{{probationerItem.soi
+              | filter:""}} </span>&nbsp;
+              <strong class='report-field-title'>ตำบล</strong>&nbsp;&nbsp;
+              <span class='report-field-value text-info'>{{probationerItem.subDistrictName
+              | filter:""}} </span>&nbsp;
+              <strong class='report-field-title'>อำเภอ</strong>&nbsp;&nbsp;
+              <span class='report-field-value text-info'>{{probationerItem.districtName
+              | filter:""}} </span>&nbsp;
+              <strong class='report-field-title'>จังหวัด</strong>&nbsp;&nbsp;
+              <span class='report-field-value text-info'>{{probationerItem.provinceName
+              | filter:""}} </span>&nbsp;
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,93 @@
+<div *ngIf="landAndCondominiumTitlesCount">
+    <!-- <div *ngFor="let landAndCondominiumTitlesItem of landAndCondominiumTitlesResults"> -->
+      <div *ngIf="exitCode[0].exitCode; else exit">
+        <div *ngIf="report_name != 'รายงาน Single Report'">
+          <div class="card border-secondary border col-md-12">
+            <div class="card mb-md-0 mb-3">
+              <div class="card-body">
+                <div>
+                  <span class="text-success font-20"><u>กรมที่ดิน:</u></span>
+                  <span class="text-white font-20"><u> ฐานข้อมูลการครอบครองกรรมสิทธิ์ที่ดินและห้องชุด(Linkage) </u></span>
+                  <span class="text-danger font-20"><u>{{exitCode[0].exitCode | changeStatus}}</u></span>
+                  <span *ngIf="exitCode[0].Results && exitCode[0].exitCode == 'NOT_FOUND'" class="text-danger font-20">
+                    <u> (ไม่พบข้อมูล) </u>
+                  </span>
+                  <span *ngIf="exitCode[0].Results == '[]' && exitCode[0].exitCode == 'OK'" class="text-danger font-20">
+                    <u> (ไม่พบข้อมูล) </u>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- </div> -->
+    <ng-template #exit>
+        <div class="card border-secondary border col-md-12">
+            <div class="card mb-md-0 mb-3">
+                <div class="card-body">
+                    <div data-toggle="collapse" data-target="#landAndCondominiumTitlescollapse" role="button" aria-expanded="true" aria-controls="landAndCondominiumTitlescollapse">
+                        <span class="text-success font-20"><u>กรมที่ดิน:</u></span>
+                        <span class="text-white font-20"><u> ฐานข้อมูลการครอบครองกรรมสิทธิ์ที่ดินและห้องชุด(Linkage) </u></span>
+                        <span class="text-warning font-20"><u> จำนวน: {{landAndCondominiumTitlesCount}} รายการ </u></span>
+                    </div>
+                    <div id="landAndCondominiumTitlescollapse" class="collapse pt-3">
+                        <div class="col-md-12" *ngFor="let landAndCondominiumTitlesItem of landAndCondominiumTitlesResults" class="singlereport-timeline-item">
+                            <div class="col-md-12" class="singlereport-timeline-item">
+                                <input type="hidden" value="ฐานข้อมูลการครอบครองกรรมสิทธิ์ที่ดินและห้องชุด(Linkage)" #landAndCondominiumTitlesTitle>
+                                <input type="hidden" value="assets/dist/img/dol.png" #landAndCondominiumTitlesdepartmentImg>
+                                <span class="text-success font-20">
+                                    <img src="assets/dist/img/dxc-img/symbol/datatype/32/moi-dol-land-and-condominium-titles.png">&nbsp;
+                                    <u>ฐานข้อมูลการครอบครองกรรมสิทธิ์ที่ดินและห้องชุด(Linkage)</u>
+                                </span>
+
+                                <table class="table-striped table-centered mb-0 mt-3 text-20">
+                                    <thead>
+                                        <tr>
+                                            <th>ทะเบียนอาคารชุด</th>
+                                            <th>ชื่ออาคารชุด</th>
+                                            <th>ประเภทเอกสารสิทธิ</th>
+                                            <th>เลขที่เอกสารสิทธิ</th>
+                                            <th>รายละเอียด</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>{{ landAndCondominiumTitlesItem.condoId | filter:""}}</td>
+                                            <td>{{ landAndCondominiumTitlesItem.condoNameTh | filter:""}}</td>
+                                            <td>{{ landAndCondominiumTitlesItem.parcelTypeName | filter:""}}</td>
+                                            <td>{{ landAndCondominiumTitlesItem.propertyNo | filter:""}}</td>
+                                            <td class="text-center">
+                                                <button class="btn btn-info" type="button" href="#land-and-condominium-table-full-width-modal" data-toggle="modal"
+                                                data-target="#land-and-condominium-table-full-width-modal"
+                                                (click)="selectRow(landAndCondominiumTitlesItem,landAndCondominiumTitlesTitle.value,landAndCondominiumTitlesdepartmentImg.value)">
+                                                <span class="icon-name"><i class="mdi mdi-arrow-top-right" style="color:white;"></i></span>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</div>
+
+<div *ngIf="report_name != 'รายงาน Single Report'">
+    <div *ngIf="!landAndCondominiumTitlesCount">
+      <div class="card border-secondary border col-md-12">
+          <div class="card mb-md-0 mb-3">
+              <div class="card-body">
+                  <div>
+                      <span class="text-success font-20"><u>กรมที่ดิน:</u></span>
+                      <span class="text-white font-20"><u> ฐานข้อมูลการครอบครองกรรมสิทธิ์ที่ดินและห้องชุด(Linkage) </u></span>
+                      <span class="text-danger font-20"><u> (ไม่พบข้อมูล) </u></span>
+                  </div>
+              </div>
+          </div>
+      </div> 
+    </div>
+</div>

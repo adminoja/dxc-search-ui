@@ -1,0 +1,66 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <h3 class="page-title mt-3">Specialize Report</h3>
+            <div class="card mt-3">
+                <div class="card-body">
+                    <div class="text-center" *ngIf="idbDopPersonReport || idbDjopPersonReport || idbDocPersonReport">
+                        <div *ngIf="idbDopPersonReport[0]=='idb.dop-person-report'">
+                            <a href="/secured/v2/index.html#/dxcui0014/dxcui00141/กรมคุมประพฤติ">
+                                <button type="button" class="btn btn-secondary" style="width: 800px; height:150px; margin: 15px;">
+                                    <img src="assets/dist/img/dxc-img/symbol/institute/64/dop.png" alt="คุมประพฤติ">
+                                    <span class="sub-title">สืบค้นข้อมูลรวมประวัติบุคคล สำหรับกรมคุมประพฤติ</span>
+                                </button>
+                            </a>
+                        </div>
+                        <div *ngIf="idbDopPersonReport[0]==null">
+                                <button type="button" class="btn btn-secondary" style="width: 800px; height:200px; margin: 15px;">
+                                    <img src="assets/dist/img/dxc-img/symbol/institute/64/dop.png" alt="คุมประพฤติ">
+                                    <span class="sub-title">สืบค้นข้อมูลรวมประวัติบุคคล สำหรับกรมคุมประพฤติ</span>
+                                    <span class="sub-title" style="float:right;">
+                                        <img src="assets/dist/img/lock.png" class="avatar-xs rounded-circle mr-1"
+                                        data-toggle="tooltip" data-placement="bottom" title="Assigned to Arya S">ไม่มีสิทธิ์การเข้าใช้งาน!!</span>
+                                </button>
+                        </div>
+                        <div *ngIf="idbDjopPersonReport[0]=='idb.djop-person-report'">
+                            <a href="/secured/v2/index.html#/dxcui0014/dxcui00141/กรมพินิจและคุ้มครองเด็กและเยาวชน">
+                                <button type="button" class="btn btn-secondary" style="width: 800px; height:150px; margin: 15px;">
+                                    <img src="assets/dist/img/dxc-img/symbol/institute/64/djop.png" alt="กรมพินิจและคุ้มครองเด็กและเยาวชน">
+                                    <span class="sub-title">สืบค้นข้อมูลรวมประวัติบุคคล สำหรับกรมพินิจและคุ้มครองเด็กและเยาวชน</span>
+                                </button>
+                            </a>
+                        </div>
+                        <div *ngIf="idbDjopPersonReport[0]==null">
+                                <button type="button" class="btn btn-secondary" style="width: 800px; height:200px; margin: 15px;">
+                                    <img src="assets/dist/img/dxc-img/symbol/institute/64/djop.png" alt="กรมพินิจและคุ้มครองเด็กและเยาวชน">
+                                    <span class="sub-title">สืบค้นข้อมูลรวมประวัติบุคคล สำหรับกรมพินิจและคุ้มครองเด็กและเยาวชน</span>
+                                    <span class="sub-title" style="float:right;">
+                                        <img src="assets/dist/img/lock.png" class="avatar-xs rounded-circle mr-1"
+                                        data-toggle="tooltip" data-placement="bottom" title="Assigned to Arya S">ไม่มีสิทธิ์การเข้าใช้งาน!!</span>
+                                      
+                                </button>
+                        </div>
+                        <div *ngIf="idbDocPersonReport[0]=='idb.doc-person-report'">
+                            <a href="/secured/v2/index.html#/dxcui0014/dxcui00141/กรมราชทัณฑ์">
+                                <button type="button" class="btn btn-secondary" style="width: 800px; height:150px; margin: 15px;">
+                                    <img src="assets/dist/img/dxc-img/symbol/institute/64/doc.png" alt="กรมราชทัณฑ์">
+                                    <span class="sub-title">สืบค้นข้อมูลรวมประวัติบุคคล สำหรับกรมราชทัณฑ์</span>
+                                </button>
+                            </a>
+                        </div>
+                        <div *ngIf="idbDocPersonReport[0]==null">
+                                <button type="button" class="btn btn-secondary" style="width: 800px; height:200px; margin: 15px;">
+                                    <img src="assets/dist/img/dxc-img/symbol/institute/64/doc.png" alt="กรมราชทัณฑ์">
+                                    <span class="sub-title">สืบค้นข้อมูลรวมประวัติบุคคล สำหรับกรมราชทัณฑ์</span>
+                                    <span class="sub-title" style="float:right;">
+                                        <img src="assets/dist/img/lock.png" class="avatar-xs rounded-circle mr-1"
+                                        data-toggle="tooltip" data-placement="bottom" title="Assigned to Arya S">ไม่มีสิทธิ์การเข้าใช้งาน!!</span>
+                                        
+                                </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

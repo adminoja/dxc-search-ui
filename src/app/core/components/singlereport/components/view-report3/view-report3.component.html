@@ -1,0 +1,517 @@
+<div class="body">
+  <div class="container-fluid">
+    <div style="margin-left:600px; margin-top:10px;">
+      <p>รายงานที่
+        <span>.............../...............</span>
+      </p>
+      <p>เลขคดี
+        <span>.............../...............</span>
+      </p>
+    </div>
+    <div style="text-align:center;">
+      <h4>
+        <span>รายงานข้อเท็จจริงเกี่ยวกับเด็ก/เยาวชน</span>
+      </h4>
+      <h4>
+        <span>สถานพินิจและคุ้มครองเด็กและเยาวชน จังหวัดพิษณุโลก</span>
+      </h4>
+    </div>
+    <div>
+      <h5>
+        <span style="margin-left:50px;">ข้าพเจ้าขอรายงานข้อเท็จจริงสาเหตุแห่งการกระทำผิดเกี่ยวกับเด็ก/เยาวชน
+          และความเห็นตามที่ระบุไว้ในมาตรา
+          ๓๖(๑) และมาตรา ๘๒(๒)
+          แห่งพระราชบัญญัติศาลเยาวชนและครอบครัวและวิธีพิจารณาคดีเยาวชนและครอบครัว
+          พ.ศ. ๒๕๕๓ ดังต่อไปนี้
+        </span>
+      </h5>
+    </div>
+    <div>
+      <form>
+        <table style="width:100%" border="0">
+
+          <tbody>
+            <tr>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+              <td style="width: 5%;"></td>
+
+
+
+            </tr>
+            <tr>
+              <td colspan="4">ชื่อ-สกุล เด็ก/เยาวชน</td>
+              <td class="colorfont" style="border-bottom: black 1px dotted; text-align:center;" colspan="3"
+                *ngFor="let citizenItem of moidopapersonResults">
+                <div *ngIf="true">{{citizenItem.firstName}} {{citizenItem.lastName}} </div>
+              </td>
+              <td colspan="2">ชื่อเล่น</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;"></td>
+              <td colspan="4">เลขประจำตัวประชาชน</td>
+              <td class="colorfont" style="border-bottom: black 1px dotted; text-align:center;" colspan="3"
+                *ngFor="let citizenItem of moidopapersonResults">
+                <div *ngIf="true">{{citizenItem.citizenCardNumber}}</div>
+              </td>
+
+
+
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3">เกิดวันที่</td>
+              <td class="colorfont" style="border-bottom: black 1px dotted; text-align:center;" colspan="3"
+                *ngFor="let citizenItem of moidopapersonResults">
+                <div *ngIf="true">{{citizenItem.dateOfBirth}} </div>
+              </td>
+              <td colspan="3">ปัจจุบันอายุ</td>
+              <td class="colorfont" style="border-bottom: black 1px dotted; text-align:center;" colspan="2"
+                *ngFor="let citizenItem of moidopapersonResults">
+                <div *ngIf="true">{{citizenItem.age}} </div>
+              </td>
+              <td>ปี</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;"></td>เดือน
+              <td colspan="2">เชื้อชาติ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="2"></td>
+              <td>สัญชาติ</td>
+              <td class="colorfont" style="border-bottom: black 1px dotted; text-align:center;" colspan="2"
+                *ngFor="let citizenItem of moidopapersonResults">
+                <div *ngIf="true">{{citizenItem.nationality}} </div>
+              </td>
+              <td>ศาสนา</td>
+              <td class="colorfont" style="border-bottom: black 1px dotted; text-align:center;" colspan="2"
+                *ngFor="let citizenItem of moidopapersonResults">
+                <div *ngIf="true">{{citizenItem.religion}}</div>
+              </td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3">ชื่อ-สกุล บิดา </td>
+              <td class="colorfont" style="border-bottom: black 1px dotted; text-align:center;" colspan="3"
+                *ngFor="let citizenItem of moidopapersonResults">
+                <div *ngIf="true">{{citizenItem.fatherFullName}}</div>
+              </td>
+              <td colspan="3">ชื่อ-สกุล มารดา</td>
+              <td class="colorfont" style="border-bottom: black 1px dotted; text-align:center;" colspan="2"
+                *ngFor="let citizenItem of moidopapersonResults">
+                <div *ngIf="true">{{citizenItem.motherFullName}}</div>
+              </td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="5">ที่อยู่ของบิดา/มารดา เลขที่</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="10"></td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="2">โทรศัพท์</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="2"></td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="4">ชื่อ-สกุล ผู้ปกครอง</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="2"></td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="5">ที่อยู่ของผู้ปกครอง เลขที่</td>
+              <td style="border-bottom: black 1px dotted; " colspan="10"></td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="2">โทรศัพท์</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="2"></td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="5">สถานภาพบิดามารดา</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="2"></td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3">เป็นบุตรคนที่</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="2"></td>
+              <td colspan="3">ในจำนวนบุตร</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;"></td>
+              <td colspan="4">คน ของบิดามารดา</td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3">ปัจจุบันอาศัยอยู่กับ</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="2"> </td>
+              <td colspan="5">เกี่ยวข้องกับเด็ก/เยาวชน</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;"></td>
+
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3">ที่อยู่ เลขที่</td>
+              <td class="colorfont" style="border-bottom: black 1px dotted; text-align:center;" colspan="12"
+                *ngFor="let citizenItem of moidopapersonResults">
+                <div *ngIf="true">{{citizenItem.homeAddress}}</div>
+              </td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="2">โทรศัพท์</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="2"></td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="5">สถานที่ติดต่อ เลขที่</td>
+              <td class="colorfont" style="border-bottom: black 1px dotted; text-align:center;" colspan="10"
+                *ngFor="let citizenItem of moidopapersonResults">
+                <div *ngIf="true">{{citizenItem.homeAddress}}</div>
+              </td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="2">โทรศัพท์</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="2"></td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3">วัน เดือน ปี ที่รับตัว</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="2"></td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="7">ถูกกล่าวหากระทำความผิดในข้อหา</td>
+              <td style="border-bottom: black 1px dotted; " colspan="8">
+              </td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="8">หนังสือแจ้งการดำเนินคดี/แจ้งการจับกุม เลขที่</td>
+              <td style="border-bottom: black 1px dotted;" colspan="5"></td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="2">ลงวันที่</td>
+              <td style="border-bottom: black 1px dotted; text-align:center; " colspan="4"></td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3">สถานีตำรวจภูธร</td>
+              <td style="border-bottom: black 1px dotted; text-align:center; " colspan="5"></td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="6">วันเดือนปีที่ถูกกล่าวหาว่ากระทำผิด</td>
+              <td style="border-bottom: black 1px dotted; text-align:center; " colspan="3"></td>
+              <td colspan="5">อายุขณะกระทำความผิด</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;"></td>ปี
+              <td style="border-bottom: black 1px dotted; text-align:center;"></td>เดือน
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3">วันเวลาที่เกิดเหตุ</td>
+              <td style="border-bottom: black 1px dotted;" colspan="10">
+              </td>
+
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="3">สถานที่เกิดเหตุ</td>
+              <td style="border-bottom: black 1px dotted; " colspan="10"></td>
+
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="7">ชั้นพนักงานสอบสวน เด็ก/เยาวชนให้การ</td>
+              <td style="border-bottom: black 1px dotted; " colspan="8">
+
+              </td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="8">ชั้นพนักงานคุมประพฤติ เด็ก/เยาวชนให้การ</td>
+              <td style="border-bottom: black 1px dotted; " colspan="7">
+
+              </td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="4">พฤติการณ์คดีโดยสังเขป</td>
+              <td style="border-bottom: black 1px dotted; " colspan="11"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td style="height: 5px; text-decoration: underline; font-weight: bold; " colspan="11">
+                เกี่ยวกับผู้เสียหาย</td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="4">ผู้เสียหายให้ถ้อยคำว่า</td>
+              <td style="border-bottom: black 1px dotted; " colspan="11">
+              </td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="4">ประวัติครอบครัว</td>
+              <td style="border-bottom: black 1px dotted; " colspan="11"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 5px; text-decoration: underline; font-weight: bold; " colspan="11">
+                ปัจจัยความเสี่ยงความจำเป็น</td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="4">๑. ครอบครัว</td>
+            </tr>
+            <tr>
+              <td colspan="4" style="margin-left:20px;">ข้อมูลเบื้องต้น</td>
+              <td style="border-bottom: black 1px dotted; " colspan="11"></td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td style="height: 5px; text-decoration: underline; font-weight: bold; " colspan="11">
+                การทำหน้าที่ของครอบครัว</td>
+            </tr>
+            <tr>
+              <td colspan="8">วิธีการควบคุมพฤติกรรมของเยาวชน พบว่า</td>
+              <td style="border-bottom: black 1px dotted; " colspan="7">
+              </td>
+            </tr>
+            <tr>
+              <td colspan="9">ลักษณะความสัมพันธ์ระหว่างบิดา มารดา/ผู้ปกครอง พบว่า</td>
+              <td style="border-bottom: black 1px dotted; " colspan="6"></td>
+            </tr>
+            <tr>
+              <td colspan="12">ลักษณะความสัมพันธ์ระหว่างเด็ก/เยาวชนกับบิดา มารดา/ผู้ปกครอง พบว่า</td>
+              <td style="border-bottom: black 1px dotted; " colspan="3">
+              </td>
+            </tr>
+            <tr>
+              <td colspan="11">ความเจ็บป่วยทางสุขภาพกายและจิตของบุคคลในครอบครัว พบว่า</td>
+              <td style="border-bottom: black 1px dotted; " colspan="4">
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="6">๒. ชุมชนและสภาพแวดล้อม</td>
+            </tr>
+            <tr>
+              <td colspan="5">ข้อมูลจากการสืบเสาะ พบว่า</td>
+              <td style="border-bottom: black 1px dotted; " colspan="10"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+
+            <tr>
+              <td colspan="6">๓. ภูมิหลังทางการศึกษา อาชีพและสังคม</td>
+              <td style="border-bottom: black 1px dotted; " colspan="9"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+
+            <tr>
+              <td colspan="5">๔. เพื่อนและบุคคลใกล้ชิด</td>
+              <td style="border-bottom: black 1px dotted; " colspan="10"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+
+            <tr>
+              <td colspan="8">๕. ประวัติการเกี่ยวข้องกับยา/สารเสพติด</td>
+
+              <td class="colorfont" style="border-bottom: black 1px dotted; " colspan="7" *ngIf="oncbnarcoticoffenderResults">
+            <tr *ngFor="let narcoticOffenderItem of oncbnarcoticoffenderResults">
+              {{narcoticOffenderItem.narcoticName}}
+            <tr>
+              </td>
+
+
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td colspan="4">๖. ประวัติการกระทำผิด</td>
+            </tr>
+            <tr>
+              <td style="height: 5px; text-decoration: underline; font-weight: bold; " colspan="11">
+                เด็กถูกดำเนินคดีรวม
+                {{juvenileoffenderResults}} คดี มีรายละเอียดดังนี้</td>
+                <!-- {{countjuvenileOffenderResults}} คดี มีรายละเอียดดังนี้</td> -->
+            </tr>
+            <tr *ngFor="let juvenileOffenderItem of juvenileoffenderResults;let i = index">
+              <td colspan="4">คดีที่ {{i+1 | thainumber:i+1}} ข้อหา</td>
+              <td class="colorfont" style="border-bottom: black 1px dotted; " colspan="11">
+                {{juvenileOffenderItem.allegation}}</td>
+            </tr>
+
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+
+            <tr>
+              <td colspan="5">๗. สภาวะทางกาย และจิต</td>
+              <td style="border-bottom: black 1px dotted; " colspan="10"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+
+            <tr>
+              <td colspan="4">๘. ปัญหาพฤติกรรม</td>
+              <td style="border-bottom: black 1px dotted; " colspan="11"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+
+            <tr>
+              <td colspan="14">
+                ความจำเป็นที่ต้องได้รับการคุ้มครองสวัสดิภาพเด็ก/เยาวชนตามพระราชบัญญัติคุ้มครองเด็ก
+                หรือเป็นผู้เสียหายจากการค้ามนุษย์
+              </td>
+              <td style="border-bottom: black 1px dotted; text-align:center;"></td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+
+            <tr>
+              <td colspan="6">สาเหตุแห่งการกระทำความผิด</td>
+              <td style="border-bottom: black 1px dotted; " colspan="9">
+              </td>
+            </tr>
+
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+
+            <tr>
+              <td colspan="5">ผลการประชุมคณะกรรมการสหวิชาชีพ</td>
+              <td colspan="7">จากการประชุมคณะกรรมการสหวิชาชีพ เมื่อวันที่</td>
+              <td style="border-bottom: black 1px dotted; text-align:center;" colspan="3"></td>
+            </tr>
+            <tr>
+              <td style="height: 3px;" colspan="11"></td>
+            </tr>
+
+            <tr>
+              <td colspan="11">คณะกรรมการสหวิชาชีพ มีข้อเสนอแนะสำหรับการแก้ไขบำบัดฟื้นฟู รายละเอียด
+                ดังนี้</td>
+              <td style="border-bottom: black 1px dotted; " colspan="5"></td>
+
+            </tr>
+
+            <tr>
+              <td style="height: 50px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td style="text-align:center;" colspan="7">( )</td>
+              <td style="text-align:center;" colspan="7">( )</td>
+            </tr>
+
+            <tr>
+              <td style="height: 20px;" colspan="11"></td>
+            </tr>
+            <tr>
+              <td style="text-align:center;" colspan="7">พนักงานคุมประพฤติผู้สืบเสาะข้อเท็จจริง</td>
+              <td style="text-align:center;" colspan="7">
+                ผู้อำนวยการสถานพินิจและคุ้มครองเด็กและเยาวชนจังหวัด............</td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </div>
+
+  </div>
+</div>

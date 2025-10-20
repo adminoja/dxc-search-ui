@@ -1,0 +1,150 @@
+<!-- <mat-dialog-content class="mat-typography"> -->
+<!-- Modal -->
+<div id="multiple-two" class="modal fade" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog"
+  aria-labelledby="multiple-twoModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="multiple-twoModalLabel">ประกาศ</h3>
+        <!-- <button type="button" class="close" data-dismiss="modal" data-target="#multiple-one" aria-hidden="true">×</button> -->
+      </div>
+      <div class="modal-body">
+        <app-dxc-notice (noticeItem)="addItem($event)"></app-dxc-notice>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary " data-dismiss="modal" data-target="#multiple-one" data-toggle="modal">ปิด</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div id="multiple-one" class="modal fade" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog"
+  aria-labelledby="multiple-oneModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="multiple-oneModalLabel">วัตถุประสงค์สำหรับการเข้าใช้งาน</h4>
+        <!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> -->
+      </div>
+      <div class="modal-body">
+        <!-- <app-dxcui0006></app-dxcui0006> -->
+        <form [formGroup]="reasonForm" (ngSubmit)="onSubmit()" class="form-horizontal">
+          <div class="font" style="margin-top:20px;">
+      
+            <h4 style="text-align: center">
+              ท่านมีจำนวนวันที่ได้รับอนุญาตให้เข้าใช้งานระบบอีก
+            </h4>
+            <button type="button" #closebutton class="close" data-dismiss="modal"></button>
+            <div style="text-align: center">
+              <h4>
+                {{expireDay}} วัน
+              </h4>
+            </div>
+            <hr>
+      
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <!-- <h4>
+                  วัตถุประสงค์สำหรับการเข้าใช้งาน
+                </h4> -->
+              </div>
+              <div class="panel-body">
+                <div>
+                  <label class="font-16">
+                    ต้องการเข้าสืบค้นประวัติที่เกี่ยวข้องกับ บุคคล (เช่น ชื่อ อายุ หรือข้อมูลเท่าที่สามารถระบุได้):
+                  </label>
+                  <div>
+                    <input id="personal" formControlName="personal" class="form-control " type="text" style="width: 100%">
+                  </div>
+                </div>
+                <div>
+                  <label class="font-16">
+                    เกี่ยวข้องกับคดี (เช่น เลขคดี คดีแดง คดีดำ หรือ ข้อมูลเท่าที่สามารถระบุได้):
+                  </label>
+                  <div>
+                    <input id="caseInfo" formControlName="caseInfo" class="form-control " type="text" style="width: 100%">
+                  </div>
+                </div>
+                <div>
+                  <label class="font-16">เหตุผลในการเข้าใช้งาน:</label>
+                  <div class="control-group" *ngIf="accountType == '1'; else checkAccountType">
+                    <select id="reasons_select" formControlName="reasons_select" class="form-control" (click)="ClickCheckBox()">
+                      <option value="กรุณาเลือก">--กรุณาเลือก--</option>
+                      <option value="ปฏิบัติหน้าที่">1.ปฏิบัติหน้าที่</option>
+                      <option value="อบรม">2.อบรม</option>
+                      <!-- <option value="ทดสอบระบบ">3.ทดสอบระบบ</option> -->
+                    </select>
+                  </div>
+                  <ng-template #checkAccountType>
+                    <div class="control-group" >
+                      <select id="reasons_select" formControlName="reasons_select" class="form-control" (click)="ClickCheckBox()">
+                        <option value="กรุณาเลือก">--กรุณาเลือก--</option>
+                        <option value="ปฏิบัติหน้าที่">1.ปฏิบัติหน้าที่</option>
+                        <option value="อบรม">2.อบรม</option>
+                        <option value="ทดสอบระบบ">3.ทดสอบระบบ</option>
+                      </select>
+                    </div>
+                  </ng-template>
+                </div>
+                <div>
+                  <label class="font-16">
+                    เหตุผลอื่นๆ:
+                  </label>
+                  <div class="control-group">
+                    <textarea id="reasons" formControlName="reasons" class="form-control " rows="3" style="width: 100%"></textarea>
+                  </div>
+                </div>
+                <div class="font-16">
+                  <input type="checkbox" id="agree" formControlName="agree" value="agree" (click)="ClickCheckBox()">
+                  ข้าพเจ้าจะไม่สืบค้นข้อมูลที่ไม่เกี่ยวข้องกับเหตุผลที่ระบุไว้นี้ 
+                  และข้าพเจ้ายินดีรับผิดชอบต่อความเสียหายต่างๆที่เกิดขึ้นจากการใช้ระบบที่ผิดวัตถุประสงค์ 
+                  และละเมิด พระราชบัญญัติข้อมูลข่าวสารของราชการ พ.ศ. 2540 และนโยบายความเป็นส่วนตัว
+                  ดังนั้นข้าพเจ้ายินยอมให้ผู้ดูแลระบบสามารถตรวจสอบประวัติการใช้งานและส่งประวัติการเข้าใช้งานให้แก่ผู้บังคับบัญชาทราบ <br>
+                  
+                </div>
+                <span *ngIf="!reasonForm.get('agree').valid" class="text-danger ">*กรุณาเลือกเหตุผลในการเข้าใช้งาน และกดยอมรับข้อตกลงการเข้าใช้งาน</span>
+                <span class="font-16"> 
+                  <br><i class="mdi mdi-hand-pointing-right mdi-24px"></i> 
+                  <a href="#/Policy" class="text-success" target="_blank"><u>[click ที่นี่ เพื่ออ่านนโยบายความเป็นส่วนตัว]</u></a>
+                </span>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal" data-target="#multiple-one" data-toggle="modal" (click)="signOut()">ออกจากระบบ</button>
+                    <!-- <a href="https://search.dxc.go.th/sso/sign-out" (click)="logout()" type="button" class="btn btn-danger ">ออกจากระบบ</a> -->
+                    <button type="submit" class="btn btn-primary " data-target="#multiple-two" data-toggle="modal" [disabled]="checkaccept" >เข้าสู่ระบบ</button>
+                </div>
+              </div>
+      
+            </div>
+          </div>
+        </form>
+      </div>
+
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div id="logout" class="modal fade" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="standard-modalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h3 class="modal-title" id="standard-modalLabel">ออกจากระบบ</h3>
+          </div>
+          <div class="modal-body font-20 text-center">
+            คุณต้องการออกจากระบบใช่หรือไม่ <br>
+            ระบบจะนำท่านไปที่หน้า login <br>
+            URL : https://search.dxc.go.th/
+          </div>
+          <div class="modal-footer">
+            <a href="https://search.dxc.go.th/sso/sign-out" (click)="logout()" type="button" class="btn btn-primary font-18">ตกลง</a>
+            <button type="button" class="btn btn-danger font-18" data-dismiss="modal" data-target="#logout" data-toggle="modal" (click)="cancelSignOut()">ยกเลิก</button>
+          </div>
+      </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+    <!-- <mat-dialog-actions align="end">
+      <button mat-raised-button color="primary" mat-dialog-close (click)="btn_Click()">เข้าสู่ระบบ</button>
+      <button mat-raised-button color="warn" [mat-dialog-close]="true" cdkFocusInitial>ออกจากระบบ</button>
+    </mat-dialog-actions> -->
+

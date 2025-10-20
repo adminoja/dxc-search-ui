@@ -1,0 +1,93 @@
+<div *ngIf="carLicenseCount">
+    <!-- <div *ngFor="let carLicenseItem of carLicenseResults"> -->
+      <div *ngIf="exitCode[0].exitCode; else exit">
+          <div *ngIf="report_name != 'รายงาน Single Report'">
+            <div class="card border-secondary border col-md-12">
+              <div class="card mb-md-0 mb-3">
+                <div class="card-body">
+                  <div>
+                    <span class="text-success font-20"><u>กรมการขนส่งทางบก: </u></span>
+                    <span class="text-white font-20"><u>ทะเบียนยานพาหนะ </u></span>
+                    <span class="text-danger font-20"><u>{{exitCode[0].exitCode | changeStatus}}</u></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    <!-- </div> -->
+    <ng-template #exit>
+        <div class="card border-secondary border col-md-12">
+            <div class="card mb-md-0 mb-3">
+                <div class="card-body">
+                    <div data-toggle="collapse" data-target="#dltcarLicenseTable" role="button" aria-expanded="true" aria-controls="dltcarLicenseTable">
+                        <span class="text-success font-20"><u>กรมการขนส่งทางบก: </u></span>
+                        <span class="text-white font-20"><u>ทะเบียนยานพาหนะ </u></span>
+                        <span class="text-warning font-20"><u>จำนวน: {{carLicenseCount}} รายการ </u></span>
+                    </div>
+                    <div id="dltcarLicenseTable" class="collapse pt-3">
+                        <div class="col-md-12" *ngFor="let carLicenseItem of carLicenseResults" class="singlereport-timeline-item">
+                            <div class="col-md-12" class="singlereport-timeline-item">
+                                <input type="hidden" value="ทะเบียนยานพาหนะ" #carLicenseTitle>
+                                <input type="hidden" value="assets/dist/img/dlt.png" #carLicenseImg>
+                                <span class="text-success font-20">
+                                    <img src="assets/dist/img/dxc-img/symbol/datatype/32/dlt-car-license.png">&nbsp;
+                                    <u>ทะเบียนยานพาหนะ</u>
+                                </span>
+
+                                <table class="table-striped table-centered mb-0 mt-3 text-20">
+                                    <thead>
+                                        <tr>
+                                            <th>ทะเบียน</th>
+                                            <th>ยี่ห้อ</th>
+                                            <th>เลขเครื่อง</th>
+                                            <th>เลขตัวถัง</th>
+                                            <th>ผู้ครอบครอง</th>
+                                            <th>เลขประจำตัวประชาชน</th>
+                                            <th>ที่อยู่ผู้ครอบครอง</th>
+                                            <th>รายละเอียด</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>{{ carLicenseItem.plate1 | filter:""}}</td>
+                                            <td>{{ carLicenseItem.brnDesc | filter:""}}</td>
+                                            <td>{{ carLicenseItem.numEng | filter:""}}</td>
+                                            <td>{{ carLicenseItem.numBody | filter:""}}</td>
+                                            <td>{{ carLicenseItem.owner2 | filter:""}}</td>
+                                            <td>{{ carLicenseItem.docNo1 | filter:""}}</td>
+                                            <td>{{ carLicenseItem.addressOwner2 | filter:""}}</td>
+                                            <td class="text-center">
+                                                <button class="btn btn-info" type="button" href="#car-license-table-full-width-modal" data-toggle="modal"
+                                                data-target="#car-license-table-full-width-modal"
+                                                (click)="selectRow(carLicenseItem,carLicenseTitle.value,carLicenseImg.value)">
+                                                <span class="icon-name"><i class="mdi mdi-arrow-top-right" style="color:white;"></i></span>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</div>
+
+<div *ngIf="report_name != 'รายงาน Single Report'">
+    <div *ngIf="!carLicenseCount">
+      <div class="card border-secondary border col-md-12">
+        <div class="card mb-md-0 mb-3">
+          <div class="card-body">
+            <div>
+              <span class="text-success font-20"><u>กรมการขนส่งทางบก: </u></span>
+              <span class="text-white font-20"><u>ทะเบียนยานพาหนะ </u></span>
+              <span class="text-danger font-20"><u> (ไม่พบข้อมูล) </u></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

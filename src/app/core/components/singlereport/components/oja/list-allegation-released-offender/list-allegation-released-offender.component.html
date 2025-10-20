@@ -1,0 +1,86 @@
+<div *ngIf="releasedOffenderCount !==0 && !inputAlgationsReleasedOffender">
+    <div class="card border-secondary border col-md-12">
+        <!-- Portlet card -->
+        <div class="card mb-md-0 mb-3">
+            <div class="card-body">
+                <div data-toggle="collapse" data-target="#releasedOffender" role="button" aria-expanded="true" aria-controls="releasedOffender">
+                    <span class="text-success font-20"><u>ฐานข้อมูลบูรณาการ: </u></span>
+                    <span class="text-white font-20"><u>ฐานข้อมูลบุคคลพ้นโทษ </u></span>
+                    <span class="text-warning font-20"><u>จำนวน: {{releasedOffenderCount}} รายการ </u></span>
+                </div>
+                <div id="releasedOffender" class="collapse pt-3">
+                    <div class="col-md-12" *ngFor="let releasedOffenderItem of releasedOffenderResults" class="singlereport-timeline-item">
+                        <img src="assets/dist/img/dxc-img/symbol/datatype/32/released-offender.png">&nbsp;
+                        <input type="hidden" value="ฐานข้อมูลบุคคลพ้นโทษ" #releasedOffenderTitle>
+                        <input type="hidden" value="assets/dist/img/idb.png" #releasedOffenderdepartmentImg>
+                        <span class="text-success font-20"><u>ฐานข้อมูลบุคคลพ้นโทษ </u></span>
+                        <button
+                          class="btn btn-info" style="float: right;" type="button" href="#released-offender-full-width-modal" data-toggle="modal" data-target="#released-offender-full-width-modal"
+                          (click)="selectRow(releasedOffenderItem,releasedOffenderTitle.value,releasedOffenderdepartmentImg.value)">
+                            <span class="icon-name"><i class="mdi mdi-arrow-top-right" style="color:white;"></i></span>
+                        </button>
+                        <div style="padding-left:15px; margin-top: 3%;">
+                            <span class="text-white font-20">ชื่อ</span>&nbsp;&nbsp;
+                            <span class="text-success font-20"><u>{{releasedOffenderItem.firstName | filter:""}}</u></span>&nbsp;&nbsp;
+                            <span class="text-white font-20">นามสกุล</span>&nbsp;&nbsp;
+                            <span class="text-success font-20">&nbsp;<u>{{releasedOffenderItem.lastName | filter:""}}</u>&nbsp;</span>&nbsp;&nbsp;
+                            <span class="text-white font-20">เลขคดีดำ</span>&nbsp;&nbsp;
+                            <span class="text-success font-20">&nbsp;<u>{{releasedOffenderItem.undecidedCaseId | filter:""}}</u>&nbsp;</span>&nbsp;&nbsp;
+                            <span class="text-white font-20">เลขคดีแดง</span>&nbsp;&nbsp;
+                            <span class="text-success font-20"><u>{{releasedOffenderItem.decidedCaseId | filter:""}}</u></span>&nbsp;&nbsp;
+                            <span class="text-white font-20">โทษฐานความผิด/ข้อหา</span>&nbsp;&nbsp;
+                            <span class="text-success font-20"><u>{{releasedOffenderItem.allegation | filter:""}}</u></span>&nbsp;&nbsp;
+                            <span class="text-white font-20">รายละเอียดการพ้นโทษ</span>&nbsp;&nbsp;
+                            <span class="text-success font-20"><u>{{releasedOffenderItem.releaseDetail | filter:""}}</u></span>&nbsp;&nbsp;
+                            <span class="text-white font-20">วันที่พ้นโทษ</span>&nbsp;&nbsp;
+                            <span class="text-success font-20"><u>{{releasedOffenderItem.releaseDate | converseDate }}</u></span>&nbsp;&nbsp;
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- end card-->
+</div>
+
+<div *ngIf="inputAlgationsReleasedOffender">
+    <div class="card border-secondary border col-md-12">
+        <!-- Portlet card -->
+        <div class="card mb-md-0 mb-3">
+            <div class="card-body">
+                <div data-toggle="collapse" data-target="#releasedOffender" role="button" aria-expanded="true" aria-controls="releasedOffender">
+                    <span class="text-success font-20"><u>ฐานข้อมูลบูรณาการ: </u></span>
+                    <span class="text-white font-20"><u>ฐานข้อมูลบุคคลพ้นโทษ </u></span>
+                </div>
+                <div id="releasedOffender" class="collapse pt-3">
+                    <div class="col-md-12" class="singlereport-timeline-item">
+                        <img src="assets/dist/img/dxc-img/symbol/datatype/32/released-offender.png">&nbsp;
+                        <input type="hidden" value="ฐานข้อมูลบุคคลพ้นโทษ" #releasedOffenderTitle>
+                        <input type="hidden" value="assets/dist/img/idb.png" #releasedOffenderdepartmentImg>
+                        <span class="text-success font-20"><u>ฐานข้อมูลบุคคลพ้นโทษ </u></span>
+                        <button
+                          class="btn btn-info" style="float: right;" type="button" href="#released-offender-full-width-modal" data-toggle="modal" data-target="#released-offender-full-width-modal"
+                          (click)="selectRow(inputAlgationsReleasedOffender,releasedOffenderTitle.value,releasedOffenderdepartmentImg.value)">
+                            <span class="icon-name"><i class="mdi mdi-arrow-top-right" style="color:white;"></i></span>
+                        </button>
+                        <div style="padding-left:15px; margin-top: 3%;">
+                            <span class="text-white font-20">ชื่อ</span>&nbsp;&nbsp;
+                            <span class="text-success font-20"><u>{{inputAlgationsReleasedOffender.firstName | filter:""}}</u></span>&nbsp;&nbsp;
+                            <span class="text-white font-20">นามสกุล</span>&nbsp;&nbsp;
+                            <span class="text-success font-20">&nbsp;<u>{{inputAlgationsReleasedOffender.lastName | filter:""}}</u>&nbsp;</span>&nbsp;&nbsp;
+                            <span class="text-white font-20">เลขคดีดำ</span>&nbsp;&nbsp;
+                            <span class="text-success font-20">&nbsp;<u>{{inputAlgationsReleasedOffender.undecidedCaseId | filter:""}}</u>&nbsp;</span>&nbsp;&nbsp;
+                            <span class="text-white font-20">เลขคดีแดง</span>&nbsp;&nbsp;
+                            <span class="text-success font-20"><u>{{inputAlgationsReleasedOffender.decidedCaseId | filter:""}}</u></span>&nbsp;&nbsp;
+                            <span class="text-white font-20">โทษฐานความผิด/ข้อหา</span>&nbsp;&nbsp;
+                            <span class="text-success font-20"><u>{{inputAlgationsReleasedOffender.allegation | filter:""}}</u></span>&nbsp;&nbsp;
+                            <span class="text-white font-20">รายละเอียดการพ้นโทษ</span>&nbsp;&nbsp;
+                            <span class="text-success font-20"><u>{{inputAlgationsReleasedOffender.releaseDetail | filter:""}}</u></span>&nbsp;&nbsp;
+                            <span class="text-white font-20">วันที่พ้นโทษ</span>&nbsp;&nbsp;
+                            <span class="text-success font-20"><u>{{inputAlgationsReleasedOffender.releaseDate | converseDate }}</u></span>&nbsp;&nbsp;
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- end card-->
+</div>

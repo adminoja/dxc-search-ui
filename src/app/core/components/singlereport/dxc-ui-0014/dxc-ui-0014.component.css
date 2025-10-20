@@ -1,0 +1,22 @@
+/* @font-face {
+    font-family: AngsanaNew;
+    src: url('/src/assets/fonts/Angsana-New.eto');
+    src: url('/src/assets/fonts/Angsana-New.eto?') format('embedded-opentype'),
+         url('/src/assets/fonts/Angsana-New.woff') format('woff'),
+         url('/src/assets/fonts/Angsana-New.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+} */
+.show {
+    background-image: url('https://search.dxc.go.th/secured/assets/dist/img/list.png');
+    background-repeat:no-repeat;
+    width: 24px; 
+    height: 24px;
+ }
+ 
+ .hide {
+    background-image: url('https://search.dxc.go.th/secured/assets/dist/img/list.png');
+    width: 24px; 
+    height: 24px;
+    
+ }

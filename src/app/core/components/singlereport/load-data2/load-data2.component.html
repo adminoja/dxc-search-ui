@@ -1,0 +1,72 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <h3 class="page-title mt-3">Specialize Report > สืบค้นข้อมูลรวมประวัติบุคคล สำหรับ{{report_name}}</h3>
+            <div class="card mt-3">
+                <div class="card-body">
+
+                    <!-- <button type="button" class="btn btn-danger" style="cursor: pointer; float: right;">
+                        <a target="_blank" [routerLink]="[reportclick]" (click)="pfdDownload()" class="text-white font-20">
+                            <i class="uil-down-arrow"></i> PDF 
+                        </a>
+                    </button> -->
+                    <!-- <button class="btn btn-primary btn-round font-20" style="cursor: pointer; float: right;"
+                        (click)="pdfPreview()" [disabled]="checkLblStatus()">แสดงรายงาน</button> -->
+
+                    <!-- <button class="btn btn-primary btn-round font-20" style="cursor: pointer; float: right;"
+                        (click)="btnSearch_Click()" [disabled]="checkLblStatus()">แสดงรายงาน</button> -->
+                    <div class="panel-heading" style="text-align: center;">
+                        <h3>
+                            <strong>ประวัติการค้นหา</strong>
+                        </h3>
+                    </div>
+                    <div>
+                        <table class="table table-striped table-centered mb-0">
+                            <thead>
+                                <tr>
+                                    <th>ลำดับ</th>
+                                    <th>เลขบัตรประชาชนที่ค้นหา</th>
+                                    <th>วันที่</th>
+                                    <th>เวลา</th>
+                                    <th>สถานะ</th>
+                                    <th></th>
+                                    <!-- <th></th> -->
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let history of historys;let i = index">
+                                    <td>{{i+1}}</td>
+                                    <td>{{history.request.parameters.thaiNin}}</td>
+                                    <td>{{history.createDate | converseDate}}</td>
+                                    <td>{{history.createDate | converseTime}}</td>
+                                    <td>
+                                        <h3 *ngIf="history.status.batchStatus=='COMPLETED'" >
+                                            <span class="badge badge-success-lighten">{{history.status.batchStatus}}</span>
+                                        </h3>
+                                        <h3 *ngIf="history.status.batchStatus == 'STARTED'">
+                                            <span class="badge badge-warning-lighten">{{history.status.batchStatus}}</span>
+                                        </h3>
+                                        <h3 *ngIf="history.status.batchStatus == 'FAILED'">
+                                            <span class="badge badge-danger-lighten">{{history.status.batchStatus}}</span>
+                                        </h3>
+                                    </td>
+                                    <td><button class="btn btn-primary btn-round font-20"
+                                        style="cursor: pointer; float: right;" (click)="pdfPreview(history.searchId)"
+                                        >แสดงรายงาน</button></td>
+                                    <!-- <td><button type="button" class="btn btn-danger"
+                                            style="cursor: pointer; float: right;">
+                                            <a target="_blank" [routerLink]="[reportclick]" (click)="pfdDownload()"
+                                                class="text-white font-20">
+                                                <i class="uil-down-arrow"></i> PDF
+                                            </a>
+                                        </button>
+                                    </td> -->
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

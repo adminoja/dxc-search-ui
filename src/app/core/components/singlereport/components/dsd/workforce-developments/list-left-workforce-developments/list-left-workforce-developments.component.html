@@ -1,0 +1,17 @@
+<div *ngIf="checkMoiDsdWorkforceDevelopmentsResults" class="row col-md-12">
+  <div class="col-md-12 media mt-1 p-2 border-secondary border" *ngFor="let workforceDevelopmentsItem of moiDsdWorkforceDevelopmentsResults">
+    <div class="media-body">
+      <img src="assets/dist/img/dxc-img/symbol/datatype/32/moi-dsd-workforce-developments.png">
+      <span style="margin-left: 15px;font-size: 18px;" class="text-white">ข้อมูลการพัฒนาฝีมือแรงงาน(Linkage)</span>
+        <div class="col-md-10 text-white">เลขประจำตัวประชาชน:
+          <span class="dataname text-success">{{workforceDevelopmentsItem.citizenCardNumber}}</span>
+        </div>
+        <div class="col-md-8 text-white">ชื่อ:
+          <span class="dataname text-success"> {{workforceDevelopmentsItem.names}}</span>
+        </div>
+        <div class="col-md-4 text-white">เพศ:
+          <span class="dataname text-success"> {{workforceDevelopmentsItem.sex | filter:""}}</span>
+        </div>
+    </div>
+  </div>
+</div>

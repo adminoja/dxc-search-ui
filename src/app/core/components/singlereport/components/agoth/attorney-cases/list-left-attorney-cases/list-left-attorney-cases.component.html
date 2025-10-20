@@ -1,0 +1,28 @@
+<div *ngIf="attorneyCasesResults">
+  <div class="col-md-11" *ngFor="let attorneyCasesItem of attorneyCasesResults"
+    class="row singlereport-timeline-item">
+<ul class="list-unstyled feeds_widget" data-toggle="modal" data-target="#searchByCidModal">
+  <li>
+    <div class="feeds-left">
+      <img src="assets/dist/img/dxc-img/symbol/datatype/32/attorney-cases.png">
+    </div>
+    <div class="feeds-body">
+      <span class="pull-right">{{attorneyCasesItem.id}}</span>
+      <span style="margin-left: 15px;font-size: 18px;">สำนวนคดี</span>
+      <div class="row">
+        <div class="col-md-13">เลขประจำตัวประชาชน:
+          <span class="dataname text-info">{{attorneyCasesItem.accusedCitizenIds}}</span>
+        </div>
+        <div class="col-md-13">ชื่อ:
+          <span class="dataname text-info">{{attorneyCasesItem.accusedsText}}</span>
+        </div>
+        <div class="col-md-12">เพศ:
+          <span class="dataname text-info">{{attorneyCasesItem.accusedGenderName}}</span>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>
+<app-search-by-cid citizenCardNumber="{{attorneyCasesItem.accusedCitizenIds}}"></app-search-by-cid>
+</div>
+</div>

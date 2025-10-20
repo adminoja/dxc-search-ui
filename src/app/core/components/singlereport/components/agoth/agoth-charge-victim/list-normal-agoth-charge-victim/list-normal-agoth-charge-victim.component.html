@@ -1,0 +1,77 @@
+<div *ngIf="agothChargeVictimCount !==0 && !inputNormalChargeVictim">
+    <div class="card border-secondary border col-md-12">
+      <!-- Portlet card -->
+      <div class="card mb-md-0 mb-3">
+        <div class="card-body">
+          <div data-toggle="collapse" data-target="#chargeVictim" role="button" aria-expanded="true"
+            aria-controls="chargeVictim">
+            <span class="text-success font-20"><u>สำนักงานอัยการสูงสุด: </u></span>
+            <span class="text-white font-20"><u>ฐานข้อมูลผู้เสียหาย </u></span>
+            <span class="text-warning font-20"><u>จำนวน: {{agothChargeVictimCount}} รายการ </u></span>
+          </div>
+          <div id="chargeVictim" class="collapse pt-3">
+            <div class="col-md-12" *ngFor="let agothChargeVictimItem of agothChargeVictimResults"
+              class="singlereport-timeline-item">
+              <img src="assets/dist/img/dxc-img/symbol/datatype/32/charge-victim.png">&nbsp;
+              <input type="hidden" value="ฐานข้อมูลผู้เสียหาย" #agothChargeVictimTitle>
+              <input type="hidden" value="assets/dist/img/agoth.png" #agothChargeVictimImg>
+              <span class="text-success font-20"><u>ฐานข้อมูลผู้เสียหาย</u></span>
+              <button class="btn btn-info" style="float: right;" type="button" href="#charge-victim-full-width-modal" data-toggle="modal" data-target="#charge-victim-full-width-modal"
+                (click)="selectRow(agothChargeVictimItem,agothChargeVictimTitle.value,agothChargeVictimImg.value)">
+                <span class="icon-name"><i class="mdi mdi-arrow-top-right" style="color:white;"></i></span>
+              </button>
+              <div style="padding-left:15px; margin-top: 3%;">
+                <span class="text-white font-20">ชื่อ ผู้เสียหาย</span>&nbsp;&nbsp;
+                <span class="text-success font-20"><u>{{agothChargeVictimItem.name1 | filter:""}}</u></span>&nbsp;&nbsp;
+                <span class="text-white font-20">นามสกุล ผู้เสียหาย</span>&nbsp;&nbsp;
+                <span class="text-success font-20">&nbsp;<u>{{agothChargeVictimItem.surname1 | filter:""}}</u>&nbsp;</span>&nbsp;&nbsp;
+                <span class="text-white font-20">อายุ</span>&nbsp;&nbsp;
+                <span class="text-success font-20"><u>{{agothChargeVictimItem.age | filter:""}}</u></span>&nbsp;&nbsp;
+                <span class="text-white font-20">ปี</span>&nbsp;&nbsp;
+                <span class="text-white font-20">อาชีพ</span>&nbsp;&nbsp;
+                <span class="text-success font-20"><u>{{agothChargeVictimItem.occupationName | filter:""}}</u></span>&nbsp;&nbsp;
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- end card-->
+</div>
+
+<div *ngIf="inputNormalChargeVictim">
+  <div class="card border-secondary border col-md-12">
+    <!-- Portlet card -->
+    <div class="card mb-md-0 mb-3">
+      <div class="card-body">
+        <div data-toggle="collapse" data-target="#chargeVictim" role="button" aria-expanded="true"
+          aria-controls="chargeVictim">
+          <span class="text-success font-20"><u>สำนักงานอัยการสูงสุด: </u></span>
+          <span class="text-white font-20"><u>ฐานข้อมูลผู้เสียหาย </u></span>
+        </div>
+        <div id="chargeVictim" class="collapse pt-3">
+          <div class="col-md-12" class="singlereport-timeline-item">
+            <img src="assets/dist/img/dxc-img/symbol/datatype/32/charge-victim.png">&nbsp;
+            <input type="hidden" value="ฐานข้อมูลผู้เสียหาย" #agothChargeVictimTitle>
+            <input type="hidden" value="assets/dist/img/agoth.png" #agothChargeVictimImg>
+            <span class="text-success font-20"><u>ฐานข้อมูลผู้เสียหาย</u></span>
+            <button class="btn btn-info" style="float: right;" type="button" href="#charge-victim-full-width-modal" data-toggle="modal" data-target="#charge-victim-full-width-modal"
+              (click)="selectRow(inputNormalChargeVictim,agothChargeVictimTitle.value,agothChargeVictimImg.value)">
+              <span class="icon-name"><i class="mdi mdi-arrow-top-right" style="color:white;"></i></span>
+            </button>
+            <div style="padding-left:15px; margin-top: 3%;">
+              <span class="text-white font-20">ชื่อ ผู้เสียหาย</span>&nbsp;&nbsp;
+              <span class="text-success font-20"><u>{{inputNormalChargeVictim.name1 | filter:""}}</u></span>&nbsp;&nbsp;
+              <span class="text-white font-20">นามสกุล ผู้เสียหาย</span>&nbsp;&nbsp;
+              <span class="text-success font-20">&nbsp;<u>{{inputNormalChargeVictim.surname1 | filter:""}}</u>&nbsp;</span>&nbsp;&nbsp;
+              <span class="text-white font-20">อายุ</span>&nbsp;&nbsp;
+              <span class="text-success font-20"><u>{{inputNormalChargeVictim.age | filter:""}}</u></span>&nbsp;&nbsp;
+              <span class="text-white font-20">ปี</span>&nbsp;&nbsp;
+              <span class="text-white font-20">อาชีพ</span>&nbsp;&nbsp;
+              <span class="text-success font-20"><u>{{inputNormalChargeVictim.occupationName | filter:""}}</u></span>&nbsp;&nbsp;
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> <!-- end card-->
+</div>

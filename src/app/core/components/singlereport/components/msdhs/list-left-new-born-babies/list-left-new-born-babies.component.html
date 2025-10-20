@@ -1,0 +1,19 @@
+<div *ngIf="checknewBornBabiesResults" class="row col-md-12">
+    <div class="col-md-12 media mt-1 p-2 border-secondary border" *ngFor="let newBornBabiesItem of newBornBabiesResults">
+      <div class="media-body">
+        <img src="assets/dist/img/dxc-img/symbol/datatype/32/moi-msdhs-new-born-babies.png">
+        <span style="margin-left: 15px;font-size: 18px;" class="text-white">ข้อมูลทะบียนเด็กแรกเกิด</span>
+        <div>
+          <div class="col-md-10 text-white">เลขประจำตัวประชาชน:
+            <span class="dataname text-success">{{newBornBabiesItem.citizenCardNumber | filter:""}}</span>
+          </div>
+          <div class="col-md-8 text-white">ชื่อ:
+            <span class="dataname text-success">{{newBornBabiesItem.childName | filter:""}} {{newBornBabiesItem.childSurname | filter:""}}</span>
+          </div>
+          <div class="col-md-4 text-white">เพศ:
+            <span class="dataname text-success">-</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

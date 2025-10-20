@@ -1,0 +1,12 @@
+{
+    "content": [
+        {   
+            "PERSON_CODE": "1234567890123",
+            "PERSON_NAME": "ทดสอบ ทดสอบ",
+            "BIRTH_DATE": "25210213",
+            "DEFORM_NAME": "ความพิการทางการเห็น",
+            "CARD_EXPIRE_DATE": "25641215",
+            "CARD_ISSUE_DATE": "25400130"
+        }
+    ]
+}

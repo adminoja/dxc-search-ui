@@ -1,0 +1,74 @@
+<div *ngIf="requestorsCount">
+    <div *ngIf="exitCode[0].exitCode; else exit">
+        <div *ngIf="report_name != 'รายงาน Single Report'">
+          <div class="card border-secondary border col-md-12">
+            <div class="card mb-md-0 mb-3">
+              <div class="card-body">
+                <div>
+                    <span class="text-success font-20"><u>กรมคุ้มครองสิทธิและเสรีภาพ: </u></span>
+                    <span class="text-white font-20"><u>ผู้ร้องทุกข์ </u></span>
+                    <span class="text-danger font-20"><u>{{exitCode[0].exitCode | changeStatus}}</u></span>
+                    <span *ngIf="exitCode[0].Results && exitCode[0].exitCode == 'NOT_FOUND'" class="text-danger font-20"><u> (ไม่พบข้อมูล) </u></span>
+                    <span *ngIf="exitCode[0].Results == '[]' && exitCode[0].exitCode == 'OK'" class="text-danger font-20">
+                      <u> (ไม่พบข้อมูล) </u>
+                    </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <ng-template #exit>
+        <div class="card border-secondary border col-md-12">
+            <div class="card mb-md-0 mb-3">
+                <div class="card-body">
+                    <div data-toggle="collapse" data-target="#requestorsTablecollapse" role="button" aria-expanded="true"
+                        aria-controls="requestorscollapse">
+                        <span class="text-success font-20"><u>กรมคุ้มครองสิทธิและเสรีภาพ:</u></span>
+                        <span class="text-white font-20"><u> ผู้ร้องทุกข์</u></span>
+                        <span class="text-warning font-20"><u> จำนวน: {{requestorsCount}} รายการ</u></span>
+                    </div> 
+                    <div id="requestorsTablecollapse" class="collapse pt-3">
+                        <div class="col-md-12" class="singlereport-timeline-item">
+                            <div class="col-md-12" class="singlereport-timeline-item" *ngFor="let requestorsItem of requestorsResults">
+                                <input type="hidden" value="ผู้ร้องทุกข์" #requestorsTitle>
+                                <input type="hidden" value="assets/dist/img/rlpd.png" #requestorsImg>
+                                <img src="assets/dist/img/dxc-img/symbol/datatype/32/rlpd-complainant.png" width="25px">
+                                <span class="text-success font-20">&nbsp;<u>ผู้ร้องทุกข์</u></span>
+
+                                <table class="table-striped table-centered mb-0 mt-3 text-20">
+                                    <thead>
+                                        <tr>
+                                            <th>อาชีพ</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>{{ requestorsItem.career | filter:""}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</div>
+
+<div *ngIf="report_name != 'รายงาน Single Report'">
+    <div *ngIf="!requestorsCount">
+      <div class="card border-secondary border col-md-12">
+          <div class="card mb-md-0 mb-3">
+              <div class="card-body">
+                  <div>
+                      <span class="text-success font-20"><u>กรมคุ้มครองสิทธิและเสรีภาพ: </u></span>
+                      <span class="text-white font-20"><u>ผู้ร้องทุกข์ </u></span>
+                      <span class="text-danger font-20"><u> (ไม่พบข้อมูล) </u></span>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+</div>
